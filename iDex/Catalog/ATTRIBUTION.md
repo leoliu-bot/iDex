@@ -1,3 +1,24 @@
+# National edition additions
+
+The National archive contains 1025 species with English, Simplified Chinese and
+Japanese fields. The original 151 records and sprite bytes are retained.
+Pinned PokéAPI data and pixel-sprite revisions are in
+`scripts/catalog/upstream-lock.json`; per-asset URLs remain in the resource manifests.
+Sprites use the default 96×96 Gen 5 collection, including credited Smogon community
+interpretations for generations without official Black/White sprites:
+https://github.com/PokeAPI/sprites/blob/master/CONTRIBUTING_SPRITES.md
+
+Missing localized short field notes/genera were completed from the official Chinese
+and Japanese Pokédex pages. `Resources/text-sources.json` records exact URLs and
+cached-page hashes. These are Pokémon content with the same excluded rights scope.
+https://dex.pokemon.cn/play/pokedex · https://zukan.pokemon.co.jp/
+
+All 1025 cries follow the pinned upstream conversion format below. Regenerate with
+`scripts/catalog/build_national_catalog.py` and `scripts/audio/build_national_cries.py`.
+Original font faces, licenses, image interpolation and metric units are unchanged.
+
+## Original Kanto resources
+
 # Offline catalog and visual assets
 
 The app bundles the original 151 Kanto species. Names, genera, English, Simplified Chinese, and Japanese Pokédex text, types, height, weight, and base stats were fetched from the PokeAPI data repository on 24 October 2026:

@@ -58,6 +58,7 @@ struct PokemonStat: Codable, Hashable, Identifiable {
 
 struct Pokemon: Identifiable, Codable, Hashable {
     let id: Int
+    let generation: Int
     let englishName: String
     let chineseName: String
     let japaneseName: String
@@ -153,10 +154,10 @@ struct PokemonCatalog {
     }
 
     private init(bundle: Bundle = .main) {
-        guard let url = bundle.url(forResource: "pokemon-kanto", withExtension: "json"),
+        guard let url = bundle.url(forResource: "pokemon-national", withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let decoded = try? JSONDecoder().decode([Pokemon].self, from: data) else {
-            assertionFailure("The bundled Kanto catalog is missing or invalid.")
+            assertionFailure("The bundled National Pokédex is missing or invalid.")
             entries = []
             entriesByID = [:]
             searchIndex = []
@@ -179,6 +180,9 @@ struct PokemonCatalog {
         let value = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !value.isEmpty else { return entries }
         let numberQuery = value.trimmingCharacters(in: CharacterSet(charactersIn: "#"))
+        if value.hasPrefix("#") || (value.hasPrefix("0") && value.allSatisfy(\.isNumber)) {
+            return Int(numberQuery).flatMap { entriesByID[$0] }.map { [$0] } ?? []
+        }
         return searchIndex.compactMap { entry in
             let matches = entry.pokemon.englishName.localizedCaseInsensitiveContains(value)
                 || entry.pokemon.chineseName.contains(value)

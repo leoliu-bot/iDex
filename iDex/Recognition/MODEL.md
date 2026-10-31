@@ -1,3 +1,5 @@
+> Historical Kanto model reference. Its 151-class weights and physical timings do not describe the new National classifier. See [National training](../../scripts/national/README.md) and [the selected training summary](../../TrainingResources/training-summary.json).
+
 # iDex trained image classifier
 
 iDex bundles a locally trained **EfficientNet-B0 FP32 Core ML model** for the **151 Kanto species**. The complete package is tracked in Git at `KantoClassifier.mlpackage`; a normal clone or GitHub source ZIP includes it. The app performs inference offline and does not download weights or upload photos at runtime.

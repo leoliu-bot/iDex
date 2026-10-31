@@ -137,7 +137,7 @@ struct RecognitionTests {
 
         #expect(result.accepted == nil)
         #expect(result.candidates.count == 3)
-        #expect(result.candidates.allSatisfy { (1...151).contains($0.dexID) })
+        #expect(result.candidates.allSatisfy { RecognitionScope.speciesIDs.contains($0.dexID) })
         #expect(result.candidates.allSatisfy { $0.confidence.isFinite && (0...1).contains($0.confidence) })
 
         let soundWasEnabled = DeviceAudio.shared.isSoundEnabled
@@ -164,7 +164,7 @@ struct RecognitionTests {
         #expect(store.entryStatusTitle == "最可能匹配")
     }
 
-    @Test("Model labels map exactly to the bundled Kanto catalog")
+    @Test("Model labels map to unique National Dex entries")
     func labelCoverageMatchesCatalog() throws {
         struct Label: Decodable {
             let id: Int
@@ -173,12 +173,12 @@ struct RecognitionTests {
         let url = try #require(Bundle.main.url(forResource: "pokemon_labels", withExtension: "json"))
         let labels = try JSONDecoder().decode([Label].self, from: Data(contentsOf: url))
 
-        #expect(labels.count == 151)
-        #expect(Set(labels.map(\.id)) == Set(PokemonCatalog.shared.entries.map(\.id)))
-        #expect(labels.enumerated().allSatisfy { $0.element.id == $0.offset + 1 })
+        #expect(labels.count == RecognitionScope.speciesIDs.count)
+        #expect(Set(labels.map(\.id)).isSubset(of: Set(PokemonCatalog.shared.entries.map(\.id))))
+        #expect(labels.map(\.id) == labels.map(\.id).sorted())
         #expect(labels.allSatisfy { !$0.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty })
-        #expect(labels[24].name == "pikachu")
-        #expect(labels[5].name == "charizard")
+        #expect(labels[24].name.lowercased() == "pikachu")
+        #expect(labels[5].name.lowercased() == "charizard")
     }
 
     // Match the app's sample path: a 96px transparent sprite becomes an opaque

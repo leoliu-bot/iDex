@@ -1,0 +1,49 @@
+{
+  "catalog_species": 1025,
+  "supported_species": 1018,
+  "unsupported": [
+    {
+      "id": 963,
+      "name": "Finizen",
+      "independent_groups": 0,
+      "reason": "Fewer than three nonconflicting independent source groups"
+    },
+    {
+      "id": 964,
+      "name": "Palafin",
+      "independent_groups": 1,
+      "reason": "Fewer than three nonconflicting independent source groups"
+    },
+    {
+      "id": 955,
+      "name": "Flittle",
+      "independent_groups": 2,
+      "reason": "Insufficient independent groups after foreground/mirror refinement"
+    },
+    {
+      "id": 960,
+      "name": "Wiglett",
+      "independent_groups": 2,
+      "reason": "Insufficient independent groups after foreground/mirror refinement"
+    },
+    {
+      "id": 1011,
+      "name": "Dipplin",
+      "independent_groups": 2,
+      "reason": "Insufficient independent groups after foreground/mirror refinement"
+    },
+    {
+      "id": 1019,
+      "name": "Hydrapple",
+      "independent_groups": 2,
+      "reason": "Insufficient independent groups after foreground/mirror refinement"
+    },
+    {
+      "id": 1023,
+      "name": "Iron Crown",
+      "independent_groups": 2,
+      "reason": "Insufficient independent groups after foreground/mirror refinement"
+    }
+  ],
+  "caveat": "Supported means public grouped train/validation/test coverage, not demonstrated physical-camera accuracy."
+}

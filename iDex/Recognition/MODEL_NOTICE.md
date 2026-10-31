@@ -1,3 +1,5 @@
+> National extension: the new 1018-class model is fine-tuned from TorchVision ImageNet weights using the pinned JJMack Gen 1–9 source below, not the old Kanto checkpoint. Preserve the same applicable attribution and noncommercial/share-alike conditions. Raw training images are not redistributed. Historical Kanto source details follow.
+
 # Model and training-data notices
 
 The packaged151-class EfficientNet-B0 was fine-tuned locally for iDex. Its architecture and ImageNet initialization use TorchVision; the training images were not all created by iDex contributors. This notice applies to the model distribution and does not relicense the entire application, its fonts, audio, catalog or sprites.

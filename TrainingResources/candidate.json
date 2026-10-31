@@ -1,0 +1,10 @@
+{
+  "selectedFrom": "artifacts\\national\\runs\\efficientnet224-continued\\best.pt",
+  "checkpoint_sha256": "754e6db1fae534e9c225041d59dd31eef685fad39634fa9bc2d34cd8241ada1b",
+  "manifest_sha256": "44b8d94b0a271a645063ff3df299c5d8d176a7ac49b14fb6611fdeda72856c3e",
+  "arch": "efficientnet_b0",
+  "size": 224,
+  "classes": 1018,
+  "validationTop1": 0.9258997882851094,
+  "selectionRule": "Maximum positive validation top1; no test predictions inspected."
+}

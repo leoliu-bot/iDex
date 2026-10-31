@@ -98,7 +98,7 @@ struct ScannerLights: View {
                                   isLit: isScanning && !isSpeaking && (reduceMotion || index == activeLight))
                     }
                 }
-                Text("iDEX").font(.system(size: 28, weight: .black, design: .rounded)).italic()
+                Text("Pokédex").font(.system(size: 24, weight: .black, design: .rounded)).italic()
                     .foregroundStyle(Color(red: 0.35, green: 0.02, blue: 0.035))
                     .shadow(color: .white.opacity(0.3), radius: 0, y: 1)
             }

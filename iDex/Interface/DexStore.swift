@@ -118,7 +118,7 @@ final class DexStore {
         } catch {
             guard operation == operationID, isActive else { return }
             message = error is RecognitionError
-                ? text("Recognition is unavailable. Restart iDex and try again.", "识别暂不可用，请重启 iDex 后重试。", "識別を利用できません。iDex を再起動して、もう一度お試しください。")
+                ? text("Recognition is unavailable. Restart Pokédex and try again.", "识别暂不可用，请重启 Pokédex 后重试。", "識別を利用できません。Pokédex を再起動して、もう一度お試しください。")
                 : text("Couldn't scan. Try a photo or enable the camera.", "未能扫描，请导入照片或启用相机。", "スキャンできませんでした。写真を読み込むか、カメラを有効にしてください。")
             audio.play(.error)
         }
@@ -210,9 +210,11 @@ final class DexStore {
     func step(_ delta: Int) {
         audio.stopSpeaking()
         cancelScan()
-        guard let selected else { return }
-        let id = ((selected.id - 1 + delta + 151) % 151) + 1
-        self.selected = PokemonCatalog.shared.pokemon(id: id)
+        let entries = PokemonCatalog.shared.entries
+        guard let selected, !entries.isEmpty,
+              let index = entries.firstIndex(where: { $0.id == selected.id }) else { return }
+        let next = ((index + delta) % entries.count + entries.count) % entries.count
+        self.selected = entries[next]
         confidence = nil
         identified = false
         audio.play(.button)

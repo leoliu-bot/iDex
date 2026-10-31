@@ -106,7 +106,7 @@ private struct ScannerPanel: View {
                 HStack {
                     pixel(store.text("OPTICAL SENSOR", "光学传感器", "光学センサー"), 7).foregroundStyle(.white.opacity(0.65))
                     Spacer()
-                    pixel(store.text("KANTO / 01", "关都 / 01", "カントー / 01"), 7).foregroundStyle(.white.opacity(0.65))
+                    pixel(store.text("NATIONAL / 09", "全国 / 09", "全国 / 09"), 7).foregroundStyle(.white.opacity(0.65))
                 }.frame(width: proxy.size.width - 98).offset(x: 49, y: 146)
                 viewfinder(side: side).frame(width: side + 34, height: side + 34)
                     .position(x: proxy.size.width / 2, y: layout.viewfinder.midY)
@@ -292,7 +292,7 @@ private struct ScannerPanel: View {
                         pixel(compact ? store.text("OPEN RECORD", "打开记录", "図鑑を開く") : store.text("POKÉDEX", "宝可梦图鉴", "ポケモン図鑑"), 8)
                     }
                 }.buttonStyle(.plain).accessibilityIdentifier("record-button")
-                pixel(store.text("\(store.seenIDs.count) SEEN · 151 SPECIES", "已发现 \(store.seenIDs.count) · 共151种", "発見 \(store.seenIDs.count) · 全151種"), 6)
+                pixel(store.text("\(store.seenIDs.count) SEEN · \(PokemonCatalog.shared.entries.count) SPECIES", "已发现 \(store.seenIDs.count) · 共\(PokemonCatalog.shared.entries.count)种", "発見 \(store.seenIDs.count) · 全\(PokemonCatalog.shared.entries.count)種"), 6)
                     .foregroundStyle(.white.opacity(0.5))
             }.foregroundStyle(DexTheme.cream)
             Spacer()

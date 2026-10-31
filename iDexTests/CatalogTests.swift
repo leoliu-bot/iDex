@@ -5,12 +5,12 @@ import CoreText
 
 @MainActor
 struct CatalogTests {
-    @Test func catalogIncludesAllOriginalKantoSpecies() {
+    @Test func catalogIncludesEveryNationalSpecies() {
         let entries = PokemonCatalog.shared.entries
-        #expect(entries.map(\.id) == Array(1...151))
-        #expect(Set(entries.map(\.englishName)).count == 151)
-        #expect(Set(entries.map(\.chineseName)).count == 151)
-        #expect(Set(entries.map(\.japaneseName)).count == 151)
+        #expect(entries.map(\.id) == Array(1...1025))
+        #expect(Set(entries.map(\.englishName)).count == 1025)
+        #expect(Set(entries.map(\.chineseName)).count == 1025)
+        #expect(Set(entries.map(\.japaneseName)).count == 1025)
         #expect(entries.allSatisfy { !$0.englishDescription.isEmpty && !$0.chineseDescription.isEmpty })
         #expect(entries.allSatisfy { !$0.englishGenus.isEmpty && !$0.chineseGenus.isEmpty })
         #expect(entries.allSatisfy { !$0.japaneseDescription.isEmpty && !$0.japaneseGenus.isEmpty })
@@ -25,6 +25,42 @@ struct CatalogTests {
             #expect(sprite != nil, "Missing sprite for \(pokemon.englishName)")
             #expect(sprite?.size == CGSize(width: 96, height: 96))
         }
+    }
+
+    @Test func nationalNumbersAndGenerationsRemainAccurate() throws {
+        let catalog = PokemonCatalog.shared
+        for (id, generation) in [(152, 2), (386, 3), (649, 5), (899, 8), (1025, 9)] {
+            #expect(try #require(catalog.pokemon(id: id)).generation == generation)
+        }
+        #expect(try #require(catalog.pokemon(id: 1025)).number == "1025")
+        #expect(catalog.search("#025", language: .en).map(\.id) == [25])
+        #expect(catalog.search("#1025", language: .en).map(\.id) == [1025])
+        #expect(catalog.search("菊草叶", language: .zhHans).map(\.id) == [152])
+        #expect(catalog.search("ニャオハ", language: .ja).map(\.id) == [906])
+    }
+
+    @Test func installedAppUsesThePokedexDisplayName() {
+        #expect(Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String == "Pokédex")
+    }
+
+    @Test func recordNavigationWrapsAcrossTheCompleteNationalDex() throws {
+        let previous = UserDefaults.standard.object(forKey: "idex.lastViewed")
+        defer {
+            if let previous { UserDefaults.standard.set(previous, forKey: "idex.lastViewed") }
+            else { UserDefaults.standard.removeObject(forKey: "idex.lastViewed") }
+        }
+        let store = DexStore()
+        let soundWasEnabled = store.audio.isSoundEnabled
+        store.audio.isSoundEnabled = false
+        defer { store.audio.isSoundEnabled = soundWasEnabled }
+        store.selected = try #require(PokemonCatalog.shared.pokemon(id: 151))
+        store.step(1)
+        #expect(store.selected?.id == 152)
+        store.selected = try #require(PokemonCatalog.shared.pokemon(id: 1025))
+        store.step(1)
+        #expect(store.selected?.id == 1)
+        store.step(-1)
+        #expect(store.selected?.id == 1025)
     }
 
     @Test func allPixelFontsRegisterFromBundledFiles() {
@@ -87,7 +123,7 @@ struct CatalogTests {
         #expect(catalog.search("皮卡丘", language: .en).map(\.id) == [25])
         #expect(catalog.search("#025", language: .en).map(\.id) == [25])
         #expect(catalog.search("  025 \n", language: .zhHans).map(\.id) == [25])
-        #expect(catalog.search("", language: .en).count == 151)
+        #expect(catalog.search("", language: .en).count == 1025)
         #expect(catalog.search("not a pokemon", language: .en).isEmpty)
     }
 
@@ -109,7 +145,7 @@ struct CatalogTests {
         #expect(pikachu.height == 0.4)
         #expect(pikachu.weight == 6.0)
         #expect(catalog.pokemon(id: 0) == nil)
-        #expect(catalog.pokemon(id: 152) == nil)
+        #expect(catalog.pokemon(id: 1026) == nil)
     }
 
     @Test func searchFindsEverySpeciesByAnyLanguageNameOrNumberInDexOrder() {
@@ -124,7 +160,7 @@ struct CatalogTests {
             }
             #expect(catalog.search("saur", language: language).map(\.id) == [1, 2, 3])
             #expect(catalog.search("Nidoran", language: language).map(\.id) == [29, 32])
-            #expect(catalog.search("25", language: language).map(\.id) == [25, 125])
+            #expect(catalog.search("25", language: language).map(\.id) .contains(1025))
         }
     }
 

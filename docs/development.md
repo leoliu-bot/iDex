@@ -1,3 +1,5 @@
+> National edition: see [the current expansion guide](national-expansion.zh-CN.md). The following records the upstream 151-species architecture and measurements.
+
 # iDex development guide
 
 [← Back to the README](../README.md)

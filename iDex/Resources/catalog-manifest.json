@@ -1,0 +1,10 @@
+{
+  "species": 1025,
+  "generations": 9,
+  "upstream": {
+    "data": "6b8db7f3cb31cfaa37cb74e5c3edff124bcba5ce",
+    "sprites": "1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64"
+  },
+  "catalogSHA256": "49c44c84c360a957948eb2ce72b039a26ad46ddeed2f103e24199e9b41d5ed52",
+  "spriteStyle": "96x96 Gen 5 pixel art; original 151 preserved; newer species use credited community Gen 5 sprites"
+}

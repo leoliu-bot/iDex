@@ -1,0 +1,9 @@
+{
+  "modelResource": "NationalClassifier",
+  "classCount": 1018,
+  "inputSize": 224,
+  "confidenceThreshold": 0.35,
+  "logitMargin": 0.5,
+  "checkpointSHA256": "754e6db1fae534e9c225041d59dd31eef685fad39634fa9bc2d34cd8241ada1b",
+  "labelsSHA256": "812dfedb1884ce1dba5f7b2497702c3f09f094550d0ac5f1f1da8126d9ca4005"
+}

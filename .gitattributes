@@ -1,3 +1,4 @@
 # Core ML specifications and tensor weights are binary artifacts.
 *.mlmodel binary
 *.bin binary
+*.pt binary

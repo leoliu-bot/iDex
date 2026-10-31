@@ -20,7 +20,7 @@ struct DeviceAudioTests {
         audio.suspend()
     }
 
-    @Test(arguments: [1, 25, 151])
+    @Test(arguments: [1, 25, 151, 152, 658, 906, 1025])
     func confirmedScanPlaysTheMatchingCryBeforeNarration(dexID: Int) async throws {
         let savedViewed = UserDefaults.standard.object(forKey: "idex.lastViewed")
         let savedSeen = UserDefaults.standard.object(forKey: "idex.seen")

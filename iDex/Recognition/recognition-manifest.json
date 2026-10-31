@@ -1,0 +1,9 @@
+{
+  "modelResource": "KantoClassifier",
+  "classCount": 151,
+  "inputSize": 224,
+  "confidenceThreshold": 0.25,
+  "logitMargin": 0.5,
+  "checkpointSHA256": "b24cf5301ad97bd1f1f721bffa3c40ec0242bf1efac68435a3752850f624fa6f",
+  "labelsSHA256": "13bd2345fa10f8a7d04363772bb6ef7871c0a6c0635d8c907a77e6cb93f78725"
+}

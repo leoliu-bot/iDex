@@ -37,6 +37,16 @@ enum RecognitionError: LocalizedError {
 actor PokemonClassifier {
     private var model: MLModel?
     private var labels: [Label] = []
+    private var confidenceThreshold = 0.25
+    private var logitMarginThreshold = 0.5
+
+    private struct Contract: Decodable {
+        let modelResource: String
+        let classCount: Int
+        let inputSize: Int
+        let confidenceThreshold: Double
+        let logitMargin: Double
+    }
 
     private struct Label: Decodable {
         let id: Int
@@ -59,7 +69,7 @@ actor PokemonClassifier {
               values.count == labels.count else { throw RecognitionError.invalidOutput }
         let logits = (0..<values.count).map { values[$0].doubleValue }
         #if DEBUG
-        print("iDex model: image \(image.width)x\(image.height), output type \(values.dataType.rawValue), logits range \(logits.min() ?? 0)...\(logits.max() ?? 0)")
+        print("Pokédex model: image \(image.width)x\(image.height), output type \(values.dataType.rawValue), logits range \(logits.min() ?? 0)...\(logits.max() ?? 0)")
         #endif
         guard logits.allSatisfy(\.isFinite), let maximum = logits.max() else {
             throw RecognitionError.invalidOutput
@@ -77,7 +87,7 @@ actor PokemonClassifier {
         let first = candidates[0]
         // Always offer the top candidate. Acceptance only controls automatic discovery
         // and narration; these relaxed heuristics are not an unknown-object detector.
-        let accepted = first.confidence >= 0.25 && margin >= 0.5 ? first : nil
+        let accepted = first.confidence >= confidenceThreshold && margin >= logitMarginThreshold ? first : nil
         return RecognitionResult(candidates: candidates, accepted: accepted, logitMargin: margin)
     }
 
@@ -85,13 +95,20 @@ actor PokemonClassifier {
         guard model == nil else { return }
         let interval = DexPerformance.begin("Model Load")
         defer { DexPerformance.end("Model Load", interval) }
-        guard let url = Bundle.main.url(forResource: "KantoClassifier", withExtension: "mlmodelc") else {
+        guard let contractURL = Bundle.main.url(forResource: "recognition-manifest", withExtension: "json"),
+              let contract = try? JSONDecoder().decode(Contract.self, from: Data(contentsOf: contractURL)),
+              contract.inputSize == 224, contract.classCount >= 2,
+              contract.confidenceThreshold.isFinite, (0...1).contains(contract.confidenceThreshold),
+              contract.logitMargin.isFinite, contract.logitMargin >= 0,
+              let url = Bundle.main.url(forResource: contract.modelResource, withExtension: "mlmodelc") else {
             throw RecognitionError.missingModel
         }
         guard let labelURL = Bundle.main.url(forResource: "pokemon_labels", withExtension: "json"),
               let loadedLabels = try? JSONDecoder().decode([Label].self, from: Data(contentsOf: labelURL)),
-              loadedLabels.count == 151,
-              Set(loadedLabels.map(\.id)) == Set(1...151) else {
+              loadedLabels.count == contract.classCount,
+              Set(loadedLabels.map(\.id)).count == loadedLabels.count,
+              loadedLabels.map(\.id) == loadedLabels.map(\.id).sorted(),
+              loadedLabels.allSatisfy({ $0.id > 0 && $0.id <= 1025 && !$0.name.isEmpty }) else {
             throw RecognitionError.invalidLabels
         }
         let configuration = MLModelConfiguration()
@@ -102,5 +119,7 @@ actor PokemonClassifier {
         #endif
         model = try MLModel(contentsOf: url, configuration: configuration)
         labels = loadedLabels
+        confidenceThreshold = contract.confidenceThreshold
+        logitMarginThreshold = contract.logitMargin
     }
 }

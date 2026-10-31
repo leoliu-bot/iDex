@@ -1,0 +1,44 @@
+{
+  "selectedFrom": "artifacts\\national\\runs\\efficientnet224-continued\\best.pt",
+  "checkpoint_sha256": "754e6db1fae534e9c225041d59dd31eef685fad39634fa9bc2d34cd8241ada1b",
+  "manifest_sha256": "44b8d94b0a271a645063ff3df299c5d8d176a7ac49b14fb6611fdeda72856c3e",
+  "arch": "efficientnet_b0",
+  "size": 224,
+  "classes": 1018,
+  "validationTop1": 0.9258997882851094,
+  "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
+  "validation": {
+    "top1": 0.9258997882851094,
+    "top3": 0.9682427664079041,
+    "macro_recall": 0.9159829419652602,
+    "accepted_known_accuracy": 0.9789217673287394,
+    "accepted_known_coverage": 0.870501058574453,
+    "unknown_far": 0.0,
+    "counts": {
+      "images": 2898,
+      "known": 2834,
+      "unknown": 64,
+      "groups": 1925,
+      "supported_classes": 1018,
+      "accepted": 2467
+    }
+  },
+  "test": {
+    "top1": 0.9252605102407474,
+    "top3": 0.9698167445203019,
+    "top5": 0.9798778296802012,
+    "macro_recall": 0.9182820944608764,
+    "accepted_known_accuracy": 0.9780719900703351,
+    "accepted_known_coverage": 0.8684872439813152,
+    "unknown_far": 0.046875,
+    "counts": {
+      "images": 2847,
+      "known": 2783,
+      "unknown": 64,
+      "groups": 1925,
+      "supported_classes": 1018,
+      "accepted": 2420
+    }
+  },
+  "limits": "Public grouped artwork tests, not independent physical-camera accuracy. Seven catalog species have insufficient training support. Core ML numerical and iOS validation pending the Mac build."
+}

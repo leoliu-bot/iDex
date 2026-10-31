@@ -1,72 +1,52 @@
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md)
 
-![iDex — Gotta scan ’em all.](docs/images/banner.png)
+# Pokédex
 
-# iDex
+A native, offline, pixel-style Pokédex for iPhone Duo.
 
-A pocket Pokédex for iPhone Duo. Point, scan, and pretend Professor Oak gave you a research grant.
+- **1,025 species, generations 1–9**: English, Simplified Chinese and Japanese
+  names, field notes, types, dimensions, base stats, 96×96 pixel sprites and cries.
+- Original red device shell, LCD palette, pixel fonts, scan animation and
+  cover/expanded layouts retained. Original 151 records and sprites preserved.
+- **A newly trained 1,018-class EfficientNet-B0**, with an ordered National Dex
+  label map. Seven species with insufficient independent training groups remain
+  archive-only; Settings lists them in the selected language.
+- Camera and imported photos stay on the iPhone. Low-confidence matches remain
+  candidates and are not automatically discovered or narrated.
+- Search by any supported language, exact `#1025` numbers or localized types;
+  browse continuously across the National Dex. Existing discovery keys and app
+  installation identifier are retained.
 
-Native SwiftUI · English / 简体中文 / 日本語 · On-device Core ML
+## Measured public diagnostic
 
-## A little field trip
+The selected checkpoint was trained for 8 + 12 epochs on a local RTX 4080 SUPER.
+Untouched grouped public test: **92.53% Top-1**, **96.98% Top-3**, and **97.81%
+accuracy among accepted known inputs**, with **86.85% known acceptance coverage**.
+The small 64-image natural-negative test had 3 false accepts. These are public
+artwork diagnostics, **not physical-camera accuracy**. Mac conversion and iOS
+validation are separate release gates. See `TrainingResources/training-summary.json`.
 
-| Scan it | Read in English | 简体中文 | 日本語 |
-| :---: | :---: | :---: | :---: |
-| <img src="docs/screenshots/scanner-result-en.png" width="200" alt="English scanner identifying the bundled Pikachu sample"> | <img src="docs/screenshots/record-en.png" width="200" alt="Pikachu record with types, dimensions and field notes"> | <img src="docs/screenshots/record-zh.png" width="200" alt="Charizard record in Simplified Chinese"> | <img src="docs/screenshots/record-ja.png" width="200" alt="Charizard record in Japanese"> |
+[Detailed Chinese engineering notes](docs/national-expansion.zh-CN.md)
 
-No wild Pokémon were inconvenienced.
+## Build
 
-[Before the scan](docs/screenshots/scanner-sample-en.png) · [Search the archive](docs/screenshots/catalog-search-en.png)
+Use **Build Pokédex National IPA** in GitHub Actions on `national-pokedex`.
+It exports the selected tensor checkpoint on Mac, requires FP32 numerical parity,
+runs iOS tests, and creates `Pokedex-IPA`. The app needs no server, API key or runtime
+downloads. After the generated Core ML model is committed, Xcode 27.1 can also build
+`iDex.xcodeproj` with the `iDex` scheme (iOS 27+, hinge APIs on iOS 27.1+).
 
-## What's in the bag?
+## Credits and licenses
 
-- **151 Kanto Pokémon.** Pixel sprites, stats, field notes, and cries.
-- **Scan a photo or use the camera.** Recognition runs on your iPhone; photos stay in memory.
-- **Unfold for more room.** The archive sits beside the scanner on the inner display.
-- **English, 简体中文, and 日本語.** All 151 entries include localized names, descriptions, types, and stats. Search by name, number, or type; listen using installed system voices.
-- **A local discovery log.** Your progress survives closing the app. Your research grant remains imaginary.
+Original application: **Zihang Huang / iDex**, [MIT](LICENSE).
+Pokémon, Nintendo, Creatures, GAME FREAK and The Pokémon Company retain their
+content and trademark rights; this remains an unofficial fan project.
+Original pixel art: Pokémon Database. National Gen 5 art: PokéAPI / credited
+Smogon contributors. Data: PokéAPI plus official localized Pokédex pages.
+Cries: PokéAPI/cries. Fonts: Press Start 2P and Fusion Pixel, SIL OFL 1.1.
+TorchVision: retained BSD notice. Model/data contributions retain their separate
+noncommercial/share-alike terms.
 
-## Choose your language
-
-Open **Settings → Language** and choose **English**, **简体中文**, or **日本語**. The first launch follows your preferred supported system language, and your selection is saved. Controls, accessibility labels, Pokédex entries, and narration follow the selected language. Names are searchable in all three languages; type search uses the selected language. Narration uses installed iOS voices.
-
-## Take it for a spin
-
-You'll need **Xcode 27.1** and **iOS 27+**. Hinge observation uses iOS 27.1 APIs.
-
-```sh
-open iDex.xcodeproj
-```
-
-Select **iDex → iPhone Duo**, then Run. The trained FP32 model is included in this Git repository; clone normally, with no LFS or separate model download. No packages, API keys, servers, or runtime downloads to configure. In Simulator, tap **Scan** to identify the sample Pikachu. On a device, allow camera access or import a photo.
-
-Run the tests:
-
-```sh
-xcodebuild test -project iDex.xcodeproj -scheme iDex \
-  -destination 'platform=iOS Simulator,name=iPhone Duo'
-```
-
-## Is it Professor Oak accurate?
-
-Professor Oak has declined to comment. The model knows the original 151 species and can still mistake unrelated objects for Pokémon. Scores aren't calibrated probabilities; low-confidence guesses don't automatically become discoveries or trigger narration. Real camera accuracy and physical hinge behavior still need device testing.
-
-## Under the hood
-
-SwiftUI, AVFoundation, Core ML, and system speech. Everything runs locally.
-
-[Development guide](docs/development.md) · [Model notes](iDex/Recognition/MODEL.md) · [Performance](docs/performance.md) · [Screenshots & graphics](docs/images/README.md)
-
-## License
-
-iDex's original app source code and supporting scripts use the [MIT License](LICENSE), copyright (c) 2026 Zihang Huang. See [NOTICE.md](NOTICE.md) for scope and exclusions.
-
-The packaged model is excluded; contributor trained-model rights are offered under CC BY-NC-SA 4.0 as described in the [model notice](iDex/Recognition/MODEL_NOTICE.md). Pokémon content and external training datasets are also excluded. See [asset credits](iDex/Catalog/ATTRIBUTION.md); bundled fonts retain the [Press Start 2P](iDex/Resources/Fonts/PressStart2P-OFL.txt) and [Fusion Pixel](iDex/Resources/Fonts/FusionPixel-OFL.txt) OFL licenses.
-
-## Thanks, humans
-
-Sprites: [Pokémon Database](https://pokemondb.net/sprites). Data and cries: [PokéAPI](https://github.com/PokeAPI/pokeapi). Model: locally trained EfficientNet-B0 (FP32), built with [TorchVision](https://docs.pytorch.org/vision/stable/models/efficientnet.html). Fonts: Press Start 2P and Fusion Pixel (SIL OFL 1.1).
-
-[Full asset credits](iDex/Catalog/ATTRIBUTION.md) · [Model provenance](iDex/Recognition/MODEL.md)
-
-An unofficial fan project. Pokémon belongs to Nintendo, Creatures, GAME FREAK, and The Pokémon Company. iDex is not affiliated with or endorsed by them.
+[Asset attribution](iDex/Catalog/ATTRIBUTION.md) ·
+[Model/data notice](iDex/Recognition/MODEL_NOTICE.md) · [License scope](NOTICE.md) ·
+[National training and validation](scripts/national/README.md)

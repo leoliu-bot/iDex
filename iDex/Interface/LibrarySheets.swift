@@ -38,7 +38,7 @@ struct CatalogSheet: View {
                 }
             }
             .background(DexTheme.charcoal)
-            .navigationTitle(store.text("Kanto archive", "关都图鉴", "カントー図鑑"))
+            .navigationTitle(store.text("National Pokédex", "全国图鉴", "全国図鑑"))
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: store.text("Name, number or type", "名称、编号或属性", "名前・番号・タイプ"))
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button(store.text("Done", "完成", "完了")) { store.showingCatalog = false }.accessibilityIdentifier("settings-done") } }
@@ -82,14 +82,20 @@ struct SettingsSheet: View {
                     Label(store.text("Point at a Pokémon, then identify.", "将取景器对准宝可梦，轻点识别。", "ポケモンにカメラを向けて、スキャンします。"), systemImage: "viewfinder")
                     Label(store.text("Unfold to reveal the research panel.", "展开屏幕，查看内部研究面板。", "画面を開くと、リサーチパネルが表示されます。"), systemImage: "book")
                     Label(store.text("Photos and recognition stay on your iPhone.", "照片与识别过程均留在你的 iPhone 上。", "写真と識別処理は、すべて iPhone 内で完結します。"), systemImage: "lock.shield")
-                    Text(store.text("The bundled model recognizes the original 151 Kanto Pokémon. Uncertain scans ask you to try again. Samples use the same model as your camera.", "内置模型可识别最初的151种关都宝可梦。匹配不确定时会提示重试。样本与相机使用相同的识别模型。", "内蔵モデルは、カントー地方の最初の151種のポケモンを識別します。結果が不確かな場合は、再スキャンをお試しください。サンプルとカメラは同じ識別モデルを使います。"))
+                    Text(store.text("The offline archive contains \(PokemonCatalog.shared.entries.count) species. The bundled model covers \(RecognitionScope.speciesIDs.count) species. Uncertain scans remain best guesses and are not automatically discovered.", "离线图鉴收录\(PokemonCatalog.shared.entries.count)种宝可梦，内置模型覆盖\(RecognitionScope.speciesIDs.count)种。低置信度结果仅作为候选，不会自动计入已发现。", "オフライン図鑑は\(PokemonCatalog.shared.entries.count)種を収録し、内蔵モデルは\(RecognitionScope.speciesIDs.count)種に対応します。確信度の低い候補は、自動的に発見済みになりません。"))
                         .font(.footnote).foregroundStyle(.secondary)
+                    let archiveOnly = PokemonCatalog.shared.entries.filter { !RecognitionScope.speciesIDs.contains($0.id) }
+                    if !archiveOnly.isEmpty {
+                        Text(store.text("Archive only: ", "仅支持图鉴浏览：", "図鑑閲覧のみ：") + archiveOnly.map { $0.name(in: store.language) }.joined(separator: "、"))
+                            .font(.footnote).foregroundStyle(.secondary)
+                    }
                 }
                 Section(store.text("Credits", "制作信息", "クレジット")) {
-                    Text("iDex · FIELD UNIT 001").font(DexTheme.pixel(8))
+                    Text("Pokédex · FIELD UNIT 001").font(DexTheme.pixel(8))
                     Text(store.text("An independent fan project. Pokémon and its characters belong to Nintendo, Creatures, and GAME FREAK. Not affiliated with or endorsed by them.", "独立粉丝项目。宝可梦及相关角色归任天堂、Creatures及GAME FREAK所有。本项目与其无关联，亦未获得其认可。", "個人によるファンプロジェクトです。ポケモンおよび関連キャラクターの権利は、任天堂・クリーチャーズ・ゲームフリークに帰属します。本プロジェクトは、各社との提携や公認を受けていません。"))
                         .font(.footnote).foregroundStyle(.secondary)
                     Link(store.text("Sprites · Pokémon Database", "像素图 · Pokémon Database", "スプライト · Pokémon Database"), destination: URL(string: "https://pokemondb.net/sprites")!)
+                    Link(store.text("National pixel sprites · PokéAPI / Smogon", "全国像素图 · PokéAPI / Smogon", "全国スプライト · PokéAPI / Smogon"), destination: URL(string: "https://github.com/PokeAPI/sprites")!)
                     Link(store.text("Pokédex data · PokéAPI", "图鉴数据 · PokéAPI", "図鑑データ · PokéAPI"), destination: URL(string: "https://github.com/PokeAPI/pokeapi")!)
                     Text("Press Start 2P · Fusion Pixel · SIL OFL 1.1").font(.caption).foregroundStyle(.secondary)
                 }
