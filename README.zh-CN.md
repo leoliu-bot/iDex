@@ -27,13 +27,15 @@ Core ML 数值一致性和 iOS 测试由 Mac 构建执行，结果与桌面训�
 [训练报告](TrainingResources/training-summary.json) ·
 [训练覆盖限制](TrainingResources/training-coverage.json)
 
-## Build
+## 构建与安装
 
-Use **Build Pokédex National IPA** in GitHub Actions on `national-pokedex`.
-It exports the selected tensor checkpoint on Mac, requires FP32 numerical parity,
-runs iOS tests, and creates `Pokedex-IPA`. The app needs no server, API key or runtime
-downloads. After the generated Core ML model is committed, Xcode 27.1 can also build
-`iDex.xcodeproj` with the `iDex` scheme (iOS 27+, hinge APIs on iOS 27.1+).
+在 `national-pokedex` 分支运行 GitHub Actions 的 **Build Pokédex National IPA**。
+云端 Mac 会转换选定的训练检查点，通过 FP32 数值一致性和 iOS 测试后，生成
+`Pokedex-IPA` 安装包。Windows 用户可沿用之前成功的签名安装流程；无需本地 Mac。
+应用运行时不需要服务器、API 密钥或额外下载。
+
+生成的 Core ML 模型提交到分支后，也可使用 Xcode 27.1 打开 `iDex.xcodeproj`，
+选择 `iDex` scheme 构建。应用支持 iOS 27 及以上，折叠角度接口要求 iOS 27.1 及以上。
 
 ## Credits and licenses
 

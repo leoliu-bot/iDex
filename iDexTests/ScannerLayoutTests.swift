@@ -40,10 +40,27 @@ struct ScannerLayoutTests {
 
         host.rootView = ScannerLights(isScanning: true, isSpeaking: true)
             .padding(24).background(DexTheme.red)
-        try await Task.sleep(for: .milliseconds(100))
-        let speaking = snapshot()
-        try await Task.sleep(for: .milliseconds(300))
-        #expect(snapshot().pngData() == speaking.pngData())
+        host.view.layoutIfNeeded()
+        // Hosting updates are asynchronous on the simulator. Wait for the
+        // speaking appearance to settle, then observe longer than a full
+        // three-light chase. Compare pixels, not PNG encoder output.
+        func pixels(_ image: UIImage) throws -> Data {
+            try #require(image.cgImage?.dataProvider?.data) as Data
+        }
+        var speaking = snapshot()
+        var settled = false
+        for _ in 0..<15 {
+            try await Task.sleep(for: .milliseconds(100))
+            let next = snapshot()
+            if try pixels(next) == pixels(speaking) { settled = true; break }
+            speaking = next
+        }
+        #expect(settled)
+        let speakingPixels = try pixels(speaking)
+        for _ in 0..<4 {
+            try await Task.sleep(for: .milliseconds(220))
+            #expect(try pixels(snapshot()) == speakingPixels)
+        }
         Attachment.record(speaking, named: "scanner-chase-stopped-for-speech", as: .png)
     }
 
