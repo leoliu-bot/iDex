@@ -1,0 +1,65 @@
+name: Build iDex IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Check Xcode and iOS SDK
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+
+      - name: Build for a physical iPhone without signing
+        run: |
+          set -euo pipefail
+          xcodebuild build \
+            -project iDex.xcodeproj \
+            -scheme iDex \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY='' \
+            DEVELOPMENT_TEAM=''
+
+      - name: Package unsigned IPA
+        run: |
+          set -euo pipefail
+          app='build/Build/Products/Release-iphoneos/iDex.app'
+          test -d "$app"
+          /usr/libexec/PlistBuddy -c 'Print :MinimumOSVersion' "$app/Info.plist"
+          mkdir -p output/Payload
+          cp -R "$app" output/Payload/
+          cd output
+          zip -q -r iDex-unsigned.ipa Payload
+          unzip -tq iDex-unsigned.ipa
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: iDex-IPA
+          path: output/iDex-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
