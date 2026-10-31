@@ -40,5 +40,26 @@
       "accepted": 2420
     }
   },
-  "limits": "Public grouped artwork tests, not independent physical-camera accuracy. Seven catalog species have insufficient training support. Core ML numerical and iOS validation pending the Mac build."
+  "limits": "Public grouped artwork tests, not independent physical-camera accuracy. Seven catalog species lack sufficient independent training support. The original Farfetchd pixel fixture remains unconfirmed by the frozen model. Core ML parity, iOS simulator tests, and the iPhone Release build passed.",
+  "appleValidation": {
+    "run": "https://github.com/leoliu-bot/iDex/actions/runs/41234347180",
+    "result": "Passed",
+    "coreML": {
+      "fixturesPerComputePolicy": 19,
+      "checks": 38,
+      "maximumAbsoluteLogitError": 3.24249267578125e-05,
+      "packagedWeightsSHA256": "5349f3b1a226aaade6063703772427afbce8a8985c8666be522e30815f6c7110"
+    },
+    "iOS": {
+      "platform": "iOS Simulator",
+      "device": "iPhone Duo",
+      "osVersion": "27.1",
+      "uniqueTests": 35,
+      "totalTestRuns": 55,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": 0
+    },
+    "physicalCamera": "Not measured. Public artwork tests and Mac/simulator validation do not establish physical-camera accuracy."
+  }
 }

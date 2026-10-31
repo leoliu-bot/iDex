@@ -1,6 +1,29 @@
-> Historical Kanto model reference. Its 151-class weights and physical timings do not describe the new National classifier. See [National training](../../scripts/national/README.md) and [the selected training summary](../../TrainingResources/training-summary.json).
+# Pokédex National image classifier
 
-# iDex trained image classifier
+The current app bundles `NationalClassifier.mlpackage`: a locally trained
+EfficientNet-B0 FP32 classifier with 1,018 ordered National Dex labels. The archive
+contains 1,025 species. Seven species lack sufficient independent training groups;
+Settings lists them in the selected language. Recognition stays offline.
+
+The selected tensor checkpoint, label order and acceptance thresholds are bound
+by [recognition-manifest.json](recognition-manifest.json). Training and the public
+grouped test are documented in [National training](../../scripts/national/README.md)
+and [the training summary](../../TrainingResources/training-summary.json).
+
+[Apple validation](../../TrainingResources/apple-validation.json) passed 38 source/
+Core ML numerical checks across CPU-only and all-compute policies, with a maximum
+absolute logit difference of 0.000032425. All 35 simulator tests (55 runs including
+parameters) and the unsigned iPhone Release build passed in the linked build run.
+These checks do not measure physical-camera accuracy, hinge behavior or latency.
+The original Farfetch'd sprite remains an explicit unconfirmed-match regression.
+
+## Historical Kanto reference
+
+The following records the upstream 151-class artifact and its physical timings.
+`KantoClassifier.mlpackage` is retained in Git history, rather than bundled with
+the National edition. These measurements do not describe the National model.
+
+### iDex trained image classifier
 
 iDex bundles a locally trained **EfficientNet-B0 FP32 Core ML model** for the **151 Kanto species**. The complete package is tracked in Git at `KantoClassifier.mlpackage`; a normal clone or GitHub source ZIP includes it. The app performs inference offline and does not download weights or upload photos at runtime.
 

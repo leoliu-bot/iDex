@@ -1,0 +1,24 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "torch": "2.13.0",
+  "coremltools": "9.0",
+  "deployment": "iOS18",
+  "size": 224,
+  "trace_max_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "models": [
+    {
+      "precision": "fp32",
+      "path": "artifacts/national/export/NationalCandidate-fp32.mlpackage"
+    },
+    {
+      "precision": "fp16",
+      "path": "artifacts/national/export/NationalCandidate-fp16.mlpackage"
+    }
+  ],
+  "parity": "PENDING: execute apple/ on Mac + physical iPhone; conversion is not inference evidence"
+}

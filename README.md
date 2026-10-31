@@ -24,7 +24,10 @@ Untouched grouped public test: **92.53% Top-1**, **96.98% Top-3**, and **97.81%
 accuracy among accepted known inputs**, with **86.85% known acceptance coverage**.
 The small 64-image natural-negative test had 3 false accepts. These are public
 artwork diagnostics, **not physical-camera accuracy**. Mac conversion and iOS
-validation are separate release gates. See `TrainingResources/training-summary.json`.
+validation are separate release gates. The Mac release passed 38 numerical checks
+and all 35 simulator tests (55 parameterized/ordinary runs), then produced the
+unsigned iPhone IPA. See [Apple validation](TrainingResources/apple-validation.json)
+and `TrainingResources/training-summary.json`.
 
 [Detailed Chinese engineering notes](docs/national-expansion.zh-CN.md)
 

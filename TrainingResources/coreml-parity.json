@@ -1,0 +1,235 @@
+{
+  "passed": true,
+  "fixturesPerPolicy": 19,
+  "checks": [
+    {
+      "fixture": "1",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 3.24249267578125e-05
+    },
+    {
+      "fixture": "6",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 3.0517578125e-05
+    },
+    {
+      "fixture": "7",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.193450927734375e-05
+    },
+    {
+      "fixture": "25",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.52587890625e-05
+    },
+    {
+      "fixture": "151",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.574920654296875e-05
+    },
+    {
+      "fixture": "152",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.3828277587890625e-05
+    },
+    {
+      "fixture": "248",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.52587890625e-05
+    },
+    {
+      "fixture": "384",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.288818359375e-05
+    },
+    {
+      "fixture": "445",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.288818359375e-05
+    },
+    {
+      "fixture": "658",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.2411346435546875e-05
+    },
+    {
+      "fixture": "700",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.765655517578125e-05
+    },
+    {
+      "fixture": "778",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.47955322265625e-05
+    },
+    {
+      "fixture": "906",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 3.0517578125e-05
+    },
+    {
+      "fixture": "1000",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.0967254638671875e-05
+    },
+    {
+      "fixture": "1025",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.09808349609375e-05
+    },
+    {
+      "fixture": "solid-0",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.780929207801819e-05
+    },
+    {
+      "fixture": "solid-127",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.6689300537109375e-05
+    },
+    {
+      "fixture": "solid-255",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 7.152557373046875e-06
+    },
+    {
+      "fixture": "noise",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 2.0503997802734375e-05
+    },
+    {
+      "fixture": "1",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 3.24249267578125e-05
+    },
+    {
+      "fixture": "6",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 3.0517578125e-05
+    },
+    {
+      "fixture": "7",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.193450927734375e-05
+    },
+    {
+      "fixture": "25",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.52587890625e-05
+    },
+    {
+      "fixture": "151",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.574920654296875e-05
+    },
+    {
+      "fixture": "152",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.3828277587890625e-05
+    },
+    {
+      "fixture": "248",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.52587890625e-05
+    },
+    {
+      "fixture": "384",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.288818359375e-05
+    },
+    {
+      "fixture": "445",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.288818359375e-05
+    },
+    {
+      "fixture": "658",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.2411346435546875e-05
+    },
+    {
+      "fixture": "700",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.765655517578125e-05
+    },
+    {
+      "fixture": "778",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.47955322265625e-05
+    },
+    {
+      "fixture": "906",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 3.0517578125e-05
+    },
+    {
+      "fixture": "1000",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.0967254638671875e-05
+    },
+    {
+      "fixture": "1025",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.09808349609375e-05
+    },
+    {
+      "fixture": "solid-0",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.780929207801819e-05
+    },
+    {
+      "fixture": "solid-127",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.6689300537109375e-05
+    },
+    {
+      "fixture": "solid-255",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 7.152557373046875e-06
+    },
+    {
+      "fixture": "noise",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 2.0503997802734375e-05
+    }
+  ],
+  "physicalIPhone": "Not measured by this Mac numerical test."
+}

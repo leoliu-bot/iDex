@@ -1,0 +1,16 @@
+{
+  "file": "Pokedex-National-unsigned.ipa",
+  "bytes": 75625931,
+  "sha256": "21426aa179318327c43afbbae692712b4979a91a9c7542d803fdb147e6690698",
+  "displayName": "Pok\u00e9dex",
+  "bundleIdentifier": "zihanghuang.iDex",
+  "version": "1.1",
+  "build": "2",
+  "minimumOS": "27.0",
+  "catalogSpecies": 1025,
+  "recognitionSpecies": 1018,
+  "cries": 1025,
+  "model": "NationalClassifier",
+  "signing": "Unsigned; sign with the previously established installation method.",
+  "buildRun": "https://github.com/leoliu-bot/iDex/actions/runs/41234347180"
+}

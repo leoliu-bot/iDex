@@ -45,7 +45,15 @@ epoch。独立样本分组在训练前完成；最终测试集只在检查点和
 
 Windows 负责训练，GitHub 的 Mac 构建负责 Core ML 转换、数值一致性、iOS 测试及打包。
 运行 **Build Pokédex National IPA**，成功后下载 `Pokedex-IPA`，按之前跑通的流程签名安装。
-当前阶段的实际验证结果请查阅 `TrainingResources` 中的报告，转换前不会把候选模型当作已部署模型。
+已完成的 [Mac 构建与验证](https://github.com/leoliu-bot/iDex/actions/runs/41234347180)：
+
+- 38 次源模型/Core ML 数值比较全部通过，最大绝对 logit 误差为 0.000032425。
+- 35 项 iOS 模拟器测试、含参数共 55 次运行全部通过，无失败或跳过。
+- 三语搜索、四位编号、新像素图、封面与展开布局、旧发现记录键及声音资源已检查。
+- 已生成 iPhone Release IPA，并确认包内含全国图鉴、1018 类新模型和 1025 个叫声。
+
+验证记录分别见 `TrainingResources/apple-validation.json`、`coreml-parity.json` 和
+`ipa-verification.json`；实际权重已经随工程提交。实机相机准确率、铰链和性能仍需在手机上验证。
 
 ## 资源来源
 

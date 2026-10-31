@@ -21,7 +21,9 @@
 留出的公开分组测试集：Top-1 **92.53%**，Top-3 **96.98%**；
 被接受的已知输入准确率 **97.81%**，接受覆盖率 **86.85%**。
 64 张自然物体负样本中误接受 3 张。该小规模公开图片诊断不代表真实相机准确率。
-Core ML 数值一致性和 iOS 测试由 Mac 构建执行，结果与桌面训练分别记录。
+Mac 上的 38 次 Core ML 数值比较、35 项 iOS 模拟器测试（含参数共 55 次运行）及
+iPhone Release 构建已全部通过；[验证记录](TrainingResources/apple-validation.json)
+与桌面训练结果分别保存。
 
 [工程分析与扩展说明](docs/national-expansion.zh-CN.md) ·
 [训练报告](TrainingResources/training-summary.json) ·
