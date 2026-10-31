@@ -1,6 +1,8 @@
 name: Build Pokédex National IPA
 
 on:
+  push:
+    branches: [national-pokedex]
   workflow_dispatch:
 
 permissions:
