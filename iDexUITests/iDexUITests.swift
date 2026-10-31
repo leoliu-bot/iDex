@@ -184,6 +184,24 @@ final class iDexUITests: XCTestCase {
         attachScreenshot("charizard-archive", app: app)
     }
 
+    func testNationalCatalogShowsFourDigitEntriesAndNewPixelSprites() throws {
+        let app = launchInEnglish()
+        openCatalog(in: app)
+        let search = app.searchFields.firstMatch
+        if !search.exists { app.buttons["Search"].tap() }
+        XCTAssertTrue(search.waitForExistence(timeout: 5))
+        search.tap()
+        search.typeText("#1025")
+        XCTAssertTrue(app.buttons["pokemon-1025"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["pokemon-25"].exists)
+        attachScreenshot("national-search-1025", app: app)
+        app.buttons["pokemon-1025"].tap()
+        XCTAssertTrue(app.staticTexts["pokemon-name"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["pokemon-name"].label, "Pecharunt")
+        XCTAssertEqual(app.staticTexts["entry-number"].label, "No. 1025")
+        attachScreenshot("national-pecharunt-record", app: app)
+    }
+
     func testTurningPhoneDoesNotRotateScannerOrPresentations() throws {
         XCUIDevice.shared.orientation = .portrait
         defer { XCUIDevice.shared.orientation = .portrait }
