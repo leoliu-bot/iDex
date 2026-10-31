@@ -20,5 +20,5 @@
       "path": "artifacts/national/export/NationalCandidate-fp16.mlpackage"
     }
   ],
-  "parity": "PENDING: execute apple/ on Mac + physical iPhone; conversion is not inference evidence"
+  "parity": "Conversion-only receipt. Subsequent Mac numerical validation passed; see coreml-parity.json and apple-validation.json. Physical iPhone evaluation is not measured."
 }

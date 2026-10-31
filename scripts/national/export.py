@@ -1,8 +1,9 @@
 """Mac export handoff. Never overwrite the production model or its labels.
 
 Run with a separately installed compatible PyTorch/torchvision/coremltools stack.
-PyTorch CPU and trace parity are checked here; Core ML image parity is verified
-by apple/ harness on the exact Apple-prepared final pixels.
+PyTorch CPU and trace parity are checked here. validate_and_publish.py checks
+source/Core ML outputs on identical RGB fixtures; iOS inference tests follow.
+Physical-camera preprocessing and device behavior require separate evaluation.
 """
 import argparse
 import hashlib
@@ -46,7 +47,7 @@ def main():
         results.append(dict(precision=name,path=str(path)))
     (a.out/'labels.json').write_text(json.dumps(state['labels'],indent=2))
     record=dict(platform=platform.platform(),torch=torch.__version__,coremltools=ct.__version__,deployment=a.deployment,size=size,trace_max_errors=capture,models=results,
-                parity='PENDING: execute apple/ on Mac + physical iPhone; conversion is not inference evidence')
+                parity='Conversion only: run scripts/national/validate_and_publish.py and consult coreml-parity.json. Physical iPhone evaluation is separate.')
     (a.out/'export_receipt.json').write_text(json.dumps(record,indent=2));print(json.dumps(record,indent=2))
 
 
