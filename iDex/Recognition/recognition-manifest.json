@@ -1,9 +1,9 @@
 {
-  "modelResource": "KantoClassifier",
-  "classCount": 151,
+  "modelResource": "NationalClassifier",
+  "classCount": 1018,
   "inputSize": 224,
-  "confidenceThreshold": 0.25,
+  "confidenceThreshold": 0.35,
   "logitMargin": 0.5,
-  "checkpointSHA256": "b24cf5301ad97bd1f1f721bffa3c40ec0242bf1efac68435a3752850f624fa6f",
-  "labelsSHA256": "13bd2345fa10f8a7d04363772bb6ef7871c0a6c0635d8c907a77e6cb93f78725"
+  "checkpointSHA256": "754e6db1fae534e9c225041d59dd31eef685fad39634fa9bc2d34cd8241ada1b",
+  "labelsSHA256": "812dfedb1884ce1dba5f7b2497702c3f09f094550d0ac5f1f1da8126d9ca4005"
 }
