@@ -92,7 +92,7 @@ struct DeviceAudioTests {
         backend.finishCry(at: 1)
         #expect(await waitUntil { backend.spokenCount == 1 })
         #expect(backend.latestSpeechText?.hasPrefix("喷火龙") == true)
-        #expect(backend.latestLanguageCode == "zh-CN")
+        #expect(backend.latestLanguageCode == "zh-TW")
         audio.suspend()
     }
 
@@ -308,7 +308,7 @@ nonisolated private final class AudioPlaybackSpy: DeviceAudioPlayback, @unchecke
         guard !request.isCancelled else { return }
         lock.withLock { cues.append(cue) }
     }
-    func speak(_ text: String, languageCode: String, request: AudioPlaybackRequest) {
+    func speak(_ text: String, languageCode: String, narrator: NarratorVoice, request: AudioPlaybackRequest) {
         guard !request.isCancelled else { return }
         lock.withLock {
             speechCount += 1

@@ -210,9 +210,9 @@ final class DexStore {
     func step(_ delta: Int) {
         audio.stopSpeaking()
         cancelScan()
-        let entries = PokemonCatalog.shared.entries
+        let entries = PokemonCatalog.shared.speciesEntries
         guard let selected, !entries.isEmpty,
-              let index = entries.firstIndex(where: { $0.id == selected.id }) else { return }
+              let index = entries.firstIndex(where: { $0.id == selected.nationalID }) else { return }
         let next = ((index + delta) % entries.count + entries.count) % entries.count
         self.selected = entries[next]
         confidence = nil

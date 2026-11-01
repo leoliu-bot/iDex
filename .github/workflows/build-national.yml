@@ -53,6 +53,9 @@ jobs:
             -only-testing:iDexTests/SelectedModelTests \
             -only-testing:iDexTests/PokemonCryTests \
             -only-testing:iDexTests/ScannerLayoutTests \
+            -only-testing:iDexTests/FormCatalogTests \
+            -only-testing:iDexTests/NarratorVoiceTests \
+            -only-testing:iDexTests/DeviceAudioTests \
             -only-testing:iDexUITests \
             CODE_SIGNING_ALLOWED=NO
       - name: Export readable test results and screenshots

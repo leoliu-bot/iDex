@@ -39,6 +39,7 @@ actor PokemonClassifier {
     private var labels: [Label] = []
     private var confidenceThreshold = 0.25
     private var logitMarginThreshold = 0.5
+    private var confirmedEntryIDs: Set<Int>?
 
     private struct Contract: Decodable {
         let modelResource: String
@@ -46,6 +47,7 @@ actor PokemonClassifier {
         let inputSize: Int
         let confidenceThreshold: Double
         let logitMargin: Double
+        let confirmedEntryIDs: [Int]?
     }
 
     private struct Label: Decodable {
@@ -87,7 +89,8 @@ actor PokemonClassifier {
         let first = candidates[0]
         // Always offer the top candidate. Acceptance only controls automatic discovery
         // and narration; these relaxed heuristics are not an unknown-object detector.
-        let accepted = first.confidence >= confidenceThreshold && margin >= logitMarginThreshold ? first : nil
+        let confirmable = confirmedEntryIDs?.contains(first.dexID) ?? true
+        let accepted = confirmable && first.confidence >= confidenceThreshold && margin >= logitMarginThreshold ? first : nil
         return RecognitionResult(candidates: candidates, accepted: accepted, logitMargin: margin)
     }
 
@@ -108,7 +111,7 @@ actor PokemonClassifier {
               loadedLabels.count == contract.classCount,
               Set(loadedLabels.map(\.id)).count == loadedLabels.count,
               loadedLabels.map(\.id) == loadedLabels.map(\.id).sorted(),
-              loadedLabels.allSatisfy({ $0.id > 0 && $0.id <= 1025 && !$0.name.isEmpty }) else {
+              loadedLabels.allSatisfy({ $0.id > 0 && $0.id < 200000 && !$0.name.isEmpty }) else {
             throw RecognitionError.invalidLabels
         }
         let configuration = MLModelConfiguration()
@@ -121,5 +124,6 @@ actor PokemonClassifier {
         labels = loadedLabels
         confidenceThreshold = contract.confidenceThreshold
         logitMarginThreshold = contract.logitMargin
+        confirmedEntryIDs = contract.confirmedEntryIDs.map(Set.init)
     }
 }

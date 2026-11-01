@@ -76,9 +76,30 @@ struct Pokemon: Identifiable, Codable, Hashable {
     let japaneseGenus: String
     let stats: [PokemonStat]
 
-    var number: String { String(format: "%03d", id) }
-    var spriteName: String { "pokemon-\(number)" }
+    let speciesID: Int?
+    let sourcePokemonID: Int?
+    let sourceFormID: Int?
+    let formIdentifier: String?
+    let formOrder: Int?
+    let englishFormName: String?
+    let chineseFormName: String?
+    let japaneseFormName: String?
+    let spriteAsset: String?
+    let spriteReferenceOnly: Bool?
+    let cryID: Int?
+    let aliases: [String]?
+    let visualAliasOf: Int?
+
+    var nationalID: Int { speciesID ?? id }
+    var number: String { String(format: "%03d", nationalID) }
+    var spriteName: String { spriteAsset ?? "pokemon-\(number)" }
+    var cryResourceID: Int { cryID ?? nationalID }
+    var isAlternateForm: Bool { speciesID != nil }
     var totalStats: Int { stats.reduce(0) { $0 + $1.value } }
+
+    func formName(in language: AppLanguage) -> String {
+        language.text(englishFormName ?? "Standard form", chineseFormName ?? "普通形态", japaneseFormName ?? "通常のすがた")
+    }
 
     func name(in language: AppLanguage) -> String {
         language.text(englishName, chineseName, japaneseName)
@@ -109,7 +130,7 @@ struct Pokemon: Identifiable, Codable, Hashable {
         "ground": "地面", "rock": "岩石", "bug": "虫", "ghost": "幽灵",
         "steel": "钢", "fire": "火", "water": "水", "grass": "草",
         "electric": "电", "psychic": "超能力", "ice": "冰", "dragon": "龙",
-        "dark": "恶", "fairy": "妖精"
+        "dark": "恶", "fairy": "妖精", "unknown": "未知"
     ]
 
     private static let japaneseTypeNames = [
@@ -117,24 +138,27 @@ struct Pokemon: Identifiable, Codable, Hashable {
         "ground": "じめん", "rock": "いわ", "bug": "むし", "ghost": "ゴースト",
         "steel": "はがね", "fire": "ほのお", "water": "みず", "grass": "くさ",
         "electric": "でんき", "psychic": "エスパー", "ice": "こおり", "dragon": "ドラゴン",
-        "dark": "あく", "fairy": "フェアリー"
+        "dark": "あく", "fairy": "フェアリー", "unknown": "？？？"
     ]
 
     func spokenEntry(in language: AppLanguage) -> String {
         if language == .zhHans {
-            return "\(chineseName)。全国图鉴编号\(id)。\(chineseGenus)。属性，\(typeNames(in: language).joined(separator: "，"))。\(chineseDescription)"
+            return "\(chineseName)。全国图鉴编号\(nationalID)。\(chineseGenus)。属性，\(typeNames(in: language).joined(separator: "，"))。\(chineseDescription)"
         }
         if language == .ja {
-            return "\(japaneseName)。全国図鑑番号\(id)。\(japaneseGenus)。\(typeNames(in: language).joined(separator: "、"))タイプ。\(japaneseDescription)"
+            return "\(japaneseName)。全国図鑑番号\(nationalID)。\(japaneseGenus)。\(typeNames(in: language).joined(separator: "、"))タイプ。\(japaneseDescription)"
         }
-        return "\(englishName). Pokédex number \(id). \(englishGenus). \(typeNames(in: language).joined(separator: " and ")) type. \(englishDescription)"
+        return "\(englishName). Pokédex number \(nationalID). \(englishGenus). \(typeNames(in: language).joined(separator: " and ")) type. \(englishDescription)"
     }
 }
 
 struct PokemonCatalog {
     static let shared = PokemonCatalog()
     let entries: [Pokemon]
+    let speciesEntries: [Pokemon]
+    var additionalFormCount: Int { entries.count - speciesEntries.count }
     private let entriesByID: [Int: Pokemon]
+    private let entriesBySpecies: [Int: [Pokemon]]
     private let searchIndex: [SearchEntry]
 
     private struct SearchEntry {
@@ -156,15 +180,26 @@ struct PokemonCatalog {
     private init(bundle: Bundle = .main) {
         guard let url = bundle.url(forResource: "pokemon-national", withExtension: "json"),
               let data = try? Data(contentsOf: url),
-              let decoded = try? JSONDecoder().decode([Pokemon].self, from: data) else {
+              let decoded = try? JSONDecoder().decode([Pokemon].self, from: data),
+              let formsURL = bundle.url(forResource: "pokemon-forms", withExtension: "json"),
+              let formsData = try? Data(contentsOf: formsURL),
+              let forms = try? JSONDecoder().decode([Pokemon].self, from: formsData) else {
             assertionFailure("The bundled National Pokédex is missing or invalid.")
             entries = []
+            speciesEntries = []
             entriesByID = [:]
+            entriesBySpecies = [:]
             searchIndex = []
             return
         }
-        entries = decoded.sorted { $0.id < $1.id }
+        speciesEntries = decoded.sorted { $0.id < $1.id }
+        entries = (decoded + forms).sorted {
+            if $0.nationalID != $1.nationalID { return $0.nationalID < $1.nationalID }
+            if $0.isAlternateForm != $1.isAlternateForm { return !$0.isAlternateForm }
+            return ($0.formOrder ?? 0, $0.id) < ($1.formOrder ?? 0, $1.id)
+        }
         entriesByID = Dictionary(uniqueKeysWithValues: entries.map { ($0.id, $0) })
+        entriesBySpecies = Dictionary(grouping: entries, by: \.nationalID)
         searchIndex = entries.map {
             SearchEntry(pokemon: $0, number: $0.number,
                         englishTypes: $0.typeNames(in: .en), chineseTypes: $0.typeNames(in: .zhHans),
@@ -176,17 +211,20 @@ struct PokemonCatalog {
         entriesByID[id]
     }
 
+    func forms(for pokemon: Pokemon) -> [Pokemon] { entriesBySpecies[pokemon.nationalID] ?? [pokemon] }
+
     func search(_ query: String, language: AppLanguage) -> [Pokemon] {
         let value = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !value.isEmpty else { return entries }
         let numberQuery = value.trimmingCharacters(in: CharacterSet(charactersIn: "#"))
         if value.hasPrefix("#") || (value.hasPrefix("0") && value.allSatisfy(\.isNumber)) {
-            return Int(numberQuery).flatMap { entriesByID[$0] }.map { [$0] } ?? []
+            return Int(numberQuery).flatMap { entriesBySpecies[$0] } ?? []
         }
         return searchIndex.compactMap { entry in
             let matches = entry.pokemon.englishName.localizedCaseInsensitiveContains(value)
                 || entry.pokemon.chineseName.contains(value)
                 || entry.pokemon.japaneseName.contains(value)
+                || (entry.pokemon.aliases ?? []).contains { $0.localizedCaseInsensitiveContains(value) }
                 || entry.number.contains(numberQuery)
                 || entry.types(in: language).contains { $0.localizedCaseInsensitiveContains(value) }
             return matches ? entry.pokemon : nil

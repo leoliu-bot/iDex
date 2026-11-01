@@ -1,0 +1,51 @@
+name: Check form catalog, fixed panel and narration
+
+on:
+  push:
+    branches: [forms-voice-layout]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: xcode-27
+    timeout-minutes: 40
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check app changes against the currently bundled model
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/forms/app-check
+          xcodebuild test -project iDex.xcodeproj -scheme iDex \
+            -destination 'platform=iOS Simulator,name=iPhone Duo' \
+            -parallel-testing-enabled NO \
+            -resultBundlePath artifacts/forms/app-check/Tests.xcresult \
+            -only-testing:iDexTests/CatalogTests \
+            -only-testing:iDexTests/FormCatalogTests \
+            -only-testing:iDexTests/NarratorVoiceTests \
+            -only-testing:iDexTests/DeviceAudioTests \
+            -only-testing:iDexTests/PokemonCryTests \
+            -only-testing:iDexTests/ScannerLayoutTests \
+            -only-testing:iDexUITests/iDexUITests/testRecordFillsCoverDisplayAndCloses \
+            -only-testing:iDexUITests/iDexUITests/testRegionalAndFusionFormsUseTheirOwnRecords \
+            CODE_SIGNING_ALLOWED=NO
+      - name: Export app evidence
+        if: always()
+        shell: bash
+        run: |
+          if [ -d artifacts/forms/app-check/Tests.xcresult ]; then
+            xcrun xcresulttool get test-results summary --path artifacts/forms/app-check/Tests.xcresult > artifacts/forms/app-check/summary.json
+            cat artifacts/forms/app-check/summary.json
+            xcrun xcresulttool export attachments --path artifacts/forms/app-check/Tests.xcresult --output-path artifacts/forms/app-check/screenshots
+          fi
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: Forms-app-check
+          path: artifacts/forms/app-check
+          retention-days: 7

@@ -92,7 +92,14 @@ final class iDexUITests: XCTestCase {
             // remain above the shell's 12pt inset decorative line.
             XCTAssertLessThanOrEqual(footer.frame.maxY, app.frame.maxY - 20)
             let statsLabel = ["en": "Toggle base stats", "zhHans": "切换基础能力", "ja": "種族値の表示を切り替える"][language]!
+            let display = element("entry-display", in: app)
+            XCTAssertTrue(display.exists)
+            let displayBeforeStats = display.frame
+            let readBeforeStats = app.buttons["read-button"].frame
             app.buttons[statsLabel].tap()
+            XCTAssertEqual(display.frame.minY, displayBeforeStats.minY, accuracy: 0.5)
+            XCTAssertEqual(display.frame.height, displayBeforeStats.height, accuracy: 0.5)
+            XCTAssertEqual(app.buttons["read-button"].frame.minY, readBeforeStats.minY, accuracy: 0.5)
             XCTAssertLessThanOrEqual(footer.frame.maxY, app.frame.maxY - 20)
             attachScreenshot("record-cover-stats-\(language)", app: app)
             close.tap()
@@ -200,6 +207,30 @@ final class iDexUITests: XCTestCase {
         XCTAssertEqual(app.staticTexts["pokemon-name"].label, "Pecharunt")
         XCTAssertEqual(app.staticTexts["entry-number"].label, "No. 1025")
         attachScreenshot("national-pecharunt-record", app: app)
+    }
+
+    func testRegionalAndFusionFormsUseTheirOwnRecords() throws {
+        let app = launchInEnglish()
+        openCatalog(in: app)
+        let search = app.searchFields.firstMatch
+        if !search.exists { app.buttons["Search"].tap() }
+        XCTAssertTrue(search.waitForExistence(timeout: 5))
+        search.tap()
+        search.typeText("ninetales-alola")
+        XCTAssertTrue(app.buttons["pokemon-110206"].waitForExistence(timeout: 5))
+        app.buttons["pokemon-110206"].tap()
+        XCTAssertTrue(app.staticTexts["entry-number"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["entry-number"].label, "No. 038")
+        XCTAssertTrue(app.buttons["form-picker"].exists)
+        attachScreenshot("alolan-ninetales-record", app: app)
+        openCatalog(in: app)
+        let again = app.searchFields.firstMatch
+        if !again.exists { app.buttons["Search"].tap() }
+        replaceSearchText("kyurem-white", in: again)
+        XCTAssertTrue(app.buttons["pokemon-110083"].waitForExistence(timeout: 5))
+        app.buttons["pokemon-110083"].tap()
+        XCTAssertEqual(app.staticTexts["entry-number"].label, "No. 646")
+        attachScreenshot("white-kyurem-record", app: app)
     }
 
     func testTurningPhoneDoesNotRotateScannerOrPresentations() throws {

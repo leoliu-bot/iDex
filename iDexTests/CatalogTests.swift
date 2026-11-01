@@ -6,7 +6,7 @@ import CoreText
 @MainActor
 struct CatalogTests {
     @Test func catalogIncludesEveryNationalSpecies() {
-        let entries = PokemonCatalog.shared.entries
+        let entries = PokemonCatalog.shared.speciesEntries
         #expect(entries.map(\.id) == Array(1...1025))
         #expect(Set(entries.map(\.englishName)).count == 1025)
         #expect(Set(entries.map(\.chineseName)).count == 1025)
@@ -33,7 +33,7 @@ struct CatalogTests {
             #expect(try #require(catalog.pokemon(id: id)).generation == generation)
         }
         #expect(try #require(catalog.pokemon(id: 1025)).number == "1025")
-        #expect(catalog.search("#025", language: .en).map(\.id) == [25])
+        #expect(catalog.search("#025", language: .en).allSatisfy { $0.nationalID == 25 })
         #expect(catalog.search("#1025", language: .en).map(\.id) == [1025])
         #expect(catalog.search("菊草叶", language: .zhHans).map(\.id) == [152])
         #expect(catalog.search("ニャオハ", language: .ja).map(\.id) == [906])
@@ -118,12 +118,12 @@ struct CatalogTests {
 
     @Test func catalogSearchSupportsBothLanguagesAndNumbers() {
         let catalog = PokemonCatalog.shared
-        #expect(catalog.search("pIkAcHu", language: .en).map(\.id) == [25])
-        #expect(catalog.search("皮卡丘", language: .zhHans).map(\.id) == [25])
-        #expect(catalog.search("皮卡丘", language: .en).map(\.id) == [25])
-        #expect(catalog.search("#025", language: .en).map(\.id) == [25])
-        #expect(catalog.search("  025 \n", language: .zhHans).map(\.id) == [25])
-        #expect(catalog.search("", language: .en).count == 1025)
+        #expect(catalog.search("pIkAcHu", language: .en).contains { $0.id == 25 })
+        #expect(catalog.search("皮卡丘", language: .zhHans).contains { $0.id == 25 })
+        #expect(catalog.search("皮卡丘", language: .en).contains { $0.id == 25 })
+        #expect(catalog.search("#025", language: .en).allSatisfy { $0.nationalID == 25 })
+        #expect(catalog.search("  025 \n", language: .zhHans).allSatisfy { $0.nationalID == 25 })
+        #expect(catalog.search("", language: .en).count == catalog.entries.count)
         #expect(catalog.search("not a pokemon", language: .en).isEmpty)
     }
 
@@ -150,16 +150,17 @@ struct CatalogTests {
 
     @Test func searchFindsEverySpeciesByAnyLanguageNameOrNumberInDexOrder() {
         let catalog = PokemonCatalog.shared
+        let rank = Dictionary(uniqueKeysWithValues: catalog.entries.enumerated().map { ($1.id, $0) })
         for language in AppLanguage.allCases {
             for pokemon in catalog.entries {
                 for query in [pokemon.englishName, pokemon.chineseName, pokemon.japaneseName, pokemon.number] {
                     let ids = catalog.search(query, language: language).map(\.id)
                     #expect(ids.contains(pokemon.id))
-                    #expect(ids == ids.sorted())
+                    #expect(ids.compactMap { rank[$0] } == ids.compactMap { rank[$0] }.sorted())
                 }
             }
-            #expect(catalog.search("saur", language: language).map(\.id) == [1, 2, 3])
-            #expect(catalog.search("Nidoran", language: language).map(\.id) == [29, 32])
+            #expect(catalog.search("saur", language: language).filter { !$0.isAlternateForm }.map(\.id) == [1, 2, 3])
+            #expect(catalog.search("Nidoran", language: language).filter { !$0.isAlternateForm }.map(\.id) == [29, 32])
             #expect(catalog.search("25", language: language).map(\.id) .contains(1025))
         }
     }

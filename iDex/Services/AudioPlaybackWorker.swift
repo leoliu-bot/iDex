@@ -9,8 +9,14 @@ nonisolated protocol DeviceAudioPlayback: Sendable {
     func play(_ cue: DeviceSound, request: AudioPlaybackRequest)
     func playCry(dexID: Int, request: AudioPlaybackRequest, completion: @escaping @Sendable () -> Void)
     func stopSound()
-    func speak(_ text: String, languageCode: String, request: AudioPlaybackRequest)
+    func speak(_ text: String, languageCode: String, narrator: NarratorVoice, request: AudioPlaybackRequest)
     func stopSpeaking()
+}
+
+extension DeviceAudioPlayback {
+    nonisolated func speak(_ text: String, languageCode: String, request: AudioPlaybackRequest) {
+        speak(text, languageCode: languageCode, narrator: .male, request: request)
+    }
 }
 
 /// Invalidated immediately by mute, suspend, or a newer request, even while a
@@ -271,7 +277,7 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
         }
     }
 
-    func speak(_ text: String, languageCode: String, request: AudioPlaybackRequest) {
+    func speak(_ text: String, languageCode: String, narrator: NarratorVoice, request: AudioPlaybackRequest) {
         queue.async {
             guard !request.isCancelled else { return }
             let interval = DexPerformance.begin("Audio Speech Startup")
@@ -285,14 +291,18 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
                 synthesizer.usesApplicationAudioSession = true
                 self.synthesizer = synthesizer
             }
-            let voice = self.voices[languageCode] ?? AVSpeechSynthesisVoice(language: languageCode)
-            if let voice { self.voices[languageCode] = voice }
-            let utterance = AVSpeechUtterance(string: text)
+            let locale = NarratorVoice.readingLocale(languageCode)
+            let cacheKey = locale + ":" + narrator.rawValue
+            let voice = NarratorVoiceSelection.installed(locale: locale, narrator: narrator) ?? self.voices[cacheKey]
+            if let voice { self.voices[cacheKey] = voice }
+            let reading = locale == "zh-TW" ? text.applyingTransform(.simplifiedToTraditional, reverse: false) ?? text : text
+            let utterance = AVSpeechUtterance(string: reading)
             utterance.voice = voice
-            utterance.rate = languageCode.hasPrefix("zh") ? 0.43 : 0.46
-            utterance.pitchMultiplier = 0.84
+            utterance.rate = locale.hasPrefix("zh") ? 0.40 : 0.46
+            utterance.pitchMultiplier = narrator.pitch
             utterance.volume = self.speechVolume
             utterance.preUtteranceDelay = 0.28
+            utterance.postUtteranceDelay = 0.12
             guard !request.isCancelled else { return }
             let observer = SpeechPlaybackObserver(utterance: utterance, request: request)
             self.speechObserver = observer

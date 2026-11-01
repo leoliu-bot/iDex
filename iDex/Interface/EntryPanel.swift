@@ -24,6 +24,23 @@ struct EntryPanel: View {
                         HStack {
                             Text("No. \(pokemon.number)").font(DexTheme.pixel(10)).accessibilityIdentifier("entry-number")
                             Spacer()
+                            let family = PokemonCatalog.shared.forms(for: pokemon)
+                            let forms = family + RecognitionScope.sameAppearance(as: pokemon).filter { other in !family.contains { $0.id == other.id } }
+                            if forms.count > 1 {
+                                Color.clear.frame(width: 30, height: 1).overlay {
+                                Menu {
+                                    ForEach(forms) { form in
+                                        Button { store.browse(form) } label: {
+                                            if form.id == pokemon.id { Label(form.formName(in: store.language), systemImage: "checkmark") }
+                                            else { Text(form.nationalID == pokemon.nationalID ? form.formName(in: store.language) : form.name(in: store.language)) }
+                                        }.accessibilityIdentifier("form-\(form.id)")
+                                    }
+                                } label: {
+                                    Image(systemName: "square.stack.3d.up").font(.system(size: 14)).frame(width: 44, height: 44)
+                                }.accessibilityLabel(store.text("Choose form", "选择形态", "すがたを選ぶ"))
+                                    .accessibilityIdentifier("form-picker")
+                                }
+                            }
                             Text(store.entryStatusTitle)
                                 .font(PixelFont.font(size: store.language == .en ? 7 : 13, language: store.language))
                         }
@@ -37,7 +54,7 @@ struct EntryPanel: View {
                             VStack(alignment: .leading, spacing: 10) {
                                 Text(pokemon.name(in: store.language))
                                     .font(PixelFont.font(size: store.language == .en ? 12 : 25, language: store.language)).accessibilityIdentifier("pokemon-name")
-                                    .lineLimit(1).minimumScaleFactor(0.55)
+                                    .lineLimit(2).minimumScaleFactor(0.55)
                                 Text(pokemon.genus(in: store.language)).font(.system(size: 12, design: .monospaced))
                                 HStack(spacing: 4) {
                                     ForEach(pokemon.typeNames(in: store.language), id: \.self) { type in
@@ -64,8 +81,9 @@ struct EntryPanel: View {
                                 Image(systemName: showStats ? "text.alignleft" : "chart.bar.xaxis").frame(width: 32, height: 28)
                             }.buttonStyle(.plain).accessibilityLabel(store.text("Toggle base stats", "切换基础能力", "種族値の表示を切り替える"))
                         }
-                        if showStats {
-                            VStack(spacing: 7) {
+                        Group {
+                            if showStats {
+                                VStack(spacing: 6) {
                                 ForEach(pokemon.stats) { stat in
                                     HStack(spacing: 8) {
                                         Text(stat.title(in: store.language)).font(.system(size: 10, design: .monospaced)).frame(width: 60, alignment: .leading)
@@ -78,17 +96,18 @@ struct EntryPanel: View {
                                         Text("\(stat.value)").font(DexTheme.pixel(6)).frame(width: 25, alignment: .trailing)
                                     }
                                 }
-                            }.frame(height: 104)
-                        } else {
-                            ScrollView {
-                                Text(pokemon.description(in: store.language))
+                                }
+                            } else {
+                                ScrollView {
+                                Text(appearanceNote(for: pokemon) + pokemon.description(in: store.language))
                                     .font(PixelFont.font(size: store.language == .en ? 8 : 17, language: store.language))
                                     .lineSpacing(store.language == .en ? 7 : 5)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                            }.frame(minHeight: 64, idealHeight: 104, maxHeight: 104)
-                        }
+                                }
+                            }
+                        }.frame(height: 104, alignment: .top).clipped()
                     }
-                }
+                }.accessibilityElement(children: .contain).accessibilityIdentifier("entry-display")
                 HStack(spacing: 12) {
                     Button { store.step(-1) } label: { Image(systemName: "arrowtriangle.left.fill").frame(width: 17) }
                         .accessibilityLabel(store.text("Previous Pokémon", "上一个宝可梦", "前のポケモン"))
@@ -108,7 +127,7 @@ struct EntryPanel: View {
                     Button { store.showingCatalog = true; store.audio.play(.button) } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "square.grid.2x2.fill")
-                            Text(store.text("BROWSE \(PokemonCatalog.shared.entries.count)", "浏览\(PokemonCatalog.shared.entries.count)种", "全\(PokemonCatalog.shared.entries.count)種を見る")).font(PixelFont.font(size: store.language == .en ? 8 : 14, language: store.language))
+                            Text(store.text("BROWSE \(PokemonCatalog.shared.entries.count)", "浏览\(PokemonCatalog.shared.entries.count)条", "全\(PokemonCatalog.shared.entries.count)件を見る")).font(PixelFont.font(size: store.language == .en ? 8 : 14, language: store.language))
                         }
                     }.buttonStyle(.plain).foregroundStyle(DexTheme.cream).accessibilityIdentifier("catalog-button")
                     Spacer()
@@ -146,5 +165,12 @@ struct EntryPanel: View {
             Text(title).font(PixelFont.font(size: store.language == .en ? 6 : 12, language: store.language)).opacity(0.65)
             Text(value).font(DexTheme.pixel(8))
         }
+    }
+
+    private func appearanceNote(for pokemon: Pokemon) -> String {
+        let others = RecognitionScope.sameAppearance(as: pokemon)
+        guard !others.isEmpty else { return "" }
+        let names = others.prefix(3).map { $0.name(in: store.language) }.joined(separator: "、")
+        return store.text("This appearance is also shared by \(names). Check the form when its identifying details are not visible. ", "此外观也可能对应\(names)。鉴别细节不可见时，请手动核对形态。", "この外見は\(names)にも共通します。識別に必要な細部が見えない場合は、すがたを確認してください。")
     }
 }

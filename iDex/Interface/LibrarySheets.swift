@@ -76,18 +76,34 @@ struct SettingsSheet: View {
                 Section(store.text("Sound", "声音", "サウンド")) {
                     Toggle(store.text("Device sounds & spoken entries", "设备音效与图鉴语音", "効果音と図鑑の読み上げ"), isOn: $audio.isSoundEnabled)
                         .accessibilityIdentifier("sound-toggle")
+                    Picker(store.text("Narrator", "图鉴播报音色", "読み上げ音声"), selection: $audio.narratorVoice) {
+                        ForEach(NarratorVoice.allCases) { voice in
+                            Text(voice.title(in: store.language)).tag(voice)
+                        }
+                    }.accessibilityIdentifier("narrator-picker")
+                    Button(store.text("Preview narrator", "试听播报", "音声を試す")) {
+                        audio.speak(store.text("Pokédex ready. Point at a Pokémon to begin identification.", "宝可梦图鉴，准备就绪。请将取景器对准宝可梦，开始识别。", "ポケモン図鑑、準備完了。ポケモンにカメラを向けてください。"), languageCode: store.language.speechLocale)
+                    }.disabled(!audio.isSoundEnabled).accessibilityIdentifier("narrator-preview")
+                    Text(store.text("Chinese readings prefer a Taiwan Mandarin voice of the selected gender. If it is not installed, the closest available Chinese voice is used. Additional system voices can be downloaded in iPhone Settings.", "中文播报优先使用所选性别的台湾国语音色。未安装时使用可用的中文音色；可在 iPhone 系统设置中下载更多声音。", "中国語は選択した性別の台湾華語音声を優先します。未インストールの場合は利用可能な音声を使用します。追加音声はiPhoneの設定からダウンロードできます。"))
+                        .font(.footnote).foregroundStyle(.secondary)
                     Button(store.text("Stop reading", "停止朗读", "読み上げを停止")) { audio.stopSpeaking() }
                 }
                 Section(store.text("Field guide", "使用指南", "使い方")) {
                     Label(store.text("Point at a Pokémon, then identify.", "将取景器对准宝可梦，轻点识别。", "ポケモンにカメラを向けて、スキャンします。"), systemImage: "viewfinder")
                     Label(store.text("Unfold to reveal the research panel.", "展开屏幕，查看内部研究面板。", "画面を開くと、リサーチパネルが表示されます。"), systemImage: "book")
                     Label(store.text("Photos and recognition stay on your iPhone.", "照片与识别过程均留在你的 iPhone 上。", "写真と識別処理は、すべて iPhone 内で完結します。"), systemImage: "lock.shield")
-                    Text(store.text("The offline archive contains \(PokemonCatalog.shared.entries.count) species. The bundled model covers \(RecognitionScope.speciesIDs.count) species. Uncertain scans remain best guesses and are not automatically discovered.", "离线图鉴收录\(PokemonCatalog.shared.entries.count)种宝可梦，内置模型覆盖\(RecognitionScope.speciesIDs.count)种。低置信度结果仅作为候选，不会自动计入已发现。", "オフライン図鑑は\(PokemonCatalog.shared.entries.count)種を収録し、内蔵モデルは\(RecognitionScope.speciesIDs.count)種に対応します。確信度の低い候補は、自動的に発見済みになりません。"))
+                    Text(store.text("The archive contains \(PokemonCatalog.shared.speciesEntries.count) species and \(PokemonCatalog.shared.additionalFormCount) additional forms. The model contains \(RecognitionScope.entryIDs.count) appearance records; \(RecognitionScope.confirmableEntryIDs.count) have independent grouped validation. Uncertain or unvalidated results are not automatically discovered.", "图鉴收录\(PokemonCatalog.shared.speciesEntries.count)种宝可梦及\(PokemonCatalog.shared.additionalFormCount)种额外形态。模型包含\(RecognitionScope.entryIDs.count)条外观记录，其中\(RecognitionScope.confirmableEntryIDs.count)条有独立分组验证。低置信度或未验证的结果不会自动计入已发现。", "図鑑は\(PokemonCatalog.shared.speciesEntries.count)種と\(PokemonCatalog.shared.additionalFormCount)種の追加のすがたを収録。モデルは\(RecognitionScope.entryIDs.count)件に対応し、\(RecognitionScope.confirmableEntryIDs.count)件に独立グループの検証があります。未検証や確信度の低い候補は自動的に発見済みになりません。"))
                         .font(.footnote).foregroundStyle(.secondary)
-                    let archiveOnly = PokemonCatalog.shared.entries.filter { !RecognitionScope.speciesIDs.contains($0.id) }
+                    let archiveOnly = PokemonCatalog.shared.entries.filter { !RecognitionScope.entryIDs.contains($0.id) }
                     if !archiveOnly.isEmpty {
-                        Text(store.text("Archive only: ", "仅支持图鉴浏览：", "図鑑閲覧のみ：") + archiveOnly.map { $0.name(in: store.language) }.joined(separator: "、"))
-                            .font(.footnote).foregroundStyle(.secondary)
+                        NavigationLink(store.text("Archive-only records (\(archiveOnly.count))", "仅支持浏览的记录（\(archiveOnly.count)）", "図鑑閲覧のみ（\(archiveOnly.count)件）")) {
+                            List(archiveOnly) { pokemon in
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(pokemon.name(in: store.language))
+                                    Text("No. \(pokemon.number)").font(.caption).foregroundStyle(.secondary)
+                                }
+                            }.navigationTitle(store.text("Archive only", "仅支持浏览", "図鑑閲覧のみ"))
+                        }
                     }
                 }
                 Section(store.text("Credits", "制作信息", "クレジット")) {

@@ -15,6 +15,13 @@ final class DeviceAudio {
 
     private(set) var isSpeaking = false
 
+    var narratorVoice: NarratorVoice {
+        didSet {
+            defaults.set(narratorVoice.rawValue, forKey: "idex.narratorVoice")
+            stopSpeaking()
+        }
+    }
+
     var isSoundEnabled: Bool {
         didSet {
             defaults.set(isSoundEnabled, forKey: "idex.soundEnabled")
@@ -40,6 +47,7 @@ final class DeviceAudio {
     init(worker: any DeviceAudioPlayback = AudioPlaybackWorker(), defaults: UserDefaults = .standard) {
         self.worker = worker
         self.defaults = defaults
+        narratorVoice = defaults.string(forKey: "idex.narratorVoice").flatMap(NarratorVoice.init(rawValue:)) ?? .male
         isSoundEnabled = defaults.object(forKey: "idex.soundEnabled") != nil
             ? defaults.bool(forKey: "idex.soundEnabled") : true
     }
@@ -114,7 +122,7 @@ final class DeviceAudio {
             guard await self.ensureSession(),
                   !Task.isCancelled, self.isSoundEnabled,
                   generation == self.speechGeneration, self.isActive else { return }
-            self.worker.speak(text, languageCode: languageCode, request: request)
+            self.worker.speak(text, languageCode: NarratorVoice.readingLocale(languageCode), narrator: self.narratorVoice, request: request)
         }
     }
 
@@ -133,7 +141,7 @@ final class DeviceAudio {
             guard let self, !Task.isCancelled else { return }
             guard await self.ensureSession(), !Task.isCancelled,
                   generation == self.soundGeneration, self.isActive, self.isSoundEnabled else { return }
-            self.worker.playCry(dexID: pokemon.id, request: request) { [weak self] in
+            self.worker.playCry(dexID: pokemon.cryResourceID, request: request) { [weak self] in
                 Task { @MainActor [weak self] in
                     guard let self, !request.isCancelled,
                           generation == self.soundGeneration,
