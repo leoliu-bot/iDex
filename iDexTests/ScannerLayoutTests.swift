@@ -36,7 +36,7 @@ struct ScannerLayoutTests {
             let context = try #require(CGContext(data: bytes.baseAddress, width: width, height: height,
                 bitsPerComponent: 8, bytesPerRow: width * 4, space: CGColorSpaceCreateDeviceRGB(),
                 bitmapInfo: CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.premultipliedLast.rawValue))
-            context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+            context.draw(cgImage, in: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
         }
         var minX = width, minY = height, maxX = -1, maxY = -1
         for y in 80..<(height - 110) {
@@ -50,7 +50,7 @@ struct ScannerLayoutTests {
             }
         }
         #expect(maxX > minX && maxY > minY)
-        return CGRect(x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1)
+        return CGRect(x: CGFloat(minX), y: CGFloat(minY), width: CGFloat(maxX - minX + 1), height: CGFloat(maxY - minY + 1))
     }
 
     @Test func scanningCyclesThroughThreeLightsAndStopsForSpeech() async throws {

@@ -295,8 +295,7 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
             let cacheKey = locale + ":" + narrator.rawValue
             let voice = NarratorVoiceSelection.installed(locale: locale, narrator: narrator) ?? self.voices[cacheKey]
             if let voice { self.voices[cacheKey] = voice }
-            let reading = locale == "zh-TW" ? text.applyingTransform(.simplifiedToTraditional, reverse: false) ?? text : text
-            let utterance = AVSpeechUtterance(string: reading)
+            let utterance = AVSpeechUtterance(string: text)
             utterance.voice = voice
             utterance.rate = locale.hasPrefix("zh") ? 0.40 : 0.46
             utterance.pitchMultiplier = narrator.pitch

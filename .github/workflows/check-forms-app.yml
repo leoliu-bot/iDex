@@ -8,6 +8,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: forms-app-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: xcode-27
