@@ -10248,5 +10248,3265 @@
     "sha256": "eea430d771a9e86108bf7ea23c2727b857a596df85c5f915d4a97fed93c213e6",
     "frames": 31894,
     "sampleRate": 22050
+  },
+  {
+    "id": 10001,
+    "name": "Attack Deoxys",
+    "file": "pokemon-cry-10001.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10001.ogg",
+    "sourceSHA256": "7cc1078e56d4bc7cf6ff324d483639c5d4591bdf66bbeb118eed6ac8834c2280",
+    "sha256": "81a153e59138d5e5820d42d9af2788dccefbcf8ab4ca889de1feee95861ee6eb",
+    "frames": 24444,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10002,
+    "name": "Defense Deoxys",
+    "file": "pokemon-cry-10002.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10002.ogg",
+    "sourceSHA256": "7cc1078e56d4bc7cf6ff324d483639c5d4591bdf66bbeb118eed6ac8834c2280",
+    "sha256": "81a153e59138d5e5820d42d9af2788dccefbcf8ab4ca889de1feee95861ee6eb",
+    "frames": 24444,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10003,
+    "name": "Speed Deoxys",
+    "file": "pokemon-cry-10003.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10003.ogg",
+    "sourceSHA256": "7cc1078e56d4bc7cf6ff324d483639c5d4591bdf66bbeb118eed6ac8834c2280",
+    "sha256": "81a153e59138d5e5820d42d9af2788dccefbcf8ab4ca889de1feee95861ee6eb",
+    "frames": 24444,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10004,
+    "name": "Sandy Wormadam",
+    "file": "pokemon-cry-10004.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10004.ogg",
+    "sourceSHA256": "ef9629a49d33d22568d0f75ca6fc3c7b79a9078aa749ef7628c84d22b804a952",
+    "sha256": "b687c0cd6f89a604e7ea7c15c989141447ea71cc756cb8147ecf634744895f8e",
+    "frames": 28790,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10005,
+    "name": "Trash Wormadam",
+    "file": "pokemon-cry-10005.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10005.ogg",
+    "sourceSHA256": "ef9629a49d33d22568d0f75ca6fc3c7b79a9078aa749ef7628c84d22b804a952",
+    "sha256": "b687c0cd6f89a604e7ea7c15c989141447ea71cc756cb8147ecf634744895f8e",
+    "frames": 28790,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10006,
+    "name": "Sky Shaymin",
+    "file": "pokemon-cry-10006.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10006.ogg",
+    "sourceSHA256": "f4868d97eacf88ce5024cc24e2bf0b65a403e459274546a59044d86b1fc67d0d",
+    "sha256": "5e63a2303eab79919d485bd044daea3d0bc7997b99ffcfbd2dfa55f36c04bf15",
+    "frames": 23457,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10007,
+    "name": "Origin Giratina",
+    "file": "pokemon-cry-10007.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10007.ogg",
+    "sourceSHA256": "3b0bacc617a92e743616730c86fa7faebc9264fb879bf4e3fec24d5e218bf87e",
+    "sha256": "b43b97eed4b23d3886f31bc9fae18721910a4043d4559bdf244d7bdfa5914542",
+    "frames": 35740,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10008,
+    "name": "Heat Rotom",
+    "file": "pokemon-cry-10008.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10008.ogg",
+    "sourceSHA256": "0096efcb07b489ac7b6e7c9d5fcc43eb263e0b4d07290cf1b1cae92a37eabe9f",
+    "sha256": "5a83a79c0366602c4ad5dd25c88fb6bf35518f70af78114537cb34c084ef2814",
+    "frames": 34321,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10009,
+    "name": "Wash Rotom",
+    "file": "pokemon-cry-10009.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10009.ogg",
+    "sourceSHA256": "0096efcb07b489ac7b6e7c9d5fcc43eb263e0b4d07290cf1b1cae92a37eabe9f",
+    "sha256": "5a83a79c0366602c4ad5dd25c88fb6bf35518f70af78114537cb34c084ef2814",
+    "frames": 34321,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10010,
+    "name": "Frost Rotom",
+    "file": "pokemon-cry-10010.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10010.ogg",
+    "sourceSHA256": "0096efcb07b489ac7b6e7c9d5fcc43eb263e0b4d07290cf1b1cae92a37eabe9f",
+    "sha256": "5a83a79c0366602c4ad5dd25c88fb6bf35518f70af78114537cb34c084ef2814",
+    "frames": 34321,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10011,
+    "name": "Fan Rotom",
+    "file": "pokemon-cry-10011.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10011.ogg",
+    "sourceSHA256": "0096efcb07b489ac7b6e7c9d5fcc43eb263e0b4d07290cf1b1cae92a37eabe9f",
+    "sha256": "5a83a79c0366602c4ad5dd25c88fb6bf35518f70af78114537cb34c084ef2814",
+    "frames": 34321,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10012,
+    "name": "Mow Rotom",
+    "file": "pokemon-cry-10012.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10012.ogg",
+    "sourceSHA256": "0096efcb07b489ac7b6e7c9d5fcc43eb263e0b4d07290cf1b1cae92a37eabe9f",
+    "sha256": "5a83a79c0366602c4ad5dd25c88fb6bf35518f70af78114537cb34c084ef2814",
+    "frames": 34321,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10013,
+    "name": "Sunny Castform",
+    "file": "pokemon-cry-10013.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10013.ogg",
+    "sourceSHA256": "ef49908cfd5402063a034bdf2e99a2564763fd99c0f8a5d8fac9ab4601d04d85",
+    "sha256": "bf30674f9b6d31d557c3504aa74338c6d98de37631b6806f62a940904807be59",
+    "frames": 15400,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10014,
+    "name": "Rainy Castform",
+    "file": "pokemon-cry-10014.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10014.ogg",
+    "sourceSHA256": "ef49908cfd5402063a034bdf2e99a2564763fd99c0f8a5d8fac9ab4601d04d85",
+    "sha256": "bf30674f9b6d31d557c3504aa74338c6d98de37631b6806f62a940904807be59",
+    "frames": 15400,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10015,
+    "name": "Snowy Castform",
+    "file": "pokemon-cry-10015.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10015.ogg",
+    "sourceSHA256": "ef49908cfd5402063a034bdf2e99a2564763fd99c0f8a5d8fac9ab4601d04d85",
+    "sha256": "bf30674f9b6d31d557c3504aa74338c6d98de37631b6806f62a940904807be59",
+    "frames": 15400,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10016,
+    "name": "Blue-Striped Basculin",
+    "file": "pokemon-cry-10016.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10016.ogg",
+    "sourceSHA256": "3e6558be3b3d5792d2e751166bee53e15b85164ee83613ed0a1c18becd1d2100",
+    "sha256": "9dd4dbd2f2b8369f87fd6d773167691d8edcc1a324315192653663b3ca4f7659",
+    "frames": 12168,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10017,
+    "name": "Zen Darmanitan",
+    "file": "pokemon-cry-10017.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10017.ogg",
+    "sourceSHA256": "4ddb16bf29ecb2a49d9bd267d8cb7cc027a4969402d2535dc959faa732999ade",
+    "sha256": "acf4bfc4329a19e89ff4d5217904d1ff064d40e0db3200678f4d75470ab29056",
+    "frames": 33881,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10018,
+    "name": "Pirouette Meloetta",
+    "file": "pokemon-cry-10018.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10018.ogg",
+    "sourceSHA256": "1fa5cd885ab668289ea9e70888fa4223467163af25a458e575ea3691531196cd",
+    "sha256": "408f9e9b2838dc100d9c6203e166b065c68820682ad35d6824332e88e181e77a",
+    "frames": 29389,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10019,
+    "name": "Therian Tornadus",
+    "file": "pokemon-cry-10019.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10019.ogg",
+    "sourceSHA256": "1aebb1e9a626c763851b9fb9c7893846c1010a754fc9567ba41c942e70cd5773",
+    "sha256": "368029dc7fcc7ba9835963b399ac4cea7c97395aae9ef1ee5220c1521dedd2b5",
+    "frames": 40015,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10020,
+    "name": "Therian Thundurus",
+    "file": "pokemon-cry-10020.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10020.ogg",
+    "sourceSHA256": "a98a23df8233eec46e9e730852e2cc8f085de23427b8e76b14c235522a4ce5aa",
+    "sha256": "d9d4a96900fec3d1e671253917fcb16528d466a03d34fddf475ccf5ca393334d",
+    "frames": 43464,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10021,
+    "name": "Therian Landorus",
+    "file": "pokemon-cry-10021.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10021.ogg",
+    "sourceSHA256": "6ccaf8f83588124b8b7f2670d803fe79b5f14a6e80bebfe91fb19201e59bd9e7",
+    "sha256": "e69502d6a40b41a65abace21cbe3f9b08fadce2fc1e2de063bab2ba0464ee6f7",
+    "frames": 39325,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10022,
+    "name": "Black Kyurem",
+    "file": "pokemon-cry-10022.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10022.ogg",
+    "sourceSHA256": "e233c2978b22acb922a4f90b012728a18c631a34c461aceb66765eb63e23f124",
+    "sha256": "ed041dcb9a2a78c2b763bb3a2323b394be2b91ed31ade5dbde093503e45abec3",
+    "frames": 33806,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10023,
+    "name": "White Kyurem",
+    "file": "pokemon-cry-10023.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10023.ogg",
+    "sourceSHA256": "21e57e92e88087caf0f0dd6ee1f1c4c7c7d1ea2359c485d0ffc5996371635a3c",
+    "sha256": "d70fad7cc4e774471a511c791a9f89a0d818c7262afe3c798e261b7b00129240",
+    "frames": 40015,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10024,
+    "name": "Resolute Keldeo",
+    "file": "pokemon-cry-10024.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10024.ogg",
+    "sourceSHA256": "0e0a810402db2e4f39ff3a520e9e447582e960812b442926d27488f27c1a9e05",
+    "sha256": "3492436db8ceab536a533a3640a0a4f290b86a434722253bf8dd975584930960",
+    "frames": 24148,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10025,
+    "name": "Female Meowstic",
+    "file": "pokemon-cry-10025.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10025.ogg",
+    "sourceSHA256": "a389cb213c2c32f1bedf309a6ba67d4b031c66bc16df8c754ee2d2ee0412fd67",
+    "sha256": "78ae88c0370032b0809692c6a54a0e08fabc94efbae8dfbc09ae8447e8761692",
+    "frames": 10915,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10026,
+    "name": "Blade Aegislash",
+    "file": "pokemon-cry-10026.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10026.ogg",
+    "sourceSHA256": "c0db76dfc1ffdc5c1473c95a302f5ea99bbdb5d5bf6e98b305470dd7b147b9e6",
+    "sha256": "75308dbabb1152b74c542da0d630e6ec5e20fec098797483a326b9440f8481e2",
+    "frames": 24542,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10027,
+    "name": "Small Pumpkaboo",
+    "file": "pokemon-cry-10027.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10027.ogg",
+    "sourceSHA256": "60a5816f37330f4666ec7b40a3fd73033e8332b78e7dcd836e268be9ae541546",
+    "sha256": "d8e30e1dd8219c49f4cecd9cca06e7cd5cfadab4f1b25422510cc05cdec7a605",
+    "frames": 17248,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10028,
+    "name": "Large Pumpkaboo",
+    "file": "pokemon-cry-10028.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10028.ogg",
+    "sourceSHA256": "60a5816f37330f4666ec7b40a3fd73033e8332b78e7dcd836e268be9ae541546",
+    "sha256": "d8e30e1dd8219c49f4cecd9cca06e7cd5cfadab4f1b25422510cc05cdec7a605",
+    "frames": 17248,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10029,
+    "name": "Super Pumpkaboo",
+    "file": "pokemon-cry-10029.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10029.ogg",
+    "sourceSHA256": "73ad44a26bc12c2a1f6c34c99935bcb826dfb3b9b690943070fd47bfce68f67f",
+    "sha256": "0e399692378d60f030d8496753f17bfaa2ab03a098ed456cd43e958f0689b9e0",
+    "frames": 19318,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10030,
+    "name": "Small Gourgeist",
+    "file": "pokemon-cry-10030.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10030.ogg",
+    "sourceSHA256": "482a9a78b4f9c28455a38b2d91b60d52c489161350628459ea54347133aa3a15",
+    "sha256": "9e81c9533738236fa4251cbd16b12b49619c54a1c7cff22ac96da9442fb51417",
+    "frames": 43464,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10031,
+    "name": "Large Gourgeist",
+    "file": "pokemon-cry-10031.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10031.ogg",
+    "sourceSHA256": "482a9a78b4f9c28455a38b2d91b60d52c489161350628459ea54347133aa3a15",
+    "sha256": "9e81c9533738236fa4251cbd16b12b49619c54a1c7cff22ac96da9442fb51417",
+    "frames": 43464,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10032,
+    "name": "Super Gourgeist",
+    "file": "pokemon-cry-10032.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10032.ogg",
+    "sourceSHA256": "811f2778226ce2a2ff7c606f5ab435138182484ae23da1a5f1ce0318038864e4",
+    "sha256": "f623d8da98950f91bffce1ad98c89906e48597e57701fb48eb99e034934da486",
+    "frames": 43464,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10033,
+    "name": "Mega Venusaur",
+    "file": "pokemon-cry-10033.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10033.ogg",
+    "sourceSHA256": "766c77a4bb7a81ea5fb9caa629ee2bc6867b5f5a43ab5ebe279ca9c0c8979ef9",
+    "sha256": "e847743d83fe46b01f9368d54f271e51ec72d6984c68b3f6263b5cff3247f0d7",
+    "frames": 34472,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10034,
+    "name": "Mega Charizard X",
+    "file": "pokemon-cry-10034.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10034.ogg",
+    "sourceSHA256": "d25ea2641ce2948d10b1c3abf372adaa7d708e9c5fbab987cbf53997753d5fa7",
+    "sha256": "ec1299653630f980262347e8c0eaa68c28521818010d8400ea59c213cf99ef99",
+    "frames": 35598,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10035,
+    "name": "Mega Charizard Y",
+    "file": "pokemon-cry-10035.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10035.ogg",
+    "sourceSHA256": "68fffb96371923e20edf5c880ea9d91971a6cd0090bab967c0a47f7b4a4e2046",
+    "sha256": "5e082123235a6cb3736da862177d8b4d46b388479c858c410c02bf1eb937d91a",
+    "frames": 35578,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10036,
+    "name": "Mega Blastoise",
+    "file": "pokemon-cry-10036.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10036.ogg",
+    "sourceSHA256": "c8da1dd3ad2f665b1026da04b0155ddf75f52971efa0dabd6caaa5f5c97af2da",
+    "sha256": "8ef0f0b669785415d06c4d403ffdae9bb741568650a8987e878b18d5a7848072",
+    "frames": 35229,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10037,
+    "name": "Mega Alakazam",
+    "file": "pokemon-cry-10037.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10037.ogg",
+    "sourceSHA256": "a3d319f26b06a70c9acd5f411ec35a26237f7a154a6300382f185787c8b70e2c",
+    "sha256": "babd96855748256a1db12af46e9e281167c432df74d056586487705b8126ea19",
+    "frames": 43464,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10038,
+    "name": "Mega Gengar",
+    "file": "pokemon-cry-10038.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10038.ogg",
+    "sourceSHA256": "6de6500ec00f56e0f969c79b98e7255ee4ee87ded02dcce7f6ffccafa2dec9d3",
+    "sha256": "b6d24904f5928f64011a665d5db5d8bea61356e3c7fb3dc70b21bb7a7c18007c",
+    "frames": 28729,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10039,
+    "name": "Mega Kangaskhan",
+    "file": "pokemon-cry-10039.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10039.ogg",
+    "sourceSHA256": "9a31f7bf3d9ddfae575249ac41b43babc45b5e0dda19aeb386006bb4916ceaca",
+    "sha256": "3ed802946319f101267c123f18bf4678dac5a4b7b2c3b36a5ee72363f9d669b6",
+    "frames": 34496,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10040,
+    "name": "Mega Pinsir",
+    "file": "pokemon-cry-10040.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10040.ogg",
+    "sourceSHA256": "db58093f4fe63be6257de1faea0f83d607d83e9f6528084552ec9a5b4537212f",
+    "sha256": "272befbc5c8f3783f7ddf4dc30879c9cda40df5c454c8add143866beb3068dd2",
+    "frames": 27597,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10041,
+    "name": "Mega Gyarados",
+    "file": "pokemon-cry-10041.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10041.ogg",
+    "sourceSHA256": "0bfa55ad5d40fe5d084dd35a4451f0e0143e530191cbc4245b8cf428198c2d30",
+    "sha256": "2ccdefdd5c0e66d9c420de06c46e216bd4d32dbacf0936b7a8e11244304f02d5",
+    "frames": 36565,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10042,
+    "name": "Mega Aerodactyl",
+    "file": "pokemon-cry-10042.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10042.ogg",
+    "sourceSHA256": "9acd3dc73adb1c5f3ad0af24d9fee77c3794f22e9e248ee6dc6774a492b1e658",
+    "sha256": "c691da2daf171f20954d0d06495e129dccab18ddec6189b3482f2c10d360d1bc",
+    "frames": 42774,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10043,
+    "name": "Mega Mewtwo X",
+    "file": "pokemon-cry-10043.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10043.ogg",
+    "sourceSHA256": "d5aa9d97de29d8d671efa83c25fc71c70fc9f9ad5be766e362dfaa4f41b712dc",
+    "sha256": "f03d9bbc7f60e3ab6d13ef5c0edd8835daff127f274603366dbed119910de9c5",
+    "frames": 44073,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10044,
+    "name": "Mega Mewtwo Y",
+    "file": "pokemon-cry-10044.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10044.ogg",
+    "sourceSHA256": "46d07dda6b5ff639adef4eeae20c9affa6e75029d2b1be6ea9753e6000cef282",
+    "sha256": "fab0c2abfe0a978233b3d4d7293309c7afaef86bdcab9c1c86e872f617a7d8ed",
+    "frames": 44006,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10045,
+    "name": "Mega Ampharos",
+    "file": "pokemon-cry-10045.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10045.ogg",
+    "sourceSHA256": "19f91e197976fe30970944bbfcd3aa342dafb1c0148c23d5177992f28723ee35",
+    "sha256": "1fd94980718cff1ee443e45b903c70edc508e5e526daafbce645ea7642b7168c",
+    "frames": 31736,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10046,
+    "name": "Mega Scizor",
+    "file": "pokemon-cry-10046.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10046.ogg",
+    "sourceSHA256": "55de4af2b79c74b7b18a1abe0865fb81172426be3bfcaee2cabf16fe8f1ed73e",
+    "sha256": "906df264e823c06e9e5cbe24dbbdeaad0648f6dc15d3ff12b37855e57ac7dc13",
+    "frames": 37255,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10047,
+    "name": "Mega Heracross",
+    "file": "pokemon-cry-10047.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10047.ogg",
+    "sourceSHA256": "eecef2af7a8b3f42277aca9e12d4a700c2fac3b50192c9731d2ee971a00020d5",
+    "sha256": "ebcd5d1568d5253bbe828e0df6d6e1eedac8641f1a4cee484c6c8726b62c6a38",
+    "frames": 32426,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10048,
+    "name": "Mega Houndoom",
+    "file": "pokemon-cry-10048.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10048.ogg",
+    "sourceSHA256": "85f2c391a0091e1a4282cd579b25c6b0717674a78858ce5f1d3233987d617a7d",
+    "sha256": "8bba7e798bc71c2a226649ba2b2e9a6a0785eb6eb7d511b82fd4dfee0bafb216",
+    "frames": 35875,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10049,
+    "name": "Mega Tyranitar",
+    "file": "pokemon-cry-10049.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10049.ogg",
+    "sourceSHA256": "95dd98e924eeee3cd9de6b87a079276504955299585ffe64dfe7dce6086c72c1",
+    "sha256": "e78b6e419b7f3a4777435757984601c1842bb66876d58b38dedcac0ee3fe6e25",
+    "frames": 38661,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10050,
+    "name": "Mega Blaziken",
+    "file": "pokemon-cry-10050.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10050.ogg",
+    "sourceSHA256": "30779d17ef03809b6a3d0182297ca608d5d4d2d34aa281a9e43e4b3b2454d230",
+    "sha256": "b9d1ed2803476efd021f5f62a7039624b045d6c5cc48fbdaf113eb81a924619c",
+    "frames": 43464,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10051,
+    "name": "Mega Gardevoir",
+    "file": "pokemon-cry-10051.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10051.ogg",
+    "sourceSHA256": "369db853e20566149fff6ac1400a9f76097fbe5623456743b1a64dc25a697432",
+    "sha256": "fb1255a6208c386752013691342393d763c0dc37f97b736bf52c5b515b043dde",
+    "frames": 39967,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10052,
+    "name": "Mega Mawile",
+    "file": "pokemon-cry-10052.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10052.ogg",
+    "sourceSHA256": "6c31633a7a61cd94af897de5bed15aa473f527d72b3aa1b96a26cf26910e7c4b",
+    "sha256": "ab0ab9bbca40c309adf0f7c443c67c71b8f06610da7aa7c4175d1c019071d578",
+    "frames": 24687,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10053,
+    "name": "Mega Aggron",
+    "file": "pokemon-cry-10053.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10053.ogg",
+    "sourceSHA256": "22901996f8db1bef18e46ee1677fac9c737e27b5b37039842c1e5f7e90eb5ded",
+    "sha256": "fbaa66678d450c2479b9fa5e6f3784a4695ee5a4b149ad063fbd5ad61ab9215f",
+    "frames": 42774,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10054,
+    "name": "Mega Medicham",
+    "file": "pokemon-cry-10054.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10054.ogg",
+    "sourceSHA256": "4a004dc2978e957f7c17049c141f5e5b21485c601e81428ccdea465305ed2e51",
+    "sha256": "a538a44e501452ffdad7acfb87ec0ed2a02bae80499fbcb9a3e1c05bd41f7d18",
+    "frames": 32426,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10055,
+    "name": "Mega Manectric",
+    "file": "pokemon-cry-10055.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10055.ogg",
+    "sourceSHA256": "4b70d407f5bb0faa8987fe4a5c9def6e6cd3ab27484e3969703f448fe8ab95ce",
+    "sha256": "10702a88772fd5a9a0ac1d62413ab99eae5407aa8b4838891adb185315b65b6b",
+    "frames": 37235,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10056,
+    "name": "Mega Banette",
+    "file": "pokemon-cry-10056.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10056.ogg",
+    "sourceSHA256": "d94fb7da3b5ff9e72527f10ec677b5551021b1d339d35e016396fef93ca8e6ef",
+    "sha256": "abbbb1292c400cebdb11e2a9b894b3d88228e18fab5699c97ebd8fe493e34565",
+    "frames": 30356,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10057,
+    "name": "Mega Absol",
+    "file": "pokemon-cry-10057.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10057.ogg",
+    "sourceSHA256": "4c26f48801bf42083ae4b879ef1be9043fc604763d5c64b44dcf0818ca2a973d",
+    "sha256": "320ca0a587ea42900e0a3f326cc79269d05be2b07de60154986f14940af10b17",
+    "frames": 26217,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10058,
+    "name": "Mega Garchomp",
+    "file": "pokemon-cry-10058.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10058.ogg",
+    "sourceSHA256": "cb9fd215c4e5666516db9e572f83cbe09bf74ac091e4aab0c9fb35c2fbf64175",
+    "sha256": "c368b5443a0ed7002837a6cf818cd255c100a176fb95982163004aea230f8500",
+    "frames": 34496,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10059,
+    "name": "Mega Lucario",
+    "file": "pokemon-cry-10059.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10059.ogg",
+    "sourceSHA256": "fc1158a79495bc4abd95cd4c6791070d35761cc26b7dfeb446202c4d21824e68",
+    "sha256": "0ec2908dc83f68312e425abf8d612156a6577bc5f642f6b263457f2e019da989",
+    "frames": 28026,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10060,
+    "name": "Mega Abomasnow",
+    "file": "pokemon-cry-10060.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10060.ogg",
+    "sourceSHA256": "f24ec0aabffc219b51b5983e67feaa3b8c540519925b909b978a2f171d67f5e8",
+    "sha256": "3457175b7ed2849073cb593babcf048479d6fa8a2fc9da454652953889bac5d3",
+    "frames": 42882,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10061,
+    "name": "Eternal Floette",
+    "file": "pokemon-cry-10061.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10061.ogg",
+    "sourceSHA256": "f9daca2f31a3e53c8afde13d872e299ea454c54cfa1dadb44838245bb79b1665",
+    "sha256": "db644e8647c20af9c3cc829aa9c28bcd9b71941e32018e321aa18abe48d20124",
+    "frames": 31046,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10062,
+    "name": "Mega Latias",
+    "file": "pokemon-cry-10062.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10062.ogg",
+    "sourceSHA256": "d4fc3e42605976871c72c576eb13a85f19816dee4e4c7443de3b3eea1a4c16bb",
+    "sha256": "faea33f2969a657a92ac39442ab380382fb4b8951c0be0fc8875be4af0d344d5",
+    "frames": 26907,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10063,
+    "name": "Mega Latios",
+    "file": "pokemon-cry-10063.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10063.ogg",
+    "sourceSHA256": "29305ba85aa4f784f12e43c92de5ba20831c5ae387a2ccaf66adfb36103f5c24",
+    "sha256": "ceb488a22056242c4fafad2cccd7dfaef65d8c2c99632182d736ce389e7acf06",
+    "frames": 37945,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10064,
+    "name": "Mega Swampert",
+    "file": "pokemon-cry-10064.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10064.ogg",
+    "sourceSHA256": "b20f579f0f076d7e62452b7a948d54eb366bdb93e95642c5f678821558a7fb5a",
+    "sha256": "6742f11cb49e02b05e15cbf92dde296965b2350b5a90d4962d85e2318b3c6ea3",
+    "frames": 40299,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10065,
+    "name": "Mega Sceptile",
+    "file": "pokemon-cry-10065.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10065.ogg",
+    "sourceSHA256": "0961997eeed8b36c23eb0e3c3afc3006e3b7c60b3d8b78bf6117023fcad068dc",
+    "sha256": "52942b029584788f8238259c5fcb68da43c982ec0631844bd2535660bdf1f2ed",
+    "frames": 45629,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10066,
+    "name": "Mega Sableye",
+    "file": "pokemon-cry-10066.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10066.ogg",
+    "sourceSHA256": "090499fae1a0d093f2a1dcc55eddfecf4cbf76ae636e6b9a253b104f86f5228d",
+    "sha256": "e965524e18a9415ce2ccd94bdf70027fc7bb3f244926cf48d13bd646d99fde11",
+    "frames": 28359,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10067,
+    "name": "Mega Altaria",
+    "file": "pokemon-cry-10067.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10067.ogg",
+    "sourceSHA256": "2988dbb17b074cc8c2cbeedfbde65c580927af542965741ca0e0263950a7fc21",
+    "sha256": "d47bb453eb898141c4e9aae72f70765d01d7dc4ca17f7117238813ba3d1c0fb7",
+    "frames": 28572,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10068,
+    "name": "Mega Gallade",
+    "file": "pokemon-cry-10068.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10068.ogg",
+    "sourceSHA256": "cd9a57b634c6197825d636412e3678ff63e7aff7f0bbfcd9bfbab65d96cf34f1",
+    "sha256": "5c7bce8dbf4ab937357d728a88d1d95142faf7dc6239bec354395f8251ef0681",
+    "frames": 45416,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10069,
+    "name": "Mega Audino",
+    "file": "pokemon-cry-10069.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10069.ogg",
+    "sourceSHA256": "f6283ea9d9336be78ef73473cb463fb7be3f84c36188e5b798e69411f7884777",
+    "sha256": "7b11823a6858f933ca516bac525750246f2daa4cdb5f3f300e1eb259cc7209cc",
+    "frames": 29425,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10070,
+    "name": "Mega Sharpedo",
+    "file": "pokemon-cry-10070.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10070.ogg",
+    "sourceSHA256": "d9b7241bc06890d878f61d1b1372b2a10acc0c84745a4b356561103c977f9ee4",
+    "sha256": "548c1f52768c066f42ba2154110692ad168e009877775a4fe7ee780f978ff17a",
+    "frames": 40298,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10071,
+    "name": "Mega Slowbro",
+    "file": "pokemon-cry-10071.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10071.ogg",
+    "sourceSHA256": "6eda18862fdc413d5e9716f9fbcc8ba385d25f5520a726be0494ae7446d7688c",
+    "sha256": "0c7935ad53f93d46c739e1701a03575bac8275fa74debe48eed7af52ad7d3fe0",
+    "frames": 31343,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10072,
+    "name": "Mega Steelix",
+    "file": "pokemon-cry-10072.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10072.ogg",
+    "sourceSHA256": "de2a42169c8b1ac02f8be1e0ad8411e4f752f6fe47dd826cfc8291bdcaedb018",
+    "sha256": "02eb7beda83f48a9f9bc9bb626d25d1232e044da26b7a90906021a61be136493",
+    "frames": 52878,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10073,
+    "name": "Mega Pidgeot",
+    "file": "pokemon-cry-10073.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10073.ogg",
+    "sourceSHA256": "b0877d5fc22a56fb73df618c00102b111da10db2cf3c53f4e817818673aa7298",
+    "sha256": "7767266502a29ed9e9251d46e212b2ed74b4559598d4f300ba681bf6cfe3d652",
+    "frames": 36247,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10074,
+    "name": "Mega Glalie",
+    "file": "pokemon-cry-10074.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10074.ogg",
+    "sourceSHA256": "248c63c0b13208cc8b2bf52df77a45d4dddbb3b932571744fe675cdad49a1988",
+    "sha256": "e7ce4758cf024fa8c98ab606e7bd88d3c6d0671150f2a16c864944964ca82bd9",
+    "frames": 39872,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10075,
+    "name": "Mega Diancie",
+    "file": "pokemon-cry-10075.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10075.ogg",
+    "sourceSHA256": "79cc9b0bdece373afc49212e1f997791ae645d907c1fe68c61a9ba7dbdb57e3d",
+    "sha256": "ac5576ecd75579e9eebb05e92b588704c9918a79e04064e38e9900beef40b3a1",
+    "frames": 48425,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10076,
+    "name": "Mega Metagross",
+    "file": "pokemon-cry-10076.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10076.ogg",
+    "sourceSHA256": "6102cba0337511363d59f71c4b274ef340b8c1f84d0fcdbc011b7760b5173d44",
+    "sha256": "115a311a362c459287bce01e74d4c906f231a6bd8d69a638a59fa3b023a29067",
+    "frames": 54584,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10077,
+    "name": "Primal Kyogre",
+    "file": "pokemon-cry-10077.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10077.ogg",
+    "sourceSHA256": "576c4a620bcb3c51d340480f22688d29049b03cc086369b666e296fac664de2c",
+    "sha256": "fd17028818e88b0882242cccfbb027cdf7830d1037964e8d06afbf704117edc6",
+    "frames": 72021,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10078,
+    "name": "Primal Groudon",
+    "file": "pokemon-cry-10078.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10078.ogg",
+    "sourceSHA256": "72cbe17b521337bb15edfc3301ef22e3507836cb9cf828da82b634c1bb157bc1",
+    "sha256": "3410f30a0ba3fca458fb1a1643beb9733e73a4f926dc3dc527bc2a8fe27bd3a6",
+    "frames": 71775,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10079,
+    "name": "Mega Rayquaza",
+    "file": "pokemon-cry-10079.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10079.ogg",
+    "sourceSHA256": "13968c88a23513522d2fdd8bf87029be01ba52a4c61afdc011e6d9c7e5f32804",
+    "sha256": "284aaf50478e81b104d1dc5582f9aa9c976568cbfb0185f0def2dd9d10736deb",
+    "frames": 46269,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10080,
+    "name": "Pikachu Rock Star",
+    "file": "pokemon-cry-10080.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10080.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10081,
+    "name": "Pikachu Belle",
+    "file": "pokemon-cry-10081.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10081.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10082,
+    "name": "Pikachu Pop Star",
+    "file": "pokemon-cry-10082.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10082.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10083,
+    "name": "Pikachu Ph.D.",
+    "file": "pokemon-cry-10083.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10083.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10084,
+    "name": "Pikachu Libre",
+    "file": "pokemon-cry-10084.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10084.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10085,
+    "name": "Cosplay Pikachu",
+    "file": "pokemon-cry-10085.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10085.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10086,
+    "name": "Hoopa Unbound",
+    "file": "pokemon-cry-10086.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10086.ogg",
+    "sourceSHA256": "81f9e08c76bd56bbb8b0485b7a3c53abdccfe084822aca9cf719959b4e231629",
+    "sha256": "2cb409536394b126a48f7678f34b3590164ee842c4d6521195d1cebeae9aeab0",
+    "frames": 29835,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10087,
+    "name": "Mega Camerupt",
+    "file": "pokemon-cry-10087.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10087.ogg",
+    "sourceSHA256": "4f2fda10629f9cfeb2fdd5e8eb7a2cb5f9eee2ec1b498649ffbd7ee7b400cad9",
+    "sha256": "c8f46cba9ea08b0ebb6f2963c40c1a5f64c958a2a0c8b0fa991b176cdc37dbd5",
+    "frames": 42004,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10088,
+    "name": "Mega Lopunny",
+    "file": "pokemon-cry-10088.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10088.ogg",
+    "sourceSHA256": "8217a5ba20dca1f06227214a000507b42281db49d8c0c720c765bb0a5bcfa1b2",
+    "sha256": "6ee5089a03e65e79242ff42f730d596f63744076b70b778d11c4a25d95e9669c",
+    "frames": 50107,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10089,
+    "name": "Mega Salamence",
+    "file": "pokemon-cry-10089.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10089.ogg",
+    "sourceSHA256": "b4793df0f0bee0030de4049b33cad39b1847cc18db588f062ffce0f967dfb9b8",
+    "sha256": "b5e1ecf0200a696d4a9af5639507f9e2b6b3e6747f8a336279f05c82ccc3260c",
+    "frames": 44989,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10090,
+    "name": "Mega Beedrill",
+    "file": "pokemon-cry-10090.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10090.ogg",
+    "sourceSHA256": "a83f901c3feb24adcc333c5c8487cecef79f37f38ba57c278476fcb38d8added",
+    "sha256": "f1e51720ade0e7453448d67138939942b77bed00eb98e2d5c9cc2af9c4142fb2",
+    "frames": 38379,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10091,
+    "name": "Alolan Rattata",
+    "file": "pokemon-cry-10091.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10091.ogg",
+    "sourceSHA256": "87d551514ef9b8e42da154be8b4c2002efea53c558989344126170eecff54aab",
+    "sha256": "33c7977c83bb0630a94b17eee7c439406ebf96a42d72028f031c036c608c7127",
+    "frames": 10477,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10092,
+    "name": "Alolan Raticate",
+    "file": "pokemon-cry-10092.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10092.ogg",
+    "sourceSHA256": "58a24056c7b92edde94698d03ae0257188baf014f4124ae6ba1c7db448e4b6e9",
+    "sha256": "1221e5f90c6d643547ad150adcebb84e899b23ffdcbd96a0303384e1515eb687",
+    "frames": 14060,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10093,
+    "name": "Totem Alolan Raticate",
+    "file": "pokemon-cry-10093.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10093.ogg",
+    "sourceSHA256": "58a24056c7b92edde94698d03ae0257188baf014f4124ae6ba1c7db448e4b6e9",
+    "sha256": "1221e5f90c6d643547ad150adcebb84e899b23ffdcbd96a0303384e1515eb687",
+    "frames": 14060,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10094,
+    "name": "Original Cap Pikachu",
+    "file": "pokemon-cry-10094.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10094.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10095,
+    "name": "Hoenn Cap Pikachu",
+    "file": "pokemon-cry-10095.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10095.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10096,
+    "name": "Sinnoh Cap Pikachu",
+    "file": "pokemon-cry-10096.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10096.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10097,
+    "name": "Unova Cap Pikachu",
+    "file": "pokemon-cry-10097.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10097.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10098,
+    "name": "Kalos Cap Pikachu",
+    "file": "pokemon-cry-10098.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10098.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10099,
+    "name": "Alola Cap Pikachu",
+    "file": "pokemon-cry-10099.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10099.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10100,
+    "name": "Alolan Raichu",
+    "file": "pokemon-cry-10100.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10100.ogg",
+    "sourceSHA256": "7fdd8215c003331221a47203b90a26efbdf9ea4c8393d0a4daae42af0b94a8c0",
+    "sha256": "16425624bb66f383276ba4cc52f25fadff615ece15bffc2578122214fdacd620",
+    "frames": 27294,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10101,
+    "name": "Alolan Sandshrew",
+    "file": "pokemon-cry-10101.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10101.ogg",
+    "sourceSHA256": "1d2fcc16683cad9b24313d86b9ec8f77aa8d7660724e798dc8f60a587c4bb7d2",
+    "sha256": "e146ede8d932b96f210ac50209520ca5b545d7d2bbcb1b0570feba6261950cbe",
+    "frames": 12406,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10102,
+    "name": "Alolan Sandslash",
+    "file": "pokemon-cry-10102.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10102.ogg",
+    "sourceSHA256": "03812406a22c9abc15a8e683a13d4cde1fe89c6d44c952c6776442fc1044ed94",
+    "sha256": "05a80ae3ccc04d778ea251b78d4eb3543f4e64d617f67be29f2b7dcde3acf26c",
+    "frames": 17782,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10103,
+    "name": "Alolan Vulpix",
+    "file": "pokemon-cry-10103.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10103.ogg",
+    "sourceSHA256": "70ed1c7f151d0bf13fe84f3e46c20c4beef810e308075f458bbff32b72469b48",
+    "sha256": "289559e24d2cae4cd696233f3ba1d5e82b619e0d28de5a691f4f3a46fcd464c5",
+    "frames": 30189,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10104,
+    "name": "Alolan Ninetales",
+    "file": "pokemon-cry-10104.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10104.ogg",
+    "sourceSHA256": "a91b30857b164e3ed2f3fb0eeb6aad6aca59e8d4643dd75d974d2f7f28e61d7f",
+    "sha256": "4774ae66340a894316204ec272715b91705a541ce42e2fd92f672bffcc1b7fe2",
+    "frames": 30326,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10105,
+    "name": "Alolan Diglett",
+    "file": "pokemon-cry-10105.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10105.ogg",
+    "sourceSHA256": "fc27635f89c49650e733fc77f9f8faf5cb23a019c75d4a26a3445d398a580f67",
+    "sha256": "103952d51033e2307b826a153477f8d9606a4a5df71bd79d39ffefc85b98a436",
+    "frames": 27570,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10106,
+    "name": "Alolan Dugtrio",
+    "file": "pokemon-cry-10106.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10106.ogg",
+    "sourceSHA256": "81e35241472e40f71c05670683a42cc37cef95d104eb9eee62c7e5667b94db0e",
+    "sha256": "15cc6174a31a99f0a3035512fd82b1c613c733c19ed8458b5a606e60a99c6fe4",
+    "frames": 27707,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10107,
+    "name": "Alolan Meowth",
+    "file": "pokemon-cry-10107.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10107.ogg",
+    "sourceSHA256": "e72d520a30d5ed7280162d4e600e925ffb94eb0ba30bd8a984bb1662ffadb2ed",
+    "sha256": "a9b6632a8ce76b19704e48af3c1c1ff4159634d5f44825fea63ad37c79341d1a",
+    "frames": 15853,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10108,
+    "name": "Alolan Persian",
+    "file": "pokemon-cry-10108.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10108.ogg",
+    "sourceSHA256": "f28d5ef81f2ec4a752c3c5e7855af3e262e3dcc04fea1a8a100fc101df5c6252",
+    "sha256": "7df15d20db82aa45d91ee169afcbe34acfda4897108cd1d87c3ea376f02ddd7e",
+    "frames": 23434,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10109,
+    "name": "Alolan Geodude",
+    "file": "pokemon-cry-10109.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10109.ogg",
+    "sourceSHA256": "41b6ff2ac6244905c946098eb7966109fadc5ff732d0342a809b36a425bdaf80",
+    "sha256": "2b7c00b3238c27781ab54a0bbeac055c627b82d5fb02be5c4fe9dc9e4764f183",
+    "frames": 29775,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10110,
+    "name": "Alolan Graveler",
+    "file": "pokemon-cry-10110.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10110.ogg",
+    "sourceSHA256": "5ee5a3ba4cb75c05a178c5f2303a761357880bb529b0604bd25452c92e3dc451",
+    "sha256": "97f81e2bfcc012747712803a45735fb5d492f58f4bd5ce262e532e4447914d71",
+    "frames": 36392,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10111,
+    "name": "Alolan Golem",
+    "file": "pokemon-cry-10111.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10111.ogg",
+    "sourceSHA256": "707d486d27f89d2d2a836e0edb0c49fcbf4777cf1768de71466137d6cd9cbea7",
+    "sha256": "4973a35258fd861b88819911616ceafe6b8b164f8e7316c214b4e90c151b28fc",
+    "frames": 24537,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10112,
+    "name": "Alolan Grimer",
+    "file": "pokemon-cry-10112.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10112.ogg",
+    "sourceSHA256": "d79bc358029276b8cc9a4cc5f75ad22d26c4229188a47969f61eca49bcdb5177",
+    "sha256": "8b9cfa96a4c600295315d4f7d11935ec3edda438c425d19ad4405f16240f2d58",
+    "frames": 14061,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10113,
+    "name": "Alolan Muk",
+    "file": "pokemon-cry-10113.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10113.ogg",
+    "sourceSHA256": "68653acef5fe182e83546e57542a8f4f9932f82f590990c99127bd4fc3ad87a5",
+    "sha256": "5a019d9497634a94bffa21d73c46308393daa2eb84dc57605a24549a33fb78f2",
+    "frames": 20953,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10114,
+    "name": "Alolan Exeggutor",
+    "file": "pokemon-cry-10114.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10114.ogg",
+    "sourceSHA256": "6bbc0a9e115e0de728b53b77619eb5fb01754147ac4dd5ac3e318bf18b040ae1",
+    "sha256": "ca0eb32bd53ce730ac509f430a2b55819e8aacc04828b19ed49a92078f551577",
+    "frames": 36254,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10115,
+    "name": "Alolan Marowak",
+    "file": "pokemon-cry-10115.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10115.ogg",
+    "sourceSHA256": "bdf9ecd3820d6f3f4cf2afcd95ecfe23ca4c9fba4e3ddd5504b0171113f79961",
+    "sha256": "6d97c5496ee8cba1029a0c5f9331ae8b85c7bdad9d4c6d0c88614761fa8fa12f",
+    "frames": 19988,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10116,
+    "name": "Battle Bond Greninja",
+    "file": "pokemon-cry-10116.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10116.ogg",
+    "sourceSHA256": "7a35bd31a0f08c184b5bfb3abce7804d3c120da032064d10a7e35fa36ab7d351",
+    "sha256": "07ab8e5c8c0c0c6cb4cbea911fe1b99517beaf1bab6644fa6fb34affa2c9efd3",
+    "frames": 25667,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10117,
+    "name": "Ash’s Greninja",
+    "file": "pokemon-cry-10117.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10117.ogg",
+    "sourceSHA256": "7a35bd31a0f08c184b5bfb3abce7804d3c120da032064d10a7e35fa36ab7d351",
+    "sha256": "07ab8e5c8c0c0c6cb4cbea911fe1b99517beaf1bab6644fa6fb34affa2c9efd3",
+    "frames": 25667,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10118,
+    "name": "10% Zygarde",
+    "file": "pokemon-cry-10118.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10118.ogg",
+    "sourceSHA256": "6ffb6c00582be1e2c53be698e9d3a34f342a5d57e29fd45651fe00987b1f1227",
+    "sha256": "815182f741c19a975c4e154d300d1971d7dc2d9d98adb1fea5ed1794e94bad2e",
+    "frames": 35508,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10119,
+    "name": "50% Zygarde",
+    "file": "pokemon-cry-10119.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10119.ogg",
+    "sourceSHA256": "97551fa4e9e7a02bddaa8bd66666b6fb327658d24bbf6af981d733b72b1960bc",
+    "sha256": "90b53aa1569f5c672e24f8ba0c67f23f552df1cd6e1dadf59159885b942eaf79",
+    "frames": 39933,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10120,
+    "name": "Complete Zygarde",
+    "file": "pokemon-cry-10120.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10120.ogg",
+    "sourceSHA256": "b045e36966245933671e47456ed0da01ec53c4b4708a178c9690d77c407523e8",
+    "sha256": "f79bc1390525e8f634894ba0dfff2d788a2dfaf560ef38ca772bae0555ff3d63",
+    "frames": 50715,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10121,
+    "name": "Totem Gumshoos",
+    "file": "pokemon-cry-10121.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10121.ogg",
+    "sourceSHA256": "e7260376a00a86624d956a3f8100b7808b2b2a2b17349c015c128e0320396c88",
+    "sha256": "399dde4f22254b79cfcc5bcb9a10002c0f1d23b1d37e2dd9c913876d030f1751",
+    "frames": 41331,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10122,
+    "name": "Totem Vikavolt",
+    "file": "pokemon-cry-10122.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10122.ogg",
+    "sourceSHA256": "c25a7e8d03b5adc68118b8fd50746a235e2494fcc657ba3dcb33da031c37430d",
+    "sha256": "e52dd095f26b157ad678af7b00670b09f63a253fa8221eeabf4931641042bdb3",
+    "frames": 38927,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10123,
+    "name": "Pom-pom Oricorio",
+    "file": "pokemon-cry-10123.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10123.ogg",
+    "sourceSHA256": "d0cdd1c18b14c3f970094f85326bfec4fde7a604004d55ff1fbc98b2a4c6acf4",
+    "sha256": "ac3edb7cac276305e94837e215111319fd957926f5f1434bf6ea104181766d38",
+    "frames": 38175,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10124,
+    "name": "Pa’u Oricorio",
+    "file": "pokemon-cry-10124.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10124.ogg",
+    "sourceSHA256": "86f4a5d04d884c085178d24e7bcc30e40511d97236498dbad3a7370b4657c5ce",
+    "sha256": "f266369a6562db295905d8b4421514444f212b9495bd65d340d42ef219d1dd6e",
+    "frames": 44090,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10125,
+    "name": "Sensu Oricorio",
+    "file": "pokemon-cry-10125.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10125.ogg",
+    "sourceSHA256": "f87a7c036e580c39b5641c5bfc4de7471f9b9df976e477cda461c836bd5ede50",
+    "sha256": "3cbb6c1e07657d207f7481a54010a4362ccc4c266ee213bff594caf4aa400975",
+    "frames": 24968,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10126,
+    "name": "Midnight Lycanroc",
+    "file": "pokemon-cry-10126.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10126.ogg",
+    "sourceSHA256": "f3fc0a911491ad34df79d65b2cbec29113f27c8fee2c80c532967f583e59e295",
+    "sha256": "e7a8da4b9ee8a6b29757d935fc8e218d23cbf31f8b7eb4fc78508c024ff187e9",
+    "frames": 36112,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10127,
+    "name": "School Wishiwashi",
+    "file": "pokemon-cry-10127.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10127.ogg",
+    "sourceSHA256": "c7a19e0174c32033aa25bc0cb29d7a902b8e5c947048d4eaa9ec7bc180704507",
+    "sha256": "a6e60a1c545ed3eae946ed9035afa5001a5b5619b08a71065f7c36ed20ee341c",
+    "frames": 29977,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10128,
+    "name": "Totem Lurantis",
+    "file": "pokemon-cry-10128.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10128.ogg",
+    "sourceSHA256": "aad312fb8395489cb2969e6320e7b44d5a2b138c7eaf97002344522566cd275a",
+    "sha256": "a36582aaa6624884328dcf4c5ea75cfdd84504ad26d87082bda8cac8b989ab97",
+    "frames": 24025,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10129,
+    "name": "Totem Salazzle",
+    "file": "pokemon-cry-10129.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10129.ogg",
+    "sourceSHA256": "b6ef758c24023767262ca2c1c5ab2a4a5453ad840074fa0c8e29c68013925f9c",
+    "sha256": "efb84ff9bcd58d266453f8a52eebea1793a120586725e46764d753fce8fb2f4e",
+    "frames": 40658,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10130,
+    "name": "Orange Meteor Minior",
+    "file": "pokemon-cry-10130.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10130.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10131,
+    "name": "Yellow Meteor Minior",
+    "file": "pokemon-cry-10131.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10131.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10132,
+    "name": "Green Meteor Minior",
+    "file": "pokemon-cry-10132.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10132.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10133,
+    "name": "Blue Meteor Minior",
+    "file": "pokemon-cry-10133.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10133.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10134,
+    "name": "Indigo Meteor Minior",
+    "file": "pokemon-cry-10134.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10134.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10135,
+    "name": "Violet Meteor Minior",
+    "file": "pokemon-cry-10135.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10135.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10136,
+    "name": "Red Core Minior",
+    "file": "pokemon-cry-10136.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10136.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10137,
+    "name": "Orange Core Minior",
+    "file": "pokemon-cry-10137.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10137.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10138,
+    "name": "Yellow Core Minior",
+    "file": "pokemon-cry-10138.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10138.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10139,
+    "name": "Green Core Minior",
+    "file": "pokemon-cry-10139.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10139.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10140,
+    "name": "Blue Core Minior",
+    "file": "pokemon-cry-10140.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10140.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10141,
+    "name": "Indigo Core Minior",
+    "file": "pokemon-cry-10141.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10141.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10142,
+    "name": "Violet Core Minior",
+    "file": "pokemon-cry-10142.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10142.ogg",
+    "sourceSHA256": "b2ff78eeecab1840618b916f1dc3067c4bbd34e98c65f692a65e700142cd5549",
+    "sha256": "01005ad0bd216ef7a040cb472efca79da70786937b1a0e2212fe918d09995a67",
+    "frames": 30987,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10143,
+    "name": "Busted Mimikyu",
+    "file": "pokemon-cry-10143.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10143.ogg",
+    "sourceSHA256": "bd3ee401eec0319f50aadff58fb9b0a164b94c701d1f53cdad287e327fd14ae4",
+    "sha256": "26aa29e05f6de5c358881a90697973d164e87a6cdd187b37ac639558cb1a387c",
+    "frames": 25472,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10144,
+    "name": "Totem Disguised Mimikyu",
+    "file": "pokemon-cry-10144.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10144.ogg",
+    "sourceSHA256": "bd3ee401eec0319f50aadff58fb9b0a164b94c701d1f53cdad287e327fd14ae4",
+    "sha256": "26aa29e05f6de5c358881a90697973d164e87a6cdd187b37ac639558cb1a387c",
+    "frames": 25472,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10145,
+    "name": "Totem Busted Mimikyu",
+    "file": "pokemon-cry-10145.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10145.ogg",
+    "sourceSHA256": "bd3ee401eec0319f50aadff58fb9b0a164b94c701d1f53cdad287e327fd14ae4",
+    "sha256": "26aa29e05f6de5c358881a90697973d164e87a6cdd187b37ac639558cb1a387c",
+    "frames": 25472,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10146,
+    "name": "Totem Kommo-o",
+    "file": "pokemon-cry-10146.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10146.ogg",
+    "sourceSHA256": "9cd74c31e2623f88d526388053597a728741f6706616cf2a35474f03ff0941f0",
+    "sha256": "2f994fa21f7503755528a31d51f294db268e20313cfdb219b936d7735d1af77a",
+    "frames": 43474,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10147,
+    "name": "Original Magearna",
+    "file": "pokemon-cry-10147.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10147.ogg",
+    "sourceSHA256": "bafa51cad1d13cf7597f11e13e06abfbb360560742a1a9eddaa54f3cc88df966",
+    "sha256": "eee58fe7763533d219e176416f735d7482c2f79ff82755a4ef1515c3acd75cc7",
+    "frames": 31174,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10148,
+    "name": "Partner Cap Pikachu",
+    "file": "pokemon-cry-10148.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10148.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10149,
+    "name": "Totem Alolan Marowak",
+    "file": "pokemon-cry-10149.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10149.ogg",
+    "sourceSHA256": "bdf9ecd3820d6f3f4cf2afcd95ecfe23ca4c9fba4e3ddd5504b0171113f79961",
+    "sha256": "6d97c5496ee8cba1029a0c5f9331ae8b85c7bdad9d4c6d0c88614761fa8fa12f",
+    "frames": 19988,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10150,
+    "name": "Totem Ribombee",
+    "file": "pokemon-cry-10150.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10150.ogg",
+    "sourceSHA256": "87d89e14d5ac81a6d597c93d05426b93690c341dc816182fba9201236c569ab7",
+    "sha256": "73f79496956f04efc14ec58c41c9fe45f01b67fb143e386c37d3e8a70aa30afc",
+    "frames": 33038,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10151,
+    "name": "Own Tempo Rockruff",
+    "file": "pokemon-cry-10151.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10151.ogg",
+    "sourceSHA256": "f573838f4d7bd0c149dc0ed51d8c6b49303f929a4adb1dba3874afd1d2aa2cb9",
+    "sha256": "0d0a32f250dfc2ea80174a53c17b928e2e1a81da8f4acb715a9021e6f7eb3d2e",
+    "frames": 11618,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10152,
+    "name": "Dusk Lycanroc",
+    "file": "pokemon-cry-10152.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10152.ogg",
+    "sourceSHA256": "eff4e0cad1b7ace84da6ae347a4daa9ce243cf61c096681bdbbaa1cb9b3b82dd",
+    "sha256": "4e9e51b7afe21c6e904f64449ef703631acac251e53b7625c727a9389a7e12df",
+    "frames": 24362,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10153,
+    "name": "Totem Araquanid",
+    "file": "pokemon-cry-10153.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10153.ogg",
+    "sourceSHA256": "be7b4611a8c75b4610028e04f8b517212170155435e1bed5f0b926c868bd450d",
+    "sha256": "333b0658269cfb12a9c3b7f826fddfdf8cc66c689994ca6eac57ee02b4727fc0",
+    "frames": 24166,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10154,
+    "name": "Totem Togedemaru",
+    "file": "pokemon-cry-10154.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10154.ogg",
+    "sourceSHA256": "f1cc67168e9eda1087caac879d8f511a686c3a0f70fba7c9266fe0ec7fc8966f",
+    "sha256": "b9da803f221b7b64d27d0ab2555d5d28164f787b924d9b72c741b92a58212cce",
+    "frames": 15421,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10155,
+    "name": "Dusk Necrozma",
+    "file": "pokemon-cry-10155.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10155.ogg",
+    "sourceSHA256": "a5a6394ea47cc6fc2e73d1c98ccb7a51344c6fde4a1ec6d9a61e77834dca404e",
+    "sha256": "a903172640ed0786a744498d067a0e1d34c354371f86a045a416cb2126087e7e",
+    "frames": 44635,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10156,
+    "name": "Dawn Necrozma",
+    "file": "pokemon-cry-10156.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10156.ogg",
+    "sourceSHA256": "e9f1f0e32dda6fafbe0bd9ff1e05c257d1b446445d2681ff02fe23fd50204900",
+    "sha256": "0b599d57bf5483ff7621c9c65e7152e83e92405032ddfc07b047bcaae45bff6a",
+    "frames": 43254,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10157,
+    "name": "Ultra Necrozma",
+    "file": "pokemon-cry-10157.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10157.ogg",
+    "sourceSHA256": "91e90f425884879f36be6957ea441fda92288d9e346fa44626a95794c63b78ce",
+    "sha256": "ef1be5b231c8905950956a4a006e8923a5d22f4e618c597958cb03ae4421c4ea",
+    "frames": 43549,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10158,
+    "name": "Partner Pikachu",
+    "file": "pokemon-cry-10158.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10158.ogg",
+    "sourceSHA256": "183c6827ba5738fdc720950ea4692d79ac75b64e174cc2341e289a6c1b287d65",
+    "sha256": "4ede53e440f1d7f74b3684a75db53ba7b1e67fe6446df5c12467581e52086148",
+    "frames": 27908,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10159,
+    "name": "Partner Eevee",
+    "file": "pokemon-cry-10159.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10159.ogg",
+    "sourceSHA256": "e40dbf6ead257da7e210a47567773dfb12705b75bc991e73c1b0218b172328cd",
+    "sha256": "2510d36e298901e75096d3f7442171696b6cc0e76759e3e501879c4f535853a3",
+    "frames": 16608,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10160,
+    "name": "World Cap Pikachu",
+    "file": "pokemon-cry-10160.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10160.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10161,
+    "name": "Galarian Meowth",
+    "file": "pokemon-cry-10161.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10161.ogg",
+    "sourceSHA256": "e72d520a30d5ed7280162d4e600e925ffb94eb0ba30bd8a984bb1662ffadb2ed",
+    "sha256": "a9b6632a8ce76b19704e48af3c1c1ff4159634d5f44825fea63ad37c79341d1a",
+    "frames": 15853,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10162,
+    "name": "Galarian Ponyta",
+    "file": "pokemon-cry-10162.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10162.ogg",
+    "sourceSHA256": "6be79d7172ac8cc9c1584e6303155cffefeed33a279f4e8b55b71e9f2a80e900",
+    "sha256": "daa267eb2971e70df8a12c240de2caa18699cbedb0d70898e8bbbc803d54a289",
+    "frames": 33910,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10163,
+    "name": "Galarian Rapidash",
+    "file": "pokemon-cry-10163.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10163.ogg",
+    "sourceSHA256": "43db7dc4707035f18025b43db27de3ebe5bf86bc7795b2a45e549e8cb00c0b7e",
+    "sha256": "34868b2799a3905c54da226b8cce31f153e67d8fc8a38b07484078658c6cf75d",
+    "frames": 30189,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10164,
+    "name": "Galarian Slowpoke",
+    "file": "pokemon-cry-10164.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10164.ogg",
+    "sourceSHA256": "8e239c0de81d81af370dd99bdbdace2f07e057704bc9d2a4aac8b4833ec200d1",
+    "sha256": "1c16de04274cfa74fe81e23ee971db70fc8b5ef520c32629852738d0ed076841",
+    "frames": 15849,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10165,
+    "name": "Galarian Slowbro",
+    "file": "pokemon-cry-10165.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10165.ogg",
+    "sourceSHA256": "216778d4a4a0db319e9226673fec1c16b899479949984b1627e42603c81f6bc0",
+    "sha256": "a6fe8b1f85d0b5e73bffa1bac991ecb6842230230e7c9313a1a2e8925bb77607",
+    "frames": 19023,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10166,
+    "name": "Galarian Farfetch’d",
+    "file": "pokemon-cry-10166.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10166.ogg",
+    "sourceSHA256": "20ac2e7b9498b73fb89d6659489336d87ba141af9ec95f75b0c24e206d4ecc37",
+    "sha256": "75232b84ddc5f2d26a780b54c8c7d451d4741889ee403cd49cad9fa9c4ec9cf1",
+    "frames": 13233,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10167,
+    "name": "Galarian Weezing",
+    "file": "pokemon-cry-10167.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10167.ogg",
+    "sourceSHA256": "298e4b24f0da3769ad05677dedcaedd973f3ff5d6a944d571004a5f2d7f71529",
+    "sha256": "b7e5cbd14ffe937a62125c48dd5f045ff13507af26291cd29bce51bed68e0d53",
+    "frames": 24951,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10168,
+    "name": "Galarian Mr. Mime",
+    "file": "pokemon-cry-10168.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10168.ogg",
+    "sourceSHA256": "00771d6d5f9bce86be72d0843d54178eb478f1039bf039e8428e6eea02b36cda",
+    "sha256": "0949be558603d47abf68ecc906ffe7d9b09d2a6c7ae676126beea7a6c397629b",
+    "frames": 22883,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10169,
+    "name": "Galarian Articuno",
+    "file": "pokemon-cry-10169.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10169.ogg",
+    "sourceSHA256": "d45d3595e290f3035dfaf7acaaf6e680025739d9e7f99dd5f14bfee2b0e658dc",
+    "sha256": "20812347f5b7dfb1ef68ca77522e0bb8e1d7b88dcda408589e9a9dc43df31e3a",
+    "frames": 30051,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10170,
+    "name": "Galarian Zapdos",
+    "file": "pokemon-cry-10170.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10170.ogg",
+    "sourceSHA256": "3505565dccb43d0067ff490a6398b2a6ff35902895b891c9662b0577181c63d9",
+    "sha256": "e7714b44ee6276a2e1c55f12dacde71bf7185ef9359bd5bcf320d2a038f41df8",
+    "frames": 22056,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10171,
+    "name": "Galarian Moltres",
+    "file": "pokemon-cry-10171.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10171.ogg",
+    "sourceSHA256": "6267c8bc38899963230b0a1be3c02a34c3ba839fa965abff2c68ec2ed61ab46a",
+    "sha256": "e426e8ed427896e40fe528a614e1841d5cc28f8c2de273b01ef3fa8d1f94f2a5",
+    "frames": 30051,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10172,
+    "name": "Galarian Slowking",
+    "file": "pokemon-cry-10172.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10172.ogg",
+    "sourceSHA256": "13525463508e35cfa828419c0af3f4b014fe5160a9472a489ebfe4a412fcf15f",
+    "sha256": "9dc4361637e4372e0d5f2b1852978aa8d2ce21d39f9d590aaf9b2ead855b5c96",
+    "frames": 28342,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10173,
+    "name": "Galarian Corsola",
+    "file": "pokemon-cry-10173.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10173.ogg",
+    "sourceSHA256": "b8402a06aaa3d4378cf5680f2a463438d7e97fcde936609d0392ace7308c55d1",
+    "sha256": "35202afc9ba21f81b60b14e30e1b79c4d697639bd41162f199aff5f91bbfaead",
+    "frames": 15296,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10174,
+    "name": "Galarian Zigzagoon",
+    "file": "pokemon-cry-10174.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10174.ogg",
+    "sourceSHA256": "a97ee964ee75c259cdc6772b427960999a3b6a5500dbf3a6df8ffccf86a47d19",
+    "sha256": "37470a26e0cd3b745e298092035125177ba69e5bc1927143baa603058fc0d277",
+    "frames": 13200,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10175,
+    "name": "Galarian Linoone",
+    "file": "pokemon-cry-10175.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10175.ogg",
+    "sourceSHA256": "2c842bfa4f0bc533d74c680c8644359350728f22a507350e3504d79dd5083629",
+    "sha256": "3b0ce1dcb819b94658f0a87c44632949f713643587b3052a12c702c062ae833f",
+    "frames": 34467,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10176,
+    "name": "Galarian Darumaka",
+    "file": "pokemon-cry-10176.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10176.ogg",
+    "sourceSHA256": "00c1decb7255aaaa24f743f828195d26f2739bcc28c4b76a11ae31c673e51a7a",
+    "sha256": "0481d4fce9e7cb0580108bebf80a583b94691617f7deea1840f1796b4216a8f1",
+    "frames": 30699,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10177,
+    "name": "Standard Galarian Darmanitan",
+    "file": "pokemon-cry-10177.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10177.ogg",
+    "sourceSHA256": "4ddb16bf29ecb2a49d9bd267d8cb7cc027a4969402d2535dc959faa732999ade",
+    "sha256": "acf4bfc4329a19e89ff4d5217904d1ff064d40e0db3200678f4d75470ab29056",
+    "frames": 33881,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10178,
+    "name": "Zen Galarian Darmanitan",
+    "file": "pokemon-cry-10178.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10178.ogg",
+    "sourceSHA256": "4ddb16bf29ecb2a49d9bd267d8cb7cc027a4969402d2535dc959faa732999ade",
+    "sha256": "acf4bfc4329a19e89ff4d5217904d1ff064d40e0db3200678f4d75470ab29056",
+    "frames": 33881,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10179,
+    "name": "Galarian Yamask",
+    "file": "pokemon-cry-10179.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10179.ogg",
+    "sourceSHA256": "e783cd231bad8012c6b83145021eeeacd16008b3e1fd6b4db960e06ffb6279bc",
+    "sha256": "ea7e22aef93913585141ecd58d8df0d15ea1922c5c0b4d87fd35ceefe2c1985d",
+    "frames": 24522,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10180,
+    "name": "Galarian Stunfisk",
+    "file": "pokemon-cry-10180.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10180.ogg",
+    "sourceSHA256": "32bc84e6fafccbba11859edc310ad807af5c128a778343a265e64b986d9066ab",
+    "sha256": "1aa26ab9bb09f9d891dc060abafdaf1adab67a44e763853870a68d6e99319e24",
+    "frames": 34817,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10181,
+    "name": "10% Zygarde",
+    "file": "pokemon-cry-10181.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10181.ogg",
+    "sourceSHA256": "6ffb6c00582be1e2c53be698e9d3a34f342a5d57e29fd45651fe00987b1f1227",
+    "sha256": "815182f741c19a975c4e154d300d1971d7dc2d9d98adb1fea5ed1794e94bad2e",
+    "frames": 35508,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10182,
+    "name": "Gulping Cramorant",
+    "file": "pokemon-cry-10182.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10182.ogg",
+    "sourceSHA256": "fee02287d532e43a3a025f11ce2ad169b2a6756b1aed88c6662c244f2d0f4c1e",
+    "sha256": "481baba0aced5cc5687fd8f67859610b0728d69cf18f1b6c2949912843a56bc7",
+    "frames": 28248,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10183,
+    "name": "Gorging Cramorant",
+    "file": "pokemon-cry-10183.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10183.ogg",
+    "sourceSHA256": "7808f5ae78b695c67efeaa86f406fb8778a8ebbb20e9b91ed5ba49f5e37db9e6",
+    "sha256": "481baba0aced5cc5687fd8f67859610b0728d69cf18f1b6c2949912843a56bc7",
+    "frames": 28248,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10184,
+    "name": "Low Key Toxtricity",
+    "file": "pokemon-cry-10184.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10184.ogg",
+    "sourceSHA256": "1ab83b21f37ccb5c30b3460670dc7e0ea20e0e0adad56ce5bd428a58c667f2bf",
+    "sha256": "bdfcaa2006dbc93e579d59a1594c0cf6eb850561b5e862748a8a1b7df4f73080",
+    "frames": 34624,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10185,
+    "name": "Noice Eiscue",
+    "file": "pokemon-cry-10185.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10185.ogg",
+    "sourceSHA256": "8458f1389ec6c3ba2575402576e8367e6985f0928fa47766886bf305eafa32c7",
+    "sha256": "c0a55ae16197a4a2c940f62511e25df938bd1a55548ad2eb75043155697a2eec",
+    "frames": 13480,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10186,
+    "name": "Female Indeedee",
+    "file": "pokemon-cry-10186.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10186.ogg",
+    "sourceSHA256": "7eff459411386db26d4e91857869f496937b1e3092f908f811b8442f7f3c0abc",
+    "sha256": "2804c64362cd54646db92db93a354cf3e1aa704785c918d68884a70c8e9cb948",
+    "frames": 23095,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10187,
+    "name": "Hangry Morpeko",
+    "file": "pokemon-cry-10187.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10187.ogg",
+    "sourceSHA256": "c100472b854e96dcabf2a02a840952d19c731268a4195aaf45ec89ef3d7759ef",
+    "sha256": "3bebc307b9e55741b00d3a9247ea09ba08a93846be2fa5493f6c25f8806dd3aa",
+    "frames": 27022,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10188,
+    "name": "Crowned Zacian",
+    "file": "pokemon-cry-10188.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10188.ogg",
+    "sourceSHA256": "b86fe2c831d07415f9ac8ceeb01c0b64b6dc69d7af83fed1de1b8c99d1cc5bf4",
+    "sha256": "be4d3f921cba83454fe926a817288149b68144d1aaa1739f39c36c06fe39d2c7",
+    "frames": 51639,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10189,
+    "name": "Crowned Zamazenta",
+    "file": "pokemon-cry-10189.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10189.ogg",
+    "sourceSHA256": "732edf0723b895b45338dc338ac6aff8e7d71721d46de2abc6d5dc4bf52174a2",
+    "sha256": "ba7dff5848740622938dcd597b50faa06b9be4e147714976f3b4475a91afb91f",
+    "frames": 54817,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10190,
+    "name": "Eternamax Eternatus",
+    "file": "pokemon-cry-10190.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10190.ogg",
+    "sourceSHA256": "6f34fffcb7565dee597c90018cfb918ba4c198104485610a930a672a3e0aab3c",
+    "sha256": "33309108ecb42ddb001de60a81c1fa127843383e6c5a7c8501b3dca372c1af8c",
+    "frames": 75840,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10191,
+    "name": "Rapid Strike Urshifu",
+    "file": "pokemon-cry-10191.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10191.ogg",
+    "sourceSHA256": "1318868ef23ec64918a74a9b9a87b168e5b4684397783c3d1f9c12e16031cd6e",
+    "sha256": "4900ff2c82eb0ec6f7a535f16c014204239a75e34bfa6e851d67b2b5a1346874",
+    "frames": 33626,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10192,
+    "name": "Dada Zarude",
+    "file": "pokemon-cry-10192.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10192.ogg",
+    "sourceSHA256": "9dda0197ca313aa4bf731f4b19aff4a849406b3ce628a94ba8f50cb038d0eacd",
+    "sha256": "f3b925e4780048ffe5701e0238f9a9aa7261372281cd688bb1f15de20a164071",
+    "frames": 33742,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10193,
+    "name": "Ice Calyrex",
+    "file": "pokemon-cry-10193.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10193.ogg",
+    "sourceSHA256": "b632561b4ac30a1e32f5ef08f6ff35c177ab6743aca90b291a0d05a5e64f1bf8",
+    "sha256": "d1913c337e2098555f6d206b388113702d393a3c7c7e91bc49ab43760e60073b",
+    "frames": 52200,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10194,
+    "name": "Shadow Calyrex",
+    "file": "pokemon-cry-10194.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10194.ogg",
+    "sourceSHA256": "9e37166263c0d948c0615dc75e93b3d9d98a8794374a43f46a0c78893ff1c052",
+    "sha256": "d5af1a3ed24ba819df3149d060699c57ebd5f5fca8a518921200a24a3c7147b5",
+    "frames": 55284,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10195,
+    "name": "Gigantamax Venusaur",
+    "file": "pokemon-cry-10195.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10195.ogg",
+    "sourceSHA256": "66f690740cac10897f41c50b67577e95fc95e015f91a041386c87450dcd35b28",
+    "sha256": "96c96f3f4731446485ca73a25e3dafc5e6f15ef6bfde02dae9fce03e8b287ee0",
+    "frames": 24261,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10196,
+    "name": "Gigantamax Charizard",
+    "file": "pokemon-cry-10196.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10196.ogg",
+    "sourceSHA256": "5372d5f01002b0d7c50dec65aba7c8e5a808275119621bdc986145ee83cee9ab",
+    "sha256": "1b57283f3d4d36d5a9ca0e308d1b3bcbaf11349da615815e9365508b6301e574",
+    "frames": 23297,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10197,
+    "name": "Gigantamax Blastoise",
+    "file": "pokemon-cry-10197.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10197.ogg",
+    "sourceSHA256": "e3c9db76ad6b9a21d10293d75d309a975d2cf73707e55b20ecc68004be02a109",
+    "sha256": "ec4a805a9c800eacc41b24c0bfee3deba3a533fe1eb42f5f4a0e728342a066e1",
+    "frames": 25778,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10198,
+    "name": "Gigantamax Butterfree",
+    "file": "pokemon-cry-10198.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10198.ogg",
+    "sourceSHA256": "b97b5b48659b95de2bf56571901b684f4bcc3e812e656a8891b87af87ab252cc",
+    "sha256": "123f0be4fdf1006ee262bace25194d42fcf7c6533fde8c1cacaff5859f9b2c1d",
+    "frames": 15301,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10199,
+    "name": "Gigantamax Pikachu",
+    "file": "pokemon-cry-10199.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10199.ogg",
+    "sourceSHA256": "1ec10c893184b155a110d746ff0560f291978f32ce90c283b9871e61d6df12a1",
+    "sha256": "990c31a00082016799d747f07854be3f370cc7e0f94d562a25775c9b76481c4c",
+    "frames": 20419,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10200,
+    "name": "Gigantamax Meowth",
+    "file": "pokemon-cry-10200.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10200.ogg",
+    "sourceSHA256": "e72d520a30d5ed7280162d4e600e925ffb94eb0ba30bd8a984bb1662ffadb2ed",
+    "sha256": "a9b6632a8ce76b19704e48af3c1c1ff4159634d5f44825fea63ad37c79341d1a",
+    "frames": 15853,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10201,
+    "name": "Gigantamax Machamp",
+    "file": "pokemon-cry-10201.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10201.ogg",
+    "sourceSHA256": "2a310011e9c415623aa8ae6f928b4cfaea7087eaa149c6c73dbcf0fd18908555",
+    "sha256": "eb71b97cba2d4688796d8e3d2c01e164f756dde2c1f52c9e3eef3b1dd305cd6f",
+    "frames": 21504,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10202,
+    "name": "Gigantamax Gengar",
+    "file": "pokemon-cry-10202.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10202.ogg",
+    "sourceSHA256": "110415b8936d8ea9ea138b0504d8f49d7a55e32b6a063a9544dd7af147b47bb4",
+    "sha256": "a57028d24eacd81958f6971f27a3096c151095ed8e7a09721e198d5cdef3545c",
+    "frames": 20264,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10203,
+    "name": "Gigantamax Kingler",
+    "file": "pokemon-cry-10203.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10203.ogg",
+    "sourceSHA256": "1af7fbee5a6fc20c6e01b1fc753b476bc2e8edcf8e0edc710927c8761f86cf30",
+    "sha256": "12382724b50cd8e41ff6d7dffe062209d00173b0242e31782453b3604d089379",
+    "frames": 29362,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10204,
+    "name": "Gigantamax Lapras",
+    "file": "pokemon-cry-10204.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10204.ogg",
+    "sourceSHA256": "7b3f97644dbbe72e28820a35b0e6a834d25115e43fe37673e45655f3f197525c",
+    "sha256": "fd47e4870a232b342370387f3d49a36df308eb0eae5843ae11e579410d9b0eed",
+    "frames": 19437,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10205,
+    "name": "Gigantamax Eevee",
+    "file": "pokemon-cry-10205.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10205.ogg",
+    "sourceSHA256": "a38524f5368360fe7ae6b9c190556368801260063636d5a686d4daf2c1fdafef",
+    "sha256": "3da34b9c20cd0831f3f1ff614225e98181edf578471780a0d8d6bbe42d395c09",
+    "frames": 17369,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10206,
+    "name": "Gigantamax Snorlax",
+    "file": "pokemon-cry-10206.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10206.ogg",
+    "sourceSHA256": "07ee89551cf6d77be885cc3b4eab94934ed046d53f3220595be74be677b6ac77",
+    "sha256": "bfb5330771be0de3b68d94fc05742ae8e4a834d3c0e673b5c610931a81081a73",
+    "frames": 9723,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10207,
+    "name": "Gigantamax Garbodor",
+    "file": "pokemon-cry-10207.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10207.ogg",
+    "sourceSHA256": "72cb5afea7beca262161cb21e10b7de3f21a241273dbddca6f545278da03687f",
+    "sha256": "b4295793b0a388fce8ec9cf2ffd54111f41c3db904f5b66dc66c5bc2770152e8",
+    "frames": 28640,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10208,
+    "name": "Gigantamax Melmetal",
+    "file": "pokemon-cry-10208.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10208.ogg",
+    "sourceSHA256": "7c91247fdb3bcab8c80bd2aa43e0ce2d8d3aa689865de63b75122826be6e589a",
+    "sha256": "c5386bb21c8577a8e11e0df8537ace4613dec1c44ff9a1f60598c85beed6ed0d",
+    "frames": 32053,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10209,
+    "name": "Gigantamax Rillaboom",
+    "file": "pokemon-cry-10209.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10209.ogg",
+    "sourceSHA256": "a87526196ef4843794e79952ee96cece88744f40e860002bc3a4dacc411467a2",
+    "sha256": "bd8ddc0eafdf9746aa43a2700af5614d1ee268930c3675c49ee556cc91420b8e",
+    "frames": 33065,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10210,
+    "name": "Gigantamax Cinderace",
+    "file": "pokemon-cry-10210.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10210.ogg",
+    "sourceSHA256": "9d2f43d74ce74a10634c421371d241736206bae57abae3e53c8055c30644b5d1",
+    "sha256": "2b8643e91db543b50826de553eed4d273f6a40540596c24400e8704879a5974a",
+    "frames": 43778,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10211,
+    "name": "Gigantamax Inteleon",
+    "file": "pokemon-cry-10211.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10211.ogg",
+    "sourceSHA256": "3b0948e65010ebe2892a210eb9f9dba600d07bda7448e5de3fe269987915a8e7",
+    "sha256": "98c1d4ed1b0bee0800b7ce336b54f594e55e7342363d407e0907d80b3ec94519",
+    "frames": 20855,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10212,
+    "name": "Gigantamax Corviknight",
+    "file": "pokemon-cry-10212.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10212.ogg",
+    "sourceSHA256": "748e8adf3f4805e4cd2851182f1943a3f33098e09d48fd53636a54cffcc765b5",
+    "sha256": "498404df3471414b2d5e7aeedd464aa88f6f5d51c81640dd7be35352eff8de8b",
+    "frames": 32220,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10213,
+    "name": "Gigantamax Orbeetle",
+    "file": "pokemon-cry-10213.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10213.ogg",
+    "sourceSHA256": "fa6045e730e585be0acd1475ca3cd92ac445e971c8405f62003154a2b19ac355",
+    "sha256": "6c7db0a94e0368323d66dbd6ef51be114aee257b506c8ec44b0da6687d5d57f3",
+    "frames": 31018,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10214,
+    "name": "Gigantamax Drednaw",
+    "file": "pokemon-cry-10214.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10214.ogg",
+    "sourceSHA256": "baa4322ca9a74f538338e3a56e7a574b140099beead36d0aa29f9b0c02e9d77a",
+    "sha256": "03bc27b073022431c1efb4ce4acf6c46be059e266cb3920cd54380918dfd8010",
+    "frames": 42794,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10215,
+    "name": "Gigantamax Coalossal",
+    "file": "pokemon-cry-10215.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10215.ogg",
+    "sourceSHA256": "6007c46e80e719a63280bad8bcb9b0352b48e1e55a248a41cd4f864c7fa8f602",
+    "sha256": "d029eab88a2d3f80881569bcdce18993d783384ec300af07b709b2b6ad514fa3",
+    "frames": 49442,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10216,
+    "name": "Gigantamax Flapple",
+    "file": "pokemon-cry-10216.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10216.ogg",
+    "sourceSHA256": "1df4e0ffc3f978a8cb6f703326ed4539b992324f74c7600700b18b64e409b4a1",
+    "sha256": "8eb4dd571b1db24ecda37808e92cd84a01f899037f06ecfe7a466de6e81085f2",
+    "frames": 15258,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10217,
+    "name": "Gigantamax Appletun",
+    "file": "pokemon-cry-10217.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10217.ogg",
+    "sourceSHA256": "3a081552821183e1626cff35852d33f7d82513d077098d54c4517de8e01347e2",
+    "sha256": "e8b8760f86ad3c541b566f8c531219557193d4acd38973080c8950ed458e03cd",
+    "frames": 37198,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10218,
+    "name": "Gigantamax Sandaconda",
+    "file": "pokemon-cry-10218.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10218.ogg",
+    "sourceSHA256": "4fcaeccc60db8ae8e0b4b7558160e168bc0430976d1c2b72cfb56d6f582be9ad",
+    "sha256": "4606dfc054133fdd0011d3fe8daeb53e3de577080742a5ed555442dc00f0a985",
+    "frames": 30374,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10219,
+    "name": "Gigantamax Amped Toxtricity",
+    "file": "pokemon-cry-10219.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10219.ogg",
+    "sourceSHA256": "1d52b4c7a7bb99c40c94f4e7d8be8fcce188b105503da50f38f218750b4ef7ec",
+    "sha256": "bb9f3151c5419f95be33e349171d13e3e195aee9427f92bcfd453b3d051fecf7",
+    "frames": 35810,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10220,
+    "name": "Gigantamax Centiskorch",
+    "file": "pokemon-cry-10220.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10220.ogg",
+    "sourceSHA256": "a3e5452c967187675136ca0634223f5940b547abc3c22f857ed668bb2410e754",
+    "sha256": "a24c3ce4a524c9659b92a08ab11da99ccc03cef3ff6a0b5d024958ebb58e75d7",
+    "frames": 38630,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10221,
+    "name": "Gigantamax Hatterene",
+    "file": "pokemon-cry-10221.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10221.ogg",
+    "sourceSHA256": "796bbff0c999294b8ffb961461c67852ed40ba1517552c738d7f266a8011980b",
+    "sha256": "05b9e296a50357383e6cfb0bb8f16f0e0e5fe2b867d98894f3e2621fa32e068b",
+    "frames": 44979,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10222,
+    "name": "Gigantamax Grimmsnarl",
+    "file": "pokemon-cry-10222.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10222.ogg",
+    "sourceSHA256": "1f897e6f572c7163bb7c855c080a0ab83d15fa433bb8676837a22947b1be8f6c",
+    "sha256": "00c00c74cf83f564f2234f2e1324f4408e0bff79633bf2e953ab9c8927a13c00",
+    "frames": 32892,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10223,
+    "name": "Gigantamax Alcremie",
+    "file": "pokemon-cry-10223.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10223.ogg",
+    "sourceSHA256": "ed5961c40944e3472be6da5b0c73bc3c86619d90eaf6b4dac3af9bf5a33fbcc4",
+    "sha256": "f60531c35efa132645d3a562d7ec8908a90281a5dd2fe21c5d631b9a8678737e",
+    "frames": 33881,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10224,
+    "name": "Gigantamax Copperajah",
+    "file": "pokemon-cry-10224.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10224.ogg",
+    "sourceSHA256": "3c3f8ee02df4b8c59920317cad87bd87abead6d94132c3ee288e28d7051de875",
+    "sha256": "ca26f2274d4ad3efbd0c4a3700c2cb35ea6e6dd18c87ef3810708e93c8f315b1",
+    "frames": 40341,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10225,
+    "name": "Gigantamax Duraludon",
+    "file": "pokemon-cry-10225.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10225.ogg",
+    "sourceSHA256": "3b09fdb12af98f81c4e01e0557978e64f05acd2fdcc6bddbe16632a5e46359cd",
+    "sha256": "d5fe1b43bfd6be950e800a8ed74775b52a5ece132be47e807e590ef008a2ea78",
+    "frames": 35341,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10226,
+    "name": "Gigantamax Single Strike Urshifu",
+    "file": "pokemon-cry-10226.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10226.ogg",
+    "sourceSHA256": "310a585391ca9b40582261c7857f4e7ebd62db226e8bee71ad9f27b3f5d6cfcb",
+    "sha256": "8e07b47a98e6c66dc4fb53f1a1055a61b5bb9c876966c11bb60cf76a36ddfd8e",
+    "frames": 21214,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10227,
+    "name": "Gigantamax Rapid Strike Urshifu",
+    "file": "pokemon-cry-10227.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10227.ogg",
+    "sourceSHA256": "aaf88347897df9755ad509c838f1b5db0fc735a41c5d7292922bc29210df2859",
+    "sha256": "4900ff2c82eb0ec6f7a535f16c014204239a75e34bfa6e851d67b2b5a1346874",
+    "frames": 33626,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10228,
+    "name": "Gigantamax Low Key Toxtricity",
+    "file": "pokemon-cry-10228.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10228.ogg",
+    "sourceSHA256": "10baa087b2ef303b780315624d720adcc52ae407accb93aef8780e826e6adffd",
+    "sha256": "bdfcaa2006dbc93e579d59a1594c0cf6eb850561b5e862748a8a1b7df4f73080",
+    "frames": 34624,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10229,
+    "name": "Hisuian Growlithe",
+    "file": "pokemon-cry-10229.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10229.ogg",
+    "sourceSHA256": "801607e1befb10dea07401bd404b46fafb50b73cce5010e116e5ed74c9e53686",
+    "sha256": "b493238f8fdd7e71c770f67d9fb5c2666a4d27bfc95024196934a15835d39a2f",
+    "frames": 17921,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10230,
+    "name": "Hisuian Arcanine",
+    "file": "pokemon-cry-10230.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10230.ogg",
+    "sourceSHA256": "31d53d4e91d38cd65885b05d85656bb6371c413de8fca9dc2fcceb9c63482d46",
+    "sha256": "dc8245fd86742ad83befff1d4a4a10ca65bf30dd69f3e37a3ebc926d7cf22861",
+    "frames": 23159,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10231,
+    "name": "Hisuian Voltorb",
+    "file": "pokemon-cry-10231.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10231.ogg",
+    "sourceSHA256": "a6ade3540ce5456e9928f906e2157dddc4fd244a69dfd12e679ab870bbe66cd8",
+    "sha256": "6812a56c1417f17f0c4e55058955de8705ed1df14c5d8b6f3e8191555c321f6b",
+    "frames": 28397,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10232,
+    "name": "Hisuian Electrode",
+    "file": "pokemon-cry-10232.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10232.ogg",
+    "sourceSHA256": "4325709b89c799bd88f3b2308ffa5dbbaa137e7ee940efe0592269ff0bbc9f3b",
+    "sha256": "31152464424e8f13d1d6a23a0f8081ac82cea091b3460c89eb5d38d3e8468f75",
+    "frames": 30326,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10233,
+    "name": "Hisuian Typhlosion",
+    "file": "pokemon-cry-10233.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10233.ogg",
+    "sourceSHA256": "bae4590652bbc4477e9638b3b7f0b9480e319840a8bde31c68d56c66e28516bb",
+    "sha256": "19a6f5dc2533bbb974772602130f548d63f30715824e6a064a5306e2e0270663",
+    "frames": 42288,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10234,
+    "name": "Hisuian Qwilfish",
+    "file": "pokemon-cry-10234.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10234.ogg",
+    "sourceSHA256": "c9b41722eb28992a3cd48b3d970277a02aa4fd02c1b3c7428d164a495319ca81",
+    "sha256": "e51dea1052c841fe1f63fef0ae63606f57eafef5e320d90d65311ee97f824910",
+    "frames": 15745,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10235,
+    "name": "Hisuian Sneasel",
+    "file": "pokemon-cry-10235.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10235.ogg",
+    "sourceSHA256": "2fd3f7965a8a52a0c4eb850126c81b05286827d0dc3baf3cba50e4e3503af0bf",
+    "sha256": "f54780b415b74a69e6e27b576b2bcae259fff515fd96bd9f7341c57ee5ce9ebc",
+    "frames": 12686,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10236,
+    "name": "Hisuian Samurott",
+    "file": "pokemon-cry-10236.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10236.ogg",
+    "sourceSHA256": "60f962a5ef524b498d0d30c1df98da8b105c0c5a147e0ed44cd2b1e009108071",
+    "sha256": "dfe7534f8d027539bb3148cb10b485b658a69f587ac4bb9b94d9902879e12019",
+    "frames": 53724,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10237,
+    "name": "Hisuian Lilligant",
+    "file": "pokemon-cry-10237.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10237.ogg",
+    "sourceSHA256": "5252eccb76f76c21ca82fb91728bfda4aa90d9f62f245b353adac21d9bbd6bc6",
+    "sha256": "9c53c8c3587674742810289b8056aceda85959ecdafdcaac5955dac85ae3a6c6",
+    "frames": 29950,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10238,
+    "name": "Hisuian Zorua",
+    "file": "pokemon-cry-10238.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10238.ogg",
+    "sourceSHA256": "db4cb7dcd5de3de46508808c2b430ad25b445db6f0fc54f7e95d68db1605f106",
+    "sha256": "dfe2fa2759e8d43df81aa3a98be039165f1a303459f9b668002d94ce52dbc037",
+    "frames": 10044,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10239,
+    "name": "Hisuian Zoroark",
+    "file": "pokemon-cry-10239.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10239.ogg",
+    "sourceSHA256": "dd978287f2217706535c71141ac628ce33a715e440025f14060ff6477875ec1f",
+    "sha256": "9f3d6a1f6d7157fe34017a632023666c50bb3f8ab7046b3fc4406e2510e962f5",
+    "frames": 30512,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10240,
+    "name": "Hisuian Braviary",
+    "file": "pokemon-cry-10240.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10240.ogg",
+    "sourceSHA256": "6673ef8df787d5ee2f461ef45048c40e7a9f3c71aec33777d1ec60426efb3ee5",
+    "sha256": "7c1c77c6ef796a39577663274c44010ebd4112e364ebe9a36439a4328d538861",
+    "frames": 21527,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10241,
+    "name": "Hisuian Sliggoo",
+    "file": "pokemon-cry-10241.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10241.ogg",
+    "sourceSHA256": "716938a0e71acb4e9add1598df311ef89c0a8239206dcece7ba32eb25f1866ec",
+    "sha256": "fe1b95d9d355f194499065cbd439246e7408cedb8273472b78396c8eeff6d5cc",
+    "frames": 35016,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10242,
+    "name": "Hisuian Goodra",
+    "file": "pokemon-cry-10242.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10242.ogg",
+    "sourceSHA256": "c4d82d584f2742d6be10dc76530d5f46b0c3e41c7cb025deeee67e23f3317fd9",
+    "sha256": "5a9ae31e293987ddbf938652219d7743792f324b93891308e485666e288d43d2",
+    "frames": 25667,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10243,
+    "name": "Hisuian Avalugg",
+    "file": "pokemon-cry-10243.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10243.ogg",
+    "sourceSHA256": "e3799cdb026553512bd7c7c2223f2c5f651e68e2430c8196f6797d4b5cce47ed",
+    "sha256": "e0dc2f513824d0ceef5e30394a1f61ae136e7ca9c564e26f16f1f72e6d3b28d3",
+    "frames": 37706,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10244,
+    "name": "Hisuian Decidueye",
+    "file": "pokemon-cry-10244.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10244.ogg",
+    "sourceSHA256": "2ad1ddae6e356a3ee9c74184deb670ec275e5a4f616f1dc7d6ebbf13420b6887",
+    "sha256": "4214d6bb43f42644e44faadd2e5728c1618a637eb9128716901fe474cf5dc325",
+    "frames": 44046,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10245,
+    "name": "Origin Dialga",
+    "file": "pokemon-cry-10245.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10245.ogg",
+    "sourceSHA256": "f0a162785a9090450b1be2e92a256796fe2b41fbfaf2a895d773850c18eb276d",
+    "sha256": "fd33f8536cfdb98118983a103c3c1757a16de1bfb3e9286751e178e02cbf3eef",
+    "frames": 35598,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10246,
+    "name": "Origin Palkia",
+    "file": "pokemon-cry-10246.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10246.ogg",
+    "sourceSHA256": "ee6c530ece2af5e00eedbbf724061ecbb5be00ed84577710b0996ac6d539af35",
+    "sha256": "c1fc2546150a1aadffd3792b860cdce0d6b79bec6208bf9135faed5a80f73e59",
+    "frames": 36307,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10247,
+    "name": "White-Striped Basculin",
+    "file": "pokemon-cry-10247.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10247.ogg",
+    "sourceSHA256": "3e6558be3b3d5792d2e751166bee53e15b85164ee83613ed0a1c18becd1d2100",
+    "sha256": "9dd4dbd2f2b8369f87fd6d773167691d8edcc1a324315192653663b3ca4f7659",
+    "frames": 12168,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10248,
+    "name": "Female Basculegion",
+    "file": "pokemon-cry-10248.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10248.ogg",
+    "sourceSHA256": "0947bc33039ec0445d304638e5e406bd81f6ff6c5bdfc13f2d2b5d66c5b4c951",
+    "sha256": "e5d8c2f4a9091e7df58db2f53243abc10364adcf33345ef4a22b532091ee6edf",
+    "frames": 38728,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10249,
+    "name": "Therian Enamorus",
+    "file": "pokemon-cry-10249.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10249.ogg",
+    "sourceSHA256": "2be36702cd214c3b5fd49a36b68218ec306e17d0fa3cf9b6c761e8b1f4bf8eb5",
+    "sha256": "ef5edff206feb41d9d9a2ab82ba9fb78554c508625702e7fc07d634907a49a06",
+    "frames": 50011,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10250,
+    "name": "Paldean Tauros (Combat Breed)",
+    "file": "pokemon-cry-10250.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10250.ogg",
+    "sourceSHA256": "3ac8baacad124dee9f19dba3ef59972e8b806178fdf3cad2817f4289156b742d",
+    "sha256": "ead2e785530117e2d3e1ecbf69469513446e2a019135a0742207a8ef1a226bfb",
+    "frames": 24399,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10251,
+    "name": "Paldean Tauros (Blaze Breed)",
+    "file": "pokemon-cry-10251.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10251.ogg",
+    "sourceSHA256": "3ac8baacad124dee9f19dba3ef59972e8b806178fdf3cad2817f4289156b742d",
+    "sha256": "ead2e785530117e2d3e1ecbf69469513446e2a019135a0742207a8ef1a226bfb",
+    "frames": 24399,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10252,
+    "name": "Paldean Tauros (Aqua Breed)",
+    "file": "pokemon-cry-10252.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10252.ogg",
+    "sourceSHA256": "3ac8baacad124dee9f19dba3ef59972e8b806178fdf3cad2817f4289156b742d",
+    "sha256": "ead2e785530117e2d3e1ecbf69469513446e2a019135a0742207a8ef1a226bfb",
+    "frames": 24399,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10253,
+    "name": "Paldean Wooper",
+    "file": "pokemon-cry-10253.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10253.ogg",
+    "sourceSHA256": "fb9007f6300936889f2ee0a9834e241f57bcb02351fd5261868b2fa1ba319cdf",
+    "sha256": "3d1cfc66eddc1afa6a9185c56309971ce927dc296d5a1e4d1901aa7072f21f4c",
+    "frames": 11517,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10254,
+    "name": "Female Oinkologne",
+    "file": "pokemon-cry-10254.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10254.ogg",
+    "sourceSHA256": "6005a720e110804cfd6cf89a0434b3f5684b16f819273a03d835a8073f11fdd4",
+    "sha256": "718da65ba0651ac0d9523137723a1fef2daa4b9a1d0059fc1c0c55757f1cd2cd",
+    "frames": 30900,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10255,
+    "name": "Three-Segment Form Dudunsparce",
+    "file": "pokemon-cry-10255.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10255.ogg",
+    "sourceSHA256": "93a93ef59c57fe497f5fe2ca92c394434aaa389658cc170b4481ee1357e3279d",
+    "sha256": "d3efd8dafc761a1b08cf5ab7c57d7f939a1312059550d79c2d4006ae006ed8eb",
+    "frames": 39936,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10256,
+    "name": "Hero Form Palafin",
+    "file": "pokemon-cry-10256.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10256.ogg",
+    "sourceSHA256": "bee92a1337f5acf8fd5b3ecb04ceb55d7c1e408c2b99f756d666fb414bc3a4dc",
+    "sha256": "0740ffc4d5d820001459b0a8a259c3b880200498eefbffae692e892247295d85",
+    "frames": 35310,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10257,
+    "name": "Maushold (Family of Three)",
+    "file": "pokemon-cry-10257.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10257.ogg",
+    "sourceSHA256": "71d2ff27e8cf029cb8a36b036beebe34003e5dec0e32131fdd89b5ad51b5fb3f",
+    "sha256": "59bcea1c0e003a75d8ad1381a062048b93972eeb673956c157daab81962c59bd",
+    "frames": 31017,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10258,
+    "name": "Droopy Form Tatsugiri",
+    "file": "pokemon-cry-10258.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10258.ogg",
+    "sourceSHA256": "ed7ebc15c0b0af8b54cfbe982ac33d8e743031e377486fd267016ea75eea5360",
+    "sha256": "393e0d2b30a405d0061417ae23dcd9582ab76ceda2940419100a780b5d1d28c8",
+    "frames": 12989,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10259,
+    "name": "Stretchy Form Tatsugiri",
+    "file": "pokemon-cry-10259.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10259.ogg",
+    "sourceSHA256": "2c13267befd5f65d7f5de20a112a44ec5c88d01a17b9916890378e5f21475c9e",
+    "sha256": "55baf758b8d061820e0627127c179557539df146e86efeeb8d7a1851ed93cf90",
+    "frames": 17405,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10260,
+    "name": "Blue Plumage Squawkabilly",
+    "file": "pokemon-cry-10260.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10260.ogg",
+    "sourceSHA256": "7207a695c7d3a50626de6aaa61917a76b1d139e0d5b2480631a12257599bd09e",
+    "sha256": "2a5be77afbb07d8cad473e08bbb98147fb533e41d208ca6daf59f9eb68db5036",
+    "frames": 24324,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10261,
+    "name": "Yellow Plumage Squawkabilly",
+    "file": "pokemon-cry-10261.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10261.ogg",
+    "sourceSHA256": "156e02657f44a12bfc93e0abdec67f2e4117691759a20dc6f91e506607de1e01",
+    "sha256": "2a5be77afbb07d8cad473e08bbb98147fb533e41d208ca6daf59f9eb68db5036",
+    "frames": 24324,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10262,
+    "name": "White Plumage Squawkabilly",
+    "file": "pokemon-cry-10262.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10262.ogg",
+    "sourceSHA256": "6aa277e31b7e2fa73a68fbad1702972fa79269ffeac18e1f8a32cf02fe9fd6fc",
+    "sha256": "2a5be77afbb07d8cad473e08bbb98147fb533e41d208ca6daf59f9eb68db5036",
+    "frames": 24324,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10263,
+    "name": "Roaming Form Gimmighoul",
+    "file": "pokemon-cry-10263.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10263.ogg",
+    "sourceSHA256": "2cdeefaadbbcc944bc8f2631aab42e0deba611aa3ffb93503fe96872e08bfc32",
+    "sha256": "79dabf1694ce517a4b27554e4c1664516ae9483d4e326db9ad8b36da04d49c11",
+    "frames": 28932,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10264,
+    "name": "Koraidon (Limited Build)",
+    "file": "pokemon-cry-10264.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10264.ogg",
+    "sourceSHA256": "91fe4175b627fbf343813cc4038aa57ce7bc5e54b2973fc87ca6568b5db9b048",
+    "sha256": "cbca0e93246c72d055d89fa5b6bed5561bcd86a4e358a65ae628ad39a24e5757",
+    "frames": 49408,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10265,
+    "name": "Koraidon (Sprinting Build)",
+    "file": "pokemon-cry-10265.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10265.ogg",
+    "sourceSHA256": "91fe4175b627fbf343813cc4038aa57ce7bc5e54b2973fc87ca6568b5db9b048",
+    "sha256": "cbca0e93246c72d055d89fa5b6bed5561bcd86a4e358a65ae628ad39a24e5757",
+    "frames": 49408,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10266,
+    "name": "Koraidon (Swimming Build)",
+    "file": "pokemon-cry-10266.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10266.ogg",
+    "sourceSHA256": "91fe4175b627fbf343813cc4038aa57ce7bc5e54b2973fc87ca6568b5db9b048",
+    "sha256": "cbca0e93246c72d055d89fa5b6bed5561bcd86a4e358a65ae628ad39a24e5757",
+    "frames": 49408,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10267,
+    "name": "Koraidon (Gliding Build)",
+    "file": "pokemon-cry-10267.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10267.ogg",
+    "sourceSHA256": "91fe4175b627fbf343813cc4038aa57ce7bc5e54b2973fc87ca6568b5db9b048",
+    "sha256": "cbca0e93246c72d055d89fa5b6bed5561bcd86a4e358a65ae628ad39a24e5757",
+    "frames": 49408,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10268,
+    "name": "Miraidon (Low-Power Mode)",
+    "file": "pokemon-cry-10268.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10268.ogg",
+    "sourceSHA256": "d51b6c541d4e819e5647383e760d7d355c92226dcd3a319a446b754f6ec131a1",
+    "sha256": "4b993c43a255a9bfea56531a1c1fc6ba0bfcf3e23dd81968846da3eb691d5ac7",
+    "frames": 43521,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10269,
+    "name": "Miraidon (Drive Mode)",
+    "file": "pokemon-cry-10269.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10269.ogg",
+    "sourceSHA256": "d51b6c541d4e819e5647383e760d7d355c92226dcd3a319a446b754f6ec131a1",
+    "sha256": "4b993c43a255a9bfea56531a1c1fc6ba0bfcf3e23dd81968846da3eb691d5ac7",
+    "frames": 43521,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10270,
+    "name": "Miraidon (Aquatic Mode)",
+    "file": "pokemon-cry-10270.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10270.ogg",
+    "sourceSHA256": "d51b6c541d4e819e5647383e760d7d355c92226dcd3a319a446b754f6ec131a1",
+    "sha256": "4b993c43a255a9bfea56531a1c1fc6ba0bfcf3e23dd81968846da3eb691d5ac7",
+    "frames": 43521,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10271,
+    "name": "Miraidon (Glide Mode)",
+    "file": "pokemon-cry-10271.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10271.ogg",
+    "sourceSHA256": "d51b6c541d4e819e5647383e760d7d355c92226dcd3a319a446b754f6ec131a1",
+    "sha256": "4b993c43a255a9bfea56531a1c1fc6ba0bfcf3e23dd81968846da3eb691d5ac7",
+    "frames": 43521,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10272,
+    "name": "Bloodmoon Ursaluna",
+    "file": "pokemon-cry-10272.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10272.ogg",
+    "sourceSHA256": "5a051faec16094298fa44682174fc1cd78b3d8c9e088fecc6b81d2294e4f1350",
+    "sha256": "1118928fa99b45641084962c7986795099e2d6daef57fd0d1f4413eac7e6d1f8",
+    "frames": 34178,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10273,
+    "name": "Wellspring Mask Ogerpon",
+    "file": "pokemon-cry-10273.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10273.ogg",
+    "sourceSHA256": "50324f4931e8229c845c4d356caeafe105adda04f468f1dfddc7da031345e2fd",
+    "sha256": "9226cdb723b8b82db7986d7eee768503504763bd1bf188e4f4431c317c23a43e",
+    "frames": 30871,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10274,
+    "name": "Hearthflame Mask Ogerpon",
+    "file": "pokemon-cry-10274.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10274.ogg",
+    "sourceSHA256": "dbbd57e04a2a983666bd556fb0be949f421e49b5763c35d244182c6973eea0e3",
+    "sha256": "9226cdb723b8b82db7986d7eee768503504763bd1bf188e4f4431c317c23a43e",
+    "frames": 30871,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10275,
+    "name": "Cornerstone Mask Ogerpon",
+    "file": "pokemon-cry-10275.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10275.ogg",
+    "sourceSHA256": "0ae05ea280140d6783bf7bea99a479aeef1ec506410dbc99f214f40d91ca51da",
+    "sha256": "9226cdb723b8b82db7986d7eee768503504763bd1bf188e4f4431c317c23a43e",
+    "frames": 30871,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10276,
+    "name": "Terastal Form Terapagos",
+    "file": "pokemon-cry-10276.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10276.ogg",
+    "sourceSHA256": "c82fb045db73119b24da78b1d34e8caa0618c29aadf1465e2675f4f735a03942",
+    "sha256": "76804ed02b9cfed1d47c7a3c766cf967765b74938220beefca72d3f2d98160a1",
+    "frames": 37662,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10277,
+    "name": "Stellar Form Terapagos",
+    "file": "pokemon-cry-10277.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10277.ogg",
+    "sourceSHA256": "3d64c6d6dbfd15d654f9c9159589354d264cc98872c1c41de480a330739b1832",
+    "sha256": "76804ed02b9cfed1d47c7a3c766cf967765b74938220beefca72d3f2d98160a1",
+    "frames": 37662,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10278,
+    "name": "Mega Clefable",
+    "file": "pokemon-cry-10278.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10278.ogg",
+    "sourceSHA256": "8e2819f63a5bf0e01ef09fb4e77558de0c304d338195b74b9ee432292aaa7bb6",
+    "sha256": "ba50d9c804868f59b18b63e36d1e3bffe7360707ee7a77550103d01e37290917",
+    "frames": 27339,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10279,
+    "name": "Mega Victreebel",
+    "file": "pokemon-cry-10279.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10279.ogg",
+    "sourceSHA256": "808e8e397f69a7725a569cc2c3f43843a71d3d3bf138e9d99b0cd5f5c2d07c37",
+    "sha256": "087def61e3273e6a52adabf03bfaa1f63f32510f752c751f4f9efdb39be37272",
+    "frames": 38982,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10280,
+    "name": "Mega Starmie",
+    "file": "pokemon-cry-10280.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10280.ogg",
+    "sourceSHA256": "05ace8bb2a05f8a329e63cb0ab58d0a102e0828cf0d3a8a020605fabbae45be4",
+    "sha256": "8262be1632f70ccba982c8bb42eb9ef2558f3d5f0bad3950b523acf4041aa90f",
+    "frames": 37242,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10281,
+    "name": "Mega Dragonite",
+    "file": "pokemon-cry-10281.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10281.ogg",
+    "sourceSHA256": "e7a7d0e7ecbf484b45d15715753a25030650e2e595e5b646207292a94e75f11b",
+    "sha256": "3418f72bc66300c94b5769fb5acbd51c753124dbe08b8b8c93d6f53aedd9fb1b",
+    "frames": 38794,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10282,
+    "name": "Mega Meganium",
+    "file": "pokemon-cry-10282.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10282.ogg",
+    "sourceSHA256": "aea8daa216869dcf5dca426611bbd63381945162a124276639ec96dc6f442086",
+    "sha256": "bb4558e8746f66e45a4f408c5f035f0b7ea19aafc5db1adf066a7461e87edcf8",
+    "frames": 35137,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10283,
+    "name": "Mega Feraligatr",
+    "file": "pokemon-cry-10283.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10283.ogg",
+    "sourceSHA256": "f9286d4e893edfc0f46f4018a73938cb7e8cdc6749b88f67f9e4dfdf6b102f41",
+    "sha256": "7ad4cc6614bc8ebe5a03604244f8ebb54dc42fc0967a2680914665733f2eb8ff",
+    "frames": 37056,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10284,
+    "name": "Mega Skarmory",
+    "file": "pokemon-cry-10284.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10284.ogg",
+    "sourceSHA256": "b23e9e7b35dbe045001b7cd00b80310f49c5e47e5cdff453be10798333c85e07",
+    "sha256": "cb2445ef00f64b2bf20b5a751727d6c884ef79ed33ccc118ef4b73aedf0691ec",
+    "frames": 37676,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10285,
+    "name": "Mega Froslass",
+    "file": "pokemon-cry-10285.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10285.ogg",
+    "sourceSHA256": "5e3c71cf5c871748e29e7cd2b1c5962d4066020fbfb9cf670cbc80208e21ef92",
+    "sha256": "3b0a8c855cd7903cc76f600709ff5f4d1eb8f6a8d3510b60b2eabcb6d0b72d25",
+    "frames": 57190,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10286,
+    "name": "Mega Emboar",
+    "file": "pokemon-cry-10286.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10286.ogg",
+    "sourceSHA256": "b626f1bc119f5123736c6528bee7dc98d2f33493f46f97209cd9dc4c91ff9566",
+    "sha256": "81ee910b9bc521b1dc97b4ec22835a68dbb7b30f6f532081cc476dc344c855a6",
+    "frames": 46211,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10287,
+    "name": "Mega Excadrill",
+    "file": "pokemon-cry-10287.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10287.ogg",
+    "sourceSHA256": "68c60c5e31f3b91cb2688744836ebc6606f81944de78721615d44e86d7082567",
+    "sha256": "be75a2ebe80fce2dfd5c1b26f5861cc7a99e37f60bfbbb1707cad5e9366c234d",
+    "frames": 44544,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10288,
+    "name": "Mega Scolipede",
+    "file": "pokemon-cry-10288.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10288.ogg",
+    "sourceSHA256": "d60ebb140bb231b548e648769744a12c56dbf25400d34f823781a9ad5fbe22ea",
+    "sha256": "991cc1211dd9a86c511fa4a3fc340b4d18d0bcbc6d1f65a264d326c6e199b33c",
+    "frames": 60889,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10289,
+    "name": "Mega Scrafty",
+    "file": "pokemon-cry-10289.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10289.ogg",
+    "sourceSHA256": "af0cc08e8a1f28e577bb3d30270d64ac26ec42bfba0abbfef77406ac14bdf0b7",
+    "sha256": "86837f7273da7cde587ee8b9a02026c3fb8f8a528f8029b10483a9e2c7888d55",
+    "frames": 37001,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10290,
+    "name": "Mega Eelektross",
+    "file": "pokemon-cry-10290.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10290.ogg",
+    "sourceSHA256": "55904bbe25ffac21316d2426bfa81d512f8d799a6e0fc3f418113ada91e81bf4",
+    "sha256": "5bff3a87a9e96841b8b67908d20336a3836922b170e9ba2ef13b191fa8dfa71c",
+    "frames": 59179,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10291,
+    "name": "Mega Chandelure",
+    "file": "pokemon-cry-10291.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10291.ogg",
+    "sourceSHA256": "f6cf6c4424c6a2c080e807788e18007034b56672c0858801c86a3531d6feba6c",
+    "sha256": "5ac86a39ddfe0aa033be8e7e27f02b6016a86aba6a5087cee0e9a5c26c3c1296",
+    "frames": 69251,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10292,
+    "name": "Mega Chesnaught",
+    "file": "pokemon-cry-10292.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10292.ogg",
+    "sourceSHA256": "aa915c6ebb421b7dc8ab04d3d9183e1bd6a5c1c9f547e7dadf4aed53585c8828",
+    "sha256": "3eb847034398f91c5899c919d6f4194dd5d75cd913a420d6a42d2cc86da97d39",
+    "frames": 51774,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10293,
+    "name": "Mega Delphox",
+    "file": "pokemon-cry-10293.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10293.ogg",
+    "sourceSHA256": "04b91b3a3d7ece5599d75ee1a73f584c20d85e6a41f86d34c646dac171c1db68",
+    "sha256": "dfca1bcd6f822f6241fec2d151329026085d66dddba48def36e2d72290c7f64e",
+    "frames": 52841,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10294,
+    "name": "Mega Greninja",
+    "file": "pokemon-cry-10294.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10294.ogg",
+    "sourceSHA256": "1dc3b04a7d37fe87f2a2117766cb7aaaca540aabc6b362dd45dfdec5bd419b66",
+    "sha256": "bb417b04877f0908fd5393c777e75a77953b4256cf5e66832bd22b48bc323ea6",
+    "frames": 43406,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10295,
+    "name": "Mega Pyroar",
+    "file": "pokemon-cry-10295.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10295.ogg",
+    "sourceSHA256": "1b00516b3b393a3fba1a7be6d887ff7e19bd5329d10462c01bdb74a410207ba4",
+    "sha256": "62a610ffbad38b10ff51bb94c272f286f00ed05a928ac0e98b04dd32be1db328",
+    "frames": 43175,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10296,
+    "name": "Mega Floette",
+    "file": "pokemon-cry-10296.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10296.ogg",
+    "sourceSHA256": "a7a28eef863fee1822921c017f396dc3ec266effb76f1fd102559f7ba032ccfb",
+    "sha256": "d2db8196311d8eefac6db0aea65f7438fa1d9c91427ad004c7b3126dcbf5ec68",
+    "frames": 62240,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10297,
+    "name": "Mega Malamar",
+    "file": "pokemon-cry-10297.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10297.ogg",
+    "sourceSHA256": "ce3b8ae564ad612e3c17eb5eaab6ecca1b6d7c04462f5e68e05373761983e9df",
+    "sha256": "b340886e9e3134fd64b7642e988621226b548326ced9097881c850cac374dece",
+    "frames": 50643,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10298,
+    "name": "Mega Barbaracle",
+    "file": "pokemon-cry-10298.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10298.ogg",
+    "sourceSHA256": "9c26474d8fc943fcef7181bc7daefe4508435d43c7d7544706c9dac7e78fa781",
+    "sha256": "8d1cab6b080b2da9f42dbc589b1dc2abd0d1df2427be9e207ad4a1e8e39331a5",
+    "frames": 47727,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10299,
+    "name": "Mega Dragalge",
+    "file": "pokemon-cry-10299.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10299.ogg",
+    "sourceSHA256": "5af5d2551dc8e6cf974c602d922ecb53ddd8043d6a3f42f918f0490f68c1854b",
+    "sha256": "768bf6c04b59b5abb0012b0d8ede0f824e327d6f3fa51032fe89df05c24a1f16",
+    "frames": 60433,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10300,
+    "name": "Mega Hawlucha",
+    "file": "pokemon-cry-10300.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10300.ogg",
+    "sourceSHA256": "2f9069705d145fd1a63ed488f8dd3d80c0b9187ee202829d25ce5a8655d54761",
+    "sha256": "78c27ca4408f6c94f519b3c83cabe170690d4c9fe135bbc9783323d5cac9f5e6",
+    "frames": 43499,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10301,
+    "name": "Mega Zygarde",
+    "file": "pokemon-cry-10301.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10301.ogg",
+    "sourceSHA256": "0010e7febd635ec48f5bee5bc46f213a3692d0f813a84a8265923ceca1c6a181",
+    "sha256": "bcce7dbe3674fdcc0379e6d97ccd8212ae5f4ec21089217d598e77f7c67c2960",
+    "frames": 84114,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10302,
+    "name": "Mega Drampa",
+    "file": "pokemon-cry-10302.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10302.ogg",
+    "sourceSHA256": "19e2aa17159cf2439dfc99cf42c28bd04f18bc19d599e97981e00075a9689854",
+    "sha256": "22947b02751001649cdd90b5133c8415845d92d14ebc2c5d16f86171985cebd3",
+    "frames": 48835,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10303,
+    "name": "Mega Falinks",
+    "file": "pokemon-cry-10303.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10303.ogg",
+    "sourceSHA256": "87b75a581db5fa8bde91e2c125e3ed9a2afb207a56920e71cdeb2c1d563098a1",
+    "sha256": "f4b7189fcff06ffd7c2aeb21a4f7ed076c1925744d4aa36a314d3b81465f95c7",
+    "frames": 49130,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10304,
+    "name": "Mega Raichu X",
+    "file": "pokemon-cry-10304.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10304.ogg",
+    "sourceSHA256": "f2492e12a67d82fe3aa13746e475b7a5c39384d88ba2397f3998b157be7c0032",
+    "sha256": "0c19637df5ceab9e13b912a8bd7afee881437a09e51954787e391f0d9e0ceb17",
+    "frames": 43268,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10305,
+    "name": "Mega Raichu Y",
+    "file": "pokemon-cry-10305.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10305.ogg",
+    "sourceSHA256": "3192a7cd0cf901af171aeac8dd1174de3472ac44dc7ccbdf64cf7bb2e605e725",
+    "sha256": "cb34149715af226bb88b0b557e3f76007881108a9026e3c042cceca8b7ac0373",
+    "frames": 43174,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10306,
+    "name": "Mega Chimecho",
+    "file": "pokemon-cry-10306.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10306.ogg",
+    "sourceSHA256": "35425e4cfe7e765e1f5ae0ee2a6bf6287d82f59891c0fcc1223ee4119dcb263d",
+    "sha256": "a68d37f87c41e6fe16185c3d11efe922f2aa7382ada3e8cec921b5dc15c81c4c",
+    "frames": 32977,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10307,
+    "name": "Mega Absol Z",
+    "file": "pokemon-cry-10307.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10307.ogg",
+    "sourceSHA256": "a608b3a59675a69bcc52c99f62b634195aa915db0d0d779e1aa22a8abb934e1f",
+    "sha256": "fa5fc66b700e3e45aabadd2010a42bd9e187b92a9475336db2857fb580c5becf",
+    "frames": 37695,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10308,
+    "name": "Mega Staraptor",
+    "file": "pokemon-cry-10308.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10308.ogg",
+    "sourceSHA256": "75fac0af85f75e36e17782842da77426cb4365ac0688f239510e0434bd3c66d0",
+    "sha256": "42a2dffbbc88ec16294f22951a1cdb1d97df5b4e1464f9ca107e91fe64f284fb",
+    "frames": 54615,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10309,
+    "name": "Mega Garchomp Z",
+    "file": "pokemon-cry-10309.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10309.ogg",
+    "sourceSHA256": "beee8225e422abc9a69d73fdb4a48717a89a6cee758ea2a0b27559a0cd51bbf0",
+    "sha256": "2680575e73e43db4907eb54fbf1a62ff21057c324b203054933668d07ab31e29",
+    "frames": 47023,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10310,
+    "name": "Mega Lucario Z",
+    "file": "pokemon-cry-10310.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10310.ogg",
+    "sourceSHA256": "4acc7f8d49a1c512835da6294895d27048e04e345b490ef0a9de9adc6bab3cfd",
+    "sha256": "1136fa6be452576d2d834259970b997f810671d333c2f9603d569244558ee31c",
+    "frames": 39397,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10311,
+    "name": "Mega Heatran",
+    "file": "pokemon-cry-10311.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10311.ogg",
+    "sourceSHA256": "b471af9ec330dd6e41b144c49533bbcf3400b73aa1eb3c3ea63fa6d675cdbf56",
+    "sha256": "f8b2006d68d9d2defce2721b604c340246c055b869abf050d91825165709032f",
+    "frames": 54647,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10312,
+    "name": "Mega Darkrai",
+    "file": "pokemon-cry-10312.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10312.ogg",
+    "sourceSHA256": "5ff4c1fce74dae67e2a80a44dfa54e4aa62e245c234541e130724e2bf632ff35",
+    "sha256": "92db330d862a8bfc77efe4eb55f06fa7a539d253e522e8f6c0b3b042d1c3095f",
+    "frames": 51174,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10313,
+    "name": "Mega Golurk",
+    "file": "pokemon-cry-10313.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10313.ogg",
+    "sourceSHA256": "629d5b5045f03987ea91b7e56663a3eee4c984ea2c1c8135eca1f05d0504d3ae",
+    "sha256": "dd965a839826094946eb5f3f5d489c877c455b96c61f65f1a89bcce5d992407a",
+    "frames": 49303,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10314,
+    "name": "Mega Meowstic",
+    "file": "pokemon-cry-10314.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10314.ogg",
+    "sourceSHA256": "e4e3f642adbcd158673b7655560c09bfcf1aeaeedcb14ee2982745ab3bdecf56",
+    "sha256": "6afd5dec3216bc03518b87cf2b67dc9dbb6db84f8204f5a835b7c7191705bf54",
+    "frames": 25560,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10315,
+    "name": "Mega Crabominable",
+    "file": "pokemon-cry-10315.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10315.ogg",
+    "sourceSHA256": "9016e2aaad620e038050e3b72f42a814f7f986155aec8d3ba0a6fb9e1c9bdc60",
+    "sha256": "140bfadb31eb24b529b70d7e90abb0fe9b7b1d06597f5f01d9501099934c164f",
+    "frames": 47164,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10316,
+    "name": "Mega Golisopod",
+    "file": "pokemon-cry-10316.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10316.ogg",
+    "sourceSHA256": "a0522c7a02b5a70d5dcc0f3d8c3895f3d974cc86e126c76fe375cd062b060645",
+    "sha256": "e4634b4e5ae083f2fd118415aec34062abde119e4f711f830e2565b5626f116e",
+    "frames": 58927,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10317,
+    "name": "Mega Magearna",
+    "file": "pokemon-cry-10317.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10317.ogg",
+    "sourceSHA256": "e271992ca99809431b0778becc0b39699696604e589cf8817f5790949c75bd43",
+    "sha256": "f056776fc22117bfdfc2bbdb1a028dd9f5d8342bb4d5ab0937dfd65ac496bf51",
+    "frames": 50932,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10318,
+    "name": "Mega Original Magearna",
+    "file": "pokemon-cry-10318.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10318.ogg",
+    "sourceSHA256": "e271992ca99809431b0778becc0b39699696604e589cf8817f5790949c75bd43",
+    "sha256": "f056776fc22117bfdfc2bbdb1a028dd9f5d8342bb4d5ab0937dfd65ac496bf51",
+    "frames": 50932,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10319,
+    "name": "Mega Zeraora",
+    "file": "pokemon-cry-10319.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10319.ogg",
+    "sourceSHA256": "ae40bbceeb2fad6ce5de30a5d32dd38aa8e93630370053f8efa821fe95373c7f",
+    "sha256": "73bc5edafce98cdd36ca9b2f8ca332301fa76f2f2dbb1164da3c18b9f7e4d554",
+    "frames": 47103,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10320,
+    "name": "Mega Scovillain",
+    "file": "pokemon-cry-10320.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10320.ogg",
+    "sourceSHA256": "dd457121f9765f87a7cfd114b699ffa838a3a27e2f82fde5dfd41465f72d0782",
+    "sha256": "1d57089e84433152cc26a9a94033a254b84b57adcce83a7b14a275bb583fe18c",
+    "frames": 53868,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10321,
+    "name": "Mega Glimmora",
+    "file": "pokemon-cry-10321.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10321.ogg",
+    "sourceSHA256": "3ffa4f96f8d68805a08657fbee7b8593cf5fcd0765c0c92d60fc4c62bde56d4d",
+    "sha256": "acc42460871560cefd865d013afa5c67dc7ebc4b882e329ad42d9f83e95cc1ec",
+    "frames": 63941,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10322,
+    "name": "Mega Curly Tatsugiri",
+    "file": "pokemon-cry-10322.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10322.ogg",
+    "sourceSHA256": "f9b2e60bb3e9730a155c97971e937912426b1a33726571a506ddf8dab2fd362b",
+    "sha256": "0ec966cfe93b6b989651b1d73fde5cc55e3e0ce7141a23cf3171de8b35508e78",
+    "frames": 29275,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10323,
+    "name": "Mega Droopy Tatsugiri",
+    "file": "pokemon-cry-10323.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10323.ogg",
+    "sourceSHA256": "f9b2e60bb3e9730a155c97971e937912426b1a33726571a506ddf8dab2fd362b",
+    "sha256": "0ec966cfe93b6b989651b1d73fde5cc55e3e0ce7141a23cf3171de8b35508e78",
+    "frames": 29275,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10324,
+    "name": "Mega Stretchy Tatsugiri",
+    "file": "pokemon-cry-10324.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10324.ogg",
+    "sourceSHA256": "f9b2e60bb3e9730a155c97971e937912426b1a33726571a506ddf8dab2fd362b",
+    "sha256": "0ec966cfe93b6b989651b1d73fde5cc55e3e0ce7141a23cf3171de8b35508e78",
+    "frames": 29275,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10325,
+    "name": "Mega Baxcalibur",
+    "file": "pokemon-cry-10325.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10325.ogg",
+    "sourceSHA256": "faca7e8836a4290e28aa33dde38e170134c906c48afbb996c85534837aaca8b8",
+    "sha256": "7426a3a259f4a1791a8f56d226741316a76444d4a05f9b4ba43ef8796f92b203",
+    "frames": 69668,
+    "sampleRate": 22050
+  },
+  {
+    "id": 10326,
+    "name": "Mega Meowstic",
+    "file": "pokemon-cry-10326.wav",
+    "source": "https://raw.githubusercontent.com/PokeAPI/cries/b3a9044bb839b5e3152aaa536c7b463a0fcf0140/cries/pokemon/latest/10326.ogg",
+    "sourceSHA256": "e4e3f642adbcd158673b7655560c09bfcf1aeaeedcb14ee2982745ab3bdecf56",
+    "sha256": "6afd5dec3216bc03518b87cf2b67dc9dbb6db84f8204f5a835b7c7191705bf54",
+    "frames": 25560,
+    "sampleRate": 22050
   }
 ]

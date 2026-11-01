@@ -1,3 +1,5 @@
+> Historical species-only release (1.1). Current 1.2 form campaign: see [scripts/forms](../forms/README.md).
+
 # National Pokédex training and release
 
 This extension follows the upstream development guide, training/export contract,

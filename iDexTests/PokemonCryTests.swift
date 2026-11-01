@@ -22,7 +22,7 @@ struct PokemonCryTests {
         #expect(Set(sources.map(\.id)) == Set(PokemonCatalog.shared.entries.map(\.cryResourceID)))
         #expect(Set(sources.map(\.file)).count == sources.count)
         for source in sources {
-            #expect(source.name == PokemonCatalog.shared.pokemon(id: source.id)?.englishName)
+            #expect(PokemonCatalog.shared.entries.contains { $0.cryResourceID == source.id && $0.englishName == source.name })
             #expect(source.source.hasSuffix("/latest/\(source.id).ogg"))
             let resource = String(format: "pokemon-cry-%03d", source.id)
             #expect(source.file == "\(resource).wav")

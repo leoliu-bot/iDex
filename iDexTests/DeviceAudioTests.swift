@@ -31,7 +31,7 @@ struct DeviceAudioTests {
         audio.suspend()
     }
 
-    @Test(arguments: [1, 25, 151, 152, 658, 906, 1025])
+    @Test(arguments: [1, 25, 151, 152, 658, 906, 1025, 110206, 110083])
     func confirmedScanPlaysTheMatchingCryBeforeNarration(dexID: Int) async throws {
         let savedViewed = UserDefaults.standard.object(forKey: "idex.lastViewed")
         let savedSeen = UserDefaults.standard.object(forKey: "idex.seen")
@@ -47,7 +47,8 @@ struct DeviceAudioTests {
         let result = RecognitionResult(candidates: [candidate], accepted: candidate, logitMargin: 4)
         try store.applyRecognition(result)
         #expect(store.identified)
-        #expect(await waitUntil { backend.cries == [dexID] })
+        let expectedCry = try #require(PokemonCatalog.shared.pokemon(id: dexID)).cryResourceID
+        #expect(await waitUntil { backend.cries == [expectedCry] })
         #expect(backend.spokenCount == 0)
         backend.finishCry()
         #expect(await waitUntil { backend.spokenCount == 1 })

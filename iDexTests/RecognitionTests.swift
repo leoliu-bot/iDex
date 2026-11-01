@@ -114,9 +114,10 @@ struct RecognitionTests {
         #expect(store.scannedPokemon?.id == 25)
     }
 
-    @Test("Core ML identifies opaque sprites across the National Dex", arguments: [25, 6, 65, 86, 98, 129, 152, 248, 384, 445, 658, 700, 778, 906, 1000, 1025])
+    @Test("Core ML identifies opaque sprites across species and forms", arguments: [25, 6, 65, 83, 86, 98, 129, 152, 248, 384, 445, 658, 700, 778, 906, 1000, 1025, 110206, 110083, 110082, 110314, 110315, 110362, 110363])
     func identifiesKnownPokemon(dexID: Int) async throws {
-        let sprite = try #require(UIImage(named: String(format: "pokemon-%03d", dexID)))
+        let pokemon = try #require(PokemonCatalog.shared.pokemon(id: dexID))
+        let sprite = try #require(UIImage(named: pokemon.spriteName))
         let image = try #require(renderOpaque(sprite: sprite))
         let classifier = PokemonClassifier()
 
@@ -128,17 +129,6 @@ struct RecognitionTests {
         #expect(result.candidates.count == 3)
         #expect(accepted.confidence >= 0.35)
         #expect(result.logitMargin >= 0.5)
-    }
-
-    @Test("The Farfetch'd sprite is either correctly confirmed or remains unconfirmed")
-    func ambiguousFarfetchdRemainsUnconfirmed() async throws {
-        // The frozen National checkpoint regresses on this Kanto sprite. Keep
-        // that limitation explicit rather than lowering the calibrated threshold.
-        let sprite = try #require(UIImage(named: "pokemon-083"))
-        let image = try #require(renderOpaque(sprite: sprite))
-        let result = try await PokemonClassifier().classify(image: image)
-        #expect(result.accepted == nil || result.accepted?.dexID == 83)
-        #expect(result.candidates.contains { $0.dexID == 83 })
     }
 
     @Test("Blank images still offer a best match without confirming a discovery", arguments: [false, true])

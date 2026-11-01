@@ -8,9 +8,11 @@ A native, offline, pixel-style Pokédex for iPhone Duo.
   names, field notes, types, dimensions, base stats, 96×96 pixel sprites and cries.
 - Original red device shell, LCD palette, pixel fonts, scan animation and
   cover/expanded layouts retained. Original 151 records and sprites preserved.
-- **A newly trained 1,018-class EfficientNet-B0**, with an ordered National Dex
-  label map. Seven species with insufficient independent training groups remain
-  archive-only; Settings lists them in the selected language.
+- **554 additional forms**, including regional forms, fusions, Mega and Gigantamax;
+  1,579 archive records and a newly trained **1,498-class appearance model**.
+  Identical appearances share candidates; sparse forms cannot auto-confirm.
+- Fixed-size notes/stats display and persistent classic male/female narration;
+  Chinese narration prefers installed Taiwan Mandarin voices. Existing names stay.
 - Camera and imported photos stay on the iPhone. Low-confidence matches remain
   candidates and are not automatically discovered or narrated.
 - Search by any supported language, exact `#1025` numbers or localized types;
@@ -20,20 +22,19 @@ A native, offline, pixel-style Pokédex for iPhone Duo.
 ## Measured public diagnostic
 
 The selected checkpoint was trained for 8 + 12 epochs on a local RTX 4080 SUPER.
-Untouched grouped public test: **92.53% Top-1**, **96.98% Top-3**, and **97.81%
-accuracy among accepted known inputs**, with **86.85% known acceptance coverage**.
-The small 64-image natural-negative test had 3 false accepts. These are public
-artwork diagnostics, **not physical-camera accuracy**. Mac conversion and iOS
-validation are separate release gates. The Mac release passed 38 numerical checks
-and all 35 simulator tests (55 parameterized/ordinary runs), then produced the
-unsigned iPhone IPA. See [Apple validation](TrainingResources/apple-validation.json)
-and `TrainingResources/training-summary.json`.
+Mixed public test: **92.02% Top-1**, **96.48% Top-3**, **97.53% accepted-known
+accuracy**, and **88.52% acceptance coverage**. The new form-only holdout is lower:
+**78.05% Top-1**, **92.97% accepted accuracy**. Reused prior species groups are
+reported separately. The 64 natural negatives had 4 false accepts. These public
+artwork diagnostics are **not physical-camera accuracy**. The Mac conversion,
+iOS tests and release build are separate gates recorded in
+[Apple validation](TrainingResources/apple-validation.json).
 
-[Detailed Chinese engineering notes](docs/national-expansion.zh-CN.md)
+[Detailed Chinese form notes](docs/forms-expansion.zh-CN.md)
 
 ## Build
 
-Use **Build Pokédex National IPA** in GitHub Actions on `national-pokedex`.
+Use **Build Pokédex Forms IPA** in GitHub Actions on `national-pokedex`.
 It exports the selected tensor checkpoint on Mac, requires FP32 numerical parity,
 runs iOS tests, and creates `Pokedex-IPA`. The app needs no server, API key or runtime
 downloads. After the generated Core ML model is committed, Xcode 27.1 can also build
@@ -52,4 +53,4 @@ noncommercial/share-alike terms.
 
 [Asset attribution](iDex/Catalog/ATTRIBUTION.md) ·
 [Model/data notice](iDex/Recognition/MODEL_NOTICE.md) · [License scope](NOTICE.md) ·
-[National training and validation](scripts/national/README.md)
+[Form training and validation](scripts/forms/README.md)

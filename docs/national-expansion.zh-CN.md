@@ -1,3 +1,5 @@
+> Historical species-only release (1.1). Current 1.2 form campaign: see [form update](forms-expansion.zh-CN.md).
+
 # Pokédex 全国图鉴扩展
 
 已阅读并沿用 `docs/development.md`、`iDex/Recognition/MODEL.md`、

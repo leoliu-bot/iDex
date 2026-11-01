@@ -1,4 +1,11 @@
-> National extension: the new 1018-class model is fine-tuned from TorchVision ImageNet weights using the pinned JJMack Gen 1–9 source below, not the old Kanto checkpoint. Preserve the same applicable attribution and noncommercial/share-alike conditions. Raw training images are not redistributed. Historical Kanto source details follow.
+> Current form extension: the 1498-class appearance model is fine-tuned from fresh TorchVision ImageNet weights, using unambiguous pinned JJMack groups plus PokéAPI references and explicitly named historical card-art crops. Raw training images are not redistributed. Preserve applicable attribution and noncommercial/share-alike conditions. Historical Kanto source details follow.
+
+## Additional form sources
+
+- [PokéAPI sprites](https://github.com/PokeAPI/sprites/tree/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64), pinned revision `1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64`; credits include Smogon contributors. Training references include game sprites, Home and official artwork. Source-code repository licensing does not grant blanket character/artwork rights.
+- [Pokémon TCG historical metadata](https://github.com/PokemonTCG/pokemon-tcg-data/tree/39a26a144c8b6ef6c2fb17b2c29d0bb7121e3a11), revision `39a26a144c8b6ef6c2fb17b2c29d0bb7121e3a11`. Exact named-form card metadata maps art crops to forms; acquisition receipts retain artist, card ID, source URL and original/cropped SHA-256. Card illustrations remain their respective holders' works. Neither raw cards nor crops are distributed with this repository. Some full-art crops retain text, a diagnostic limitation.
+
+See [form campaign](../../scripts/forms/README.md) for split controls, shared-appearance limitations and reproduction. These sources do not change the application's MIT source-code license or establish commercial artwork rights.
 
 # Model and training-data notices
 

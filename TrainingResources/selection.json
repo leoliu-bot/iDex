@@ -1,13 +1,13 @@
 {
-  "selectedFrom": "artifacts\\national\\runs\\efficientnet224-continued\\best.pt",
-  "checkpoint_sha256": "754e6db1fae534e9c225041d59dd31eef685fad39634fa9bc2d34cd8241ada1b",
-  "manifest_sha256": "44b8d94b0a271a645063ff3df299c5d8d176a7ac49b14fb6611fdeda72856c3e",
+  "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
+  "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+  "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
   "arch": "efficientnet_b0",
   "size": 224,
-  "classes": 1018,
-  "validationTop1": 0.9258997882851094,
+  "classes": 1498,
+  "validationTop1": 0.9023920813857574,
   "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
-  "confidenceThreshold": 0.35,
+  "confidenceThreshold": 0.25,
   "logitMargin": 0.5,
   "calibrationRule": "Validation only: >=97% accepted accuracy, <=5% natural-negative FAR, then maximum known acceptance; small public diagnostic, not camera certification."
 }

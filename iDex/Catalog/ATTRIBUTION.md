@@ -17,6 +17,20 @@ All 1025 cries follow the pinned upstream conversion format below. Regenerate wi
 `scripts/catalog/build_national_catalog.py` and `scripts/audio/build_national_cries.py`.
 Original font faces, licenses, image interpolation and metric units are unchanged.
 
+## Form extension
+
+The archive adds 554 form records from PokéAPI data revision
+`6b8db7f3cb31cfaa37cb74e5c3edff124bcba5ce` and 505 independent 96×96 Gen 5
+style sprites from the pinned sprite revision above. `forms-manifest.json` records
+shared/reference-only cases. Descriptions state sourced form/type/fusion facts;
+unknown measurements are displayed as unknown. The original 151 records stay intact.
+
+There are now 1351 cry resources using the same pinned upstream audio revision,
+conversion format and preserved notice. Form records select the corresponding
+source Pokémon cry when available. Regenerate with `scripts/audio/build_forms_cries.py`.
+Native narration uses installed Apple voices; no television actor recording or
+cloned voice is bundled.
+
 ## Original Kanto resources
 
 # Offline catalog and visual assets

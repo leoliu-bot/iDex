@@ -162,6 +162,7 @@ def main():
     files = {p['path'] for p in json.loads((CACHE / 'pokemon-tree.json').read_text())['tree'] if p['type'] == 'blob'}
     source_paths = json.loads((ROOT / 'artifacts/forms/sprite-paths.json').read_text())
     forms, metadata = [], {}
+    cry_ids = {p['id'] for p in json.loads((RESOURCES/'Cries/cry-sources.json').read_text(encoding='utf-8'))}
     unresolved = []
     for form in rows('pokemon_forms.csv'):
         p = pokemon[form['pokemon_id']]
@@ -175,11 +176,13 @@ def main():
         entry.update(id=100000 + int(form['id']), speciesID=sid, sourcePokemonID=int(p['id']),
                      sourceFormID=int(form['id']), formIdentifier=form['identifier'], formOrder=int(form['form_order']),
                      generation=versions.get(form['introduced_in_version_group_id'], base['generation']),
-                     height=int(p['height'])/10, weight=int(p['weight'])/10,
+                     height=max(0,int(p['height']))/10, weight=max(0,int(p['weight']))/10,
                      types=[x[1] for x in sorted(form_types.get(form['id'], types[p['id']]))], stats=stats[p['id']],
-                     cryID=sid, spriteAsset=f'pokemon-form-{form["id"]}', formCategory='alternate',
+                     cryID=int(p['id']) if int(p['id']) in cry_ids else sid, spriteAsset=f'pokemon-form-{form["id"]}', formCategory='alternate',
                      aliases=[form['identifier']], descriptionSource='Localized summary of pinned form name, species, types and fusion partner')
         token = form['form_identifier']
+        entry['heightUnavailable'] = int(p['height']) <= 0
+        entry['weightUnavailable'] = int(p['weight']) <= 0
         if token in ['alola','galar','hisui','paldea','galar-standard','galar-zen','paldea-combat-breed','paldea-blaze-breed','paldea-aqua-breed']: entry['formCategory'] = 'regional'
         elif token.startswith('mega'): entry['formCategory'] = 'mega'
         elif token == 'gmax': entry['formCategory'] = 'gigantamax'

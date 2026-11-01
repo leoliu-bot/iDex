@@ -1,4 +1,4 @@
-name: Build Pokédex National IPA
+name: Build Pokédex Forms IPA
 
 on:
   push:
@@ -32,15 +32,15 @@ jobs:
         run: |
           set -euo pipefail
           test -f TrainingResources/national-best.pt
-          mkdir -p artifacts/national
-          cp TrainingResources/training-labels.json artifacts/national/training-labels.json
+          mkdir -p artifacts/forms
+          cp TrainingResources/training-labels.json artifacts/forms/training-labels.json
           python -m venv .export-env
           .export-env/bin/python -m pip install 'coremltools==9.0' 'torch==2.13.0' 'torchvision==0.28.0' 'numpy==2.4.6' 'pillow==13.0.0'
       - name: Export and numerically validate the FP32 model
         run: |
           set -euo pipefail
-          .export-env/bin/python scripts/national/export.py --checkpoint TrainingResources/national-best.pt --out artifacts/national/export --deployment iOS18
-          .export-env/bin/python scripts/national/validate_and_publish.py
+          .export-env/bin/python scripts/forms/export.py --checkpoint TrainingResources/national-best.pt --out artifacts/forms/export --deployment iOS18
+          .export-env/bin/python scripts/forms/validate_and_publish.py
       - name: Test catalog, inference, audio, and layouts
         run: |
           set -euo pipefail
@@ -51,7 +51,7 @@ jobs:
           xcodebuild test -project iDex.xcodeproj -scheme iDex \
             -destination "platform=iOS Simulator,id=$device_id" \
             -parallel-testing-enabled NO \
-            -resultBundlePath artifacts/national/Tests.xcresult \
+            -resultBundlePath artifacts/forms/Tests.xcresult \
             -only-testing:iDexTests/CatalogTests \
             -only-testing:iDexTests/RecognitionTests \
             -only-testing:iDexTests/SelectedModelTests \
@@ -65,10 +65,10 @@ jobs:
       - name: Export readable test results and screenshots
         if: always()
         run: |
-          if [ -d artifacts/national/Tests.xcresult ]; then
-            xcrun xcresulttool get test-results summary --path artifacts/national/Tests.xcresult > artifacts/national/reports/ios-tests.json
-            cat artifacts/national/reports/ios-tests.json
-            xcrun xcresulttool export attachments --path artifacts/national/Tests.xcresult --output-path artifacts/national/screenshots
+          if [ -d artifacts/forms/Tests.xcresult ]; then
+            xcrun xcresulttool get test-results summary --path artifacts/forms/Tests.xcresult > artifacts/forms/reports/ios-tests.json
+            cat artifacts/forms/reports/ios-tests.json
+            xcrun xcresulttool export attachments --path artifacts/forms/Tests.xcresult --output-path artifacts/forms/screenshots
           fi
       - name: Build the iPhone app
         run: |
@@ -79,8 +79,8 @@ jobs:
           mkdir -p output/Payload
           cp -R build/Build/Products/Release-iphoneos/iDex.app output/Payload/
           cd output
-          zip -q -r Pokedex-unsigned.ipa Payload
-          unzip -tq Pokedex-unsigned.ipa
+          zip -q -r Pokedex-Forms-unsigned.ipa Payload
+          unzip -tq Pokedex-Forms-unsigned.ipa
       - name: Keep the validated model in this development branch
         if: github.ref_name == 'national-pokedex'
         run: |
@@ -89,13 +89,13 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A iDex/Recognition
           if ! git diff --cached --quiet; then
-            git commit -m 'Bundle validated National Pokédex classifier'
+            git commit -m 'Bundle validated form-aware Pokédex classifier'
             git push origin HEAD:national-pokedex
           fi
       - uses: actions/upload-artifact@v7
         with:
           name: Pokedex-IPA
-          path: output/Pokedex-unsigned.ipa
+          path: output/Pokedex-Forms-unsigned.ipa
           if-no-files-found: error
           retention-days: 7
           compression-level: 0
@@ -104,9 +104,9 @@ jobs:
         with:
           name: Pokedex-validation
           path: |
-            artifacts/national/reports/coreml-parity.json
-            artifacts/national/reports/ios-tests.json
-            artifacts/national/export/export_receipt.json
-            artifacts/national/screenshots
-            artifacts/national/Tests.xcresult
+            artifacts/forms/reports/coreml-parity.json
+            artifacts/forms/reports/ios-tests.json
+            artifacts/forms/export/export_receipt.json
+            artifacts/forms/screenshots
+            artifacts/forms/Tests.xcresult
           retention-days: 7

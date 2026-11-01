@@ -149,7 +149,18 @@ def predict(args):
         if args.arch!='baseline':
             if selection['checkpoint_sha256']!=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest() or selection['size']!=args.size or selection['arch']!=args.arch:
                 raise ValueError('final checkpoint does not match frozen selection')
-    rows=rows_from(args.manifest,args.split)
+    source_rows=rows_from(args.manifest,args.split)
+    # Alias records may reference exactly the same source bytes. Keep the frozen
+    # grouped manifest intact, but count each image once in evaluation.
+    unique={}
+    for row in source_rows:
+        previous=unique.get(row['sha256'])
+        if previous is not None:
+            if any(previous[key]!=row[key] for key in ['target_id','group','split']):
+                raise ValueError('Conflicting duplicate in evaluation manifest')
+        else:
+            unique[row['sha256']]=row
+    rows=list(unique.values())
     model=make_model('baseline') if args.arch=='baseline' else load_checkpoint(args.checkpoint)[0]
     if args.checkpoint and args.arch!='baseline':
         state=torch.load(args.checkpoint,map_location='cpu',weights_only=True)
@@ -166,7 +177,7 @@ def predict(args):
                 output={k:r[k] for k in ['sha256','group','target_id','source','domain','split']}
                 output.update({k:r[k] for k in ['form','shiny','generation','national_dex_id','baseline_exposure'] if k in r})
                 output.update(logits=logits,label_ids=[l['id'] for l in labels]); f.write(json.dumps(output)+'\n')
-    metadata=dict(rows=len(rows),seconds=time.time()-began,arch=args.arch,checkpoint=str(args.checkpoint),checkpoint_sha256=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest() if args.checkpoint else None,predictions_sha256=hashlib.sha256(args.out.read_bytes()).hexdigest(),size=args.size,manifest_sha256=manifest_sha,preprocess='PIL EXIF decoded in ingest, white alpha, center square, RGB bilinear resize; approximation of app CoreGraphics pending Apple pixel parity')
+    metadata=dict(rows=len(rows),duplicateAliasRowsOmitted=len(source_rows)-len(rows),seconds=time.time()-began,arch=args.arch,checkpoint=str(args.checkpoint),checkpoint_sha256=hashlib.sha256(args.checkpoint.read_bytes()).hexdigest() if args.checkpoint else None,predictions_sha256=hashlib.sha256(args.out.read_bytes()).hexdigest(),size=args.size,manifest_sha256=manifest_sha,preprocess='PIL EXIF decoded in ingest, white alpha, center square, RGB bilinear resize; approximation of app CoreGraphics pending Apple pixel parity')
     args.out.with_suffix('.metadata.json').write_text(json.dumps(metadata,indent=2)); print(json.dumps(metadata),flush=True)
 
 

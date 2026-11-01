@@ -7,18 +7,20 @@ iPhone Duo 用、オフラインのピクセルスタイル全国ポケモン図
 - 第1～9世代の **1025種**。英語・簡体字中国語・日本語の名前、分類、図鑑説明、
   タイプ、種族値、たかさ、おもさ、96×96スプライト、鳴き声を同梱。
 - 赤い本体、LCDカラー、ピクセルフォント、スキャン演出、折りたたみレイアウトを維持。
-- 新たに学習した **1018クラスの EfficientNet-B0**。独立した学習グループが不足する
-  7種は図鑑閲覧のみで、設定画面に対応範囲を表示。
+- リージョン・合体・メガ・キョダイマックスなど **554件の追加のすがた**。
+  全1579件、新たに学習した **1498外見クラスの EfficientNet-B0**。
+  同じ外見は候補を共有し、資料の少ないすがたは自動確定しません。
+- 説明／種族値を切り替えても画面サイズは固定。男性音声を初期設定とし女性音声も選べます。
 - 識別はデバイス内で実行。確信度の低い候補は自動的に発見済みになりません。
 - 名前・タイプ・全国番号で検索。`#1025` の完全一致検索、全国図鑑の連続ページ送りに対応。
 
-公開画像をグループ分割した未使用テストでは Top-1 **92.53%**、Top-3 **96.98%**。
-これは実際のカメラ精度を証明するものではありません。Macでの数値検証と iOS テストは
-リリース前に別途実行します。
+公開画像の混合テストは Top-1 **92.02%**、Top-3 **96.48%**。
+追加のすがただけのテストは Top-1 **78.05%**。旧物種グループの再利用診断は別記。
+実際のカメラ精度を証明するものではありません。Mac数値検証と iOS テストは別途記録します。
 
 ## Build
 
-Use **Build Pokédex National IPA** in GitHub Actions on `national-pokedex`.
+Use **Build Pokédex Forms IPA** in GitHub Actions on `national-pokedex`.
 It exports the selected tensor checkpoint on Mac, requires FP32 numerical parity,
 runs iOS tests, and creates `Pokedex-IPA`. The app needs no server, API key or runtime
 downloads. After the generated Core ML model is committed, Xcode 27.1 can also build
@@ -37,4 +39,4 @@ noncommercial/share-alike terms.
 
 [Asset attribution](iDex/Catalog/ATTRIBUTION.md) ·
 [Model/data notice](iDex/Recognition/MODEL_NOTICE.md) · [License scope](NOTICE.md) ·
-[National training and validation](scripts/national/README.md)
+[Form training and validation](scripts/forms/README.md)

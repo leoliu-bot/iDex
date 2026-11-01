@@ -1,65 +1,92 @@
 {
-  "selectedFrom": "artifacts\\national\\runs\\efficientnet224-continued\\best.pt",
-  "checkpoint_sha256": "754e6db1fae534e9c225041d59dd31eef685fad39634fa9bc2d34cd8241ada1b",
-  "manifest_sha256": "44b8d94b0a271a645063ff3df299c5d8d176a7ac49b14fb6611fdeda72856c3e",
+  "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
+  "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+  "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
   "arch": "efficientnet_b0",
   "size": 224,
-  "classes": 1018,
-  "validationTop1": 0.9258997882851094,
+  "classes": 1498,
+  "validationTop1": 0.9023920813857574,
   "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
+  "confidenceThreshold": 0.25,
+  "logitMargin": 0.5,
+  "calibrationRule": "Validation only: >=97% accepted accuracy, <=5% natural-negative FAR, then maximum known acceptance; small public diagnostic, not camera certification.",
   "validation": {
-    "top1": 0.9258997882851094,
-    "top3": 0.9682427664079041,
-    "macro_recall": 0.9159829419652602,
-    "accepted_known_accuracy": 0.9789217673287394,
-    "accepted_known_coverage": 0.870501058574453,
-    "unknown_far": 0.0,
+    "top1": 0.9018201875344732,
+    "top3": 0.9558742415885273,
+    "top5": 0.9704908990623277,
+    "macro_recall": 0.8567622842723245,
+    "accepted_known_accuracy": 0.9755381604696673,
+    "accepted_known_coverage": 0.8455598455598455,
+    "unknown_far": 0.046875,
     "counts": {
-      "images": 2898,
-      "known": 2834,
+      "images": 3690,
+      "known": 3626,
       "unknown": 64,
-      "groups": 1925,
-      "supported_classes": 1018,
-      "accepted": 2467
+      "groups": 2171,
+      "supported_classes": 1494,
+      "accepted": 3069
     }
   },
   "test": {
-    "top1": 0.9252605102407474,
-    "top3": 0.9698167445203019,
-    "top5": 0.9798778296802012,
-    "macro_recall": 0.9182820944608764,
-    "accepted_known_accuracy": 0.9780719900703351,
-    "accepted_known_coverage": 0.8684872439813152,
-    "unknown_far": 0.046875,
-    "counts": {
-      "images": 2847,
-      "known": 2783,
-      "unknown": 64,
-      "groups": 1925,
-      "supported_classes": 1018,
-      "accepted": 2420
+    "final-test": {
+      "top1": 0.9201864258665889,
+      "top3": 0.9647538595980192,
+      "top5": 0.9766967666763764,
+      "macro_recall": 0.872122086228512,
+      "accepted_known_accuracy": 0.9753208292201382,
+      "accepted_known_coverage": 0.8852315758811535,
+      "unknown_far": 0.0625,
+      "counts": {
+        "images": 3497,
+        "known": 3433,
+        "unknown": 64,
+        "groups": 2171,
+        "supported_classes": 1494,
+        "accepted": 3043
+      }
+    },
+    "test-public": {
+      "top1": 0.9578402366863905,
+      "top3": 0.9840976331360947,
+      "top5": 0.9903846153846154,
+      "macro_recall": 0.9537112767074599,
+      "accepted_known_accuracy": 0.9842581660763479,
+      "accepted_known_coverage": 0.9397189349112426,
+      "unknown_far": 0.0625,
+      "counts": {
+        "images": 2768,
+        "known": 2704,
+        "unknown": 64,
+        "groups": 1463,
+        "supported_classes": 786,
+        "accepted": 2545
+      }
+    },
+    "test-forms": {
+      "top1": 0.7805212620027435,
+      "top3": 0.8930041152263375,
+      "top5": 0.9259259259259259,
+      "macro_recall": 0.7815442561205274,
+      "accepted_known_accuracy": 0.929718875502008,
+      "accepted_known_coverage": 0.6831275720164609,
+      "unknown_far": null,
+      "counts": {
+        "images": 729,
+        "known": 729,
+        "unknown": 0,
+        "groups": 708,
+        "supported_classes": 708,
+        "accepted": 498
+      }
     }
   },
-  "limits": "Public grouped artwork tests, not independent physical-camera accuracy. Seven catalog species lack sufficient independent training support. The original Farfetchd pixel fixture remains unconfirmed by the frozen model. Core ML parity, iOS simulator tests, and the iPhone Release build passed.",
+  "limits": "Public artwork/reference diagnostics, not physical-camera accuracy. Species public test groups were reused from the prior campaign; new form test is reported separately. Same-appearance species cannot auto-confirm. Shiny is not separately classified.",
+  "evaluationDeduplication": {
+    "validation": 11,
+    "test": 16,
+    "rule": "Identical source SHA with identical label, group and split counted once; frozen source manifest unchanged."
+  },
   "appleValidation": {
-    "run": "https://github.com/leoliu-bot/iDex/actions/runs/41234347180",
-    "result": "Passed",
-    "coreML": {
-      "fixturesPerComputePolicy": 19,
-      "checks": 38,
-      "maximumAbsoluteLogitError": 3.24249267578125e-05,
-      "packagedWeightsSHA256": "5349f3b1a226aaade6063703772427afbce8a8985c8666be522e30815f6c7110"
-    },
-    "iOS": {
-      "platform": "iOS Simulator",
-      "device": "iPhone Duo",
-      "osVersion": "27.1",
-      "uniqueTests": 35,
-      "totalTestRuns": 55,
-      "failed": 0,
-      "skipped": 0,
-      "runtimeWarnings": 0
-    },
-    "physicalCamera": "Not measured. Public artwork tests and Mac/simulator validation do not establish physical-camera accuracy."
+    "result": "Pending form-aware Mac export and full release checks"
   }
 }

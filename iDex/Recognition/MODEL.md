@@ -1,21 +1,23 @@
-# Pokédex National image classifier
+# Pokédex form-aware image classifier
 
-The current app bundles `NationalClassifier.mlpackage`: a locally trained
-EfficientNet-B0 FP32 classifier with 1,018 ordered National Dex labels. The archive
-contains 1,025 species. Seven species lack sufficient independent training groups;
-Settings lists them in the selected language. Recognition stays offline.
+The app bundles `NationalClassifier.mlpackage`, a locally trained EfficientNet-B0
+FP32 model with 1,498 appearance classes for 1,025 species and 554 additional forms.
+1,492 classes have independent train/validation/test groups and may auto-confirm
+when the validation-frozen score/margin policy also passes. Shared appearances
+retain manual choices; sparse or ambiguous records do not auto-confirm.
 
-The selected tensor checkpoint, label order and acceptance thresholds are bound
-by [recognition-manifest.json](recognition-manifest.json). Training and the public
-grouped test are documented in [National training](../../scripts/national/README.md)
-and [the training summary](../../TrainingResources/training-summary.json).
+The selected tensor checkpoint, ordered labels and policy are hash-bound by
+[recognition-manifest.json](recognition-manifest.json). The form campaign starts
+from ImageNet, not the previous species checkpoint. See [form training](../../scripts/forms/README.md),
+[aggregate training report](../../TrainingResources/training-summary.json) and
+[Apple validation](../../TrainingResources/apple-validation.json).
 
-[Apple validation](../../TrainingResources/apple-validation.json) passed 38 source/
-Core ML numerical checks across CPU-only and all-compute policies, with a maximum
-absolute logit difference of 0.000032425. All 35 simulator tests (55 runs including
-parameters) and the unsigned iPhone Release build passed in the linked build run.
-These checks do not measure physical-camera accuracy, hinge behavior or latency.
-The original Farfetch'd sprite remains an explicit unconfirmed-match regression.
+Mixed public-image Top-1 is 92.02%; new form holdout Top-1 is 78.05% (92.97% accuracy
+among accepted form inputs). Reused species holdouts are reported separately.
+Natural-negative test false accepts: 4/64. These are public-art diagnostics, not
+physical-camera accuracy. Shiny identification is not separately trained.
+The app's regional/fusion opaque sprite fixtures and original Farfetch'd fixture
+are checked separately as known-input integration checks, not a generalization test.
 
 ## Historical Kanto reference
 

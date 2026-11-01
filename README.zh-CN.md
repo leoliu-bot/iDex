@@ -7,8 +7,10 @@
 - **1025 种、第 1～9 世代**：中英日三语名称、分类、说明、属性、身高、体重、
   六项能力值、96×96 像素图和叫声，全部随应用离线提供。
 - 保留红色设备外壳、LCD 配色、像素字体、扫描动画和折叠布局；原有 151 条图文不变。
-- **重新训练的 1018 类 EfficientNet-B0**。独立训练分组不足的 7 种仍可完整浏览，
-  设置中按当前语言列出，不会用空类别冒充识别能力。
+- **新增 554 条地区、合体、Mega、超极巨化等形态**，共 1579 条图鉴记录。
+  重新训练的 EfficientNet-B0 覆盖 **1498 类外观**；相同外观共用候选，稀少形态不自动确认。
+- 观察记录／基础能力切换时保持展示框大小；默认经典男声，提供女声与试听。
+  中文播报优先台湾国语系统音色，保留现有中文名。
 - 拍照或导入照片后在手机上识别，照片仅留在内存；低置信度候选不会自动发现或朗读。
 - 支持三语名称、属性与全国编号搜索，`#1025` 可精确定位；翻页覆盖全国并循环首尾。
 - 应用显示名称改为 **Pokédex**，保留安装标识与发现记录键，便于沿用之前的签名安装流程。
@@ -18,20 +20,20 @@
 使用本机 RTX 4080 SUPER 完成 8 + 12 轮训练。先按来源、重复图片、前景和镜像分组，
 再划分训练/验证/测试；只用验证集选择检查点和接受策略。
 
-留出的公开分组测试集：Top-1 **92.53%**，Top-3 **96.98%**；
-被接受的已知输入准确率 **97.81%**，接受覆盖率 **86.85%**。
-64 张自然物体负样本中误接受 3 张。该小规模公开图片诊断不代表真实相机准确率。
-Mac 上的 38 次 Core ML 数值比较、35 项 iOS 模拟器测试（含参数共 55 次运行）及
-iPhone Release 构建已全部通过；[验证记录](TrainingResources/apple-validation.json)
-与桌面训练结果分别保存。
+混合公开分组测试：Top-1 **92.02%**，Top-3 **96.48%**；
+确认的已知结果准确率 **97.53%**，确认覆盖率 **88.52%**。
+新增形态单独留出测试 Top-1 **78.05%**，确认结果准确率 **92.97%**。
+复用的旧物种测试组另行报告。64 张自然物体负样本中误确认 4 张。
+这些公开图片诊断不代表真实相机准确率；Mac 数值比较、iOS 模拟器与 Release 构建
+结果分别记录于 [Apple 验证](TrainingResources/apple-validation.json)。
 
-[工程分析与扩展说明](docs/national-expansion.zh-CN.md) ·
+[形态、显示与播报说明](docs/forms-expansion.zh-CN.md) ·
 [训练报告](TrainingResources/training-summary.json) ·
 [训练覆盖限制](TrainingResources/training-coverage.json)
 
 ## 构建与安装
 
-在 `national-pokedex` 分支运行 GitHub Actions 的 **Build Pokédex National IPA**。
+在 `national-pokedex` 分支运行 GitHub Actions 的 **Build Pokédex Forms IPA**。
 云端 Mac 会转换选定的训练检查点，通过 FP32 数值一致性和 iOS 测试后，生成
 `Pokedex-IPA` 安装包。Windows 用户可沿用之前成功的签名安装流程；无需本地 Mac。
 应用运行时不需要服务器、API 密钥或额外下载。
@@ -52,4 +54,4 @@ noncommercial/share-alike terms.
 
 [Asset attribution](iDex/Catalog/ATTRIBUTION.md) ·
 [Model/data notice](iDex/Recognition/MODEL_NOTICE.md) · [License scope](NOTICE.md) ·
-[National training and validation](scripts/national/README.md)
+[Form training and validation](scripts/forms/README.md)

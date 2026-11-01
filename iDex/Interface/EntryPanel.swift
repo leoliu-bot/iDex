@@ -72,9 +72,9 @@ struct EntryPanel: View {
                             }
                         }.frame(maxWidth: .infinity, alignment: .leading)
                         HStack {
-                            metric(store.text("HEIGHT", "身高", "たかさ"), String(format: "%.1f m", pokemon.height))
+                            metric(store.text("HEIGHT", "身高", "たかさ"), pokemon.height > 0 ? String(format: "%.1f m", pokemon.height) : "—")
                             Spacer()
-                            metric(store.text("WEIGHT", "体重", "おもさ"), String(format: "%.1f kg", pokemon.weight))
+                            metric(store.text("WEIGHT", "体重", "おもさ"), pokemon.weight > 0 ? String(format: "%.1f kg", pokemon.weight) : "—")
                             Spacer()
                             metric(store.text("SEEN", "发现", "発見"), store.seenIDs.contains(pokemon.id) ? "●" : "—")
                         }
