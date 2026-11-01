@@ -87,8 +87,8 @@ nonisolated private final class SpeechRenderMeter: @unchecked Sendable {
 
     init(request: AudioPlaybackRequest) { self.request = request }
 
-    func record(_ buffer: AVAudioPCMBuffer) {
-        guard !request.isCancelled, let samples = buffer.floatChannelData?[0], buffer.frameLength > 0 else { return }
+    func record(_ buffer: AVReadOnlyAudioPCMBuffer) {
+        guard !request.isCancelled, case .float(let samples) = buffer.channelData(0), buffer.frameLength > 0 else { return }
         var square = 0.0
         for i in 0..<Int(buffer.frameLength) { square += Double(samples[i] * samples[i]) }
         let rms = sqrt(square / Double(buffer.frameLength))

@@ -61,7 +61,8 @@ def download_large(lock):
         target, model, file, start, end = item
         for attempt in range(6):
             try:
-                url=f'https://huggingface.co/{model["repo"]}/resolve/{model["revision"]}/{file["name"]}?download=true&request={time.time_ns()}'
+                source=file.get('mirror') or f'https://huggingface.co/{model["repo"]}/resolve/{model["revision"]}/{file["name"]}'
+                url=source+f'?download=true&request={time.time_ns()}'
                 request=urllib.request.Request(url,headers={'Range':f'bytes={start}-{end}'})
                 with urllib.request.urlopen(request,timeout=160) as response:
                     assert response.status==206, 'Model server did not honor bounded range'
