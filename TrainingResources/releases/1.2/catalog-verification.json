@@ -1,0 +1,29 @@
+{
+  "species": 1025,
+  "additionalForms": 554,
+  "catalogEntries": 1579,
+  "uniquePixelAssets": 1530,
+  "verifiedCryResources": 1351,
+  "additionalFormCategories": {
+    "alternate": 359,
+    "fusion": 6,
+    "mega": 97,
+    "regional": 58,
+    "gigantamax": 34
+  },
+  "referenceOnlyImages": [
+    "koraidon-limited-build",
+    "koraidon-sprinting-build",
+    "koraidon-swimming-build",
+    "koraidon-gliding-build",
+    "miraidon-low-power-mode",
+    "miraidon-drive-mode",
+    "miraidon-aquatic-mode",
+    "miraidon-glide-mode",
+    "zygarde-mega"
+  ],
+  "trainedAppearanceClasses": 1498,
+  "groupSplitOverlap": 0,
+  "confirmableClasses": 1492,
+  "kantoPreserved": true
+}

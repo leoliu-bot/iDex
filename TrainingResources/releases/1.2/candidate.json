@@ -1,0 +1,10 @@
+{
+  "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
+  "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+  "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+  "arch": "efficientnet_b0",
+  "size": 224,
+  "classes": 1498,
+  "validationTop1": 0.9023920813857574,
+  "selectionRule": "Maximum positive validation top1; no test predictions inspected."
+}

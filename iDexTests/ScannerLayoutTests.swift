@@ -90,7 +90,7 @@ struct ScannerLayoutTests {
         func speechLensIsLit(_ bytes: Data) -> Bool {
             // The unlit lens has no bright cyan pixels; the speech frame has
             // thousands. Confirm the new state before accepting equal frames.
-            bytes.withUnsafeBytes { buffer in
+            bytes.withUnsafeBytes { (buffer: UnsafeRawBufferPointer) in
                 var brightCyan = 0
                 for offset in stride(from: 0, to: buffer.count, by: 4) {
                     if buffer[offset] < 100 && buffer[offset + 1] > 150 && buffer[offset + 2] > 180 {
@@ -99,6 +99,20 @@ struct ScannerLayoutTests {
                     }
                 }
                 return false
+            }
+        }
+
+        func sameAppearance(_ expected: Data, _ actual: Data) -> Bool {
+            guard expected.count == actual.count else { return false }
+            // Simulator captures of the unlit red indicator's shadow vary by
+            // at most 2/255 after compositing. A chase light changes far more.
+            return expected.withUnsafeBytes { (left: UnsafeRawBufferPointer) in
+                actual.withUnsafeBytes { (right: UnsafeRawBufferPointer) in
+                    for offset in 0..<left.count {
+                        if abs(Int(left[offset]) - Int(right[offset])) > 2 { return false }
+                    }
+                    return true
+                }
             }
         }
 
@@ -124,10 +138,12 @@ struct ScannerLayoutTests {
             return "changedPixels=\(count), maximumChannelDelta=\(maximumDelta), bounds=(\(minX),\(minY))...(\(maxX),\(maxY))"
         }
 
-        var frames = Set<Data>()
+        var frames: [Data] = []
         for _ in 0..<20 {
             let image = snapshot()
-            if frames.insert(try pixels(image)).inserted {
+            let imagePixels = try pixels(image)
+            if !frames.contains(where: { sameAppearance($0, imagePixels) }) {
+                frames.append(imagePixels)
                 Attachment.record(image, named: "scanner-chase-\(frames.count)", as: .png)
             }
             if frames.count >= 3 { break }
@@ -149,7 +165,7 @@ struct ScannerLayoutTests {
             let next = snapshot()
             let nextPixels = try pixels(next)
             let previousPixels = try pixels(speaking)
-            if speechLensIsLit(nextPixels) && nextPixels == previousPixels {
+            if speechLensIsLit(nextPixels) && sameAppearance(nextPixels, previousPixels) {
                 speaking = next
                 settled = true
                 break
@@ -164,11 +180,12 @@ struct ScannerLayoutTests {
         for index in 0..<4 {
             try await Task.sleep(for: .milliseconds(220))
             let sample = snapshot(), samplePixels = try pixels(sample)
-            if samplePixels != speakingPixels {
+            let matches = sameAppearance(samplePixels, speakingPixels)
+            if !matches {
                 Attachment.record(sample, named: "scanner-speech-followup-\(index)", as: .png)
                 print("Speech snapshot \(index): \(difference(speakingPixels, samplePixels, width: source.width))")
             }
-            #expect(samplePixels == speakingPixels)
+            #expect(matches)
         }
         Attachment.record(speaking, named: "scanner-chase-stopped-for-speech", as: .png)
     }

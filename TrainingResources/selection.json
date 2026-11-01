@@ -1,13 +1,54 @@
 {
-  "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
-  "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
-  "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+  "selectedFrom": "artifacts\\multidomain\\runs\\expanded-continued\\best.pt",
+  "checkpoint_sha256": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+  "manifest_sha256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
   "arch": "efficientnet_b0",
   "size": 224,
   "classes": 1498,
-  "validationTop1": 0.9023920813857574,
-  "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
-  "confidenceThreshold": 0.25,
+  "validationTop1": 0.9205277692543725,
+  "validationScore": 0.9120329279509458,
+  "validationDetails": {
+    "top1": 0.9205277692543725,
+    "macro_recall": 0.9036202260477034,
+    "domain_group_mean": 0.9204456298541881,
+    "selection_score": 0.9120329279509458,
+    "domains": {
+      "mixed": {
+        "top1": 0.9777777777777777,
+        "images": 2790,
+        "groups": 2018,
+        "group_top1": 0.9773290386521308
+      },
+      "game": {
+        "top1": 0.9613782658084059,
+        "images": 2641,
+        "groups": 1360,
+        "group_top1": 0.9523529411764706
+      },
+      "cards": {
+        "top1": 0.8573841698841699,
+        "images": 4144,
+        "groups": 2018,
+        "group_top1": 0.8576560951437067
+      },
+      "anime": {
+        "top1": 1.0,
+        "images": 1,
+        "groups": 1,
+        "group_top1": 1.0
+      },
+      "toys": {
+        "top1": 0.8905472636815921,
+        "images": 201,
+        "groups": 45,
+        "group_top1": 0.8944444444444443
+      }
+    },
+    "loss": 0.6576905684614031,
+    "n": 9777
+  },
+  "selectionRule": "Maximum validation composite: 0.5 class-macro recall + 0.5 equal domain mean of source-group accuracy (domains with >=30 images and >=5 groups); no test predictions inspected.",
+  "confidenceThreshold": 0.35,
   "logitMargin": 0.5,
   "calibrationRule": "Validation only: >=97% accepted accuracy, <=5% natural-negative FAR, then maximum known acceptance; small public diagnostic, not camera certification."
 }

@@ -1,23 +1,12 @@
 {
-  "campaign": "forms-voice-layout-1.2",
-  "run": "https://github.com/leoliu-bot/iDex/actions/runs/41270266518",
-  "result": "Passed",
-  "coreML": {
-    "fixturesPerComputePolicy": 29,
-    "checks": 58,
-    "maximumAbsoluteLogitError": 0.00024628639221191406,
-    "packagedWeightsSHA256": "6b2ff3ce16ffd384ce480a7b80d1c04044d0a31d574f6ea308e6e198c99aca5b"
-  },
-  "iOS": {
-    "platform": "iOS Simulator",
-    "device": "iPhone Duo",
-    "osVersion": "27.1",
-    "uniqueTests": 52,
-    "totalTestRuns": 94,
-    "failed": 0,
-    "skipped": 0,
-    "runtimeWarnings": 0
-  },
-  "physicalCamera": "Not measured. Public artwork tests and Mac/simulator validation do not establish physical-camera accuracy.",
-  "narration": "Native installed voices: Taiwan Mandarin preferred for Chinese; gender and persistence tests passed, physical-phone audition remains separate."
+  "campaign": "expanded-source-1.3",
+  "status": "pending",
+  "checkpointSHA256": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+  "required": [
+    "FP32 Core ML parity",
+    "affected simulator and UI tests",
+    "iPhone Release build",
+    "final IPA verification"
+  ],
+  "physicalCamera": "Not measured by public-image or Mac/simulator checks."
 }

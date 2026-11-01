@@ -60,7 +60,7 @@ def main():
                   checkpointSHA256=policy['checkpointSHA256'],
                   role='Predeclared app integration fixtures, not generalization accuracy.')
     (root / 'reports').mkdir(parents=True, exist_ok=True)
-    (root / 'reports/sprite-smoke.json').write_text(json.dumps(report, indent=2)+'\n')
+    (root / 'reports/sprite-smoke.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8', newline='\n')
     print(json.dumps(report))
     if not report['passed']:
         raise ValueError('Frozen model failed app sprite/blank integration; policy was not changed')

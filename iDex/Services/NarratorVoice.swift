@@ -1,5 +1,6 @@
 import AVFoundation
 import Foundation
+import Observation
 
 nonisolated enum NarratorVoice: String, CaseIterable, Identifiable, Codable, Sendable {
     case male, female
@@ -22,7 +23,7 @@ nonisolated enum NarratorVoice: String, CaseIterable, Identifiable, Codable, Sen
 /// Uses the installed voice's real gender; lowering a female voice's pitch is
 /// not a substitute for selecting a male narrator. No particular actor is used.
 nonisolated enum NarratorVoiceSelection {
-    struct Choice: Sendable, Identifiable {
+    struct Choice: Sendable, Identifiable, Equatable {
         let identifier: String
         let language: String
         let gender: AVSpeechSynthesisVoiceGender
@@ -140,5 +141,74 @@ nonisolated enum NarratorVoiceSelection {
     static func delivery(locale: String, narrator: NarratorVoice, explicitVoice: Bool) -> Delivery {
         if explicitVoice { return Delivery(rate: AVSpeechUtteranceDefaultSpeechRate, pitch: 1, preDelay: 0.12) }
         return Delivery(rate: locale.hasPrefix("zh") ? 0.40 : 0.46, pitch: narrator.pitch, preDelay: 0.28)
+    }
+}
+
+/// System voice discovery can synchronously consult accessibility services.
+/// Keep that work outside the main actor, with one enumeration in flight.
+@MainActor @Observable
+final class InstalledNarratorVoices {
+    typealias Loader = @Sendable (String) async -> [NarratorVoiceSelection.Choice]
+
+    private(set) var choices: [NarratorVoiceSelection.Choice] = []
+    private(set) var isRefreshing = false
+    @ObservationIgnored private let loader: Loader
+    @ObservationIgnored private var refreshTask: Task<Void, Never>?
+    @ObservationIgnored private var requestedLocale: String?
+    @ObservationIgnored private var displayedLocale: String?
+    @ObservationIgnored private var generation = UUID()
+
+    init(loader: @escaping Loader = { locale in
+        await Task.detached(priority: .userInitiated) {
+            NarratorVoiceSelection.installedChoices(locale: locale)
+        }.value
+    }) {
+        self.loader = loader
+    }
+
+    func refresh(locale: String) {
+        if displayedLocale != locale {
+            displayedLocale = locale
+            if !choices.isEmpty { choices = [] }
+        }
+        requestedLocale = locale
+        guard refreshTask == nil else { return }
+        isRefreshing = true
+        let token = generation
+        refreshTask = Task { [weak self] in
+            guard let self else { return }
+            await self.loadLatest(generation: token)
+        }
+    }
+
+    func cancel() {
+        generation = UUID()
+        refreshTask?.cancel()
+        refreshTask = nil
+        requestedLocale = nil
+        isRefreshing = false
+    }
+
+    private func loadLatest(generation token: UUID) async {
+        defer {
+            if generation == token {
+                refreshTask = nil
+                isRefreshing = false
+            }
+        }
+        // Merge onAppear, foreground and availability notifications arriving
+        // together. Notifications during discovery share that in-flight read.
+        do { try await Task.sleep(for: .milliseconds(100)) }
+        catch { return }
+        while let locale = requestedLocale {
+            requestedLocale = nil
+            let result = await loader(locale)
+            guard !Task.isCancelled, generation == token else { return }
+            if let pending = requestedLocale, pending != locale { continue }
+            requestedLocale = nil
+            // An identical availability notification must not redraw the form
+            // and start another SwiftUI appearance/accessibility cycle.
+            if choices != result { choices = result }
+        }
     }
 }

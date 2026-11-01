@@ -1,314 +1,399 @@
-[
-  {
-    "entryID": 25,
-    "topEntryID": 25,
-    "correct": true,
-    "confidence": 0.9359182119369507,
-    "margin": 3.217287302017212,
-    "accepted": true,
-    "top3": [
-      25,
-      110187,
-      172
-    ]
-  },
-  {
-    "entryID": 6,
-    "topEntryID": 6,
-    "correct": true,
-    "confidence": 0.9266891479492188,
-    "margin": 5.636320114135742,
-    "accepted": true,
-    "top3": [
-      6,
-      99,
-      828
-    ]
-  },
-  {
-    "entryID": 65,
-    "topEntryID": 65,
-    "correct": true,
-    "confidence": 0.9034286737442017,
-    "margin": 4.1510701179504395,
-    "accepted": true,
-    "top3": [
-      65,
-      64,
-      63
-    ]
-  },
-  {
-    "entryID": 83,
-    "topEntryID": 83,
-    "correct": true,
-    "confidence": 0.9281877279281616,
-    "margin": 4.338786602020264,
-    "accepted": true,
-    "top3": [
-      83,
-      17,
-      16
-    ]
-  },
-  {
-    "entryID": 86,
-    "topEntryID": 86,
-    "correct": true,
-    "confidence": 0.9891571998596191,
-    "margin": 5.953852653503418,
-    "accepted": true,
-    "top3": [
-      86,
-      87,
-      150
-    ]
-  },
-  {
-    "entryID": 98,
-    "topEntryID": 98,
-    "correct": true,
-    "confidence": 0.9853045344352722,
-    "margin": 6.098139762878418,
-    "accepted": true,
-    "top3": [
-      98,
-      99,
-      341
-    ]
-  },
-  {
-    "entryID": 129,
-    "topEntryID": 129,
-    "correct": true,
-    "confidence": 0.9827699661254883,
-    "margin": 6.702499866485596,
-    "accepted": true,
-    "top3": [
-      129,
-      338,
-      266
-    ]
-  },
-  {
-    "entryID": 152,
-    "topEntryID": 152,
-    "correct": true,
-    "confidence": 0.9714010953903198,
-    "margin": 7.889204978942871,
-    "accepted": true,
-    "top3": [
-      152,
-      420,
-      108
-    ]
-  },
-  {
-    "entryID": 248,
-    "topEntryID": 248,
-    "correct": true,
-    "confidence": 0.9032935500144958,
-    "margin": 5.9003472328186035,
-    "accepted": true,
-    "top3": [
-      248,
-      110149,
-      995
-    ]
-  },
-  {
-    "entryID": 384,
-    "topEntryID": 384,
-    "correct": true,
-    "confidence": 0.9733790755271912,
-    "margin": 7.165060043334961,
-    "accepted": true,
-    "top3": [
-      384,
-      1003,
-      110031
-    ]
-  },
-  {
-    "entryID": 445,
-    "topEntryID": 445,
-    "correct": true,
-    "confidence": 0.9670175909996033,
-    "margin": 5.095613956451416,
-    "accepted": true,
-    "top3": [
-      445,
-      444,
-      110158
-    ]
-  },
-  {
-    "entryID": 658,
-    "topEntryID": 658,
-    "correct": true,
-    "confidence": 0.9828997254371643,
-    "margin": 7.310973167419434,
-    "accepted": true,
-    "top3": [
-      658,
-      110172,
-      134
-    ]
-  },
-  {
-    "entryID": 700,
-    "topEntryID": 700,
-    "correct": true,
-    "confidence": 0.9908173084259033,
-    "margin": 8.457747459411621,
-    "accepted": true,
-    "top3": [
-      700,
-      806,
-      110246
-    ]
-  },
-  {
-    "entryID": 778,
-    "topEntryID": 778,
-    "correct": true,
-    "confidence": 0.9685794711112976,
-    "margin": 5.189531326293945,
-    "accepted": true,
-    "top3": [
-      778,
-      246,
-      153
-    ]
-  },
-  {
-    "entryID": 906,
-    "topEntryID": 906,
-    "correct": true,
-    "confidence": 0.9860761761665344,
-    "margin": 6.448764801025391,
-    "accepted": true,
-    "top3": [
-      906,
-      907,
-      352
-    ]
-  },
-  {
-    "entryID": 1000,
-    "topEntryID": 1000,
-    "correct": true,
-    "confidence": 0.9491017460823059,
-    "margin": 6.45208740234375,
-    "accepted": true,
-    "top3": [
-      1000,
-      346,
-      185
-    ]
-  },
-  {
-    "entryID": 1025,
-    "topEntryID": 1025,
-    "correct": true,
-    "confidence": 0.9355712532997131,
-    "margin": 6.240616798400879,
-    "accepted": true,
-    "top3": [
-      1025,
-      895,
-      599
-    ]
-  },
-  {
-    "entryID": 110206,
-    "topEntryID": 110206,
-    "correct": true,
-    "confidence": 0.9061241149902344,
-    "margin": 4.80198860168457,
-    "accepted": true,
-    "top3": [
-      110206,
-      365,
-      110204
-    ]
-  },
-  {
-    "entryID": 110083,
-    "topEntryID": 110083,
-    "correct": true,
-    "confidence": 0.968468427658081,
-    "margin": 5.720101833343506,
-    "accepted": true,
-    "top3": [
-      110083,
-      123,
-      493
-    ]
-  },
-  {
-    "entryID": 110082,
-    "topEntryID": 110082,
-    "correct": true,
-    "confidence": 0.9694413542747498,
-    "margin": 4.897246837615967,
-    "accepted": true,
-    "top3": [
-      110082,
-      110083,
-      110178
-    ]
-  },
-  {
-    "entryID": 110314,
-    "topEntryID": 110314,
-    "correct": true,
-    "confidence": 0.9904042482376099,
-    "margin": 7.355166435241699,
-    "accepted": true,
-    "top3": [
-      110314,
-      110316,
-      794
-    ]
-  },
-  {
-    "entryID": 110315,
-    "topEntryID": 110315,
-    "correct": true,
-    "confidence": 0.9933777451515198,
-    "margin": 7.2457275390625,
-    "accepted": true,
-    "top3": [
-      110315,
-      110444,
-      110442
-    ]
-  },
-  {
-    "entryID": 110362,
-    "topEntryID": 110362,
-    "correct": true,
-    "confidence": 0.9597967267036438,
-    "margin": 5.408993721008301,
-    "accepted": true,
-    "top3": [
-      110362,
-      110405,
-      110204
-    ]
-  },
-  {
-    "entryID": 110363,
-    "topEntryID": 110363,
-    "correct": true,
-    "confidence": 0.958152174949646,
-    "margin": 5.837924957275391,
-    "accepted": true,
-    "top3": [
-      110363,
-      245,
-      897
-    ]
-  }
-]
+{
+  "passed": true,
+  "fixtures": [
+    {
+      "entryID": 25,
+      "topEntryID": 25,
+      "correct": true,
+      "confidence": 0.9905440807342529,
+      "margin": 7.845584869384766,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        25,
+        110187,
+        26
+      ]
+    },
+    {
+      "entryID": 6,
+      "topEntryID": 6,
+      "correct": true,
+      "confidence": 0.9745050668716431,
+      "margin": 6.997182846069336,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        6,
+        110135,
+        4
+      ]
+    },
+    {
+      "entryID": 65,
+      "topEntryID": 65,
+      "correct": true,
+      "confidence": 0.9407640695571899,
+      "margin": 5.374113082885742,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        65,
+        64,
+        63
+      ]
+    },
+    {
+      "entryID": 83,
+      "topEntryID": 83,
+      "correct": true,
+      "confidence": 0.9829921126365662,
+      "margin": 7.437800884246826,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        83,
+        470,
+        251
+      ]
+    },
+    {
+      "entryID": 86,
+      "topEntryID": 86,
+      "correct": true,
+      "confidence": 0.9824768304824829,
+      "margin": 8.291691780090332,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        86,
+        87,
+        580
+      ]
+    },
+    {
+      "entryID": 98,
+      "topEntryID": 98,
+      "correct": true,
+      "confidence": 0.9429655075073242,
+      "margin": 6.082429885864258,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        98,
+        99,
+        165
+      ]
+    },
+    {
+      "entryID": 129,
+      "topEntryID": 129,
+      "correct": true,
+      "confidence": 0.9749951958656311,
+      "margin": 7.572930335998535,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        129,
+        165,
+        341
+      ]
+    },
+    {
+      "entryID": 152,
+      "topEntryID": 152,
+      "correct": true,
+      "confidence": 0.964699923992157,
+      "margin": 8.00442886352539,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        152,
+        282,
+        87
+      ]
+    },
+    {
+      "entryID": 248,
+      "topEntryID": 248,
+      "correct": true,
+      "confidence": 0.979965090751648,
+      "margin": 8.829425811767578,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        248,
+        348,
+        342
+      ]
+    },
+    {
+      "entryID": 384,
+      "topEntryID": 384,
+      "correct": true,
+      "confidence": 0.9775281548500061,
+      "margin": 8.065451622009277,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        384,
+        781,
+        346
+      ]
+    },
+    {
+      "entryID": 445,
+      "topEntryID": 445,
+      "correct": true,
+      "confidence": 0.9592843651771545,
+      "margin": 6.607349872589111,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        445,
+        444,
+        110158
+      ]
+    },
+    {
+      "entryID": 658,
+      "topEntryID": 658,
+      "correct": true,
+      "confidence": 0.9706538319587708,
+      "margin": 7.341104507446289,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        658,
+        818,
+        134
+      ]
+    },
+    {
+      "entryID": 700,
+      "topEntryID": 700,
+      "correct": true,
+      "confidence": 0.9783857464790344,
+      "margin": 8.100996017456055,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        700,
+        110246,
+        110051
+      ]
+    },
+    {
+      "entryID": 778,
+      "topEntryID": 778,
+      "correct": true,
+      "confidence": 0.969167947769165,
+      "margin": 7.488621234893799,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        778,
+        246,
+        104
+      ]
+    },
+    {
+      "entryID": 906,
+      "topEntryID": 906,
+      "correct": true,
+      "confidence": 0.9818598628044128,
+      "margin": 7.282559394836426,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        906,
+        907,
+        610
+      ]
+    },
+    {
+      "entryID": 1000,
+      "topEntryID": 1000,
+      "correct": true,
+      "confidence": 0.9006059169769287,
+      "margin": 6.862574577331543,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        1000,
+        65,
+        346
+      ]
+    },
+    {
+      "entryID": 1025,
+      "topEntryID": 1025,
+      "correct": true,
+      "confidence": 0.9731629490852356,
+      "margin": 8.43568229675293,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        1025,
+        1014,
+        41
+      ]
+    },
+    {
+      "entryID": 110206,
+      "topEntryID": 110206,
+      "correct": true,
+      "confidence": 0.9866408705711365,
+      "margin": 8.323247909545898,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110206,
+        365,
+        111
+      ]
+    },
+    {
+      "entryID": 110083,
+      "topEntryID": 110083,
+      "correct": true,
+      "confidence": 0.9677019119262695,
+      "margin": 6.805434226989746,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110083,
+        646,
+        110082
+      ]
+    },
+    {
+      "entryID": 110082,
+      "topEntryID": 110082,
+      "correct": true,
+      "confidence": 0.97258061170578,
+      "margin": 6.917924404144287,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110082,
+        967,
+        644
+      ]
+    },
+    {
+      "entryID": 110314,
+      "topEntryID": 110314,
+      "correct": true,
+      "confidence": 0.9643483757972717,
+      "margin": 7.859981536865234,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110314,
+        794,
+        110096
+      ]
+    },
+    {
+      "entryID": 110315,
+      "topEntryID": 110315,
+      "correct": true,
+      "confidence": 0.9869571924209595,
+      "margin": 8.698480606079102,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110315,
+        110098,
+        896
+      ]
+    },
+    {
+      "entryID": 110362,
+      "topEntryID": 110362,
+      "correct": true,
+      "confidence": 0.9915620684623718,
+      "margin": 8.04940414428711,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110362,
+        110170,
+        724
+      ]
+    },
+    {
+      "entryID": 110363,
+      "topEntryID": 110363,
+      "correct": true,
+      "confidence": 0.982043445110321,
+      "margin": 7.015563011169434,
+      "accepted": true,
+      "passed": true,
+      "top3": [
+        110363,
+        897,
+        110362
+      ]
+    },
+    {
+      "entryID": "solid-0",
+      "topEntryID": 110151,
+      "correct": false,
+      "confidence": 0.04021509736776352,
+      "margin": 0.21692562103271484,
+      "accepted": false,
+      "passed": true,
+      "top3": [
+        110151,
+        110015,
+        618
+      ]
+    },
+    {
+      "entryID": "solid-127",
+      "topEntryID": 110159,
+      "correct": false,
+      "confidence": 0.015233924612402916,
+      "margin": 0.720189094543457,
+      "accepted": false,
+      "passed": true,
+      "top3": [
+        110159,
+        94,
+        618
+      ]
+    },
+    {
+      "entryID": "solid-255",
+      "topEntryID": 110159,
+      "correct": false,
+      "confidence": 0.01006120815873146,
+      "margin": 0.4368925094604492,
+      "accepted": false,
+      "passed": true,
+      "top3": [
+        110159,
+        725,
+        199
+      ]
+    },
+    {
+      "entryID": "noise",
+      "topEntryID": 132,
+      "correct": false,
+      "confidence": 0.011300726793706417,
+      "margin": 0.39569735527038574,
+      "accepted": false,
+      "passed": true,
+      "top3": [
+        132,
+        370,
+        618
+      ]
+    }
+  ],
+  "checkpointSHA256": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+  "role": "Predeclared app integration fixtures, not generalization accuracy."
+}

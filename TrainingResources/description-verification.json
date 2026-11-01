@@ -1,0 +1,539 @@
+{
+  "baselineCommit": "c530639",
+  "actualEntries": 554,
+  "regeneratedEntries": 554,
+  "curatedDescriptions": 64,
+  "languageVersions": 192,
+  "categoryCounts": {
+    "regional": 58,
+    "fusion": 6
+  },
+  "regionCounts": {
+    "alola": 18,
+    "galar": 20,
+    "hisui": 16,
+    "paldea": 4
+  },
+  "verifiedSourceReferences": 68,
+  "uniqueOfficialSourceURLs": 67,
+  "allSourceHashesAndFormLabelsVerified": true,
+  "networkRequests": 0,
+  "cachedSpriteReads": 505,
+  "semanticDifferences": [],
+  "allCuratedDescriptionsRegeneratedExactly": true,
+  "mainResourcesUnmodifiedByRebuild": true,
+  "allNonDescriptionFieldsPreserved": true,
+  "editorialCorrectionsAfterBaseline": [
+    {
+      "formIdentifier": "kyurem-black",
+      "fields": [
+        "chineseDescription",
+        "englishDescription"
+      ]
+    },
+    {
+      "formIdentifier": "kyurem-white",
+      "fields": [
+        "chineseDescription"
+      ]
+    },
+    {
+      "formIdentifier": "slowbro-galar",
+      "fields": [
+        "englishDescription"
+      ]
+    },
+    {
+      "formIdentifier": "yamask-galar",
+      "fields": [
+        "chineseDescription",
+        "englishDescription",
+        "japaneseDescription"
+      ]
+    },
+    {
+      "formIdentifier": "sneasel-hisui",
+      "fields": [
+        "japaneseDescription"
+      ]
+    }
+  ],
+  "textLengths": {
+    "curatedForms": {
+      "englishNonWhitespaceCharacters": {
+        "minimum": 91,
+        "median": 120.5,
+        "maximum": 143
+      },
+      "chineseNonWhitespaceCharacters": {
+        "minimum": 39,
+        "median": 44.0,
+        "maximum": 54
+      },
+      "japaneseNonWhitespaceCharacters": {
+        "minimum": 44,
+        "median": 52.0,
+        "maximum": 61
+      },
+      "englishWords": {
+        "minimum": 21,
+        "median": 24.0,
+        "maximum": 27
+      }
+    },
+    "ordinaryKanto151": {
+      "englishNonWhitespaceCharacters": {
+        "minimum": 50,
+        "median": 103,
+        "maximum": 166
+      },
+      "chineseNonWhitespaceCharacters": {
+        "minimum": 20,
+        "median": 32,
+        "maximum": 46
+      },
+      "japaneseNonWhitespaceCharacters": {
+        "minimum": 29,
+        "median": 35,
+        "maximum": 44
+      },
+      "englishWords": {
+        "minimum": 9,
+        "median": 21,
+        "maximum": 34
+      }
+    },
+    "ordinaryNational1025": {
+      "englishNonWhitespaceCharacters": {
+        "minimum": 50,
+        "median": 108,
+        "maximum": 183
+      },
+      "chineseNonWhitespaceCharacters": {
+        "minimum": 20,
+        "median": 32,
+        "maximum": 47
+      },
+      "japaneseNonWhitespaceCharacters": {
+        "minimum": 26,
+        "median": 36,
+        "maximum": 84
+      },
+      "englishWords": {
+        "minimum": 9,
+        "median": 22,
+        "maximum": 41
+      }
+    }
+  },
+  "sourceChecks": [
+    {
+      "formIdentifier": "rattata-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0019_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "raticate-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0020_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "raichu-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0026_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "sandshrew-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0027_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "sandslash-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0028_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "vulpix-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0037_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "ninetales-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0038_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "diglett-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0050_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "dugtrio-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0051_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "meowth-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0052_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "persian-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0053_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "geodude-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0074_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "graveler-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0075_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "golem-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0076_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "grimer-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0088_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "muk-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0089_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "exeggutor-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0103_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "marowak-alola",
+      "url": "https://dex.pokemon.cn/play/pokedex/0105_1",
+      "formLabel": "阿罗拉的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "meowth-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0052_2",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "ponyta-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0077_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "rapidash-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0078_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "slowpoke-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0079_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "slowbro-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0080_2",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "farfetchd-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0083_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "weezing-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0110_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "mr-mime-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0122_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "articuno-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0144_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "zapdos-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0145_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "moltres-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0146_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "slowking-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0199_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "corsola-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0222_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "zigzagoon-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0263_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "linoone-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0264_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "darumaka-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0554_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "darmanitan-galar-standard",
+      "url": "https://dex.pokemon.cn/play/pokedex/0555_2",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "darmanitan-galar-zen",
+      "url": "https://dex.pokemon.cn/play/pokedex/0555_3",
+      "formLabel": "伽勒尔的样子/达摩模式",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "yamask-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0562_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "stunfisk-galar",
+      "url": "https://dex.pokemon.cn/play/pokedex/0618_1",
+      "formLabel": "伽勒尔的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "growlithe-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0058_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "arcanine-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0059_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "voltorb-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0100_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "electrode-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0101_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "typhlosion-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0157_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "qwilfish-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0211_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "sneasel-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0215_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "samurott-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0503_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "lilligant-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0549_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "zorua-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0570_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "zoroark-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0571_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "braviary-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0628_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "sliggoo-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0705_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "goodra-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0706_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "avalugg-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0713_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "decidueye-hisui",
+      "url": "https://dex.pokemon.cn/play/pokedex/0724_1",
+      "formLabel": "洗翠的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "tauros-paldea-combat-breed",
+      "url": "https://dex.pokemon.cn/play/pokedex/0128_1",
+      "formLabel": "帕底亚的样子／斗战种",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "tauros-paldea-blaze-breed",
+      "url": "https://dex.pokemon.cn/play/pokedex/0128_2",
+      "formLabel": "帕底亚的样子／火炽种",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "tauros-paldea-aqua-breed",
+      "url": "https://dex.pokemon.cn/play/pokedex/0128_3",
+      "formLabel": "帕底亚的样子／水澜种",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "wooper-paldea",
+      "url": "https://dex.pokemon.cn/play/pokedex/0194_1",
+      "formLabel": "帕底亚的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "kyurem-black",
+      "url": "https://dex.pokemon.cn/play/pokedex/0646_2",
+      "formLabel": "暗黑酋雷姆",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "kyurem-black",
+      "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon04.html",
+      "formLabel": null,
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "kyurem-white",
+      "url": "https://dex.pokemon.cn/play/pokedex/0646_1",
+      "formLabel": "焰白酋雷姆",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "kyurem-white",
+      "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon04.html",
+      "formLabel": null,
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "necrozma-dusk",
+      "url": "https://dex.pokemon.cn/play/pokedex/0800_1",
+      "formLabel": "黄昏之鬃",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "necrozma-dawn",
+      "url": "https://dex.pokemon.cn/play/pokedex/0800_2",
+      "formLabel": "拂晓之翼",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "calyrex-ice",
+      "url": "https://dex.pokemon.cn/play/pokedex/0898_1",
+      "formLabel": "骑白马的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "calyrex-ice",
+      "url": "https://swordshield.pokemon.com/en-us/expansionpass/pokemon/ice-rider-calyrex/",
+      "formLabel": null,
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "calyrex-shadow",
+      "url": "https://dex.pokemon.cn/play/pokedex/0898_2",
+      "formLabel": "骑黑马的样子",
+      "sha256Verified": true
+    },
+    {
+      "formIdentifier": "calyrex-shadow",
+      "url": "https://swordshield.pokemon.com/en-us/expansionpass/pokemon/shadow-rider-calyrex/",
+      "formLabel": null,
+      "sha256Verified": true
+    }
+  ]
+}

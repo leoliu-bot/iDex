@@ -1,4 +1,5 @@
 import AVFoundation
+import Combine
 import SwiftUI
 
 struct CatalogSheet: View {
@@ -57,7 +58,9 @@ struct CatalogSheet: View {
 struct SettingsSheet: View {
     @Bindable var store: DexStore
     @Environment(\.scenePhase) private var scenePhase
-    @State private var installedVoices: [NarratorVoiceSelection.Choice] = []
+    @State private var voiceCatalog = InstalledNarratorVoices()
+
+    private var installedVoices: [NarratorVoiceSelection.Choice] { voiceCatalog.choices }
 
     var body: some View {
         @Bindable var audio = store.audio
@@ -104,7 +107,10 @@ struct SettingsSheet: View {
                     }.disabled(!audio.isSoundEnabled).accessibilityIdentifier("narrator-preview")
                     Text(store.text("Choose from this iPhone’s available voices for the current language, with their region and quality shown. A specific voice uses its natural pitch and speaking rate. Automatic Chinese voices prefer Taiwan Mandarin. Download additional voices in iPhone Settings; this list refreshes when you return.", "这里列出本机当前语言可用的系统音色，并显示地区与品质。选择具体音色后，保留它自然的音高和语速；自动中文音色优先台湾国语。可在 iPhone 系统设置中下载更多声音，返回这里会自动刷新。", "現在の言語でこのiPhoneが利用できる音声を地域・品質とともに表示します。指定した音声は自然な音程と速度で読み上げます。中国語の自動選択は台湾華語を優先します。追加音声はiPhoneの設定でダウンロードでき、戻ると一覧が更新されます。"))
                         .font(.footnote).foregroundStyle(.secondary)
-                    if installedVoices.isEmpty {
+                    if installedVoices.isEmpty && voiceCatalog.isRefreshing {
+                        ProgressView(store.text("Loading iPhone voices…", "正在读取 iPhone 系统音色…", "iPhoneの音声を読み込み中…"))
+                            .accessibilityIdentifier("narrator-loading")
+                    } else if installedVoices.isEmpty {
                         Text(store.text("No standard voice for this language is currently listed by iOS. Automatic reading uses the system default.", "iOS 目前未列出该语言的标准音色，自动朗读将使用系统默认声音。", "iOSにこの言語の標準音声が表示されていません。自動読み上げではシステムの既定音声を使用します。"))
                             .font(.footnote).foregroundStyle(.secondary)
                     }
@@ -145,9 +151,11 @@ struct SettingsSheet: View {
             .statusBarHidden()
             .persistentSystemOverlays(.hidden)
             .onAppear(perform: refreshVoices)
+            .onDisappear { voiceCatalog.cancel() }
             .onChange(of: store.language) { _, _ in refreshVoices() }
             .onChange(of: scenePhase) { _, phase in if phase == .active { refreshVoices() } }
-            .onReceive(NotificationCenter.default.publisher(for: AVSpeechSynthesizer.availableVoicesDidChangeNotification)) { _ in refreshVoices() }
+            .onReceive(NotificationCenter.default.publisher(for: AVSpeechSynthesizer.availableVoicesDidChangeNotification)
+                .receive(on: RunLoop.main)) { _ in refreshVoices() }
     }
 
     private var unavailableSelection: NarratorVoiceSelection.Preference? {
@@ -173,6 +181,6 @@ struct SettingsSheet: View {
     }
 
     private func refreshVoices() {
-        installedVoices = NarratorVoiceSelection.installedChoices(locale: store.language.speechLocale)
+        voiceCatalog.refresh(locale: store.language.speechLocale)
     }
 }

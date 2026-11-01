@@ -1,0 +1,141 @@
+{
+  "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
+  "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+  "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+  "arch": "efficientnet_b0",
+  "size": 224,
+  "classes": 1498,
+  "validationTop1": 0.9023920813857574,
+  "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
+  "confidenceThreshold": 0.25,
+  "logitMargin": 0.5,
+  "calibrationRule": "Validation only: >=97% accepted accuracy, <=5% natural-negative FAR, then maximum known acceptance; small public diagnostic, not camera certification.",
+  "validation": {
+    "top1": 0.9018201875344732,
+    "top3": 0.9558742415885273,
+    "top5": 0.9704908990623277,
+    "macro_recall": 0.8567622842723245,
+    "accepted_known_accuracy": 0.9755381604696673,
+    "accepted_known_coverage": 0.8455598455598455,
+    "unknown_far": 0.046875,
+    "counts": {
+      "images": 3690,
+      "known": 3626,
+      "unknown": 64,
+      "groups": 2171,
+      "supported_classes": 1494,
+      "accepted": 3069
+    }
+  },
+  "test": {
+    "final-test": {
+      "top1": 0.9201864258665889,
+      "top3": 0.9647538595980192,
+      "top5": 0.9766967666763764,
+      "macro_recall": 0.872122086228512,
+      "accepted_known_accuracy": 0.9753208292201382,
+      "accepted_known_coverage": 0.8852315758811535,
+      "unknown_far": 0.0625,
+      "counts": {
+        "images": 3497,
+        "known": 3433,
+        "unknown": 64,
+        "groups": 2171,
+        "supported_classes": 1494,
+        "accepted": 3043
+      }
+    },
+    "test-public": {
+      "top1": 0.9578402366863905,
+      "top3": 0.9840976331360947,
+      "top5": 0.9903846153846154,
+      "macro_recall": 0.9537112767074599,
+      "accepted_known_accuracy": 0.9842581660763479,
+      "accepted_known_coverage": 0.9397189349112426,
+      "unknown_far": 0.0625,
+      "counts": {
+        "images": 2768,
+        "known": 2704,
+        "unknown": 64,
+        "groups": 1463,
+        "supported_classes": 786,
+        "accepted": 2545
+      }
+    },
+    "test-forms": {
+      "top1": 0.7805212620027435,
+      "top3": 0.8930041152263375,
+      "top5": 0.9259259259259259,
+      "macro_recall": 0.7815442561205274,
+      "accepted_known_accuracy": 0.929718875502008,
+      "accepted_known_coverage": 0.6831275720164609,
+      "unknown_far": null,
+      "counts": {
+        "images": 729,
+        "known": 729,
+        "unknown": 0,
+        "groups": 708,
+        "supported_classes": 708,
+        "accepted": 498
+      }
+    },
+    "test-alternate-forms": {
+      "top1": 0.731006160164271,
+      "top3": 0.8562628336755647,
+      "accepted_known_accuracy": 0.9108910891089109,
+      "accepted_known_coverage": 0.62217659137577,
+      "counts": {
+        "images": 487,
+        "known": 487,
+        "unknown": 0,
+        "groups": 470,
+        "supported_classes": 470,
+        "accepted": 303
+      }
+    },
+    "test-regional-fusion": {
+      "top1": 0.8153846153846154,
+      "top3": 0.9538461538461539,
+      "accepted_known_accuracy": 0.9387755102040817,
+      "accepted_known_coverage": 0.7538461538461538,
+      "counts": {
+        "images": 65,
+        "known": 65,
+        "unknown": 0,
+        "groups": 64,
+        "supported_classes": 64,
+        "accepted": 49
+      }
+    }
+  },
+  "limits": "Public artwork/reference diagnostics, not physical-camera accuracy. Species public test groups were reused from the prior campaign; new form test is reported separately. Same-appearance species cannot auto-confirm. Shiny is not separately classified.",
+  "evaluationDeduplication": {
+    "validation": 11,
+    "test": 16,
+    "rule": "Identical source SHA with identical label, group and split counted once; frozen source manifest unchanged."
+  },
+  "appleValidation": {
+    "campaign": "forms-voice-layout-1.2",
+    "run": "https://github.com/leoliu-bot/iDex/actions/runs/41270266518",
+    "result": "Passed",
+    "coreML": {
+      "fixturesPerComputePolicy": 29,
+      "checks": 58,
+      "maximumAbsoluteLogitError": 0.00024628639221191406,
+      "packagedWeightsSHA256": "6b2ff3ce16ffd384ce480a7b80d1c04044d0a31d574f6ea308e6e198c99aca5b"
+    },
+    "iOS": {
+      "platform": "iOS Simulator",
+      "device": "iPhone Duo",
+      "osVersion": "27.1",
+      "uniqueTests": 52,
+      "totalTestRuns": 94,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": 0
+    },
+    "physicalCamera": "Not measured. Public artwork tests and Mac/simulator validation do not establish physical-camera accuracy.",
+    "narration": "Native installed voices: Taiwan Mandarin preferred for Chinese; gender and persistence tests passed, physical-phone audition remains separate."
+  },
+  "testReferenceSplitNote": "test-forms contains 729 new-reference inputs: 487 alternate forms and 242 ordinary appearances. test-alternate-forms isolates the 487 non-base labels."
+}

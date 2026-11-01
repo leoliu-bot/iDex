@@ -1,29 +1,13 @@
 {
-  "species": 1025,
-  "additionalForms": 554,
-  "catalogEntries": 1579,
-  "uniquePixelAssets": 1530,
-  "verifiedCryResources": 1351,
-  "additionalFormCategories": {
-    "alternate": 359,
-    "fusion": 6,
-    "mega": 97,
-    "regional": 58,
-    "gigantamax": 34
+  "records": {
+    "pokemon-kanto": 151,
+    "pokemon-national": 1025,
+    "pokemon-forms": 554
   },
-  "referenceOnlyImages": [
-    "koraidon-limited-build",
-    "koraidon-sprinting-build",
-    "koraidon-swimming-build",
-    "koraidon-gliding-build",
-    "miraidon-low-power-mode",
-    "miraidon-drive-mode",
-    "miraidon-aquatic-mode",
-    "miraidon-glide-mode",
-    "zygarde-mega"
-  ],
-  "trainedAppearanceClasses": 1498,
-  "groupSplitOverlap": 0,
-  "confirmableClasses": 1492,
-  "kantoPreserved": true
+  "sha256": {
+    "pokemon-kanto": "a340a6aaad8f02ffb72daa09e6e30cde3fd76f2bbc1fb369085d8c9f415b6e24",
+    "pokemon-national": "49c44c84c360a957948eb2ce72b039a26ad46ddeed2f103e24199e9b41d5ed52",
+    "pokemon-forms": "226f209ed37a7c77b635c76ebeaf223723c75992a93f2e122a5062d8d5585cd1"
+  },
+  "regionalAndFusionDescriptionAudit": "description-verification.json"
 }

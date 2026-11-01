@@ -1,0 +1,89 @@
+{
+  "hardware": "NVIDIA RTX 4080 SUPER 16 GB",
+  "framework": "2.13.0+cu132",
+  "cuda": "13.2",
+  "runs": [
+    {
+      "status": "completed",
+      "elapsed_seconds": 587.8844385147095,
+      "best_val": 0.8781963156447622,
+      "last_epoch": 8
+    },
+    {
+      "status": "completed",
+      "elapsed_seconds": 842.491179227829,
+      "best_val": 0.9023920813857574,
+      "last_epoch": 12
+    }
+  ],
+  "totalTrainingSeconds": 1430.3756177425385,
+  "initialization": "Verified TorchVision ImageNet EfficientNet-B0, fresh head; no old species checkpoint",
+  "categories": {
+    "alternate": {
+      "catalogRecords": 359,
+      "representedByTrainedClass": 355,
+      "representedByDataEligibleClass": 351
+    },
+    "fusion": {
+      "catalogRecords": 6,
+      "representedByTrainedClass": 6,
+      "representedByDataEligibleClass": 6
+    },
+    "gigantamax": {
+      "catalogRecords": 34,
+      "representedByTrainedClass": 34,
+      "representedByDataEligibleClass": 32
+    },
+    "mega": {
+      "catalogRecords": 97,
+      "representedByTrainedClass": 97,
+      "representedByDataEligibleClass": 97
+    },
+    "regional": {
+      "catalogRecords": 58,
+      "representedByTrainedClass": 58,
+      "representedByDataEligibleClass": 58
+    }
+  },
+  "sourceReferenceRecords": 12731,
+  "cardArtCropRecords": 636,
+  "finalSelectionFrozenBeforeTest": {
+    "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
+    "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+    "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+    "arch": "efficientnet_b0",
+    "size": 224,
+    "classes": 1498,
+    "validationTop1": 0.9023920813857574,
+    "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
+    "confidenceThreshold": 0.25,
+    "logitMargin": 0.5,
+    "calibrationRule": "Validation only: >=97% accepted accuracy, <=5% natural-negative FAR, then maximum known acceptance; small public diagnostic, not camera certification."
+  },
+  "predictionReceipts": {
+    "val": {
+      "rows": 3690,
+      "duplicateAliasRowsOmitted": 11,
+      "seconds": 23.957128047943115,
+      "arch": "efficientnet_b0",
+      "checkpoint": "artifacts\\forms\\selected.pt",
+      "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+      "predictions_sha256": "fd3b935bc79ee6330d53f51574ea96a507c1ba4abaa2f3c70c59d4d8bc72ca1b",
+      "size": 224,
+      "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+      "preprocess": "PIL EXIF decoded in ingest, white alpha, center square, RGB bilinear resize; approximation of app CoreGraphics pending Apple pixel parity"
+    },
+    "test": {
+      "rows": 3497,
+      "duplicateAliasRowsOmitted": 16,
+      "seconds": 25.30359148979187,
+      "arch": "efficientnet_b0",
+      "checkpoint": "artifacts\\forms\\selected.pt",
+      "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+      "predictions_sha256": "6eeb6589af83f5586c1061673b75c49020744f40026d077e31095344381702b0",
+      "size": 224,
+      "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+      "preprocess": "PIL EXIF decoded in ingest, white alpha, center square, RGB bilinear resize; approximation of app CoreGraphics pending Apple pixel parity"
+    }
+  }
+}

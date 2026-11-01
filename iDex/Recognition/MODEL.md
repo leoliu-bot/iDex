@@ -1,30 +1,106 @@
-# Pokédex form-aware image classifier
+# Pokédex 1.3 form-aware image classifier
 
 The app bundles `NationalClassifier.mlpackage`, a locally trained EfficientNet-B0
 FP32 model with 1,498 appearance classes for 1,025 species and 554 additional forms.
-1,492 classes have independent train/validation/test groups and may auto-confirm
-when the validation-frozen score/margin policy also passes. Shared appearances
-retain manual choices; sparse or ambiguous records do not auto-confirm.
+**1,491 classes** are eligible for automatic discovery when the validation-frozen
+score/margin policy also passes. Small Pumpkaboo (entry 110126) remains trained
+and available as a candidate, but its only independent test group was quarantined,
+so it cannot auto-confirm. Shared appearances retain manual choices; sparse or
+ambiguous records do not auto-confirm. Shiny colors are not separately trained.
 
 The selected tensor checkpoint, ordered labels and policy are hash-bound by
-[recognition-manifest.json](recognition-manifest.json). The form campaign starts
-from ImageNet, not the previous species checkpoint. See [form training](../../scripts/forms/README.md),
+[recognition-manifest.json](recognition-manifest.json). The 1.3 checkpoint SHA-256 is
+`9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0`.
+The expanded manifest SHA-256 is
+`b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe`.
+The ordered 1,498-column head is retained. Input is 224×224 RGB with ImageNet
+normalization embedded once; the FP32 output contains raw logits. Swift applies
+softmax and the frozen acceptance gates; it does not repeat normalization.
+
+The original form campaign started from ImageNet. The 1.3 campaign continued that
+model through **24 + 60 + 24 = 108 completed epochs** on a local RTX 4080 SUPER:
+robustness warmup on the previous training split, expanded-source training,
+and lower-rate continuation. Extra data covers game animation frames, card
+illustrations and masked full-card views, mixed public images, and manufacturer
+plush photos. Animation frames and different views of the same card or product
+stay in one source group. Duplicate screening and quarantine protect split
+boundaries; public-source grouping can still miss related artwork or sessions.
+The recorded epoch work totals 7,692.101 seconds (approximately 128.2 minutes),
+excluding acquisition, final evaluation and cloud builds.
+
+Checkpoint selection uses validation class-macro recall and per-domain
+source-group accuracy. The acceptance policy is also chosen on validation only;
+the checkpoint and policy are frozen before final test predictions. Fresh
+source-group tests and reused prior public holdouts are reported separately.
+The 1.3 acceptance gates are a top softmax score of at least 0.35 and a first/second
+raw-logit margin of at least 0.5, together with class eligibility. They do not
+provide a calibrated probability or a trained unknown-object detector.
+
+On the **same fresh 6,448 images / 3,031 source groups**, the frozen 1.2 baseline
+has 33.28% per-image Top-1 versus **88.20% for 1.3**. New-model Top-3 is 94.43%,
+with **96.99% accepted-known accuracy at 78.32% coverage**. These inputs include
+ordinary species and additional forms. The large gain applies to this expanded
+public-source distribution; it is not a measured gain on physical-phone photos.
+[Fresh test metrics](../../TrainingResources/test-multidomain.json) ·
+[Paired same-input comparison](../../TrainingResources/paired-fresh-groups.json)
+
+The following domain rows are subsets of that fresh holdout, measured with 1.3.
+Card crops and masked full-card views can share a source group; row counts must
+not be added as independent groups.
+
+| Fresh source subset | Images / groups | Top-1 | Accepted-known accuracy | Coverage |
+| --- | ---: | ---: | ---: | ---: |
+| TCG illustration crops | 2,085 / 2,021 | 87.15% | 98.16% | 73.05% |
+| Masked full-card views | 2,087 / 2,021 | 83.71% | 97.18% | 69.62% |
+| Manufacturer plush product photos | 226 / 50 | 89.82% | 96.27% | 71.24% |
+| Game animation frames | 1,424 / 350 | 91.78% | 94.64% | 91.71% |
+
+The [strict fresh **non-base-form** subset](../../TrainingResources/test-alternate-forms-fresh.json)
+contains 776 images / 208 groups:
+Top-1 is **82.09%**, with **89.95% accepted accuracy at 80.80% coverage**. Form
+confusion therefore remains even among automatically accepted results. The
+separate [reused non-base-form subset](../../TrainingResources/test-alternate-forms-reused.json)
+has 535 images / 468 groups: Top-1 is
+86.54%, with 96.90% accepted accuracy at 72.34% coverage. These subsets must
+not be conflated with the broader mixed-species holdouts.
+
+[Reused public and form-reference tests](../../TrainingResources/paired-reused-public.json)
+contain **4,009 known images**: Top-1 is
+92.14% for the frozen 1.2 model and 96.43% for 1.3 on that same set. Those counts
+differ from the historical release's original test report. The separate 64 reused
+natural negatives produce **4 false accepts in both models** (6.25%). A validation
+false-accept gate does not guarantee the same bound on final or real-world inputs.
+
+There is only one explicitly tagged anime validation image and the fresh anime
+test has **3 images / 3 groups**, insufficient for an anime-specific accuracy claim.
+Public artwork and studio product photos do not establish physical-camera
+accuracy. Known regional/fusion sprite fixtures and the original Farfetch'd
+fixture are integration checks, not generalization tests.
+
+See [expanded-source training](../../scripts/multidomain/README.md),
+[training runtime](../../TrainingResources/training-runtime.json),
 [aggregate training report](../../TrainingResources/training-summary.json) and
-[Apple validation](../../TrainingResources/apple-validation.json).
+[1.3 update and limits](../../docs/multidomain-update.zh-CN.md).
+[Historical 1.2 diagnostics](../../docs/forms-expansion.zh-CN.md) are retained as
+previous-release evidence rather than 1.3 results.
 
-Release 1.2 passed 58 FP32 source/Core ML checks (CPU-only and all-compute),
-52 simulator tests / 94 runs, and the iPhone Release build. Maximum absolute
-logit error was 0.000246287. These checks do not measure physical-camera accuracy,
-voice audition, hinge behavior or physical-device performance.
+GitHub Actions **Build Pokédex 1.3 IPA** exports the selected FP32 model, requires
+source/Core ML parity, runs iOS tests and verifies the final package. Its
+`Pokedex-IPA` artifact contains `Pokedex-1.3-unsigned.ipa`. Numerical comparison,
+simulator and Release-build status are recorded separately in
+[Apple validation](../../TrainingResources/apple-validation.json). They do not
+measure physical-camera accuracy, phone voice audition, hinge behavior or
+physical-device performance.
 
-Mixed public-image Top-1 is 92.02%; strict alternate-form Top-1 is 73.10% (91.09%
-accuracy among accepted form inputs, 487 inputs). Regional/fusion Top-1 is 81.54%
-(65 inputs). The broader new-reference split includes ordinary appearances;
-reused species holdouts are also reported separately.
-Natural-negative test false accepts: 4/64. These are public-art diagnostics, not
-physical-camera accuracy. Shiny identification is not separately trained.
-The app's regional/fusion opaque sprite fixtures and original Farfetch'd fixture
-are checked separately as known-input integration checks, not a generalization test.
+The app retains the original pixel shell and sprites, and the fixed notes/stats
+panel. It adds persistent per-language selection from installed iOS voices, using
+natural pitch and default rate for explicit choices. Automatic male/female
+options remain; Chinese automatic selection prefers Taiwan Mandarin. The top
+blue light gently follows speech progress, with steady brightness under Reduce
+Motion. No third-party voice pack or cloud TTS is used. Revised English, Chinese
+and Japanese field notes cover all 58 regional and 6 fusion records, with exact
+official-form URLs and hashes in the
+[editorial source receipt](../../scripts/catalog/form-description-overrides.json).
 
 ## Historical Kanto reference
 

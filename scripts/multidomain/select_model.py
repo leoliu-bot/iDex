@@ -42,7 +42,7 @@ def choose(paths):
               'validationTop1': state['validation']['top1'], 'validationScore': state['best_val'],
               'validationDetails': state['validation'],
               'selectionRule': 'Maximum validation composite: 0.5 class-macro recall + 0.5 equal domain mean of source-group accuracy (domains with >=30 images and >=5 groups); no test predictions inspected.'}
-    (ROOT / 'candidate.json').write_text(json.dumps(record, indent=2) + '\n')
+    (ROOT / 'candidate.json').write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps(record), flush=True)
 
 

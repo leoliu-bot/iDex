@@ -1,141 +1,151 @@
 {
-  "selectedFrom": "artifacts\\forms\\runs\\form-aware-continued\\best.pt",
-  "checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
-  "manifest_sha256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
-  "arch": "efficientnet_b0",
-  "size": 224,
-  "classes": 1498,
-  "validationTop1": 0.9023920813857574,
-  "selectionRule": "Maximum positive validation top1; no test predictions inspected.",
-  "confidenceThreshold": 0.25,
-  "logitMargin": 0.5,
-  "calibrationRule": "Validation only: >=97% accepted accuracy, <=5% natural-negative FAR, then maximum known acceptance; small public diagnostic, not camera certification.",
-  "validation": {
-    "top1": 0.9018201875344732,
-    "top3": 0.9558742415885273,
-    "top5": 0.9704908990623277,
-    "macro_recall": 0.8567622842723245,
-    "accepted_known_accuracy": 0.9755381604696673,
-    "accepted_known_coverage": 0.8455598455598455,
-    "unknown_far": 0.046875,
-    "counts": {
-      "images": 3690,
-      "known": 3626,
+  "provenance": {
+    "campaign": "expanded-source-1.3",
+    "manifestSHA256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
+    "labelsSHA256": "8fdfe2a48b070b7312829f6e03b24a63ca3afba7881b147400b8c76d0f5c2cb6",
+    "baselineLabelsSHA256": "86fa86fe32e7e68c959efe704a419ebf3d852052a9d1392b736c12bc759503f5",
+    "candidateCheckpointSHA256": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+    "baselineCheckpointSHA256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+    "candidatePredictionSHA256": "9bef4fc1e92f6ed65c765f7d2c093a08d776ddfd839ca3dcd59a47c2bfae71ba",
+    "baselinePredictionSHA256": "c0e467719fccb908dd092197927357a20d9fcdf66df71ba4b6d2fd5d15234479"
+  },
+  "classCount": 1498,
+  "eligibleClasses": 1491,
+  "baselineEligibleClasses": 1492,
+  "selectedFrom": "artifacts\\multidomain\\runs\\expanded-continued\\best.pt",
+  "validationScore": 0.9120329279509458,
+  "observedEpochs": 108,
+  "epochWorkSeconds": 7692.101085662842,
+  "stages": [
+    {
+      "name": "robust-warmup",
+      "plannedEpochs": 24,
+      "status": "completed",
+      "observedEpochs": 24,
+      "epochWorkSeconds": 1052.7004997730255,
+      "checkpointSHA256": {
+        "best.pt": "b8fd6f6cee31de611cebfa9c13920170fb7ade2a5a9a83bd3ce7cfa8174327e8",
+        "last.pt": "04da1d5ec4518b8f95676a470293620383b1e9333ce8176c6e4bb480ea43dd04"
+      }
+    },
+    {
+      "name": "expanded",
+      "plannedEpochs": 60,
+      "status": "completed",
+      "observedEpochs": 60,
+      "epochWorkSeconds": 4759.969202756882,
+      "checkpointSHA256": {
+        "best.pt": "224b06b9c714e7ee9a4628f6a73d64284c5f151885eda317a803b19cc0028a55",
+        "last.pt": "cfef9af8d34e7a58d7b33a5cade244386a496c429be190292829485940f5550d"
+      }
+    },
+    {
+      "name": "expanded-continued",
+      "plannedEpochs": 24,
+      "status": "completed",
+      "observedEpochs": 24,
+      "epochWorkSeconds": 1879.4313831329346,
+      "checkpointSHA256": {
+        "best.pt": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+        "last.pt": "a2978112f432df7e1a7b9793bf5562550372fc1b4499e6fac4ae7d64199162c7"
+      }
+    }
+  ],
+  "testCounts": {
+    "test-multidomain": {
+      "images": 6448,
+      "known": 6448,
+      "unknown": 0,
+      "groups": 3031,
+      "supported_classes": 1191,
+      "accepted": 5050
+    },
+    "test-reused-public": {
+      "images": 3230,
+      "known": 3230,
+      "unknown": 0,
+      "groups": 1394,
+      "supported_classes": 784,
+      "accepted": 3065
+    },
+    "test-reused-forms-reference": {
+      "images": 779,
+      "known": 779,
+      "unknown": 0,
+      "groups": 706,
+      "supported_classes": 706,
+      "accepted": 614
+    },
+    "test-reused-natural-negatives": {
+      "images": 64,
+      "known": 0,
       "unknown": 64,
-      "groups": 2171,
-      "supported_classes": 1494,
-      "accepted": 3069
+      "groups": 64,
+      "supported_classes": 0,
+      "accepted": 4
+    },
+    "test-alternate-forms-fresh": {
+      "images": 776,
+      "known": 776,
+      "unknown": 0,
+      "groups": 208,
+      "supported_classes": 204,
+      "accepted": 627
+    },
+    "test-alternate-forms-reused": {
+      "images": 535,
+      "known": 535,
+      "unknown": 0,
+      "groups": 468,
+      "supported_classes": 468,
+      "accepted": 387
     }
   },
-  "test": {
-    "final-test": {
-      "top1": 0.9201864258665889,
-      "top3": 0.9647538595980192,
-      "top5": 0.9766967666763764,
-      "macro_recall": 0.872122086228512,
-      "accepted_known_accuracy": 0.9753208292201382,
-      "accepted_known_coverage": 0.8852315758811535,
-      "unknown_far": 0.0625,
-      "counts": {
-        "images": 3497,
-        "known": 3433,
-        "unknown": 64,
-        "groups": 2171,
-        "supported_classes": 1494,
-        "accepted": 3043
-      }
-    },
-    "test-public": {
-      "top1": 0.9578402366863905,
-      "top3": 0.9840976331360947,
-      "top5": 0.9903846153846154,
-      "macro_recall": 0.9537112767074599,
-      "accepted_known_accuracy": 0.9842581660763479,
-      "accepted_known_coverage": 0.9397189349112426,
-      "unknown_far": 0.0625,
-      "counts": {
-        "images": 2768,
-        "known": 2704,
-        "unknown": 64,
-        "groups": 1463,
-        "supported_classes": 786,
-        "accepted": 2545
-      }
-    },
-    "test-forms": {
-      "top1": 0.7805212620027435,
-      "top3": 0.8930041152263375,
-      "top5": 0.9259259259259259,
-      "macro_recall": 0.7815442561205274,
-      "accepted_known_accuracy": 0.929718875502008,
-      "accepted_known_coverage": 0.6831275720164609,
-      "unknown_far": null,
-      "counts": {
-        "images": 729,
-        "known": 729,
-        "unknown": 0,
-        "groups": 708,
-        "supported_classes": 708,
-        "accepted": 498
-      }
-    },
-    "test-alternate-forms": {
-      "top1": 0.731006160164271,
-      "top3": 0.8562628336755647,
-      "accepted_known_accuracy": 0.9108910891089109,
-      "accepted_known_coverage": 0.62217659137577,
-      "counts": {
-        "images": 487,
-        "known": 487,
-        "unknown": 0,
-        "groups": 470,
-        "supported_classes": 470,
-        "accepted": 303
-      }
-    },
-    "test-regional-fusion": {
-      "top1": 0.8153846153846154,
-      "top3": 0.9538461538461539,
-      "accepted_known_accuracy": 0.9387755102040817,
-      "accepted_known_coverage": 0.7538461538461538,
-      "counts": {
-        "images": 65,
-        "known": 65,
-        "unknown": 0,
-        "groups": 64,
-        "supported_classes": 64,
-        "accepted": 49
-      }
-    }
+  "sourceReceipts": {
+    "protocolSHA256": "eacde3520d696c16895094452e890e1401b035ab07eaa4776450a7d357c56909",
+    "splitLockSHA256": "cfcc239fa917605075c2d5f803d78634fc7f0d9c7b67d160de27502f373fbbad",
+    "mixedReferencesSHA256": "57d758ab34a4620143421145d32db5eac565500c74eec0f56bcba30a93b252f8",
+    "gameReferencesSHA256": "4017449c76498a40a725a407c3fa36b192a64450e28eb64398c763ef71877e1a",
+    "cardReferencesSHA256": "926b6aff090e8fd1b51f45437a3798d6cc4040fde58301c5bad62f8c90d07621",
+    "plushReferencesSHA256": "bfb4c8731df65f3e13a8f2a684889c455bc7b073808be37c1f854a5f5dfc939d"
   },
-  "limits": "Public artwork/reference diagnostics, not physical-camera accuracy. Species public test groups were reused from the prior campaign; new form test is reported separately. Same-appearance species cannot auto-confirm. Shiny is not separately classified.",
-  "evaluationDeduplication": {
-    "validation": 11,
-    "test": 16,
-    "rule": "Identical source SHA with identical label, group and split counted once; frozen source manifest unchanged."
-  },
-  "appleValidation": {
-    "campaign": "forms-voice-layout-1.2",
-    "run": "https://github.com/leoliu-bot/iDex/actions/runs/41270266518",
-    "result": "Passed",
-    "coreML": {
-      "fixturesPerComputePolicy": 29,
-      "checks": 58,
-      "maximumAbsoluteLogitError": 0.00024628639221191406,
-      "packagedWeightsSHA256": "6b2ff3ce16ffd384ce480a7b80d1c04044d0a31d574f6ea308e6e198c99aca5b"
-    },
-    "iOS": {
-      "platform": "iOS Simulator",
-      "device": "iPhone Duo",
-      "osVersion": "27.1",
-      "uniqueTests": 52,
-      "totalTestRuns": 94,
-      "failed": 0,
-      "skipped": 0,
-      "runtimeWarnings": 0
-    },
-    "physicalCamera": "Not measured. Public artwork tests and Mac/simulator validation do not establish physical-camera accuracy.",
-    "narration": "Native installed voices: Taiwan Mandarin preferred for Chinese; gender and persistence tests passed, physical-phone audition remains separate."
-  },
-  "testReferenceSplitNote": "test-forms contains 729 new-reference inputs: 487 alternate forms and 242 ordinary appearances. test-alternate-forms isolates the 487 non-base labels."
+  "caveats": [
+    "Public-source diagnostics and manufacturer product photos do not establish physical-phone camera accuracy.",
+    "Related artwork, capture sessions and public pretraining contamination may survive source/perceptual grouping.",
+    "Anime has very few explicitly audited groups; report its sample counts without claiming general anime accuracy.",
+    "The head classifies species/forms, not shiny-versus-normal appearance; no shiny-recognition claim is supported.",
+    "Reused public, alternate-form and natural-negative holdouts are diagnostics, separate from fresh source-group holdouts."
+  ],
+  "reportFiles": [
+    "domains/test-multidomain--anime_screenshot.json",
+    "domains/test-multidomain--card_scan.json",
+    "domains/test-multidomain--game_render.json",
+    "domains/test-multidomain--game_render_animation.json",
+    "domains/test-multidomain--mixed_public_photo_art.json",
+    "domains/test-multidomain--real_plush_photo.json",
+    "domains/test-multidomain--real_plush_product_photo.json",
+    "domains/test-multidomain--tcg_card_art.json",
+    "domains/test-multidomain--tcg_masked_card_scan.json",
+    "domains/test-reused-forms-reference--game_render_animation.json",
+    "domains/test-reused-forms-reference--public_card_art.json",
+    "domains/test-reused-forms-reference--public_game_art_reference.json",
+    "domains/test-reused-forms-reference--tcg_card_art.json",
+    "domains/test-reused-forms-reference--tcg_masked_card_scan.json",
+    "domains/test-reused-natural-negatives--public_natural_object_negative.json",
+    "domains/test-reused-public--game_render_animation.json",
+    "domains/test-reused-public--mixed_public_photo_art.json",
+    "domains/test-reused-public--public_game_art_reference.json",
+    "domains/test-reused-public--public_mixed_unverified.json",
+    "paired-fresh-groups.json",
+    "paired-reused-public.json",
+    "runtime.json",
+    "test-alternate-forms-fresh.json",
+    "test-alternate-forms-reused.json",
+    "test-multidomain.json",
+    "test-regional-fusion.json",
+    "test-reused-forms-reference.json",
+    "test-reused-natural-negatives.json",
+    "test-reused-public.json",
+    "training-summary.json"
+  ]
 }

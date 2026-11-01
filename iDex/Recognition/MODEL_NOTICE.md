@@ -1,4 +1,4 @@
-> Current form extension: the 1498-class appearance model is fine-tuned from fresh TorchVision ImageNet weights, using unambiguous pinned JJMack groups plus PokéAPI references and explicitly named historical card-art crops. Raw training images are not redistributed. Preserve applicable attribution and noncommercial/share-alike conditions. Historical Kanto source details follow.
+> Current classifier lineage: release 1.2 trained the 1498-class appearance model from fresh TorchVision ImageNet weights with pinned JJMack groups, PokéAPI references and explicitly named historical card art. Release 1.3 continues that checkpoint with the expanded-source campaign below. Raw training images are not redistributed. Preserve applicable attribution and noncommercial/share-alike conditions. Historical Kanto source details follow.
 
 ## Expanded-source campaign (1.3)
 

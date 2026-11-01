@@ -1,5 +1,9 @@
 # 形态、显示与播报更新（1.2）
 
+本文保留 1.2 的历史成绩与行为。该版机器可读证据保存在
+[1.2 发布记录](../TrainingResources/releases/1.2/training-summary.json)；
+当前版本见[1.3 扩充训练与系统音色](multidomain-update.zh-CN.md)。
+
 图鉴在原有 1025 种的基础上增加 554 条形态记录，共 1579 条。包括地区形态、
 六种合体形态、Mega、超极巨化及其他形态；仍使用现有中文名和中英日资料结构。
 新增资料来自固定版本的 PokéAPI：属性、能力、身高体重按具体形态读取，说明采用
@@ -20,7 +24,7 @@ RTX 4080 SUPER 实际完成 8 + 12 轮训练，从 TorchVision ImageNet 权重�
 固定资料版本中的 58 条地区形态、6 条合体形态、97 条 Mega 和 34 条超极巨化
 记录均映射到已训练外观。故勒顿受限／游泳、密勒顿低电量／水上四种状态因缺少
 可用来源图，仅可浏览资料；其他四种移动状态虽然有训练图，也不自动确认。
-覆盖统计与实际训练耗时见 [运行记录](../TrainingResources/training-runtime.json)。
+覆盖统计与实际训练耗时见 [运行记录](../TrainingResources/releases/1.2/training-runtime.json)。
 
 有 1492 类具备独立训练、验证和测试组，可在满足确认阈值时计入发现。
 外观相同的机械差异不强行区分。波普海豚／平凡形态海豚侠，以及外观一致的
@@ -59,7 +63,7 @@ RTX 4080 SUPER 实际完成 8 + 12 轮训练，从 TorchVision ImageNet 权重�
 设置下载更多音色。原有中文名称与文字不改成另一套译名。
 
 复现、来源版本与发布门槛见 [训练说明](../scripts/forms/README.md)。
-Mac 转换和模拟器结果见 [Apple 验证记录](../TrainingResources/apple-validation.json)；
+Mac 转换和模拟器结果见 [Apple 验证记录](../TrainingResources/releases/1.2/apple-validation.json)；
 实机摄像头、折叠铰链与音色试听需在手机上单独检查。
 
 1.2 发布已通过 58 次 FP32 数值一致性检查、52 项模拟器测试（含参数共 94 次运行）、

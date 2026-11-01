@@ -1,0 +1,4687 @@
+{
+  "provenance": {
+    "campaign": "expanded-source-1.3",
+    "manifestSHA256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
+    "labelsSHA256": "8fdfe2a48b070b7312829f6e03b24a63ca3afba7881b147400b8c76d0f5c2cb6",
+    "baselineLabelsSHA256": "86fa86fe32e7e68c959efe704a419ebf3d852052a9d1392b736c12bc759503f5",
+    "candidateCheckpointSHA256": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+    "baselineCheckpointSHA256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+    "candidatePredictionSHA256": "9bef4fc1e92f6ed65c765f7d2c093a08d776ddfd839ca3dcd59a47c2bfae71ba",
+    "baselinePredictionSHA256": "c0e467719fccb908dd092197927357a20d9fcdf66df71ba4b6d2fd5d15234479"
+  },
+  "stages": [
+    {
+      "name": "robust-warmup",
+      "plannedEpochs": 24,
+      "status": "completed",
+      "observedEpochs": 24,
+      "epochWorkSeconds": 1052.7004997730255,
+      "checkpointSHA256": {
+        "best.pt": "b8fd6f6cee31de611cebfa9c13920170fb7ade2a5a9a83bd3ce7cfa8174327e8",
+        "last.pt": "04da1d5ec4518b8f95676a470293620383b1e9333ce8176c6e4bb480ea43dd04"
+      },
+      "sourceSnapshots": {
+        "scripts\\forms\\acquire.py": {
+          "recordedSHA256": "10a06f03a245eff4b09cf5fa71808df11606a39fa92e33027f5ef44481f3931a",
+          "snapshotSHA256": "10a06f03a245eff4b09cf5fa71808df11606a39fa92e33027f5ef44481f3931a"
+        },
+        "scripts\\forms\\acquire_cards.py": {
+          "recordedSHA256": "a4250accdea60a772a86c84c0d23f6b047f0f51fcf9db4c5788656f9e7e73c34",
+          "snapshotSHA256": "a4250accdea60a772a86c84c0d23f6b047f0f51fcf9db4c5788656f9e7e73c34"
+        },
+        "scripts\\forms\\export.py": {
+          "recordedSHA256": "dc70b4fda9a1aaf86cba4f6ec61866b5988082083c54bf3e739d70e0cce96590",
+          "snapshotSHA256": "dc70b4fda9a1aaf86cba4f6ec61866b5988082083c54bf3e739d70e0cce96590"
+        },
+        "scripts\\forms\\metrics.py": {
+          "recordedSHA256": "67cbd00d26302f47aca44f2cb68802487041a542485bbee6c02707c495b50ff7",
+          "snapshotSHA256": "67cbd00d26302f47aca44f2cb68802487041a542485bbee6c02707c495b50ff7"
+        },
+        "scripts\\forms\\model.py": {
+          "recordedSHA256": "e65b6bc28fa7293a2c742267b3c7de707de826fd75d8563c31040418004e3a74",
+          "snapshotSHA256": "e65b6bc28fa7293a2c742267b3c7de707de826fd75d8563c31040418004e3a74"
+        },
+        "scripts\\forms\\prepare.py": {
+          "recordedSHA256": "ea010133bc05b399a54254a3711e0662defd60e52af7a594fcc8a8e30b021546",
+          "snapshotSHA256": "ea010133bc05b399a54254a3711e0662defd60e52af7a594fcc8a8e30b021546"
+        },
+        "scripts\\forms\\select_model.py": {
+          "recordedSHA256": "956b451174633d8adcd896c51a6ea2c2c33f0a90b923a75b5636b515781ca6b9",
+          "snapshotSHA256": "956b451174633d8adcd896c51a6ea2c2c33f0a90b923a75b5636b515781ca6b9"
+        },
+        "scripts\\forms\\smoke_sprites.py": {
+          "recordedSHA256": "84caa8321ca9b53afb8c11443bb6e2cf2f34435ba735485e05b3da0bd63edcb1",
+          "snapshotSHA256": "84caa8321ca9b53afb8c11443bb6e2cf2f34435ba735485e05b3da0bd63edcb1"
+        },
+        "scripts\\forms\\train.py": {
+          "recordedSHA256": "ef57578285937ce457112fc580542cc78128244aa8f8e4c3d94cf12fc8c93f36",
+          "snapshotSHA256": "ef57578285937ce457112fc580542cc78128244aa8f8e4c3d94cf12fc8c93f36"
+        },
+        "scripts\\forms\\validate_and_publish.py": {
+          "recordedSHA256": "aba55a67c7ca019853705b3075c9656667f0934489b59286c6c3e314bee7e090",
+          "snapshotSHA256": "aba55a67c7ca019853705b3075c9656667f0934489b59286c6c3e314bee7e090"
+        },
+        "scripts\\forms\\verify_ipa.py": {
+          "recordedSHA256": "14ac6b2c5a6a9a6a93f020b167ab84d005c9561257dc6976fb1a4285b5f04575",
+          "snapshotSHA256": "14ac6b2c5a6a9a6a93f020b167ab84d005c9561257dc6976fb1a4285b5f04575"
+        }
+      },
+      "historySHA256": "abfadb01ef373a1987fd91b84c94c5c7bdf6a37ee6a358082d8b43212a6f4e97",
+      "environmentSHA256": "1a54cb448540a1c247df5e917fad30d15b107b9b8d1a590868472b56298fefd1",
+      "runStatusSHA256": "2f78d9e6f5198b116d743aff1611f580606d12c43601be4dc9647b7eb6a02530",
+      "lastSessionElapsedSeconds": 1052.7224979400635,
+      "manifestSHA256": "575fa0c69fad2283aaa6abcde2e4fe826a3fb85fecf0511bfe07897e0891a671",
+      "config": {
+        "action": "train",
+        "arch": "efficientnet_b0",
+        "manifest": "artifacts\\forms\\data\\manifest.jsonl",
+        "checkpoint": null,
+        "init_checkpoint": "TrainingResources\\national-best.pt",
+        "out": "artifacts\\multidomain\\runs\\robust-warmup",
+        "size": 224,
+        "epochs": 24,
+        "batch": 64,
+        "workers": 4,
+        "seed": 20261117,
+        "lr": 8e-05,
+        "transfer": false,
+        "max_minutes": 45.0,
+        "resume": false,
+        "split": "val",
+        "final": false,
+        "init_checkpoint_sha256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571"
+      },
+      "environment": {
+        "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+        "torch": "2.13.0+cu132",
+        "torchvision": "0.28.0+cu132",
+        "PIL": "13.0.0",
+        "cuda": "13.2",
+        "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+        "seed": 20261117,
+        "parameters": 5926486
+      },
+      "peakGPUBytes": 3037617152,
+      "peakRSSBytes": 3407917056,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.6726660726867167,
+          "val": {
+            "top1": 0.8974429474841903,
+            "loss": 0.6887237752306615,
+            "n": 3637
+          },
+          "seconds": 77.0804033279419,
+          "elapsed_seconds": 77.08116054534912,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3372371968
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.6660841061211121,
+          "val": {
+            "top1": 0.9067913115204839,
+            "loss": 0.6700063626255542,
+            "n": 3637
+          },
+          "seconds": 43.204551458358765,
+          "elapsed_seconds": 120.28790235519409,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3390955520
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.6654187826859966,
+          "val": {
+            "top1": 0.9070662634039043,
+            "loss": 0.6807241075341112,
+            "n": 3637
+          },
+          "seconds": 42.82139444351196,
+          "elapsed_seconds": 163.1102113723755,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3399753728
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.6661251486004086,
+          "val": {
+            "top1": 0.9037668408028595,
+            "loss": 0.6931043165478039,
+            "n": 3637
+          },
+          "seconds": 42.57405710220337,
+          "elapsed_seconds": 205.68516778945923,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3384651776
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.6627722840669366,
+          "val": {
+            "top1": 0.9051416002199615,
+            "loss": 0.6763634441775347,
+            "n": 3637
+          },
+          "seconds": 42.6625862121582,
+          "elapsed_seconds": 248.3485541343689,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3395780608
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.6610577385862109,
+          "val": {
+            "top1": 0.9087159747044268,
+            "loss": 0.6730612780256588,
+            "n": 3637
+          },
+          "seconds": 42.718923807144165,
+          "elapsed_seconds": 291.06829500198364,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3393179648
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.658035380477026,
+          "val": {
+            "top1": 0.9125653010723124,
+            "loss": 0.652360053189613,
+            "n": 3637
+          },
+          "seconds": 44.13557815551758,
+          "elapsed_seconds": 335.2047972679138,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3405246464
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.6561311049345361,
+          "val": {
+            "top1": 0.9161396755567776,
+            "loss": 0.6533340703729814,
+            "n": 3637
+          },
+          "seconds": 43.78189516067505,
+          "elapsed_seconds": 378.9876923561096,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3405475840
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.6542856171738628,
+          "val": {
+            "top1": 0.9213637613417652,
+            "loss": 0.6284652473443414,
+            "n": 3637
+          },
+          "seconds": 42.130486488342285,
+          "elapsed_seconds": 421.11907148361206,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407245312
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.6502196517094455,
+          "val": {
+            "top1": 0.9106406378883696,
+            "loss": 0.6711536071311651,
+            "n": 3637
+          },
+          "seconds": 41.71597146987915,
+          "elapsed_seconds": 462.8358883857727,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407478784
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.6495489589627665,
+          "val": {
+            "top1": 0.9147649161396756,
+            "loss": 0.6551672075684332,
+            "n": 3637
+          },
+          "seconds": 41.8036162853241,
+          "elapsed_seconds": 504.6402921676636,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407917056
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.6467538412218667,
+          "val": {
+            "top1": 0.916414627440198,
+            "loss": 0.651314008816081,
+            "n": 3637
+          },
+          "seconds": 41.98936367034912,
+          "elapsed_seconds": 546.6305170059204,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407085568
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.6420522827802944,
+          "val": {
+            "top1": 0.9172394830904592,
+            "loss": 0.6612236278870619,
+            "n": 3637
+          },
+          "seconds": 41.91675138473511,
+          "elapsed_seconds": 588.5480539798737,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407417344
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.6419252856226493,
+          "val": {
+            "top1": 0.9169645312070388,
+            "loss": 0.6939338792114426,
+            "n": 3637
+          },
+          "seconds": 43.50180244445801,
+          "elapsed_seconds": 632.0506131649017,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407032320
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.6394216473246048,
+          "val": {
+            "top1": 0.9169645312070388,
+            "loss": 0.6671179689350186,
+            "n": 3637
+          },
+          "seconds": 42.08584809303284,
+          "elapsed_seconds": 674.1374518871307,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407765504
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.6372568537483753,
+          "val": {
+            "top1": 0.9202639538080836,
+            "loss": 0.6565442288482389,
+            "n": 3637
+          },
+          "seconds": 42.19125247001648,
+          "elapsed_seconds": 716.3295238018036,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3406983168
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.6378587586137916,
+          "val": {
+            "top1": 0.9224635688754468,
+            "loss": 0.6322497786615522,
+            "n": 3637
+          },
+          "seconds": 41.8590452671051,
+          "elapsed_seconds": 758.1893262863159,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407376384
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.6362454815313849,
+          "val": {
+            "top1": 0.920538905691504,
+            "loss": 0.6618971081267748,
+            "n": 3637
+          },
+          "seconds": 41.489081621170044,
+          "elapsed_seconds": 799.6792631149292,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3406991360
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.6354434328531028,
+          "val": {
+            "top1": 0.9252130877096508,
+            "loss": 0.6428907678649751,
+            "n": 3637
+          },
+          "seconds": 41.41517233848572,
+          "elapsed_seconds": 841.0952596664429,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407523840
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.6344770359840344,
+          "val": {
+            "top1": 0.9213637613417652,
+            "loss": 0.6464692974011912,
+            "n": 3637
+          },
+          "seconds": 41.80925250053406,
+          "elapsed_seconds": 882.9053540229797,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407396864
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.633362787517787,
+          "val": {
+            "top1": 0.926037943359912,
+            "loss": 0.6138963012338701,
+            "n": 3637
+          },
+          "seconds": 42.630897998809814,
+          "elapsed_seconds": 925.5370652675629,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407810560
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.6346053019436922,
+          "val": {
+            "top1": 0.9238383282925487,
+            "loss": 0.6311942035757908,
+            "n": 3637
+          },
+          "seconds": 42.33856821060181,
+          "elapsed_seconds": 967.8764777183533,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407667200
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.6336932672825422,
+          "val": {
+            "top1": 0.928787462194116,
+            "loss": 0.6523524148797871,
+            "n": 3637
+          },
+          "seconds": 42.028260707855225,
+          "elapsed_seconds": 1009.9055423736572,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407646720
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.633263523795388,
+          "val": {
+            "top1": 0.92466318394281,
+            "loss": 0.6375753868403001,
+            "n": 3637
+          },
+          "seconds": 42.815739154815674,
+          "elapsed_seconds": 1052.7220711708069,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3407269888
+        }
+      ]
+    },
+    {
+      "name": "expanded",
+      "plannedEpochs": 60,
+      "status": "completed",
+      "observedEpochs": 60,
+      "epochWorkSeconds": 4759.969202756882,
+      "checkpointSHA256": {
+        "best.pt": "224b06b9c714e7ee9a4628f6a73d64284c5f151885eda317a803b19cc0028a55",
+        "last.pt": "cfef9af8d34e7a58d7b33a5cade244386a496c429be190292829485940f5550d"
+      },
+      "sourceSnapshots": {
+        "scripts\\multidomain\\acquire_cards.py": {
+          "recordedSHA256": "4961730a07f49985e7bfa57a2273a7badefe09ae3d3378b70f400a8966131077",
+          "snapshotSHA256": "4961730a07f49985e7bfa57a2273a7badefe09ae3d3378b70f400a8966131077"
+        },
+        "scripts\\multidomain\\acquire_games.py": {
+          "recordedSHA256": "2e304fced60d0bae2ce24b909747aad0f606839d400268c30c98981713740141",
+          "snapshotSHA256": "2e304fced60d0bae2ce24b909747aad0f606839d400268c30c98981713740141"
+        },
+        "scripts\\multidomain\\acquire_mixed.py": {
+          "recordedSHA256": "7a222728c7bb1fdb6be83995667dcc8694231237d3c735952c4229d0667f813f",
+          "snapshotSHA256": "7a222728c7bb1fdb6be83995667dcc8694231237d3c735952c4229d0667f813f"
+        },
+        "scripts\\multidomain\\acquire_plush.py": {
+          "recordedSHA256": "5b83d6b24416c74a46a9ed7d77881c20fc519acc05f4d7b0a4e0235a26369d94",
+          "snapshotSHA256": "5b83d6b24416c74a46a9ed7d77881c20fc519acc05f4d7b0a4e0235a26369d94"
+        },
+        "scripts\\multidomain\\export.py": {
+          "recordedSHA256": "dc70b4fda9a1aaf86cba4f6ec61866b5988082083c54bf3e739d70e0cce96590",
+          "snapshotSHA256": "dc70b4fda9a1aaf86cba4f6ec61866b5988082083c54bf3e739d70e0cce96590"
+        },
+        "scripts\\multidomain\\metrics.py": {
+          "recordedSHA256": "67cbd00d26302f47aca44f2cb68802487041a542485bbee6c02707c495b50ff7",
+          "snapshotSHA256": "67cbd00d26302f47aca44f2cb68802487041a542485bbee6c02707c495b50ff7"
+        },
+        "scripts\\multidomain\\model.py": {
+          "recordedSHA256": "da08b25c3950ad32c25ee4a00da253c77e404d10fd97c7e0f9a26763fc81cbcb",
+          "snapshotSHA256": "da08b25c3950ad32c25ee4a00da253c77e404d10fd97c7e0f9a26763fc81cbcb"
+        },
+        "scripts\\multidomain\\prepare.py": {
+          "recordedSHA256": "294c8c9f9e14496000089e4a1e70308c714e2291857ff1de95d8d228972b77f5",
+          "snapshotSHA256": "294c8c9f9e14496000089e4a1e70308c714e2291857ff1de95d8d228972b77f5"
+        },
+        "scripts\\multidomain\\select_model.py": {
+          "recordedSHA256": "93d1d3f65d9d69e46fde30ee9982a8bde4771c8bcfa62f9503cecaaba237d10a",
+          "snapshotSHA256": "93d1d3f65d9d69e46fde30ee9982a8bde4771c8bcfa62f9503cecaaba237d10a"
+        },
+        "scripts\\multidomain\\smoke_sprites.py": {
+          "recordedSHA256": "9d747b435b921cbafc7e511bbe00c944d52cf66340ddd222147aa606473a5e67",
+          "snapshotSHA256": "9d747b435b921cbafc7e511bbe00c944d52cf66340ddd222147aa606473a5e67"
+        },
+        "scripts\\multidomain\\train.py": {
+          "recordedSHA256": "88cbf6035100b51115220a6a710f7ddb2f0fc5637fb724f86c46d7d13453cb37",
+          "snapshotSHA256": "88cbf6035100b51115220a6a710f7ddb2f0fc5637fb724f86c46d7d13453cb37"
+        },
+        "scripts\\multidomain\\validate_and_publish.py": {
+          "recordedSHA256": "9483ec097604fa3eccba406e15104b14dbb613c422bd225aff6ac4c99be3f4bc",
+          "snapshotSHA256": "9483ec097604fa3eccba406e15104b14dbb613c422bd225aff6ac4c99be3f4bc"
+        },
+        "scripts\\multidomain\\verify_ipa.py": {
+          "recordedSHA256": "1575ad4ad06af487dcfae1c3a044445c24fbab66acc74a7fd3018695fe38107f",
+          "snapshotSHA256": "1575ad4ad06af487dcfae1c3a044445c24fbab66acc74a7fd3018695fe38107f"
+        }
+      },
+      "historySHA256": "5db4974226afd5f62c558de4b40a2670298f6daf4b7f140c7453faa49db688a4",
+      "environmentSHA256": "bdebabe327cafab87839e2f3926d64fee6ae3727ab88a81b0fb7bc23dbe76769",
+      "runStatusSHA256": "4ea6935bb122a2ca55acbd3d10f1f2743fad61f76a13b3ea54d9ffbc4c34ceb9",
+      "lastSessionElapsedSeconds": 4760.018557310104,
+      "manifestSHA256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
+      "config": {
+        "action": "train",
+        "arch": "efficientnet_b0",
+        "manifest": "artifacts\\multidomain\\data\\manifest.jsonl",
+        "checkpoint": null,
+        "init_checkpoint": "artifacts\\multidomain\\runs\\robust-warmup\\best.pt",
+        "out": "artifacts\\multidomain\\runs\\expanded",
+        "size": 224,
+        "epochs": 60,
+        "class_balance": 0.65,
+        "domain_balance": 0.15,
+        "group_balance": 0.25,
+        "reference": false,
+        "batch": 64,
+        "workers": 4,
+        "seed": 20261121,
+        "lr": 0.00012,
+        "transfer": true,
+        "max_minutes": 180.0,
+        "resume": false,
+        "split": "val",
+        "final": false,
+        "init_checkpoint_sha256": "b8fd6f6cee31de611cebfa9c13920170fb7ade2a5a9a83bd3ce7cfa8174327e8"
+      },
+      "environment": {
+        "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+        "torch": "2.13.0+cu132",
+        "torchvision": "0.28.0+cu132",
+        "PIL": "13.0.0",
+        "cuda": "13.2",
+        "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+        "seed": 20261121,
+        "parameters": 5926486
+      },
+      "peakGPUBytes": 3037617152,
+      "peakRSSBytes": 3537813504,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.3827540498775246,
+          "val": {
+            "top1": 0.8351232484402168,
+            "macro_recall": 0.8171364131688231,
+            "domain_group_mean": 0.840908232160555,
+            "selection_score": 0.8290223226646891,
+            "domains": {
+              "mixed": {
+                "top1": 0.9469534050179211,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9432936901222332
+              },
+              "game": {
+                "top1": 0.9329799318439985,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9184027777777778
+              },
+              "cards": {
+                "top1": 0.6998069498069498,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7030475718533201
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.7860696517412935,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.7988888888888888
+              }
+            },
+            "loss": 0.8463120152275536,
+            "n": 9777
+          },
+          "seconds": 94.72168564796448,
+          "elapsed_seconds": 94.72205257415771,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3504693248
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.9780336851651948,
+          "val": {
+            "top1": 0.8567045105860693,
+            "macro_recall": 0.8288434686747651,
+            "domain_group_mean": 0.8551326045573497,
+            "selection_score": 0.8419880366160575,
+            "domains": {
+              "mixed": {
+                "top1": 0.9526881720430107,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9483481995374958
+              },
+              "game": {
+                "top1": 0.9360090874668686,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9151593137254901
+              },
+              "cards": {
+                "top1": 0.7442084942084942,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7459117938553023
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8009950248756219,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8111111111111111
+              }
+            },
+            "loss": 0.7461648436549545,
+            "n": 9777
+          },
+          "seconds": 83.3963828086853,
+          "elapsed_seconds": 178.11955976486206,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3523424256
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.8704792024487065,
+          "val": {
+            "top1": 0.8681599672701238,
+            "macro_recall": 0.8424117285069865,
+            "domain_group_mean": 0.8681190931939343,
+            "selection_score": 0.8552654108504605,
+            "domains": {
+              "mixed": {
+                "top1": 0.9577060931899641,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9547076313181367
+              },
+              "game": {
+                "top1": 0.9375236652783037,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9204248366013073
+              },
+              "cards": {
+                "top1": 0.765926640926641,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7673439048562933
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8208955223880597,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8300000000000001
+              }
+            },
+            "loss": 0.6818677504345282,
+            "n": 9777
+          },
+          "seconds": 83.38966298103333,
+          "elapsed_seconds": 261.5103054046631,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3532402688
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.8069899792675205,
+          "val": {
+            "top1": 0.8740922573386519,
+            "macro_recall": 0.8454683231798229,
+            "domain_group_mean": 0.8729021739394469,
+            "selection_score": 0.859185248559635,
+            "domains": {
+              "mixed": {
+                "top1": 0.9612903225806452,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9574331020812685
+              },
+              "game": {
+                "top1": 0.9379023097311624,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9182720588235294
+              },
+              "cards": {
+                "top1": 0.777027027027027,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7792368681863231
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8258706467661692,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8366666666666667
+              }
+            },
+            "loss": 0.6645146413633182,
+            "n": 9777
+          },
+          "seconds": 86.70064878463745,
+          "elapsed_seconds": 348.2117545604706,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3517296640
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.7745950513042099,
+          "val": {
+            "top1": 0.8758310320139102,
+            "macro_recall": 0.8501141550851828,
+            "domain_group_mean": 0.8722905978546026,
+            "selection_score": 0.8612023764698927,
+            "domains": {
+              "mixed": {
+                "top1": 0.9609318996415771,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9596795507102741
+              },
+              "game": {
+                "top1": 0.9397955319954563,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9234477124183007
+              },
+              "cards": {
+                "top1": 0.7806467181467182,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7815906838453914
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8159203980099502,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8244444444444442
+              }
+            },
+            "loss": 0.6560049204783924,
+            "n": 9777
+          },
+          "seconds": 82.84659671783447,
+          "elapsed_seconds": 431.0591847896576,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3528155136
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.7515722489516582,
+          "val": {
+            "top1": 0.8805359517234326,
+            "macro_recall": 0.8557102002698274,
+            "domain_group_mean": 0.8807559679388768,
+            "selection_score": 0.8682330841043521,
+            "domains": {
+              "mixed": {
+                "top1": 0.9605734767025089,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9573092170465807
+              },
+              "game": {
+                "top1": 0.9432033320711851,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9274264705882352
+              },
+              "cards": {
+                "top1": 0.7886100386100386,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7905104063429138
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8407960199004975,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8477777777777776
+              }
+            },
+            "loss": 0.6277624216379167,
+            "n": 9777
+          },
+          "seconds": 83.74150538444519,
+          "elapsed_seconds": 514.80149102211,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3535237120
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.7334643361837982,
+          "val": {
+            "top1": 0.8813541986294364,
+            "macro_recall": 0.8506039782779871,
+            "domain_group_mean": 0.8783938269828083,
+            "selection_score": 0.8644989026303977,
+            "domains": {
+              "mixed": {
+                "top1": 0.9630824372759856,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9623885034687809
+              },
+              "game": {
+                "top1": 0.9360090874668686,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9201654411764706
+              },
+              "cards": {
+                "top1": 0.7941602316602316,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.7954658077304262
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8258706467661692,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8355555555555556
+              }
+            },
+            "loss": 0.6358637318626265,
+            "n": 9777
+          },
+          "seconds": 82.73318028450012,
+          "elapsed_seconds": 597.5355186462402,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3537813504
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.7207957256003844,
+          "val": {
+            "top1": 0.8836043776209471,
+            "macro_recall": 0.8557317991698058,
+            "domain_group_mean": 0.8815682119705333,
+            "selection_score": 0.8686500055701696,
+            "domains": {
+              "mixed": {
+                "top1": 0.9605734767025089,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9587462834489594
+              },
+              "game": {
+                "top1": 0.9390382430897387,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.922702205882353
+              },
+              "cards": {
+                "top1": 0.7987451737451737,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.800379914106376
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.835820895522388,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8444444444444444
+              }
+            },
+            "loss": 0.6472343758618867,
+            "n": 9777
+          },
+          "seconds": 82.51101112365723,
+          "elapsed_seconds": 680.0474560260773,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526627328
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.7087223387908161,
+          "val": {
+            "top1": 0.88841157819372,
+            "macro_recall": 0.8600124596217468,
+            "domain_group_mean": 0.8845512446802308,
+            "selection_score": 0.8722818521509887,
+            "domains": {
+              "mixed": {
+                "top1": 0.9652329749103943,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9636851668318467
+              },
+              "game": {
+                "top1": 0.9443392654297614,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9264705882352942
+              },
+              "cards": {
+                "top1": 0.8035714285714286,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8047158903204493
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.835820895522388,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8433333333333333
+              }
+            },
+            "loss": 0.6418812053267229,
+            "n": 9777
+          },
+          "seconds": 82.4576735496521,
+          "elapsed_seconds": 762.5059418678284,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525296128
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.6996667503768568,
+          "val": {
+            "top1": 0.8900480720057278,
+            "macro_recall": 0.8601461539765348,
+            "domain_group_mean": 0.882625949785266,
+            "selection_score": 0.8713860518809005,
+            "domains": {
+              "mixed": {
+                "top1": 0.9659498207885304,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9654195573174761
+              },
+              "game": {
+                "top1": 0.9416887542597501,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.925
+              },
+              "cards": {
+                "top1": 0.8093629343629344,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8100842418235877
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8208955223880597,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8300000000000001
+              }
+            },
+            "loss": 0.631100545890787,
+            "n": 9777
+          },
+          "seconds": 85.60277915000916,
+          "elapsed_seconds": 848.109530210495,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3533086720
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.6914645128824918,
+          "val": {
+            "top1": 0.8916845658177355,
+            "macro_recall": 0.8631839598198326,
+            "domain_group_mean": 0.8887948415243204,
+            "selection_score": 0.8759894006720765,
+            "domains": {
+              "mixed": {
+                "top1": 0.9648745519713262,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9639329369012224
+              },
+              "game": {
+                "top1": 0.9439606209769027,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9279411764705883
+              },
+              "cards": {
+                "top1": 0.811534749034749,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8133052527254707
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8407960199004975,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.85
+              }
+            },
+            "loss": 0.6188752182278394,
+            "n": 9777
+          },
+          "seconds": 86.65542149543762,
+          "elapsed_seconds": 934.7658026218414,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3532857344
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.6861539123230144,
+          "val": {
+            "top1": 0.8956735194845045,
+            "macro_recall": 0.8688745257414257,
+            "domain_group_mean": 0.8948685128370806,
+            "selection_score": 0.8818715192892531,
+            "domains": {
+              "mixed": {
+                "top1": 0.9695340501792115,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9695738354806739
+              },
+              "game": {
+                "top1": 0.945096554335479,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9300367647058823
+              },
+              "cards": {
+                "top1": 0.8163610038610039,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.817641228939544
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8622222222222221
+              }
+            },
+            "loss": 0.6214506328867978,
+            "n": 9777
+          },
+          "seconds": 82.94388794898987,
+          "elapsed_seconds": 1017.710542678833,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525849088
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.6817709452371776,
+          "val": {
+            "top1": 0.8914800040912345,
+            "macro_recall": 0.8607960477575973,
+            "domain_group_mean": 0.8865225187365993,
+            "selection_score": 0.8736592832470983,
+            "domains": {
+              "mixed": {
+                "top1": 0.96415770609319,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9625949785265939
+              },
+              "game": {
+                "top1": 0.9454751987883377,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9263235294117647
+              },
+              "cards": {
+                "top1": 0.8108108108108109,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8127271225635943
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.835820895522388,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8444444444444443
+              }
+            },
+            "loss": 0.6290436686456989,
+            "n": 9777
+          },
+          "seconds": 81.92071270942688,
+          "elapsed_seconds": 1099.6321713924408,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525144576
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.6756342635408669,
+          "val": {
+            "top1": 0.8937301830827452,
+            "macro_recall": 0.8656094878134977,
+            "domain_group_mean": 0.885234009114052,
+            "selection_score": 0.8754217484637749,
+            "domains": {
+              "mixed": {
+                "top1": 0.9623655913978495,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9614139411959035
+              },
+              "game": {
+                "top1": 0.9462324876940553,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9283823529411764
+              },
+              "cards": {
+                "top1": 0.8173262548262549,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8178064089857945
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8258706467661692,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8333333333333334
+              }
+            },
+            "loss": 0.6237587718079887,
+            "n": 9777
+          },
+          "seconds": 81.93147659301758,
+          "elapsed_seconds": 1181.564420223236,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525865472
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.6702512766071569,
+          "val": {
+            "top1": 0.8938324639459957,
+            "macro_recall": 0.8647752011297511,
+            "domain_group_mean": 0.8839998095166379,
+            "selection_score": 0.8743875053231945,
+            "domains": {
+              "mixed": {
+                "top1": 0.9670250896057347,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9655599603567889
+              },
+              "game": {
+                "top1": 0.9428246876183264,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9276102941176471
+              },
+              "cards": {
+                "top1": 0.8170849420849421,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.818384539147671
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8159203980099502,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8244444444444444
+              }
+            },
+            "loss": 0.6289386594174793,
+            "n": 9777
+          },
+          "seconds": 79.90125131607056,
+          "elapsed_seconds": 1261.4665710926056,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525337088
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.6672416005555559,
+          "val": {
+            "top1": 0.9007875626470288,
+            "macro_recall": 0.8742186252404599,
+            "domain_group_mean": 0.898127187218627,
+            "selection_score": 0.8861729062295435,
+            "domains": {
+              "mixed": {
+                "top1": 0.9702508960573477,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.968004625041295
+              },
+              "game": {
+                "top1": 0.9469897765997728,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9310661764705882
+              },
+              "cards": {
+                "top1": 0.8267374517374517,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8278823918070698
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8655555555555553
+              }
+            },
+            "loss": 0.6190260527164911,
+            "n": 9777
+          },
+          "seconds": 77.68415117263794,
+          "elapsed_seconds": 1339.1515102386475,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525877760
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.663430980617291,
+          "val": {
+            "top1": 0.8997647540145239,
+            "macro_recall": 0.8729395284649725,
+            "domain_group_mean": 0.8936372423515162,
+            "selection_score": 0.8832883854082443,
+            "domains": {
+              "mixed": {
+                "top1": 0.9670250896057347,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.966245457548728
+              },
+              "game": {
+                "top1": 0.9469897765997728,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9322303921568629
+              },
+              "cards": {
+                "top1": 0.8272200772200772,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8282953419226957
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8407960199004975,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8477777777777779
+              }
+            },
+            "loss": 0.6099573957465282,
+            "n": 9777
+          },
+          "seconds": 77.41592502593994,
+          "elapsed_seconds": 1416.5682215690613,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526553600
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.6580100799021894,
+          "val": {
+            "top1": 0.8999693157410249,
+            "macro_recall": 0.8705549651808389,
+            "domain_group_mean": 0.8901695939566775,
+            "selection_score": 0.8803622795687582,
+            "domains": {
+              "mixed": {
+                "top1": 0.9709677419354839,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9690782953419227
+              },
+              "game": {
+                "top1": 0.945096554335479,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9277491830065361
+              },
+              "cards": {
+                "top1": 0.8269787644787645,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8282953419226957
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8258706467661692,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8355555555555556
+              }
+            },
+            "loss": 0.6162300791198568,
+            "n": 9777
+          },
+          "seconds": 77.66781687736511,
+          "elapsed_seconds": 1494.2367885112762,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525242880
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.65667080968776,
+          "val": {
+            "top1": 0.8997647540145239,
+            "macro_recall": 0.875282905526721,
+            "domain_group_mean": 0.895551880501953,
+            "selection_score": 0.885417393014337,
+            "domains": {
+              "mixed": {
+                "top1": 0.9670250896057347,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9656921043937893
+              },
+              "game": {
+                "top1": 0.9485043544112078,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9348080065359478
+              },
+              "cards": {
+                "top1": 0.8260135135135135,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8272629666336307
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.845771144278607,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8544444444444442
+              }
+            },
+            "loss": 0.6104670914084899,
+            "n": 9777
+          },
+          "seconds": 77.73868989944458,
+          "elapsed_seconds": 1571.9762244224548,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524886528
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.6533029413408444,
+          "val": {
+            "top1": 0.9007875626470288,
+            "macro_recall": 0.8740842196419087,
+            "domain_group_mean": 0.8950522665293406,
+            "selection_score": 0.8845682430856247,
+            "domains": {
+              "mixed": {
+                "top1": 0.9670250896057347,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9663941195903535
+              },
+              "game": {
+                "top1": 0.9492616433169254,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9328431372549019
+              },
+              "cards": {
+                "top1": 0.8279440154440154,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8287495870498844
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.845771144278607,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8522222222222221
+              }
+            },
+            "loss": 0.618993851333061,
+            "n": 9777
+          },
+          "seconds": 77.39711809158325,
+          "elapsed_seconds": 1649.3740785121918,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524657152
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.6498338904227352,
+          "val": {
+            "top1": 0.9017080904162831,
+            "macro_recall": 0.8782425138888993,
+            "domain_group_mean": 0.8998678347082143,
+            "selection_score": 0.8890551742985568,
+            "domains": {
+              "mixed": {
+                "top1": 0.9691756272401434,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9681037330690452
+              },
+              "game": {
+                "top1": 0.9488829988640667,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9359926470588236
+              },
+              "cards": {
+                "top1": 0.8281853281853282,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8287082920383219
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8666666666666668
+              }
+            },
+            "loss": 0.641505585231822,
+            "n": 9777
+          },
+          "seconds": 77.27207946777344,
+          "elapsed_seconds": 1726.6469039916992,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524182016
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.6485812215406503,
+          "val": {
+            "top1": 0.9041628311342947,
+            "macro_recall": 0.8795794234937333,
+            "domain_group_mean": 0.9012617346657856,
+            "selection_score": 0.8904205790797595,
+            "domains": {
+              "mixed": {
+                "top1": 0.9731182795698925,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9737446316484969
+              },
+              "game": {
+                "top1": 0.9503975766755017,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9351388888888889
+              },
+              "cards": {
+                "top1": 0.8303571428571429,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8306078625702015
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8655555555555556
+              }
+            },
+            "loss": 0.6017918212167249,
+            "n": 9777
+          },
+          "seconds": 77.80121111869812,
+          "elapsed_seconds": 1804.448891878128,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524198400
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.6463791833077801,
+          "val": {
+            "top1": 0.9048787971770482,
+            "macro_recall": 0.8806829343565027,
+            "domain_group_mean": 0.9047774735307073,
+            "selection_score": 0.8927302039436049,
+            "domains": {
+              "mixed": {
+                "top1": 0.9709677419354839,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9697555335315494
+              },
+              "game": {
+                "top1": 0.951533510034078,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9360661764705882
+              },
+              "cards": {
+                "top1": 0.832046332046332,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8321770730095805
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8811111111111111
+              }
+            },
+            "loss": 0.6036376253012756,
+            "n": 9777
+          },
+          "seconds": 78.16633558273315,
+          "elapsed_seconds": 1882.6160244941711,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525451776
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.6437252923185269,
+          "val": {
+            "top1": 0.9078449422113123,
+            "macro_recall": 0.8779433205806108,
+            "domain_group_mean": 0.9055142139858916,
+            "selection_score": 0.8917287672832512,
+            "domains": {
+              "mixed": {
+                "top1": 0.9731182795698925,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9725635943178064
+              },
+              "game": {
+                "top1": 0.9469897765997728,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9286029411764707
+              },
+              "cards": {
+                "top1": 0.840492277992278,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8408903204492897
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.88
+              }
+            },
+            "loss": 0.5992464697091531,
+            "n": 9777
+          },
+          "seconds": 77.44881296157837,
+          "elapsed_seconds": 1960.0656502246857,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525390336
+        },
+        {
+          "epoch": 25,
+          "train_loss": 0.6407739919344845,
+          "val": {
+            "top1": 0.9067198527155569,
+            "macro_recall": 0.8820051112279561,
+            "domain_group_mean": 0.902129546297376,
+            "selection_score": 0.892067328762666,
+            "domains": {
+              "mixed": {
+                "top1": 0.9716845878136201,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9727700693756194
+              },
+              "game": {
+                "top1": 0.9526694433926542,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9374632352941177
+              },
+              "cards": {
+                "top1": 0.8361486486486487,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8371737694086555
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8611111111111113
+              }
+            },
+            "loss": 0.6146745116503141,
+            "n": 9777
+          },
+          "seconds": 77.76789879798889,
+          "elapsed_seconds": 2037.834293603897,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524075520
+        },
+        {
+          "epoch": 26,
+          "train_loss": 0.6395009226249806,
+          "val": {
+            "top1": 0.9080495039378133,
+            "macro_recall": 0.8860453030276789,
+            "domain_group_mean": 0.9047198548439859,
+            "selection_score": 0.8953825789358324,
+            "domains": {
+              "mixed": {
+                "top1": 0.9691756272401434,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9685414601916088
+              },
+              "game": {
+                "top1": 0.9530480878455131,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9384191176470589
+              },
+              "cards": {
+                "top1": 0.8402509652509652,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8408077304261645
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8711111111111112
+              }
+            },
+            "loss": 0.6210747759096142,
+            "n": 9777
+          },
+          "seconds": 77.72987031936646,
+          "elapsed_seconds": 2115.5649037361145,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524141056
+        },
+        {
+          "epoch": 27,
+          "train_loss": 0.6360691296603677,
+          "val": {
+            "top1": 0.9088677508438171,
+            "macro_recall": 0.884948388201758,
+            "domain_group_mean": 0.9019501513543144,
+            "selection_score": 0.8934492697780363,
+            "domains": {
+              "mixed": {
+                "top1": 0.9706093189964158,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9695655764783614
+              },
+              "game": {
+                "top1": 0.9500189322226429,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9359742647058823
+              },
+              "cards": {
+                "top1": 0.8438706563706564,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8444829864552362
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8507462686567164,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8577777777777779
+              }
+            },
+            "loss": 0.6168820094486754,
+            "n": 9777
+          },
+          "seconds": 77.55917477607727,
+          "elapsed_seconds": 2193.124847173691,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524026368
+        },
+        {
+          "epoch": 28,
+          "train_loss": 0.6356239852582748,
+          "val": {
+            "top1": 0.9076403804848113,
+            "macro_recall": 0.8857769633660318,
+            "domain_group_mean": 0.9033950562178952,
+            "selection_score": 0.8945860097919636,
+            "domains": {
+              "mixed": {
+                "top1": 0.9709677419354839,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9712091179385529
+              },
+              "game": {
+                "top1": 0.9549413101098069,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9402573529411765
+              },
+              "cards": {
+                "top1": 0.8373552123552124,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8376693095474066
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8644444444444445
+              }
+            },
+            "loss": 0.6123919862050933,
+            "n": 9777
+          },
+          "seconds": 77.76257634162903,
+          "elapsed_seconds": 2270.8881578445435,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524075520
+        },
+        {
+          "epoch": 29,
+          "train_loss": 0.6330441731567082,
+          "val": {
+            "top1": 0.9111179298353278,
+            "macro_recall": 0.8866194636133422,
+            "domain_group_mean": 0.9066676848720988,
+            "selection_score": 0.8966435742427206,
+            "domains": {
+              "mixed": {
+                "top1": 0.9741935483870968,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9729187314172447
+              },
+              "game": {
+                "top1": 0.9538053767512306,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9381617647058824
+              },
+              "cards": {
+                "top1": 0.8436293436293436,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.843368021143046
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222222
+              }
+            },
+            "loss": 0.6238342361532131,
+            "n": 9777
+          },
+          "seconds": 77.68941473960876,
+          "elapsed_seconds": 2348.5784606933594,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524079616
+        },
+        {
+          "epoch": 30,
+          "train_loss": 0.6324837125371514,
+          "val": {
+            "top1": 0.9113224915618288,
+            "macro_recall": 0.8889580945246971,
+            "domain_group_mean": 0.9043377353005952,
+            "selection_score": 0.8966479149126462,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9740915097456228
+              },
+              "game": {
+                "top1": 0.9545626656569481,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9404656862745098
+              },
+              "cards": {
+                "top1": 0.8431467181467182,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8439048562933598
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8507462686567164,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8588888888888888
+              }
+            },
+            "loss": 0.6194087028308333,
+            "n": 9777
+          },
+          "seconds": 77.76839780807495,
+          "elapsed_seconds": 2426.347677707672,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524079616
+        },
+        {
+          "epoch": 31,
+          "train_loss": 0.6285730577884489,
+          "val": {
+            "top1": 0.9124475810575842,
+            "macro_recall": 0.8917559629079154,
+            "domain_group_mean": 0.9108747002063131,
+            "selection_score": 0.9013153315571143,
+            "domains": {
+              "mixed": {
+                "top1": 0.9745519713261649,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9741328047571853
+              },
+              "game": {
+                "top1": 0.9545626656569481,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9421200980392157
+              },
+              "cards": {
+                "top1": 0.8455598455598455,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8461347869177404
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8811111111111111
+              }
+            },
+            "loss": 0.6169453239323867,
+            "n": 9777
+          },
+          "seconds": 77.85717344284058,
+          "elapsed_seconds": 2504.2061166763306,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525570560
+        },
+        {
+          "epoch": 32,
+          "train_loss": 0.627606628871347,
+          "val": {
+            "top1": 0.9115270532883297,
+            "macro_recall": 0.8903229365963244,
+            "domain_group_mean": 0.9055991784721817,
+            "selection_score": 0.8979610575342531,
+            "domains": {
+              "mixed": {
+                "top1": 0.9734767025089606,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9727865873802445
+              },
+              "game": {
+                "top1": 0.9522907989397955,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9398529411764707
+              },
+              "cards": {
+                "top1": 0.8465250965250966,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8464238519986785
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8633333333333334
+              }
+            },
+            "loss": 0.6159578515328158,
+            "n": 9777
+          },
+          "seconds": 78.05610585212708,
+          "elapsed_seconds": 2582.263134241104,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525201920
+        },
+        {
+          "epoch": 33,
+          "train_loss": 0.6265340929027371,
+          "val": {
+            "top1": 0.9141863557328423,
+            "macro_recall": 0.8916033088886184,
+            "domain_group_mean": 0.9091538905163982,
+            "selection_score": 0.9003785997025082,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9745622728774364
+              },
+              "game": {
+                "top1": 0.9538053767512306,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9407230392156862
+              },
+              "cards": {
+                "top1": 0.8496621621621622,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8491080277502477
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222222
+              }
+            },
+            "loss": 0.6206660980801282,
+            "n": 9777
+          },
+          "seconds": 78.10727787017822,
+          "elapsed_seconds": 2660.371170282364,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524644864
+        },
+        {
+          "epoch": 34,
+          "train_loss": 0.6262068701342216,
+          "val": {
+            "top1": 0.9109133681088268,
+            "macro_recall": 0.8882973151173758,
+            "domain_group_mean": 0.9071242589164836,
+            "selection_score": 0.8977107870169296,
+            "domains": {
+              "mixed": {
+                "top1": 0.9745519713261649,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.972811364387182
+              },
+              "game": {
+                "top1": 0.9511548655812192,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9384436274509804
+              },
+              "cards": {
+                "top1": 0.8445945945945946,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.84501982160555
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222222
+              }
+            },
+            "loss": 0.6162208245187568,
+            "n": 9777
+          },
+          "seconds": 77.97035431861877,
+          "elapsed_seconds": 2738.3423252105713,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524083712
+        },
+        {
+          "epoch": 35,
+          "train_loss": 0.6243308079588635,
+          "val": {
+            "top1": 0.9111179298353278,
+            "macro_recall": 0.8876655182820109,
+            "domain_group_mean": 0.9052513165821333,
+            "selection_score": 0.8964584174320721,
+            "domains": {
+              "mixed": {
+                "top1": 0.9734767025089606,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9730591344565576
+              },
+              "game": {
+                "top1": 0.9511548655812192,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9379411764705882
+              },
+              "cards": {
+                "top1": 0.8462837837837838,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8466716220680542
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8633333333333332
+              }
+            },
+            "loss": 0.625359866228208,
+            "n": 9777
+          },
+          "seconds": 77.73826932907104,
+          "elapsed_seconds": 2816.0813586711884,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3523878912
+        },
+        {
+          "epoch": 36,
+          "train_loss": 0.6241061669928784,
+          "val": {
+            "top1": 0.9138795131430909,
+            "macro_recall": 0.8913247022742663,
+            "domain_group_mean": 0.9108211138560148,
+            "selection_score": 0.9010729080651405,
+            "domains": {
+              "mixed": {
+                "top1": 0.9756272401433692,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975016518004625
+              },
+              "game": {
+                "top1": 0.9556985990155245,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9416299019607844
+              },
+              "cards": {
+                "top1": 0.8477316602316602,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8488602576808721
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8777777777777778
+              }
+            },
+            "loss": 0.6214984974466585,
+            "n": 9777
+          },
+          "seconds": 77.8312041759491,
+          "elapsed_seconds": 2893.9133303165436,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3524837376
+        },
+        {
+          "epoch": 37,
+          "train_loss": 0.6223923949073266,
+          "val": {
+            "top1": 0.9146977600490949,
+            "macro_recall": 0.8937268179669484,
+            "domain_group_mean": 0.9133830118395228,
+            "selection_score": 0.9035549149032356,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9427573529411766
+              },
+              "cards": {
+                "top1": 0.8484555984555985,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8491080277502477
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8866666666666666
+              }
+            },
+            "loss": 0.624838250368861,
+            "n": 9777
+          },
+          "seconds": 77.7235279083252,
+          "elapsed_seconds": 2971.6375925540924,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525414912
+        },
+        {
+          "epoch": 38,
+          "train_loss": 0.6208060454552708,
+          "val": {
+            "top1": 0.913470389690089,
+            "macro_recall": 0.8903262186504672,
+            "domain_group_mean": 0.907441764924503,
+            "selection_score": 0.8988839917874851,
+            "domains": {
+              "mixed": {
+                "top1": 0.9756272401433692,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9740089197224975
+              },
+              "game": {
+                "top1": 0.9553199545626656,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.941139705882353
+              },
+              "cards": {
+                "top1": 0.8474903474903475,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8479517674264948
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8666666666666667
+              }
+            },
+            "loss": 0.6207807344247608,
+            "n": 9777
+          },
+          "seconds": 77.46084356307983,
+          "elapsed_seconds": 3049.0992226600647,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526492160
+        },
+        {
+          "epoch": 39,
+          "train_loss": 0.6208977530002734,
+          "val": {
+            "top1": 0.9145954791858443,
+            "macro_recall": 0.8892702656108744,
+            "domain_group_mean": 0.9082743685102055,
+            "selection_score": 0.89877231706054,
+            "domains": {
+              "mixed": {
+                "top1": 0.9763440860215054,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9752477700693756
+              },
+              "game": {
+                "top1": 0.9549413101098069,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9402205882352942
+              },
+              "cards": {
+                "top1": 0.849903474903475,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8498513379583746
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777778
+              }
+            },
+            "loss": 0.6307762604836636,
+            "n": 9777
+          },
+          "seconds": 77.56749367713928,
+          "elapsed_seconds": 3126.66748046875,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526479872
+        },
+        {
+          "epoch": 40,
+          "train_loss": 0.6195348169269814,
+          "val": {
+            "top1": 0.9165388155876035,
+            "macro_recall": 0.8926075187504203,
+            "domain_group_mean": 0.9140042720094315,
+            "selection_score": 0.9033058953799259,
+            "domains": {
+              "mixed": {
+                "top1": 0.9770609318996416,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9759084902543772
+              },
+              "game": {
+                "top1": 0.9560772434683832,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9420588235294118
+              },
+              "cards": {
+                "top1": 0.8523166023166023,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8524942186983812
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8855555555555554
+              }
+            },
+            "loss": 0.626088826754128,
+            "n": 9777
+          },
+          "seconds": 77.73276114463806,
+          "elapsed_seconds": 3204.401367664337,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526615040
+        },
+        {
+          "epoch": 41,
+          "train_loss": 0.6197599273730345,
+          "val": {
+            "top1": 0.9159251304081006,
+            "macro_recall": 0.8914086315436113,
+            "domain_group_mean": 0.9036772286755799,
+            "selection_score": 0.8975429301095956,
+            "domains": {
+              "mixed": {
+                "top1": 0.9777777777777777,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9766518004625041
+              },
+              "game": {
+                "top1": 0.9538053767512306,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9393014705882353
+              },
+              "cards": {
+                "top1": 0.8540057915057915,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8543111992071358
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.835820895522388,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8444444444444443
+              }
+            },
+            "loss": 0.632550164625861,
+            "n": 9777
+          },
+          "seconds": 77.63687539100647,
+          "elapsed_seconds": 3282.0389931201935,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3527094272
+        },
+        {
+          "epoch": 42,
+          "train_loss": 0.6175359874475808,
+          "val": {
+            "top1": 0.9160274112713511,
+            "macro_recall": 0.8919601363919832,
+            "domain_group_mean": 0.9075200351655364,
+            "selection_score": 0.8997400857787599,
+            "domains": {
+              "mixed": {
+                "top1": 0.9767025089605734,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9757433102081269
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9421691176470588
+              },
+              "cards": {
+                "top1": 0.852557915057915,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8532788239180708
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8507462686567164,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8588888888888888
+              }
+            },
+            "loss": 0.6303204221570371,
+            "n": 9777
+          },
+          "seconds": 77.76546788215637,
+          "elapsed_seconds": 3359.805328130722,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525513216
+        },
+        {
+          "epoch": 43,
+          "train_loss": 0.6175986586578687,
+          "val": {
+            "top1": 0.9160274112713511,
+            "macro_recall": 0.89438271113039,
+            "domain_group_mean": 0.908159227289363,
+            "selection_score": 0.9012709692098766,
+            "domains": {
+              "mixed": {
+                "top1": 0.9763440860215054,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9763379583746283
+              },
+              "game": {
+                "top1": 0.9568345323741008,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9440073529411764
+              },
+              "cards": {
+                "top1": 0.852557915057915,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8534027089527585
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8507462686567164,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8588888888888888
+              }
+            },
+            "loss": 0.6295273130115854,
+            "n": 9777
+          },
+          "seconds": 77.243816614151,
+          "elapsed_seconds": 3437.0499110221863,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525484544
+        },
+        {
+          "epoch": 44,
+          "train_loss": 0.6159957358623243,
+          "val": {
+            "top1": 0.9153114452285978,
+            "macro_recall": 0.894819542720837,
+            "domain_group_mean": 0.9097502127502802,
+            "selection_score": 0.9022848777355585,
+            "domains": {
+              "mixed": {
+                "top1": 0.974910394265233,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9742153947803106
+              },
+              "game": {
+                "top1": 0.9591063990912533,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9468259803921569
+              },
+              "cards": {
+                "top1": 0.849903474903475,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8501816980508754
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777779
+              }
+            },
+            "loss": 0.6161760698862574,
+            "n": 9777
+          },
+          "seconds": 77.62167072296143,
+          "elapsed_seconds": 3514.672350883484,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3527155712
+        },
+        {
+          "epoch": 45,
+          "train_loss": 0.6151952237583465,
+          "val": {
+            "top1": 0.9151068835020968,
+            "macro_recall": 0.8929870605401331,
+            "domain_group_mean": 0.9091892959281499,
+            "selection_score": 0.9010881782341416,
+            "domains": {
+              "mixed": {
+                "top1": 0.974910394265233,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9737776676577469
+              },
+              "game": {
+                "top1": 0.9556985990155245,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9431617647058824
+              },
+              "cards": {
+                "top1": 0.8515926640926641,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8520399735711925
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777779
+              }
+            },
+            "loss": 0.6265321254388826,
+            "n": 9777
+          },
+          "seconds": 77.44290924072266,
+          "elapsed_seconds": 3592.116062402725,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3527323648
+        },
+        {
+          "epoch": 46,
+          "train_loss": 0.6144445943352703,
+          "val": {
+            "top1": 0.9179707476731104,
+            "macro_recall": 0.8935878523667103,
+            "domain_group_mean": 0.9107916941966743,
+            "selection_score": 0.9021897732816924,
+            "domains": {
+              "mixed": {
+                "top1": 0.9767025089605734,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9764040303931284
+              },
+              "game": {
+                "top1": 0.9545626656569481,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9408333333333333
+              },
+              "cards": {
+                "top1": 0.8578667953667953,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8581516352824579
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777778
+              }
+            },
+            "loss": 0.619882860346612,
+            "n": 9777
+          },
+          "seconds": 77.7367377281189,
+          "elapsed_seconds": 3669.8535261154175,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3528011776
+        },
+        {
+          "epoch": 47,
+          "train_loss": 0.615107072336511,
+          "val": {
+            "top1": 0.9159251304081006,
+            "macro_recall": 0.8913366813003458,
+            "domain_group_mean": 0.9081428904564799,
+            "selection_score": 0.8997397858784129,
+            "domains": {
+              "mixed": {
+                "top1": 0.9745519713261649,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9743227618103734
+              },
+              "game": {
+                "top1": 0.9534267322983718,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9391176470588236
+              },
+              "cards": {
+                "top1": 0.855453667953668,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8557978196233895
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8633333333333334
+              }
+            },
+            "loss": 0.6357058047321636,
+            "n": 9777
+          },
+          "seconds": 77.69929432868958,
+          "elapsed_seconds": 3747.553584575653,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525230592
+        },
+        {
+          "epoch": 48,
+          "train_loss": 0.6137066167427715,
+          "val": {
+            "top1": 0.9160274112713511,
+            "macro_recall": 0.8933299615796185,
+            "domain_group_mean": 0.9095277328390887,
+            "selection_score": 0.9014288472093537,
+            "domains": {
+              "mixed": {
+                "top1": 0.974910394265233,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9743227618103734
+              },
+              "game": {
+                "top1": 0.9541840212040894,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9409558823529413
+              },
+              "cards": {
+                "top1": 0.8547297297297297,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8550545094152626
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777778
+              }
+            },
+            "loss": 0.6273377090921136,
+            "n": 9777
+          },
+          "seconds": 77.60915899276733,
+          "elapsed_seconds": 3825.1635072231293,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525722112
+        },
+        {
+          "epoch": 49,
+          "train_loss": 0.6142603482046295,
+          "val": {
+            "top1": 0.916845658177355,
+            "macro_recall": 0.8942139584573422,
+            "domain_group_mean": 0.9119848659855418,
+            "selection_score": 0.903099412221442,
+            "domains": {
+              "mixed": {
+                "top1": 0.9763440860215054,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.974587049884374
+              },
+              "game": {
+                "top1": 0.9545626656569481,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9415073529411765
+              },
+              "cards": {
+                "top1": 0.8549710424710425,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8551783944499505
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666667
+              }
+            },
+            "loss": 0.6149773862545532,
+            "n": 9777
+          },
+          "seconds": 78.01385688781738,
+          "elapsed_seconds": 3903.178206682205,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525455872
+        },
+        {
+          "epoch": 50,
+          "train_loss": 0.6134538391380272,
+          "val": {
+            "top1": 0.917459343356858,
+            "macro_recall": 0.8948965282492186,
+            "domain_group_mean": 0.9140041181652707,
+            "selection_score": 0.9044503232072447,
+            "domains": {
+              "mixed": {
+                "top1": 0.9767025089605734,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975825900231252
+              },
+              "game": {
+                "top1": 0.9560772434683832,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.943529411764706
+              },
+              "cards": {
+                "top1": 0.8549710424710425,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8555500495540139
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8811111111111111
+              }
+            },
+            "loss": 0.6358059903065144,
+            "n": 9777
+          },
+          "seconds": 77.93677401542664,
+          "elapsed_seconds": 3981.11576795578,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525918720
+        },
+        {
+          "epoch": 51,
+          "train_loss": 0.6126073764172315,
+          "val": {
+            "top1": 0.9161296921346016,
+            "macro_recall": 0.8940270040716893,
+            "domain_group_mean": 0.9106152734053647,
+            "selection_score": 0.902321138738527,
+            "domains": {
+              "mixed": {
+                "top1": 0.975268817204301,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9740089197224975
+              },
+              "game": {
+                "top1": 0.9568345323741008,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9438970588235295
+              },
+              "cards": {
+                "top1": 0.8527992277992278,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8534440039643211
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8711111111111112
+              }
+            },
+            "loss": 0.6238037809779872,
+            "n": 9777
+          },
+          "seconds": 77.48651480674744,
+          "elapsed_seconds": 4058.60307264328,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525435392
+        },
+        {
+          "epoch": 52,
+          "train_loss": 0.6131651635969597,
+          "val": {
+            "top1": 0.9173570624936075,
+            "macro_recall": 0.8948542728193856,
+            "domain_group_mean": 0.9129264529771274,
+            "selection_score": 0.9038903628982564,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975016518004625
+              },
+              "game": {
+                "top1": 0.9534267322983718,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9422426470588235
+              },
+              "cards": {
+                "top1": 0.8571428571428571,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8577799801783944
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666666
+              }
+            },
+            "loss": 0.6262290486287666,
+            "n": 9777
+          },
+          "seconds": 77.52914452552795,
+          "elapsed_seconds": 4136.13324546814,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526029312
+        },
+        {
+          "epoch": 53,
+          "train_loss": 0.612054356776251,
+          "val": {
+            "top1": 0.916436534724353,
+            "macro_recall": 0.8935855267405066,
+            "domain_group_mean": 0.9117562100410035,
+            "selection_score": 0.902670868390755,
+            "domains": {
+              "mixed": {
+                "top1": 0.9756272401433692,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9741080277502477
+              },
+              "game": {
+                "top1": 0.9549413101098069,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9416911764705883
+              },
+              "cards": {
+                "top1": 0.8542471042471043,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8545589692765114
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666667
+              }
+            },
+            "loss": 0.624510237126186,
+            "n": 9777
+          },
+          "seconds": 77.4870834350586,
+          "elapsed_seconds": 4213.621087312698,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3528011776
+        },
+        {
+          "epoch": 54,
+          "train_loss": 0.6126083809409644,
+          "val": {
+            "top1": 0.916436534724353,
+            "macro_recall": 0.8933896948487684,
+            "domain_group_mean": 0.9120006552546687,
+            "selection_score": 0.9026951750517185,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9747687479352494
+              },
+              "game": {
+                "top1": 0.9534267322983718,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9410171568627451
+              },
+              "cards": {
+                "top1": 0.8549710424710425,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8555500495540139
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666667
+              }
+            },
+            "loss": 0.6214860974614503,
+            "n": 9777
+          },
+          "seconds": 78.11434507369995,
+          "elapsed_seconds": 4291.736215591431,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526848512
+        },
+        {
+          "epoch": 55,
+          "train_loss": 0.6125775146693282,
+          "val": {
+            "top1": 0.9175616242201085,
+            "macro_recall": 0.8964014391267796,
+            "domain_group_mean": 0.9100645264919645,
+            "selection_score": 0.903232982809372,
+            "domains": {
+              "mixed": {
+                "top1": 0.9756272401433692,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9745209778658738
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9450367647058824
+              },
+              "cards": {
+                "top1": 0.8566602316602316,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8573670300627685
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8557213930348259,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8633333333333334
+              }
+            },
+            "loss": 0.6312704914196803,
+            "n": 9777
+          },
+          "seconds": 77.61057233810425,
+          "elapsed_seconds": 4369.34757232666,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3528699904
+        },
+        {
+          "epoch": 56,
+          "train_loss": 0.6122089341252893,
+          "val": {
+            "top1": 0.9167433773141045,
+            "macro_recall": 0.8954482800382307,
+            "domain_group_mean": 0.9124913827027341,
+            "selection_score": 0.9039698313704825,
+            "domains": {
+              "mixed": {
+                "top1": 0.9745519713261649,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9739263296993722
+              },
+              "game": {
+                "top1": 0.9549413101098069,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9431617647058824
+              },
+              "cards": {
+                "top1": 0.8556949806949807,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8562107697390154
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666667
+              }
+            },
+            "loss": 0.6238368742912475,
+            "n": 9777
+          },
+          "seconds": 77.88208651542664,
+          "elapsed_seconds": 4447.230449438095,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526975488
+        },
+        {
+          "epoch": 57,
+          "train_loss": 0.6115680898429057,
+          "val": {
+            "top1": 0.9154137260918482,
+            "macro_recall": 0.8924781773036576,
+            "domain_group_mean": 0.9092122966423107,
+            "selection_score": 0.9008452369729842,
+            "domains": {
+              "mixed": {
+                "top1": 0.9763440860215054,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975429468120251
+              },
+              "game": {
+                "top1": 0.9534267322983718,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9404044117647059
+              },
+              "cards": {
+                "top1": 0.8527992277992278,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8532375289065081
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777779
+              }
+            },
+            "loss": 0.6307690247468108,
+            "n": 9777
+          },
+          "seconds": 77.5374653339386,
+          "elapsed_seconds": 4524.768721580505,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3526303744
+        },
+        {
+          "epoch": 58,
+          "train_loss": 0.6113887202220241,
+          "val": {
+            "top1": 0.916641096450854,
+            "macro_recall": 0.8939359356887484,
+            "domain_group_mean": 0.9100696995018689,
+            "selection_score": 0.9020028175953086,
+            "domains": {
+              "mixed": {
+                "top1": 0.975268817204301,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9747522299306244
+              },
+              "game": {
+                "top1": 0.9530480878455131,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9405882352941177
+              },
+              "cards": {
+                "top1": 0.8566602316602316,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8571605550049554
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777778
+              }
+            },
+            "loss": 0.6232445918673617,
+            "n": 9777
+          },
+          "seconds": 78.03117299079895,
+          "elapsed_seconds": 4602.800607204437,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525820416
+        },
+        {
+          "epoch": 59,
+          "train_loss": 0.6115949788982792,
+          "val": {
+            "top1": 0.9176639050833589,
+            "macro_recall": 0.8956207016563421,
+            "domain_group_mean": 0.9119119145015125,
+            "selection_score": 0.9037663080789273,
+            "domains": {
+              "mixed": {
+                "top1": 0.9767025089605734,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9757598282127519
+              },
+              "game": {
+                "top1": 0.9556985990155245,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9427941176470589
+              },
+              "cards": {
+                "top1": 0.8561776061776062,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8568714899240172
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222222
+              }
+            },
+            "loss": 0.6282505576957086,
+            "n": 9777
+          },
+          "seconds": 78.21084403991699,
+          "elapsed_seconds": 4681.012236356735,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525554176
+        },
+        {
+          "epoch": 60,
+          "train_loss": 0.6126972281667394,
+          "val": {
+            "top1": 0.9180730285363609,
+            "macro_recall": 0.8971335360651312,
+            "domain_group_mean": 0.9134759195427429,
+            "selection_score": 0.905304727803937,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975016518004625
+              },
+              "game": {
+                "top1": 0.9568345323741008,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9451838235294118
+              },
+              "cards": {
+                "top1": 0.8566602316602316,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8570366699702676
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666667
+              }
+            },
+            "loss": 0.6198619133345589,
+            "n": 9777
+          },
+          "seconds": 79.00505113601685,
+          "elapsed_seconds": 4760.018091917038,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3525955584
+        }
+      ]
+    },
+    {
+      "name": "expanded-continued",
+      "plannedEpochs": 24,
+      "status": "completed",
+      "observedEpochs": 24,
+      "epochWorkSeconds": 1879.4313831329346,
+      "checkpointSHA256": {
+        "best.pt": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+        "last.pt": "a2978112f432df7e1a7b9793bf5562550372fc1b4499e6fac4ae7d64199162c7"
+      },
+      "sourceSnapshots": {
+        "scripts\\multidomain\\acquire_cards.py": {
+          "recordedSHA256": "4961730a07f49985e7bfa57a2273a7badefe09ae3d3378b70f400a8966131077",
+          "snapshotSHA256": "4961730a07f49985e7bfa57a2273a7badefe09ae3d3378b70f400a8966131077"
+        },
+        "scripts\\multidomain\\acquire_games.py": {
+          "recordedSHA256": "2e304fced60d0bae2ce24b909747aad0f606839d400268c30c98981713740141",
+          "snapshotSHA256": "2e304fced60d0bae2ce24b909747aad0f606839d400268c30c98981713740141"
+        },
+        "scripts\\multidomain\\acquire_mixed.py": {
+          "recordedSHA256": "7a222728c7bb1fdb6be83995667dcc8694231237d3c735952c4229d0667f813f",
+          "snapshotSHA256": "7a222728c7bb1fdb6be83995667dcc8694231237d3c735952c4229d0667f813f"
+        },
+        "scripts\\multidomain\\acquire_plush.py": {
+          "recordedSHA256": "5b83d6b24416c74a46a9ed7d77881c20fc519acc05f4d7b0a4e0235a26369d94",
+          "snapshotSHA256": "5b83d6b24416c74a46a9ed7d77881c20fc519acc05f4d7b0a4e0235a26369d94"
+        },
+        "scripts\\multidomain\\archive_receipts.py": {
+          "recordedSHA256": "d87a49bcecd0196b1dbde66fa8c973bc64713594bf8cd70e6f24296e26497c26",
+          "snapshotSHA256": "d87a49bcecd0196b1dbde66fa8c973bc64713594bf8cd70e6f24296e26497c26"
+        },
+        "scripts\\multidomain\\export.py": {
+          "recordedSHA256": "29e5121c5445b25637d651329e8a4d36b5bc3cdd8ba04b9dad1db9b8aaef91ba",
+          "snapshotSHA256": "29e5121c5445b25637d651329e8a4d36b5bc3cdd8ba04b9dad1db9b8aaef91ba"
+        },
+        "scripts\\multidomain\\metrics.py": {
+          "recordedSHA256": "507ab68dc2e7dd3971d4d8d95dd80684581833df1d88681e2c1af5b532333195",
+          "snapshotSHA256": "507ab68dc2e7dd3971d4d8d95dd80684581833df1d88681e2c1af5b532333195"
+        },
+        "scripts\\multidomain\\model.py": {
+          "recordedSHA256": "da08b25c3950ad32c25ee4a00da253c77e404d10fd97c7e0f9a26763fc81cbcb",
+          "snapshotSHA256": "da08b25c3950ad32c25ee4a00da253c77e404d10fd97c7e0f9a26763fc81cbcb"
+        },
+        "scripts\\multidomain\\prepare.py": {
+          "recordedSHA256": "294c8c9f9e14496000089e4a1e70308c714e2291857ff1de95d8d228972b77f5",
+          "snapshotSHA256": "294c8c9f9e14496000089e4a1e70308c714e2291857ff1de95d8d228972b77f5"
+        },
+        "scripts\\multidomain\\release_contract.py": {
+          "recordedSHA256": "0bc1af7d6768764022e850ff06be4b8886d798f1485a831e7b7d2b1fadacd13b",
+          "snapshotSHA256": "0bc1af7d6768764022e850ff06be4b8886d798f1485a831e7b7d2b1fadacd13b"
+        },
+        "scripts\\multidomain\\report_campaign.py": {
+          "recordedSHA256": "f02b60be3f7254ccbc3a3529262bc9e1bbf7a705c9b9efb4fac90feb3d8aa49b",
+          "snapshotSHA256": "f02b60be3f7254ccbc3a3529262bc9e1bbf7a705c9b9efb4fac90feb3d8aa49b"
+        },
+        "scripts\\multidomain\\select_model.py": {
+          "recordedSHA256": "5dbf81041d3b4470638ad61875dd793f3b0aa615691c57deea492a67c42eea8f",
+          "snapshotSHA256": "5dbf81041d3b4470638ad61875dd793f3b0aa615691c57deea492a67c42eea8f"
+        },
+        "scripts\\multidomain\\smoke_sprites.py": {
+          "recordedSHA256": "38c0658e65ee5a80457f2874c1ff5ac9d4d74d29acdf7422c77f570c472dd19d",
+          "snapshotSHA256": "38c0658e65ee5a80457f2874c1ff5ac9d4d74d29acdf7422c77f570c472dd19d"
+        },
+        "scripts\\multidomain\\train.py": {
+          "recordedSHA256": "88cbf6035100b51115220a6a710f7ddb2f0fc5637fb724f86c46d7d13453cb37",
+          "snapshotSHA256": "88cbf6035100b51115220a6a710f7ddb2f0fc5637fb724f86c46d7d13453cb37"
+        },
+        "scripts\\multidomain\\validate_and_publish.py": {
+          "recordedSHA256": "b1811b4a7ed673ba1eb528bf33f12260b1853854cc363c6ad5ad44e5f04badca",
+          "snapshotSHA256": "b1811b4a7ed673ba1eb528bf33f12260b1853854cc363c6ad5ad44e5f04badca"
+        },
+        "scripts\\multidomain\\verify_ipa.py": {
+          "recordedSHA256": "631c8c3996e8baa3cc11da986a10cd5ad9ce35680bac0ccf486e731d1fadcb1b",
+          "snapshotSHA256": "631c8c3996e8baa3cc11da986a10cd5ad9ce35680bac0ccf486e731d1fadcb1b"
+        }
+      },
+      "historySHA256": "6e33f5ac8dcd7213ecf1dd7319aefea221e20240c1898381ff3b02bd71c8e695",
+      "environmentSHA256": "ca1140f0d6ebc3e6dd76416e975b112603523d9b6b0c949473728ee397edc829",
+      "runStatusSHA256": "712167a448db72c18fa990fa5005b0ac320720b69afd91d8751dae40e483672c",
+      "lastSessionElapsedSeconds": 1879.4509751796722,
+      "manifestSHA256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
+      "config": {
+        "action": "train",
+        "arch": "efficientnet_b0",
+        "manifest": "artifacts\\multidomain\\data\\manifest.jsonl",
+        "checkpoint": null,
+        "init_checkpoint": "artifacts\\multidomain\\runs\\expanded\\best.pt",
+        "out": "artifacts\\multidomain\\runs\\expanded-continued",
+        "size": 224,
+        "epochs": 24,
+        "class_balance": 0.65,
+        "domain_balance": 0.15,
+        "group_balance": 0.25,
+        "reference": false,
+        "batch": 64,
+        "workers": 4,
+        "seed": 20261122,
+        "lr": 3.5e-05,
+        "transfer": false,
+        "max_minutes": 70.0,
+        "resume": false,
+        "split": "val",
+        "final": false,
+        "init_checkpoint_sha256": "224b06b9c714e7ee9a4628f6a73d64284c5f151885eda317a803b19cc0028a55"
+      },
+      "environment": {
+        "python": "3.13.9 (tags/v3.13.9:8183fa5, Oct 14 2025, 14:09:13) [MSC v.1944 64 bit (AMD64)]",
+        "torch": "2.13.0+cu132",
+        "torchvision": "0.28.0+cu132",
+        "PIL": "13.0.0",
+        "cuda": "13.2",
+        "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+        "seed": 20261122,
+        "parameters": 5926486
+      },
+      "peakGPUBytes": 3037617152,
+      "peakRSSBytes": 3513507840,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.6099202891827105,
+          "val": {
+            "top1": 0.9158228495448502,
+            "macro_recall": 0.8949014255296521,
+            "domain_group_mean": 0.9098629967142127,
+            "selection_score": 0.9023822111219324,
+            "domains": {
+              "mixed": {
+                "top1": 0.974910394265233,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9743145028080608
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9440808823529412
+              },
+              "cards": {
+                "top1": 0.8527992277992278,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8532788239180708
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777778
+              }
+            },
+            "loss": 0.648842015831678,
+            "n": 9777
+          },
+          "seconds": 88.19379425048828,
+          "elapsed_seconds": 88.19415664672852,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3480584192
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.6102881955834795,
+          "val": {
+            "top1": 0.9163342538611026,
+            "macro_recall": 0.8969231593864098,
+            "domain_group_mean": 0.9126518138226549,
+            "selection_score": 0.9047874866045323,
+            "domains": {
+              "mixed": {
+                "top1": 0.975268817204301,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9749587049884374
+              },
+              "game": {
+                "top1": 0.9568345323741008,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9456617647058823
+              },
+              "cards": {
+                "top1": 0.8530405405405406,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8533201189296333
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666667
+              }
+            },
+            "loss": 0.6450714633376293,
+            "n": 9777
+          },
+          "seconds": 77.81390595436096,
+          "elapsed_seconds": 166.00909328460693,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3499298816
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.609174407059114,
+          "val": {
+            "top1": 0.9162319729978521,
+            "macro_recall": 0.8953737208691253,
+            "domain_group_mean": 0.913166093597168,
+            "selection_score": 0.9042699072331466,
+            "domains": {
+              "mixed": {
+                "top1": 0.9756272401433692,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9744218698381235
+              },
+              "game": {
+                "top1": 0.9560772434683832,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9438112745098041
+              },
+              "cards": {
+                "top1": 0.8527992277992278,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8533201189296333
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8811111111111111
+              }
+            },
+            "loss": 0.6432252078013905,
+            "n": 9777
+          },
+          "seconds": 77.60155487060547,
+          "elapsed_seconds": 243.6116111278534,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3508346880
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.608566966685032,
+          "val": {
+            "top1": 0.9180730285363609,
+            "macro_recall": 0.8975429911744952,
+            "domain_group_mean": 0.9147185674112723,
+            "selection_score": 0.9061307792928838,
+            "domains": {
+              "mixed": {
+                "top1": 0.9781362007168459,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9772877436405681
+              },
+              "game": {
+                "top1": 0.957970465732677,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9461642156862745
+              },
+              "cards": {
+                "top1": 0.8542471042471043,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8543111992071358
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.881111111111111
+              }
+            },
+            "loss": 0.6467213901844787,
+            "n": 9777
+          },
+          "seconds": 77.72050929069519,
+          "elapsed_seconds": 321.3328595161438,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3493150720
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.6076321304280643,
+          "val": {
+            "top1": 0.9177661859466094,
+            "macro_recall": 0.9006157540371296,
+            "domain_group_mean": 0.9156663446060618,
+            "selection_score": 0.9081410493215957,
+            "domains": {
+              "mixed": {
+                "top1": 0.975268817204301,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9749421869838124
+              },
+              "game": {
+                "top1": 0.9606209769026883,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9485171568627451
+              },
+              "cards": {
+                "top1": 0.853523166023166,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8536504790221341
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8855555555555555
+              }
+            },
+            "loss": 0.6341602550372764,
+            "n": 9777
+          },
+          "seconds": 77.63908338546753,
+          "elapsed_seconds": 398.97296357154846,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3503988736
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.6065932067368378,
+          "val": {
+            "top1": 0.9176639050833589,
+            "macro_recall": 0.8954694270800615,
+            "domain_group_mean": 0.91430603328216,
+            "selection_score": 0.9048877301811107,
+            "domains": {
+              "mixed": {
+                "top1": 0.9774193548387097,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9769408655434424
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9441176470588235
+              },
+              "cards": {
+                "top1": 0.8547297297297297,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8550545094152626
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8811111111111113
+              }
+            },
+            "loss": 0.6426715527476252,
+            "n": 9777
+          },
+          "seconds": 77.78797602653503,
+          "elapsed_seconds": 476.7617573738098,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3511070720
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.6064670403058641,
+          "val": {
+            "top1": 0.916436534724353,
+            "macro_recall": 0.894612701446625,
+            "domain_group_mean": 0.9144333302159647,
+            "selection_score": 0.9045230158312949,
+            "domains": {
+              "mixed": {
+                "top1": 0.9774193548387097,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9762966633630656
+              },
+              "game": {
+                "top1": 0.9549413101098069,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9433455882352941
+              },
+              "cards": {
+                "top1": 0.852557915057915,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8525355137099437
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8855555555555555
+              }
+            },
+            "loss": 0.6515795812414652,
+            "n": 9777
+          },
+          "seconds": 78.08172798156738,
+          "elapsed_seconds": 554.8442132472992,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3513507840
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.6055832616402529,
+          "val": {
+            "top1": 0.9179707476731104,
+            "macro_recall": 0.8972301648732574,
+            "domain_group_mean": 0.9152814943288183,
+            "selection_score": 0.9062558296010379,
+            "domains": {
+              "mixed": {
+                "top1": 0.9770609318996416,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9759663032705649
+              },
+              "game": {
+                "top1": 0.9556985990155245,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9450000000000001
+              },
+              "cards": {
+                "top1": 0.8559362934362934,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8557152296002644
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8844444444444444
+              }
+            },
+            "loss": 0.6444279755918821,
+            "n": 9777
+          },
+          "seconds": 78.04432725906372,
+          "elapsed_seconds": 632.8894612789154,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3502440448
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.6050566239621082,
+          "val": {
+            "top1": 0.9191981180321162,
+            "macro_recall": 0.899996256260821,
+            "domain_group_mean": 0.9163887927362884,
+            "selection_score": 0.9081925244985547,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.97604889329369
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9459191176470588
+              },
+              "cards": {
+                "top1": 0.859073359073359,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8591427155599604
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8844444444444444
+              }
+            },
+            "loss": 0.653048298092382,
+            "n": 9777
+          },
+          "seconds": 77.80490016937256,
+          "elapsed_seconds": 710.6950778961182,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501105152
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.6043081802532089,
+          "val": {
+            "top1": 0.920630050117623,
+            "macro_recall": 0.9021591353983531,
+            "domain_group_mean": 0.9190649260819292,
+            "selection_score": 0.9106120307401412,
+            "domains": {
+              "mixed": {
+                "top1": 0.9788530465949821,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9782375289065081
+              },
+              "game": {
+                "top1": 0.9594850435441121,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9493750000000001
+              },
+              "cards": {
+                "top1": 0.8583494208494209,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8586471754212092
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8855721393034826,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8899999999999999
+              }
+            },
+            "loss": 0.6463505374857335,
+            "n": 9777
+          },
+          "seconds": 77.26052069664001,
+          "elapsed_seconds": 787.9564282894135,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3508588544
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.6034602157601037,
+          "val": {
+            "top1": 0.9183798711261123,
+            "macro_recall": 0.8984464749381502,
+            "domain_group_mean": 0.9147951605485272,
+            "selection_score": 0.9066208177433387,
+            "domains": {
+              "mixed": {
+                "top1": 0.9745519713261649,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9738189626693095
+              },
+              "game": {
+                "top1": 0.9572131768269595,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9464705882352942
+              },
+              "cards": {
+                "top1": 0.8578667953667953,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8577799801783944
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.881111111111111
+              }
+            },
+            "loss": 0.6475550018596151,
+            "n": 9777
+          },
+          "seconds": 77.90799188613892,
+          "elapsed_seconds": 865.8652501106262,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3508572160
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.6033278359854651,
+          "val": {
+            "top1": 0.9181753093996113,
+            "macro_recall": 0.8979950947327539,
+            "domain_group_mean": 0.9126338788323389,
+            "selection_score": 0.9053144867825464,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.974810042946812
+              },
+              "game": {
+                "top1": 0.957970465732677,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9468382352941177
+              },
+              "cards": {
+                "top1": 0.856418918918919,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8566650148662042
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222219
+              }
+            },
+            "loss": 0.6525425758295488,
+            "n": 9777
+          },
+          "seconds": 78.03440380096436,
+          "elapsed_seconds": 943.9004368782043,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501785088
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.6023534476725644,
+          "val": {
+            "top1": 0.9180730285363609,
+            "macro_recall": 0.8969107876512902,
+            "domain_group_mean": 0.9124039779646578,
+            "selection_score": 0.904657382807974,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9759084902543772
+              },
+              "game": {
+                "top1": 0.9572131768269595,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9444485294117647
+              },
+              "cards": {
+                "top1": 0.8566602316602316,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8570366699702676
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222219
+              }
+            },
+            "loss": 0.6415722569134675,
+            "n": 9777
+          },
+          "seconds": 77.67616510391235,
+          "elapsed_seconds": 1021.5774087905884,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501146112
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.6021448333630077,
+          "val": {
+            "top1": 0.917254781630357,
+            "macro_recall": 0.8967779071793393,
+            "domain_group_mean": 0.912008137951249,
+            "selection_score": 0.9043930225652941,
+            "domains": {
+              "mixed": {
+                "top1": 0.9767025089605734,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.975429468120251
+              },
+              "game": {
+                "top1": 0.9572131768269595,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9453676470588236
+              },
+              "cards": {
+                "top1": 0.8542471042471043,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8550132144036999
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222219
+              }
+            },
+            "loss": 0.666581962498051,
+            "n": 9777
+          },
+          "seconds": 77.82318830490112,
+          "elapsed_seconds": 1099.401355266571,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501973504
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.6016785080561353,
+          "val": {
+            "top1": 0.9205277692543725,
+            "macro_recall": 0.9013092012823412,
+            "domain_group_mean": 0.9166317713697635,
+            "selection_score": 0.9089704863260524,
+            "domains": {
+              "mixed": {
+                "top1": 0.9763440860215054,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9756772381896266
+              },
+              "game": {
+                "top1": 0.9591063990912533,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9487377450980392
+              },
+              "cards": {
+                "top1": 0.8605212355212355,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8610009910802775
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8756218905472637,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8811111111111107
+              }
+            },
+            "loss": 0.6517550877245997,
+            "n": 9777
+          },
+          "seconds": 77.80568861961365,
+          "elapsed_seconds": 1177.207793712616,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501510656
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.6014137732929827,
+          "val": {
+            "top1": 0.9195049606218676,
+            "macro_recall": 0.8977956670244673,
+            "domain_group_mean": 0.9166872180198474,
+            "selection_score": 0.9072414425221573,
+            "domains": {
+              "mixed": {
+                "top1": 0.9777777777777777,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9772464486290056
+              },
+              "game": {
+                "top1": 0.957970465732677,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9459191176470588
+              },
+              "cards": {
+                "top1": 0.8576254826254827,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8580277502477701
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8805970149253731,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8855555555555554
+              }
+            },
+            "loss": 0.6464017414663837,
+            "n": 9777
+          },
+          "seconds": 77.8725118637085,
+          "elapsed_seconds": 1255.0810651779175,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3500986368
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.6007527283738364,
+          "val": {
+            "top1": 0.9184821519893628,
+            "macro_recall": 0.8982405218398383,
+            "domain_group_mean": 0.9140014289288559,
+            "selection_score": 0.9061209753843471,
+            "domains": {
+              "mixed": {
+                "top1": 0.9767025089605734,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9760075982821275
+              },
+              "game": {
+                "top1": 0.9564558879212419,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9455514705882353
+              },
+              "cards": {
+                "top1": 0.8573841698841699,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8577799801783944
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666666
+              }
+            },
+            "loss": 0.656621812908418,
+            "n": 9777
+          },
+          "seconds": 77.9517970085144,
+          "elapsed_seconds": 1333.033599615097,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3500912640
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.600739320099448,
+          "val": {
+            "top1": 0.9205277692543725,
+            "macro_recall": 0.9036202260477034,
+            "domain_group_mean": 0.9204456298541881,
+            "selection_score": 0.9120329279509458,
+            "domains": {
+              "mixed": {
+                "top1": 0.9777777777777777,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9773290386521308
+              },
+              "game": {
+                "top1": 0.9613782658084059,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9523529411764706
+              },
+              "cards": {
+                "top1": 0.8573841698841699,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8576560951437067
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8905472636815921,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8944444444444443
+              }
+            },
+            "loss": 0.6576905684614031,
+            "n": 9777
+          },
+          "seconds": 78.4017915725708,
+          "elapsed_seconds": 1411.4363098144531,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501764608
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.6004118569814807,
+          "val": {
+            "top1": 0.9196072414851182,
+            "macro_recall": 0.8968273650392493,
+            "domain_group_mean": 0.9120706249959514,
+            "selection_score": 0.9044489950176003,
+            "domains": {
+              "mixed": {
+                "top1": 0.9756272401433692,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9752229930624381
+              },
+              "game": {
+                "top1": 0.9553199545626656,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9427941176470589
+              },
+              "cards": {
+                "top1": 0.861969111969112,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8624876114965312
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777775
+              }
+            },
+            "loss": 0.6512108200762283,
+            "n": 9777
+          },
+          "seconds": 78.17721343040466,
+          "elapsed_seconds": 1489.6142880916595,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501441024
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.600388638708218,
+          "val": {
+            "top1": 0.9189935563056152,
+            "macro_recall": 0.8997500150502528,
+            "domain_group_mean": 0.9135217063989454,
+            "selection_score": 0.906635860724599,
+            "domains": {
+              "mixed": {
+                "top1": 0.9759856630824373,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9753468780971258
+              },
+              "game": {
+                "top1": 0.9594850435441121,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9487377450980392
+              },
+              "cards": {
+                "top1": 0.8573841698841699,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8577799801783944
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.872222222222222
+              }
+            },
+            "loss": 0.6524734529259382,
+            "n": 9777
+          },
+          "seconds": 77.8820230960846,
+          "elapsed_seconds": 1567.497166633606,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3499905024
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.6005562357597961,
+          "val": {
+            "top1": 0.9200163649381201,
+            "macro_recall": 0.8990996483858299,
+            "domain_group_mean": 0.9127383137141543,
+            "selection_score": 0.9059189810499921,
+            "domains": {
+              "mixed": {
+                "top1": 0.9777777777777777,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.976792203501817
+              },
+              "game": {
+                "top1": 0.9572131768269595,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9459191176470588
+              },
+              "cards": {
+                "top1": 0.8602799227799228,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8604641559299636
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8606965174129353,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8677777777777778
+              }
+            },
+            "loss": 0.6476328956991834,
+            "n": 9777
+          },
+          "seconds": 78.04606223106384,
+          "elapsed_seconds": 1645.543979883194,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3500482560
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.6001511651808067,
+          "val": {
+            "top1": 0.9194026797586171,
+            "macro_recall": 0.8994415112678533,
+            "domain_group_mean": 0.9145455817981305,
+            "selection_score": 0.9069935465329919,
+            "domains": {
+              "mixed": {
+                "top1": 0.9774193548387097,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9765031384208788
+              },
+              "game": {
+                "top1": 0.957970465732677,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9466544117647059
+              },
+              "cards": {
+                "top1": 0.8581081081081081,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8583581103402709
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8706467661691543,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8766666666666663
+              }
+            },
+            "loss": 0.6522325539352387,
+            "n": 9777
+          },
+          "seconds": 78.37272882461548,
+          "elapsed_seconds": 1723.9175095558167,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3500339200
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.6002094502985772,
+          "val": {
+            "top1": 0.9188912754423647,
+            "macro_recall": 0.8981240640957181,
+            "domain_group_mean": 0.9131339583859641,
+            "selection_score": 0.9056290112408412,
+            "domains": {
+              "mixed": {
+                "top1": 0.9770609318996416,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9766105054509415
+              },
+              "game": {
+                "top1": 0.9572131768269595,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9455514705882353
+              },
+              "cards": {
+                "top1": 0.8578667953667953,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8581516352824579
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8722222222222219
+              }
+            },
+            "loss": 0.653438916683831,
+            "n": 9777
+          },
+          "seconds": 77.76651167869568,
+          "elapsed_seconds": 1801.6847772598267,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501649920
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.6000193460408757,
+          "val": {
+            "top1": 0.9197095223483687,
+            "macro_recall": 0.9006846572872562,
+            "domain_group_mean": 0.9142507384519714,
+            "selection_score": 0.9074676978696138,
+            "domains": {
+              "mixed": {
+                "top1": 0.9763440860215054,
+                "images": 2790,
+                "groups": 2018,
+                "group_top1": 0.9755946481665014
+              },
+              "game": {
+                "top1": 0.957970465732677,
+                "images": 2641,
+                "groups": 1360,
+                "group_top1": 0.9479411764705883
+              },
+              "cards": {
+                "top1": 0.8597972972972973,
+                "images": 4144,
+                "groups": 2018,
+                "group_top1": 0.8601337958374629
+              },
+              "anime": {
+                "top1": 1.0,
+                "images": 1,
+                "groups": 1,
+                "group_top1": 1.0
+              },
+              "toys": {
+                "top1": 0.8656716417910447,
+                "images": 201,
+                "groups": 45,
+                "group_top1": 0.8733333333333331
+              }
+            },
+            "loss": 0.6519308108255348,
+            "n": 9777
+          },
+          "seconds": 77.76500582695007,
+          "elapsed_seconds": 1879.450534105301,
+          "gpu_peak_bytes": 3037617152,
+          "rss_bytes": 3501387776
+        }
+      ]
+    }
+  ],
+  "observedEpochs": 108,
+  "epochWorkSeconds": 7692.101085662842,
+  "timingDefinition": "Sum of actual history epoch seconds across all stages; excludes initialization and idle time. Last-session elapsed values are not summed after resumes.",
+  "warmupProvenanceNote": "Warmup snapshot helper copied scripts/forms instead of scripts/multidomain. Actual augmentation/training source is in Git commit ad9db25. Expanded-stage helper now snapshots its actual script directory.",
+  "reportingScriptSHA256": "b8054bb3a891c6bbdd3ea6e2f8b4f807325f1b100dcbbaed33dc14beccd812e5"
+}

@@ -116,8 +116,8 @@ struct ScannerLights: View {
         }
         .accessibilityHidden(true)
         .task(id: isChasing) {
-            activeLight = 0
             guard isChasing else { return }
+            activeLight = 0
             do {
                 while !Task.isCancelled {
                     try await Task.sleep(for: .milliseconds(220))
