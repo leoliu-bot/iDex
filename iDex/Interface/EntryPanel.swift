@@ -5,6 +5,12 @@ struct EntryPanel: View {
     var onClose: (() -> Void)? = nil
     @State private var showStats = false
 
+    init(store: DexStore, onClose: (() -> Void)? = nil, showStats: Bool = false) {
+        self._store = Bindable(wrappedValue: store)
+        self.onClose = onClose
+        self._showStats = State(initialValue: showStats)
+    }
+
     var body: some View {
         // Leave room for the footer inside the shell's inset border, even on
         // the shorter interior display and with the taller CJK pixel fonts.

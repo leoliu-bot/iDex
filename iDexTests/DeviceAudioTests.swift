@@ -5,6 +5,17 @@ import Testing
 @MainActor
 @Suite("Audio startup and lifecycle", .serialized)
 struct DeviceAudioTests {
+    @Test func narratorChoiceReachesPlaybackWithTaiwanMandarinLocale() async throws {
+        let backend = AudioPlaybackSpy()
+        let audio = DeviceAudio(worker: backend, defaults: isolatedDefaults())
+        audio.narratorVoice = .female
+        audio.resume()
+        audio.speak("皮卡丘。图鉴准备就绪。", languageCode: "zh-CN")
+        #expect(await waitUntil { backend.spokenCount == 1 })
+        #expect(backend.latestNarrator == .female)
+        #expect(backend.latestLanguageCode == "zh-TW")
+        audio.suspend()
+    }
     @Test func japaneseAnnouncementUsesJapaneseTextAndVoice() async throws {
         let backend = AudioPlaybackSpy()
         let audio = DeviceAudio(worker: backend, defaults: isolatedDefaults())
@@ -258,6 +269,7 @@ nonisolated private final class AudioPlaybackSpy: DeviceAudioPlayback, @unchecke
     private var cryCompletions: [@Sendable () -> Void] = []
     private var speechText: String?
     private var languageCode: String?
+    private var narrator: NarratorVoice?
     private var pending: [CheckedContinuation<Bool, Never>] = []
 
     init(deferredActivation: Bool = false) { self.deferredActivation = deferredActivation }
@@ -269,6 +281,7 @@ nonisolated private final class AudioPlaybackSpy: DeviceAudioPlayback, @unchecke
     var cries: [Int] { lock.withLock { cryIDs } }
     var latestSpeechText: String? { lock.withLock { speechText } }
     var latestLanguageCode: String? { lock.withLock { languageCode } }
+    var latestNarrator: NarratorVoice? { lock.withLock { narrator } }
 
     func playCry(dexID: Int, request: AudioPlaybackRequest, completion: @escaping @Sendable () -> Void) {
         guard !request.isCancelled else { return }
@@ -315,6 +328,7 @@ nonisolated private final class AudioPlaybackSpy: DeviceAudioPlayback, @unchecke
             speechRequest = request
             speechText = text
             self.languageCode = languageCode
+            self.narrator = narrator
         }
     }
     func stopSound() {}

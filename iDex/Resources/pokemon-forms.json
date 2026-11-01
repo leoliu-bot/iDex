@@ -11984,7 +11984,7 @@
     "formOrder": 3,
     "cryID": 20,
     "spriteAsset": "pokemon-form-10195",
-    "formCategory": "regional",
+    "formCategory": "alternate",
     "aliases": [
       "raticate-totem-alola",
       "阿罗拉拉达",
@@ -12352,7 +12352,7 @@
     "formOrder": 13,
     "cryID": 25,
     "spriteAsset": "pokemon-form-10201",
-    "formCategory": "regional",
+    "formCategory": "alternate",
     "aliases": [
       "pikachu-alola-cap",
       "阿罗拉皮卡丘",

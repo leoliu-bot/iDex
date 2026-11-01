@@ -6,6 +6,53 @@ import UIKit
 @MainActor
 @Suite(.serialized)
 struct ScannerLayoutTests {
+    @Test(arguments: AppLanguage.allCases)
+    func detailDisplayKeepsItsBoundsForNotesAndStats(language: AppLanguage) throws {
+        let store = DexStore()
+        let savedLanguage = UserDefaults.standard.object(forKey: "idex.language")
+        defer { UserDefaults.standard.set(savedLanguage, forKey: "idex.language") }
+        store.language = language
+        store.selected = PokemonCatalog.shared.pokemon(id: 25)
+        for size in [CGSize(width: 466, height: 678), CGSize(width: 465, height: 669)] {
+            var bounds: [CGRect] = []
+            for stats in [false, true] {
+                let renderer = ImageRenderer(content: EntryPanel(store: store, showStats: stats)
+                    .frame(width: size.width, height: size.height).background(ShellSurface()))
+                renderer.scale = 1
+                let image = try #require(renderer.uiImage)
+                bounds.append(try greenDisplayBounds(image))
+                Attachment.record(image, named: "detail-\(language.rawValue)-\(Int(size.width))-\(stats ? "stats" : "notes")", as: .png)
+            }
+            #expect(bounds[0] == bounds[1])
+        }
+        store.suspend()
+    }
+
+    private func greenDisplayBounds(_ image: UIImage) throws -> CGRect {
+        let cgImage = try #require(image.cgImage)
+        let width = cgImage.width, height = cgImage.height
+        var pixels = [UInt8](repeating: 0, count: width * height * 4)
+        try pixels.withUnsafeMutableBytes { bytes in
+            let context = try #require(CGContext(data: bytes.baseAddress, width: width, height: height,
+                bitsPerComponent: 8, bytesPerRow: width * 4, space: CGColorSpaceCreateDeviceRGB(),
+                bitmapInfo: CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.premultipliedLast.rawValue))
+            context.draw(cgImage, in: CGRect(x: 0, y: 0, width: width, height: height))
+        }
+        var minX = width, minY = height, maxX = -1, maxY = -1
+        for y in 80..<(height - 110) {
+            for x in 0..<width {
+                let i = (y * width + x) * 4
+                let r = Int(pixels[i]), g = Int(pixels[i + 1]), b = Int(pixels[i + 2])
+                if r > 90 && g > r + 8 && b < g - 25 {
+                    minX = min(minX, x); minY = min(minY, y)
+                    maxX = max(maxX, x); maxY = max(maxY, y)
+                }
+            }
+        }
+        #expect(maxX > minX && maxY > minY)
+        return CGRect(x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1)
+    }
+
     @Test func scanningCyclesThroughThreeLightsAndStopsForSpeech() async throws {
         let scene = try #require(UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first)
         let previousWindow = scene.windows.first { $0.isKeyWindow }
