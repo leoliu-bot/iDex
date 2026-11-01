@@ -1,4 +1,3 @@
-import AVFoundation
 import Foundation
 import Observation
 import UIKit
@@ -17,13 +16,6 @@ final class DeviceAudio {
     private(set) var isSpeaking = false
     private(set) var speechLevel = 0.0
 
-    var systemVoiceIdentifier: String {
-        didSet { defaults.set(systemVoiceIdentifier, forKey: "idex.systemVoiceIdentifier"); stopSpeaking() }
-    }
-    var importedVoiceFilename: String {
-        didSet { defaults.set(importedVoiceFilename, forKey: "idex.importedVoiceFilename"); stopSpeaking() }
-    }
-
     var narratorVoice: NarratorVoice {
         didSet {
             defaults.set(narratorVoice.rawValue, forKey: "idex.narratorVoice")
@@ -41,6 +33,13 @@ final class DeviceAudio {
 
     @ObservationIgnored private let worker: any DeviceAudioPlayback
     @ObservationIgnored private let defaults: UserDefaults
+    private var systemVoicePreferences: [String: NarratorVoiceSelection.Preference] = [:] {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(systemVoicePreferences) {
+                defaults.set(encoded, forKey: "idex.systemVoicePreferences")
+            }
+        }
+    }
     @ObservationIgnored private var isActive = false
     @ObservationIgnored private var soundRequest: AudioPlaybackRequest?
     @ObservationIgnored private var speechRequest: AudioPlaybackRequest?
@@ -57,10 +56,27 @@ final class DeviceAudio {
         self.worker = worker
         self.defaults = defaults
         narratorVoice = defaults.string(forKey: "idex.narratorVoice").flatMap(NarratorVoice.init(rawValue:)) ?? .male
-        systemVoiceIdentifier = defaults.string(forKey: "idex.systemVoiceIdentifier") ?? ""
-        importedVoiceFilename = defaults.string(forKey: "idex.importedVoiceFilename") ?? ""
         isSoundEnabled = defaults.object(forKey: "idex.soundEnabled") != nil
             ? defaults.bool(forKey: "idex.soundEnabled") : true
+        if let data = defaults.data(forKey: "idex.systemVoicePreferences"),
+           let saved = try? JSONDecoder().decode([String: NarratorVoiceSelection.Preference].self, from: data) {
+            systemVoicePreferences = saved
+        }
+    }
+
+    func selectedSystemVoice(languageCode: String) -> NarratorVoiceSelection.Preference? {
+        systemVoicePreferences[NarratorVoiceSelection.languageKey(languageCode)]
+    }
+
+    func selectSystemVoice(_ voice: NarratorVoiceSelection.Choice, languageCode: String) {
+        guard !voice.isPersonal, !voice.isNovelty else { return }
+        systemVoicePreferences[NarratorVoiceSelection.languageKey(languageCode)] = .init(voice)
+        stopSpeaking()
+    }
+
+    func useAutomaticVoice(_ voice: NarratorVoice, languageCode: String) {
+        systemVoicePreferences.removeValue(forKey: NarratorVoiceSelection.languageKey(languageCode))
+        narratorVoice = voice
     }
 
     func resume() {
@@ -120,17 +136,12 @@ final class DeviceAudio {
         guard isActive, isSoundEnabled, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         stopSpeaking()
         let generation = speechGeneration
-        let packURL: URL? = narratorVoice == .imported
-            ? VoicePackLibrary.url(filename: importedVoiceFilename)
-            : narratorVoice.usesPack ? VoicePackFile.bundledURL(female: narratorVoice.gender == .female) : nil
-        let request = AudioPlaybackRequest(voicePackURL: packURL,
-            systemVoiceIdentifier: narratorVoice == .system ? systemVoiceIdentifier : nil,
-            speechLevel: { [weak self] level in
-                Task { @MainActor [weak self] in
-                    guard let self, generation == self.speechGeneration, self.isActive, self.isSoundEnabled else { return }
-                    self.speechLevel = self.isSpeaking ? level : 0
-                }
-            }) { [weak self] speaking in
+        let request = AudioPlaybackRequest(preferredVoiceIdentifier: selectedSystemVoice(languageCode: languageCode)?.identifier, speechLevel: { [weak self] level in
+            Task { @MainActor [weak self] in
+                guard let self, generation == self.speechGeneration, self.isActive, self.isSoundEnabled else { return }
+                self.speechLevel = self.isSpeaking ? level : 0
+            }
+        }) { [weak self] speaking in
             Task { @MainActor [weak self] in
                 guard let self, generation == self.speechGeneration,
                       self.isActive, self.isSoundEnabled else { return }

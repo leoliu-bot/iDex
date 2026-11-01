@@ -1,4 +1,4 @@
-name: Build Pokédex Forms IPA
+name: Build Pokédex 1.3 IPA
 
 on:
   push:
@@ -32,15 +32,15 @@ jobs:
         run: |
           set -euo pipefail
           test -f TrainingResources/national-best.pt
-          mkdir -p artifacts/forms
-          cp TrainingResources/training-labels.json artifacts/forms/training-labels.json
+          mkdir -p artifacts/multidomain
+          cp TrainingResources/training-labels.json artifacts/multidomain/training-labels.json
           python -m venv .export-env
           .export-env/bin/python -m pip install 'coremltools==9.0' 'torch==2.13.0' 'torchvision==0.28.0' 'numpy==2.4.6' 'pillow==13.0.0'
       - name: Export and numerically validate the FP32 model
         run: |
           set -euo pipefail
-          .export-env/bin/python scripts/forms/export.py --checkpoint TrainingResources/national-best.pt --out artifacts/forms/export --deployment iOS18
-          .export-env/bin/python scripts/forms/validate_and_publish.py
+          .export-env/bin/python scripts/multidomain/export.py --checkpoint TrainingResources/national-best.pt --out artifacts/multidomain/export --deployment iOS18
+          .export-env/bin/python scripts/multidomain/validate_and_publish.py
       - name: Test catalog, inference, audio, and layouts
         run: |
           set -euo pipefail
@@ -51,7 +51,7 @@ jobs:
           xcodebuild test -project iDex.xcodeproj -scheme iDex \
             -destination "platform=iOS Simulator,id=$device_id" \
             -parallel-testing-enabled NO \
-            -resultBundlePath artifacts/forms/Tests.xcresult \
+            -resultBundlePath artifacts/multidomain/Tests.xcresult \
             -only-testing:iDexTests/CatalogTests \
             -only-testing:iDexTests/RecognitionTests \
             -only-testing:iDexTests/SelectedModelTests \
@@ -60,15 +60,16 @@ jobs:
             -only-testing:iDexTests/FormCatalogTests \
             -only-testing:iDexTests/NarratorVoiceTests \
             -only-testing:iDexTests/DeviceAudioTests \
+            -only-testing:iDexTests/AudioPlaybackTests/silentNativeSpeechReportsItsActualStartAndFinish \
             -only-testing:iDexUITests \
             CODE_SIGNING_ALLOWED=NO
       - name: Export readable test results and screenshots
         if: always()
         run: |
-          if [ -d artifacts/forms/Tests.xcresult ]; then
-            xcrun xcresulttool get test-results summary --path artifacts/forms/Tests.xcresult > artifacts/forms/reports/ios-tests.json
-            cat artifacts/forms/reports/ios-tests.json
-            xcrun xcresulttool export attachments --path artifacts/forms/Tests.xcresult --output-path artifacts/forms/screenshots
+          if [ -d artifacts/multidomain/Tests.xcresult ]; then
+            xcrun xcresulttool get test-results summary --path artifacts/multidomain/Tests.xcresult > artifacts/multidomain/reports/ios-tests.json
+            cat artifacts/multidomain/reports/ios-tests.json
+            xcrun xcresulttool export attachments --path artifacts/multidomain/Tests.xcresult --output-path artifacts/multidomain/screenshots
           fi
       - name: Build the iPhone app
         run: |
@@ -79,8 +80,10 @@ jobs:
           mkdir -p output/Payload
           cp -R build/Build/Products/Release-iphoneos/iDex.app output/Payload/
           cd output
-          zip -q -r Pokedex-Forms-unsigned.ipa Payload
-          unzip -tq Pokedex-Forms-unsigned.ipa
+          zip -q -r Pokedex-1.3-unsigned.ipa Payload
+          unzip -tq Pokedex-1.3-unsigned.ipa
+      - name: Verify the final IPA before upload
+        run: .export-env/bin/python scripts/multidomain/verify_ipa.py output/Pokedex-1.3-unsigned.ipa --out artifacts/multidomain/reports/ipa-verification.json
       - name: Keep the validated model in this development branch
         if: github.ref_name == 'national-pokedex'
         run: |
@@ -95,7 +98,7 @@ jobs:
       - uses: actions/upload-artifact@v7
         with:
           name: Pokedex-IPA
-          path: output/Pokedex-Forms-unsigned.ipa
+          path: output/Pokedex-1.3-unsigned.ipa
           if-no-files-found: error
           retention-days: 7
           compression-level: 0
@@ -104,9 +107,10 @@ jobs:
         with:
           name: Pokedex-validation
           path: |
-            artifacts/forms/reports/coreml-parity.json
-            artifacts/forms/reports/ios-tests.json
-            artifacts/forms/export/export_receipt.json
-            artifacts/forms/screenshots
-            artifacts/forms/Tests.xcresult
+            artifacts/multidomain/reports/coreml-parity.json
+            artifacts/multidomain/reports/ios-tests.json
+            artifacts/multidomain/reports/ipa-verification.json
+            artifacts/multidomain/export/export_receipt.json
+            artifacts/multidomain/screenshots
+            artifacts/multidomain/Tests.xcresult
           retention-days: 7

@@ -6,7 +6,7 @@ import importlib.util
 import json
 from pathlib import Path
 import random
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT/'artifacts/multidomain'
@@ -32,6 +32,28 @@ def main():
     references = []
     for name in ['mixed','game','card','plush']:
         references += json.loads((OUT/f'{name}-references.json').read_text(encoding='utf-8'))
+    card_review_path=OUT/'review/card-form-review.json'
+    card_review=json.loads(card_review_path.read_text()) if card_review_path.exists() else {}
+    checked=[]
+    for ref in references:
+        if ref.get('formReviewRequired'):
+            reviewed_target=card_review.get(ref['sha256'])
+            if reviewed_target is None:continue
+            ref=dict(ref,entry_id=reviewed_target)
+        checked.append(ref)
+    references=checked
+    # Keep the full card geometry as well as its cropped illustration. Name/HP
+    # and attack-text regions are blurred, so printed species names are not the
+    # training label shortcut. Both views retain the SAME card source group.
+    full_cards=[]
+    for ref in references:
+        if not ref.get('cardID'):continue
+        raw_path=OUT/'sources/tcg'/f'{ref["cardID"]}.png'
+        if raw_path.exists():
+            full_cards.append(dict(ref,path=raw_path.relative_to(ROOT).as_posix(),
+                sha256=ref['originalSHA256'],domain='tcg_masked_card_scan',cardFullScan=True,
+                source_path='tcg-masked-scan/'+ref['cardID']))
+    references+=full_cards
     review_path = OUT/'review/domain-review.json'
     reviewed = json.loads(review_path.read_text()) if review_path.exists() else {}
     unique = {p['sha256']:p for p in references if aliases.get(p['entry_id'],p['entry_id']) in label_ids}
@@ -40,6 +62,10 @@ def main():
         with Image.open(ROOT/ref['path']) as original:
             rgba = ImageOps.exif_transpose(original).convert('RGBA')
             rgb = Image.alpha_composite(Image.new('RGBA',rgba.size,'white'),rgba).convert('RGB')
+            if ref.get('cardFullScan'):
+                w,h=rgb.size
+                for box in [(0,0,w,round(h*.17)),(0,round(h*.55),w,round(h*.97))]:
+                    rgb.paste(rgb.crop(box).filter(ImageFilter.GaussianBlur(8)),box)
             rgb.thumbnail((640,640))
             side = max(rgb.size)
             image = Image.new('RGB',(side,side),'white')

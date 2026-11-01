@@ -27,16 +27,13 @@ nonisolated final class AudioPlaybackRequest: @unchecked Sendable {
     private var pulseGeneration = 0
     private let speechActivity: (@Sendable (Bool) -> Void)?
     private let speechLevel: (@Sendable (Double) -> Void)?
-    let voicePackURL: URL?
-    let systemVoiceIdentifier: String?
+    let preferredVoiceIdentifier: String?
 
-    init(voicePackURL: URL? = nil, systemVoiceIdentifier: String? = nil,
-         speechLevel: (@Sendable (Double) -> Void)? = nil,
+    init(preferredVoiceIdentifier: String? = nil, speechLevel: (@Sendable (Double) -> Void)? = nil,
          speechActivity: (@Sendable (Bool) -> Void)? = nil) {
+        self.preferredVoiceIdentifier = preferredVoiceIdentifier
         self.speechActivity = speechActivity
         self.speechLevel = speechLevel
-        self.voicePackURL = voicePackURL
-        self.systemVoiceIdentifier = systemVoiceIdentifier
     }
 
     var isCancelled: Bool { lock.withLock { cancelled } }
@@ -119,8 +116,6 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
     private var currentCue: DeviceSound?
     private var synthesizer: AVSpeechSynthesizer?
     private var speechObserver: SpeechPlaybackObserver?
-    private var voices: [String: AVSpeechSynthesisVoice] = [:]
-    private var packPlayback: VoicePackPlayback?
 
     init(soundVolume: Float = 0.32, speechVolume: Float = 0.9) {
         self.soundVolume = soundVolume
@@ -224,7 +219,6 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
     func deactivate() async {
         await withCheckedContinuation { continuation in
             queue.async {
-                self.packPlayback?.stop()
                 self.currentRequest = nil
                 self.currentCue = nil
                 self.player?.stop()
@@ -316,18 +310,6 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
             guard !request.isCancelled else { return }
             let interval = DexPerformance.begin("Audio Speech Startup")
             defer { DexPerformance.end("Audio Speech Startup", interval) }
-            self.packPlayback?.stop()
-            if languageCode.hasPrefix("zh"), let url = request.voicePackURL {
-                do {
-                    self.synthesizer?.stopSpeaking(at: .immediate)
-                    if self.packPlayback == nil { self.packPlayback = VoicePackPlayback(queue: self.queue, volume: self.speechVolume) }
-                    try self.packPlayback?.play(text: text, url: url, retro: narrator.isRetro, request: request)
-                    return
-                } catch {
-                    self.packPlayback?.stop()
-                    Self.logger.warning("Offline voice clip unavailable; using installed voice: \(error.localizedDescription, privacy: .public)")
-                }
-            }
             let synthesizer: AVSpeechSynthesizer
             if let existing = self.synthesizer {
                 synthesizer = existing
@@ -338,16 +320,16 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
                 self.synthesizer = synthesizer
             }
             let locale = NarratorVoice.readingLocale(languageCode)
-            let cacheKey = locale + ":" + narrator.rawValue
-            let explicit = request.systemVoiceIdentifier.flatMap { AVSpeechSynthesisVoice(identifier: $0) }
-            let voice = explicit ?? NarratorVoiceSelection.installed(locale: locale, narrator: narrator) ?? self.voices[cacheKey]
-            if let voice { self.voices[cacheKey] = voice }
+            let voice = NarratorVoiceSelection.installed(locale: locale, narrator: narrator,
+                preferredIdentifier: request.preferredVoiceIdentifier)
+            let delivery = NarratorVoiceSelection.delivery(locale: locale, narrator: narrator,
+                explicitVoice: voice != nil && voice?.identifier == request.preferredVoiceIdentifier)
             let utterance = AVSpeechUtterance(string: text)
             utterance.voice = voice
-            utterance.rate = locale.hasPrefix("zh") ? 0.47 : 0.46
-            utterance.pitchMultiplier = narrator.pitch
+            utterance.rate = delivery.rate
+            utterance.pitchMultiplier = delivery.pitch
             utterance.volume = self.speechVolume
-            utterance.preUtteranceDelay = 0.28
+            utterance.preUtteranceDelay = delivery.preDelay
             utterance.postUtteranceDelay = 0.12
             guard !request.isCancelled else { return }
             let observer = SpeechPlaybackObserver(utterance: utterance, request: request)
@@ -358,7 +340,7 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
     }
 
     func stopSpeaking() {
-        queue.async { self.synthesizer?.stopSpeaking(at: .immediate); self.packPlayback?.stop() }
+        queue.async { self.synthesizer?.stopSpeaking(at: .immediate) }
     }
 
     /// A nonblocking snapshot also waits for previously enqueued commands.
@@ -370,7 +352,7 @@ nonisolated final class AudioPlaybackWorker: DeviceAudioPlayback, @unchecked Sen
                     cachedSoundCount: self.buffers.count,
                     hasSpeechSynthesizer: self.synthesizer != nil,
                     soundIsPlaying: self.currentRequest != nil && (self.player?.isPlaying ?? false),
-                    speechIsSpeaking: (self.synthesizer?.isSpeaking ?? false) || (self.packPlayback?.isPlaying ?? false),
+                    speechIsSpeaking: self.synthesizer?.isSpeaking ?? false,
                     renderedFrames: progress.frames,
                     renderedSignalFrames: progress.signalFrames,
                     outputPorts: AVAudioSession.sharedInstance().currentRoute.outputs.map { $0.portType.rawValue },

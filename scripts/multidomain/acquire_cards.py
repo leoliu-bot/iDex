@@ -19,7 +19,7 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'artifacts/multidomain'
 
-def key(name):return re.sub('[^a-z0-9]','',name.lower())
+def key(name):return re.sub('[^a-z0-9]','',name.lower().replace('♀','f').replace('♂','m'))
 
 async def main():
     forms=json.loads((ROOT/'iDex/Resources/pokemon-forms.json').read_text(encoding='utf-8'))
@@ -30,6 +30,13 @@ async def main():
     for name,identifier in extra.items():
         p=next(p for p in forms if p['formIdentifier']==identifier);index[key(name)]=[p]
     base=json.loads((ROOT/'iDex/Resources/pokemon-national.json').read_text(encoding='utf-8'))
+    review_species={25,386,479,487,492,718}
+    for form in forms:
+        species=next(p for p in base if p['id']==form['speciesID'])
+        name=form.get('englishFormName','')
+        if key(species['englishName']) in key(name):
+            values=index.setdefault(key(name),[])
+            if not any(p['id']==form['id'] for p in values):values.append(form)
     aliases=json.loads((ROOT/'artifacts/forms/aliases.json').read_text())
     families=collections.defaultdict(list)
     for form in forms:
@@ -41,6 +48,8 @@ async def main():
         if not family or all(form['formCategory'] in ['regional','mega','gigantamax','fusion'] for form in family):
             index[key(pokemon['englishName'])]=[pokemon]
     # Explicit regional/fusion card aliases are separate from ordinary names.
+    for pokemon in base:
+        if pokemon['id'] in review_species:index[key(pokemon['englishName'])]=[pokemon]
     for form in forms:
         region=next((r for r in ['alola','galar','hisui','paldea'] if '-'+r in form['formIdentifier']),None)
         if region:
@@ -115,11 +124,15 @@ async def main():
                     square.paste(crop,((side-crop.width)//2,(side-crop.height)//2))
                     destination=OUT/'sources/tcg-art'/f'{card_id}.png';destination.parent.mkdir(parents=True,exist_ok=True);square.save(destination)
                 records.append({'entry_id':p['id'],'path':destination.relative_to(ROOT).as_posix(),'source_path':'tcg-art/'+card_id,'source_group':'tcg-art:'+card_id,'source':'PokemonTCG-pinned-expanded','domain':'tcg_card_art',
+                                'formReviewRequired':p['id'] in review_species,
                                 'url':url,'sha256':hashlib.sha256(destination.read_bytes()).hexdigest(),'originalSHA256':hashlib.sha256(raw).hexdigest(),
                                 'cardID':card_id,'cardName':card['name'],'artist':card.get('artist'),'metadataRevision':revision,
                                 'crop':[.08,.20,.92,.50]})
         await asyncio.gather(*(one(item) for item in chosen))
-    records.sort(key=lambda r:(r['entry_id'],r['cardID']))
+    previous=json.loads((OUT/'card-references.json').read_text()) if (OUT/'card-references.json').exists() else []
+    merged={(r['cardID'],r['entry_id']):r for r in previous}
+    merged.update({(r['cardID'],r['entry_id']):r for r in records})
+    records=sorted(merged.values(),key=lambda r:(r['entry_id'],r['cardID']))
     (OUT/'card-references.json').write_text(json.dumps(records,indent=2)+'\n',encoding='utf-8',newline='\n')
     (OUT/'unavailable-card-images.json').write_text(json.dumps(unavailable,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(f'Acquired {len(records)} card-art references',flush=True)

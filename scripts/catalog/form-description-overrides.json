@@ -1,0 +1,858 @@
+{
+  "schemaVersion": 1,
+  "editorialPolicy": "Concise original paraphrases of verified official form-specific field notes. Species names and all gameplay/resource fields stay unchanged.",
+  "entries": {
+    "rattata-alola": {
+      "chineseDescription": "入夜后会溜进民宅寻找食物，尤其偏爱新鲜食材。灵敏的眼光甚至能帮人挑出上好的食物。",
+      "englishDescription": "It slips into homes after dark in search of food. Its fondness for fresh ingredients makes it a surprisingly useful shopping companion.",
+      "japaneseDescription": "夜になると民家へ忍び込み、食べ物を探す。新鮮な食材に目がなく、買い物に連れていくと品選びを助けてくれる。",
+      "entryID": 110193,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0019_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "40dc43a98453053f76de01fb039f5ce5a5929f6ba2d6ca72a90138a044f54df6"
+        }
+      ]
+    },
+    "raticate-alola": {
+      "chineseDescription": "率领小拉达成群行动，把搜集来的食物堆满巢穴。对食物十分贪心，群体间常为觅食地争斗。",
+      "englishDescription": "It leads groups of Rattata and fills its nest with their gathered food. Rival groups fiercely contest the best feeding grounds.",
+      "japaneseDescription": "コラッタの群れを率い、集めさせた食べ物を巣いっぱいにためこむ。食欲が強く、群れどうしで餌場を激しく争う。",
+      "entryID": 110194,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0020_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "9c6f9a91d681f1471f136fa4962ee73a5b4d352136100b82ceedafe95cb35949"
+        }
+      ]
+    },
+    "raichu-alola": {
+      "chineseDescription": "踩着尾巴，靠精神力量在空中自在滑行。人们认为阿罗拉的气候与食物，让它拥有了这副模样。",
+      "englishDescription": "It rides its tail through the air using psychic power. Alola's climate and food are thought to have shaped this unusual form.",
+      "japaneseDescription": "しっぽに乗り、念力で空中をすべるように移動する。アローラの気候や食べ物が、この姿を生んだと考えられている。",
+      "entryID": 110202,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0026_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "00f0fbf77fbb01d8357d0f407328c4d7231e37763ce960e6a2eedf60e8c72637"
+        }
+      ]
+    },
+    "sandshrew-alola": {
+      "chineseDescription": "生活在雪山，身上的钢甲坚硬得难以蜷成球。阿罗拉还有让它在冰上比拼滑行距离的传统庆典。",
+      "englishDescription": "Its rigid steel shell keeps it from curling into a ball. In Alola, traditional festivals feature contests to see how far it can slide over ice.",
+      "japaneseDescription": "雪山に暮らし、硬い鋼の殻のため体を丸められない。アローラには、氷の上をどれだけ遠くまで滑れるか競う祭りがある。",
+      "entryID": 110203,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0027_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "b2bce9992f78bbe29cf9d6e87b2a9082a6b9bde5f4bd33531061cc16c73d93a3"
+        }
+      ]
+    },
+    "sandslash-alola": {
+      "chineseDescription": "用利爪抓紧山壁，连冰山也能稳稳攀登。背上的钢针覆着寒冰，刺伤对手时还会留下冻伤。",
+      "englishDescription": "Its claws grip mountain walls firmly enough to climb even icy slopes. Ice coats its steel spines, adding frostbite to the wounds they inflict.",
+      "japaneseDescription": "鋭い爪を山肌に食い込ませ、氷山も滑らずに登る。鋼の針は氷に覆われ、刺した相手に傷と凍傷を負わせる。",
+      "entryID": 110204,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0028_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "16d3f3c9f94391f0500ba7855dd825c5aa321344060540e8d7b86f742f3de9a8"
+        }
+      ]
+    },
+    "vulpix-alola": {
+      "chineseDescription": "在积雪深厚的山中结伴生活，用冰冷的吐息保护自己。天气变热时，会用六条尾巴撒出冰粒降温。",
+      "englishDescription": "It lives in groups on deeply snow-covered mountains and defends itself with freezing breath. In warm weather, its six tails scatter ice to cool it down.",
+      "japaneseDescription": "雪深い山で仲間と暮らし、冷たい息で身を守る。暑くなると六本のしっぽで氷の粒をまき、体を冷やす。",
+      "entryID": 110205,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0037_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "5ec1fedcd454ac59d12845268138a19cb61cfc8c3071852853c7e6cb853c19b2"
+        }
+      ]
+    },
+    "ninetales-alola": {
+      "chineseDescription": "栖息在终年积雪的圣山，能从被毛中凝出冰粒。性情温和，传说会引领迷路的善良旅人下山。",
+      "englishDescription": "It inhabits sacred mountains covered in permanent snow and forms ice grains in its coat. Legends say it guides kindhearted, lost travelers to safety.",
+      "japaneseDescription": "万年雪に覆われた聖なる山にすみ、体毛から氷の粒を生み出す。心優しい遭難者を山のふもとへ導くという伝説がある。",
+      "entryID": 110206,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0038_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "62c0824a925f8859c0a76d4c51910299c5eb5e6b7355d08f435ebb19d6f9bb46"
+        }
+      ]
+    },
+    "diglett-alola": {
+      "chineseDescription": "头顶闪亮的金色细丝，其实是变成金属的胡须。会把它们伸出地面探察四周，也会摇动胡须与同伴交流。",
+      "englishDescription": "The golden strands on its head are metallic whiskers. It extends them above ground to sense its surroundings and moves them to communicate with others.",
+      "japaneseDescription": "頭の金色の毛は、金属に変化したひげ。地上へ伸ばして周囲を探り、揺らして仲間に合図を送る。",
+      "entryID": 110207,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0050_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "2f69ec029c16bd29f5d775aa037fe082d6e2c7d0fa37268e239a9614e363e19a"
+        }
+      ]
+    },
+    "dugtrio-alola": {
+      "chineseDescription": "沉重的金属胡须让它行动缓慢，却能敏锐感知远处的振动。拥有强大的挖掘力量，连坚硬岩层也能凿穿。",
+      "englishDescription": "Its heavy metallic whiskers slow it down but detect distant vibrations with great sensitivity. Its digging strength can break through even solid bedrock.",
+      "japaneseDescription": "重い金属のひげで動きは遅いが、遠くの振動まで敏感に感じ取る。硬い岩盤を掘り抜くほど力が強い。",
+      "entryID": 110208,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0051_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "8a8b0d9da0b60bf410e4ba73f60697f9843c955a12fa6b77e0b48edc70e6b7e5"
+        }
+      ]
+    },
+    "meowth-alola": {
+      "chineseDescription": "曾受阿罗拉王族宠爱，至今仍对食物十分挑剔。聪明而自尊心强，战斗时会反复瞄准对手的弱点。",
+      "englishDescription": "Once pampered by Alolan royalty, it remains a fussy eater. Intelligent and proud, it fights shrewdly by repeatedly targeting an opponent's weak points.",
+      "japaneseDescription": "かつてアローラの王族に大切にされ、今も食べ物にはうるさい。知能と自尊心が高く、戦いでは相手の弱点を繰り返し狙う。",
+      "entryID": 110209,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0052_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "27dce70c7f9e389e8da315109566f19e52e6ee1705f52290611566422a9516c4"
+        }
+      ]
+    },
+    "persian-alola": {
+      "chineseDescription": "圆润的脸庞在阿罗拉被视作富贵的象征，因此备受呵护。身手出众，又善于耍弄狡猾的战术。",
+      "englishDescription": "Its round face is prized in Alola as a sign of prosperity. Excellent physical ability and underhanded tactics make it a difficult opponent.",
+      "japaneseDescription": "丸い顔はアローラで豊かさの象徴とされ、大切にされている。身体能力に優れ、ずる賢い戦い方も得意だ。",
+      "entryID": 110210,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0053_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "427e36d2f73f22cf2049ee1c059eefacb1aa14c6fbe1abea2e6720101fa3df57"
+        }
+      ]
+    },
+    "geodude-alola": {
+      "chineseDescription": "岩石般的身体带有磁力，铁砂会聚在磁力最强的部位。若不小心踩到睡着的它，便可能被电得全身发麻。",
+      "englishDescription": "Iron sand gathers on the most strongly magnetic parts of its rocky body. Stepping on one while it sleeps can deliver a numbing electric shock.",
+      "japaneseDescription": "岩の体には磁力があり、強い部分に砂鉄が集まる。眠っているところを踏むと、電撃で全身がしびれることがある。",
+      "entryID": 110211,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0074_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "9f2d4ab6467b1224ba399f39404e3063f90385df05468cb72c888b3a6cbe9e9f"
+        }
+      ]
+    },
+    "graveler-alola": {
+      "chineseDescription": "吃下喜爱的岩石后，电力便遍布全身。性格好斗，争夺食物时互相碰撞，会迸出耀眼的闪光与爆响。",
+      "englishDescription": "The rocks it eats leave its whole body charged with electricity. Combative by nature, it crashes into rivals over food in bursts of light and noise.",
+      "japaneseDescription": "好物の岩を食べることで全身が電気を帯びる。気性が荒く、餌を争ってぶつかり合うと、まばゆい光と大きな音が生じる。",
+      "entryID": 110212,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0075_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "47dce086a7b666495389cb5735fc58614a7e6f8a566bea2b36893ed792b6baef"
+        }
+      ]
+    },
+    "golem-alola": {
+      "chineseDescription": "顽固而难以亲近，心情不佳时会放电怒吼。发射的岩石裹着电流，即使只是擦过，也足以让对手麻痹。",
+      "englishDescription": "Stubborn and difficult to approach, it discharges electricity with thunderous roars when upset. Even a glancing hit from its electrified rocks can paralyze a foe.",
+      "japaneseDescription": "頑固で気難しく、機嫌が悪いと放電しながら大声でほえる。撃ち出す岩は電気を帯び、かすめただけでも相手をしびれさせる。",
+      "entryID": 110213,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0076_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "56a64f68637e3d8c39b7f65af21dc861655af716e95f5041e2c8fb3d20a799d2"
+        }
+      ]
+    },
+    "grimer-alola": {
+      "chineseDescription": "能把各种垃圾当作美食，在处理垃圾的地方很受欢迎。毒素被留在体内，因此靠近时并不会闻到其他臭泥的恶臭。",
+      "englishDescription": "It happily eats almost any rubbish, making it welcome at waste-disposal sites. Keeping toxins inside its body prevents the strong smell of Grimer from other regions.",
+      "japaneseDescription": "どんなごみもおいしく食べるため、ごみ処理場で重宝される。毒を体内にためるので、ほかの地方のベトベターのような悪臭はしない。",
+      "entryID": 110214,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0088_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "c0322ea004328355ddde67ad44af88dfe8be6d630047cd0c142e5a56bed4dda8"
+        }
+      ]
+    },
+    "muk-alola": {
+      "chineseDescription": "体内多种毒素不断发生反应，维系着它的生命。看似牙齿与爪子的坚硬部分是剧毒结晶，触碰十分危险。",
+      "englishDescription": "Reactions between the many toxins inside its body sustain its life. What look like teeth and claws are poisonous crystals that are dangerous to touch.",
+      "japaneseDescription": "体内のさまざまな毒が反応し、その命を支えている。歯や爪のような部分は毒の結晶で、触れるだけでも危険だ。",
+      "entryID": 110215,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0089_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "ec58150e417eb788ecc48ba12dc3508c08d073c3cf1391e6a0b57840ec63b97e"
+        }
+      ]
+    },
+    "exeggutor-alola": {
+      "chineseDescription": "长长的脖子能像鞭子般甩动，用头部重击对手。悠然成长的过程中，沉睡在体内的龙之力量逐渐觉醒。",
+      "englishDescription": "It whips its long neck around to strike opponents with its head. As it grew in comfort, dormant draconic power awakened within its body.",
+      "japaneseDescription": "長い首をむちのようにしならせ、頭で相手を打つ。のびのびと育つうちに、体内に眠っていたドラゴンの力が目覚めた。",
+      "entryID": 110216,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0103_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "28d23f8eb2c5c35c956cd21a0d03b163c5b0a877f2506b7fad585f6924b76a58"
+        }
+      ]
+    },
+    "marowak-alola": {
+      "chineseDescription": "为了在阿罗拉生存，学会了操纵火焰。骨棒击中对手时会留下诅咒之火，即使用水也无法将其浇灭。",
+      "englishDescription": "It learned to control fire to survive in Alola. A strike from its bone spreads cursed flames that water cannot put out.",
+      "japaneseDescription": "アローラで生き抜くために炎を操るようになった。骨で打った相手に呪いの炎が燃え移り、水でも消すことができない。",
+      "entryID": 110217,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0105_1",
+          "formLabel": "阿罗拉的样子",
+          "pageSHA256": "ea3493f51315be3aa130fb2b6a8d30f4def5831a58c27c63b25c9b901ad9ace7"
+        }
+      ]
+    },
+    "meowth-galar": {
+      "chineseDescription": "长期与好战的航海民族共同生活，身体逐渐变得如黑铁般坚硬。额头的金币越黑、越硬，就越受同伴敬重。",
+      "englishDescription": "Life alongside a warlike seafaring people hardened parts of its body into dark iron. A darker, harder forehead coin earns greater respect from its companions.",
+      "japaneseDescription": "好戦的な海の民と暮らすうち、体のあちこちが黒い鉄へ変わった。額の小判が黒く硬いほど、仲間から尊敬される。",
+      "entryID": 110320,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0052_2",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "a7839bea7d1118e7405dd7949a4338b90c3c9822f537122e1e3df060a64da302"
+        }
+      ]
+    },
+    "ponyta-galar": {
+      "chineseDescription": "小小的角藏着疗愈轻伤的力量。能从目光读懂对方的内心，一察觉恶意，就会迅速消失得无影无踪。",
+      "englishDescription": "Its small horn can heal minor injuries. It reads another's heart through their eyes and swiftly vanishes if it senses malicious intentions.",
+      "japaneseDescription": "小さな角には軽い傷を治す力がある。目を見て相手の心を読み、悪意を感じるとすぐに姿を消す。",
+      "entryID": 110321,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0077_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "86edcf35710dc781a465812e259c0c46c628fe0dd729e66ab62a1b990fa0e4ae"
+        }
+      ]
+    },
+    "rapidash-galar": {
+      "chineseDescription": "把精神力量储存在蹄边的长毛中，轻快地穿行于森林。犄角放出的精神利刃，甚至能贯穿厚实的铁板。",
+      "englishDescription": "It stores psychic power in the hair around its hooves as it races lightly through forests. Blades of psychic energy from its horn can pierce thick iron.",
+      "japaneseDescription": "ひづめの毛に念力をため、森を軽やかに駆ける。角から放つ精神の刃は、厚い鉄板を貫くほど強力だ。",
+      "entryID": 110322,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0078_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "496d353ef91dfa0c352af1b0a8104fb66be5ad44b257260814845f8531f27e91"
+        }
+      ]
+    },
+    "slowpoke-galar": {
+      "chineseDescription": "常吃的香料渗入身体，让它散发出独特的辛香。虽然照样用尾巴钓鱼，却因尾巴上的气味而很难有所收获。",
+      "englishDescription": "The spices it eats seep into its body and give it a pungent scent. That same aroma makes fishing with its tail less successful than it hopes.",
+      "japaneseDescription": "好んで食べるスパイスが体に染み込み、刺激的な香りを放つ。しっぽで釣りをしても、そのにおいのせいであまり魚がかからない。",
+      "entryID": 110323,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0079_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "c0e8a19c579d7d6fd7ef1a970d0ae2725773fef283810e1e2e6edec61b11837c"
+        }
+      ]
+    },
+    "slowbro-galar": {
+      "chineseDescription": "手臂上的大舌贝不断吸取渗出的毒素，因而咬得格外用力。紧咬带来的刺激，有时会让呆壳兽突然发狂。",
+      "englishDescription": "The Shellder on its arm bites hard to draw out more of its toxins. This irritation can occasionally send its usually sluggish host into a frenzy.",
+      "japaneseDescription": "腕のシェルダーは毒を多く吸おうと、強くかみつく。その刺激のためか、普段は鈍いヤドランが突然暴れだすことがある。",
+      "entryID": 110324,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0080_2",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "e64ea01d6f04afe298e03c4fbc04bb21210dac5fa378ced985ced2786226764a"
+        }
+      ]
+    },
+    "farfetchd-galar": {
+      "chineseDescription": "挥舞粗壮的大葱英勇作战，是伽勒尔的大葱战士。长年活用当地又粗又长的大葱，逐渐演化成了独特的模样。",
+      "englishDescription": "A bold warrior that wields a thick, hefty leek. Adapting to the unusually large leeks of Galar helped shape this distinctive form.",
+      "japaneseDescription": "太く大きなねぎを振るって戦う、勇ましい戦士。ガラルの立派なねぎを使いこなすうちに、独特の姿へと変わった。",
+      "entryID": 110325,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0083_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "6ed64b03fd9cb31b39eafe839d93116c577db8a8bc098e704849c0e49a11e7d7"
+        }
+      ]
+    },
+    "weezing-galar": {
+      "chineseDescription": "吸入空气中的污染物，再呼出洁净的空气。据说在往昔工厂林立、烟尘浓重的时代，变成了如今的模样。",
+      "englishDescription": "It takes pollutants out of the air and releases clean air in their place. This form arose during an age of factories and heavy pollution.",
+      "japaneseDescription": "大気の汚れを吸い込み、きれいな空気を吐き出す。工場が立ち並び、空気がひどく汚れていた時代に今の姿になったという。",
+      "entryID": 110326,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0110_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "4ea6cca2130d7af17806e8b0dd947853152549a819a2b9f29884788a27385df8"
+        }
+      ]
+    },
+    "mr-mime-galar": {
+      "chineseDescription": "脚底能放出冷气，在冻成冰面的地板上整日练习踢踏舞。遇到危险时，会踢起冰块筑成保护自己的屏障。",
+      "englishDescription": "It chills the ground through its soles and practices tap dancing on the ice all day. Kicked-up ice becomes a barrier that protects it from danger.",
+      "japaneseDescription": "足の裏から冷気を出し、凍らせた床で一日中タップダンスを練習する。氷をけり上げて、身を守る壁も作る。",
+      "entryID": 110327,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0122_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "5a70af7778507df40e42a171c3fa96958f0108e76f1547e6555053d97904c304"
+        }
+      ]
+    },
+    "articuno-galar": {
+      "chineseDescription": "精神光束能让对手动弹不得，宛如全身冻结。以念力制成的羽毛状刀刃，连厚重铁板也能轻易劈开。",
+      "englishDescription": "Its psychic beams immobilize opponents as though they were frozen. Feather-shaped blades formed from mental power can slice through thick iron.",
+      "japaneseDescription": "念力の光線で、相手を凍ったように動けなくする。羽の形をした精神の刃は、厚い鉄板もたやすく切り裂く。",
+      "entryID": 110328,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0144_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "4bfeda94f110f06feadbc068966d8cf2958d794504d75d70467b42561b97de29"
+        }
+      ]
+    },
+    "zapdos-galar": {
+      "chineseDescription": "强健的双腿让它能在山间飞快奔跑。羽毛摩擦时会噼啪作响，宛如电流，因此得到了闪电鸟之名。",
+      "englishDescription": "Powerful legs carry it swiftly through mountainous terrain. Its feathers crackle like electricity when they rub together, giving rise to its name.",
+      "japaneseDescription": "強い脚で山の中をすさまじい速さで駆ける。羽がこすれると電気のような音がするため、サンダーと呼ばれる。",
+      "entryID": 110329,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0145_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "d1b666b0b76bc12eeeae4fb9cbe2090f375b17ab0a26e39bd37777ea12c8cd0d"
+        }
+      ]
+    },
+    "moltres-galar": {
+      "chineseDescription": "邪恶的气场如烈火般升腾，因此被称为火焰鸟。接触这股气场的生命，会被侵蚀得灵魂枯竭。",
+      "englishDescription": "Its sinister aura flares around it like a fire. Those touched by that aura can be drained of their very spirit.",
+      "japaneseDescription": "邪悪なオーラを炎のように燃え上がらせる。その気に触れたものは、魂まで消耗してしまうという。",
+      "entryID": 110330,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0146_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "b6d7cff6273181d5c98bb375671064887cb4ab79c97f6ad6e4b0f8c12c995c60"
+        }
+      ]
+    },
+    "slowking-galar": {
+      "chineseDescription": "把食物与毒液混合，制成连自己也弄不清功效的药。遇见虚弱的宝可梦时，便从角上的孔取药给对方。",
+      "englishDescription": "It mixes food and venom into medicines whose effects even it does not fully understand. It offers these mixtures to weakened Pokémon from holes in its horns.",
+      "japaneseDescription": "食べ物と毒を混ぜ、自分にも効き目のわからない薬を作る。弱ったポケモンを見つけると、角の穴から薬を出して与える。",
+      "entryID": 110331,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0199_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "60ad35122a660f2e929dee7ffe27bf3d62b794c5cd37e7b6475042b5e084e3ec"
+        }
+      ]
+    },
+    "corsola-galar": {
+      "chineseDescription": "古代的太阳珊瑚因环境骤变而死去，留下了如今的幽魂姿态。会借助珊瑚枝吸取生气，误把它当成石头踢开就会遭到诅咒。",
+      "englishDescription": "Ancient Corsola perished after a sudden environmental change, leaving this ghostly form. Its branches drain vitality, and kicking one by mistake invites a curse.",
+      "japaneseDescription": "古代のサニーゴが急な環境変化で命を落としたすがた。枝で生気を吸い取り、石と間違えてけった相手に呪いをかける。",
+      "entryID": 110332,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0222_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "4d15e66ce15291209289de0c2be79a26ea5843b36c144b977dbbb469d0e658e3"
+        }
+      ]
+    },
+    "zigzagoon-galar": {
+      "chineseDescription": "被认为保留着蛇纹熊最古老的模样，总是不停地之字形奔跑。见到其他宝可梦，常会故意撞上去挑起争端。",
+      "englishDescription": "Thought to resemble Zigzagoon's oldest form, it never settles down and runs in restless zigzags. It often barges into other Pokémon to start trouble.",
+      "japaneseDescription": "ジグザグマの最も古い姿と考えられ、落ち着きなくジグザグに走り回る。ほかのポケモンにわざとぶつかり、けんかを仕掛ける。",
+      "entryID": 110333,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0263_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "48c3c2d9d88bf5f8ee42a4a7fc008b571606191c0d3302fed8fc464835fe24f7"
+        }
+      ]
+    },
+    "linoone-galar": {
+      "chineseDescription": "伸出长舌头挑衅猎物，等对方发怒便猛烈撞上去。性情好斗，即使面对比自己更强的对手也毫不退缩。",
+      "englishDescription": "It taunts prey with its long tongue, then charges when they become angry. Its combative nature drives it to challenge even stronger opponents.",
+      "japaneseDescription": "長い舌で獲物を挑発し、怒ったところへ激しく体当たりする。気性が荒く、自分より強い相手にもひるまず挑む。",
+      "entryID": 110334,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0264_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "8474957245e5723ead549a98c0cb1a7c54ecbada1f9ae9424d1a6a2225639267"
+        }
+      ]
+    },
+    "darumaka-galar": {
+      "chineseDescription": "雪地生活使原本的火囊退化，转而长出了制造冷气的器官。身体越冷越有精神，还会冻出雪球与伙伴嬉闹。",
+      "englishDescription": "Life in snowy regions replaced its dwindling fire sac with a cold-producing organ. The colder it gets, the livelier it becomes, making snowballs to throw with friends.",
+      "japaneseDescription": "雪深い土地で暮らすうち、火の袋が衰え、冷気を作る器官が育った。寒いほど元気になり、雪玉を作って仲間と投げ合う。",
+      "entryID": 110335,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0554_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "b606e57fb311d88cf8d8af10c677052c5095f4b47b53a67f8fad125333c77a18"
+        }
+      ]
+    },
+    "darmanitan-galar-standard": {
+      "chineseDescription": "性情温和的大力士，常把食物藏在头顶的雪球里带回家。战斗时会把雪球冻得坚硬，用头锤迎击对手。",
+      "englishDescription": "A gentle giant that carries food home inside the snowball on its head. In battle, it freezes that ball solid and strikes with a powerful headbutt.",
+      "japaneseDescription": "頭の雪玉に食べ物を入れて持ち帰る、温厚な力持ち。戦うときは雪玉を硬く凍らせ、強烈な頭突きを放つ。",
+      "entryID": 110336,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0555_2",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "08b856f9d54362549ba38d645adb3c9c461d254f9b5cc0550ed943f848dcb250"
+        }
+      ]
+    },
+    "darmanitan-galar-zen": {
+      "chineseDescription": "愤怒让退化的火囊再度苏醒，身体喷出熊熊烈焰。即使自己的冰躯渐渐融化，也要等怒气平息才肯停下。",
+      "englishDescription": "Rage reawakens its dormant fire sac and sends flames pouring from its body. It keeps burning until its anger fades, even as its icy body melts.",
+      "japaneseDescription": "怒りによって衰えた火の袋がよみがえり、体から炎を噴き出す。氷の体が溶けても、怒りがおさまるまで暴れ続ける。",
+      "entryID": 110337,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0555_3",
+          "formLabel": "伽勒尔的样子/达摩模式",
+          "pageSHA256": "6d5acbb2b3feeb5ee204a6a3c7b27297bd5f6cb8156336ebaa80bededcde6528"
+        }
+      ]
+    },
+    "yamask-galar": {
+      "chineseDescription": "刻有诅咒的古老黏土板附在身上，吸收着怨念的能量。传说它的诞生，与被石板吸引的强烈怨魂有关。",
+      "englishDescription": "A cursed ancient clay tablet clings to it and draws in the energy of resentment. Its origin is linked to a powerful spirit attracted to the tablet.",
+      "japaneseDescription": "呪いを刻まれた古い粘土板が取りつき、怨念の力を吸い込む。板に引き寄せられた、強い恨みを持つ魂から生まれたという。",
+      "entryID": 110338,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0562_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "726e2bd622c9a982d4e11b84c3a210bd3da1f90cc7ea37f5176fbff62bb4c4e1"
+        }
+      ]
+    },
+    "stunfisk-galar": {
+      "chineseDescription": "长年住在富含铁质的泥中，身体变得如钢铁般坚固。会露出醒目的嘴唇引来猎物，再用锯齿钢鳍猛然夹住。",
+      "englishDescription": "Iron-rich mud has given it a tough steel body. It displays its conspicuous lips as bait, then snaps its serrated steel fins shut around approaching prey.",
+      "japaneseDescription": "鉄分の多い泥にすみ、鋼のように硬い体を得た。目立つ唇で獲物を誘い、近づくと鋸のような鋼のひれで挟み込む。",
+      "entryID": 110339,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0618_1",
+          "formLabel": "伽勒尔的样子",
+          "pageSHA256": "56d61e78da3d70a617e1e1c621850e25e841ff838269f20e24f64f16c24b2099"
+        }
+      ]
+    },
+    "growlithe-hisui": {
+      "chineseDescription": "常两只一组守卫领地，彼此照应。体毛里混有火成岩的成分，人们认为这与当地的火山活动有关。",
+      "englishDescription": "Pairs work together to guard their territory. The igneous material mixed into their coats is thought to reflect the influence of local volcanic activity.",
+      "japaneseDescription": "二匹で組になり、縄張りの見張りを受け持つ。体毛には火成岩の成分が混じり、火山活動の影響と考えられている。",
+      "entryID": 110398,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0058_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "fde23876d354a3fdea6087f286d243079ca54edfd1eac8717c4339a9eebafe52"
+        }
+      ]
+    },
+    "arcanine-hisui": {
+      "chineseDescription": "身躯庞大却动作灵巧，会以宛如舞步的假动作扰乱对手。扑向猎物时，牙齿上缠绕着猛烈的火焰。",
+      "englishDescription": "Despite its imposing size, it confounds opponents with agile, dance-like feints. Fierce flames wrap its fangs as it leaps at prey.",
+      "japaneseDescription": "大きな体ながら身軽で、踊るようなフェイントで相手を翻弄する。牙に激しい炎をまとい、獲物へ飛びかかる。",
+      "entryID": 110399,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0059_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "85f331f0df116d145fb3a2517c944ef9229ad1315b409815f327633f31276483"
+        }
+      ]
+    },
+    "voltorb-hisui": {
+      "chineseDescription": "外形与精灵球十分相似，腹内蓄着电流。情绪一高涨，就会一边大笑，一边把积蓄的电力释放出来。",
+      "englishDescription": "Its round shape closely resembles a Poké Ball, while electricity builds inside its belly. When excited, it laughs and lets that stored power discharge.",
+      "japaneseDescription": "姿はモンスターボールによく似ており、腹に電気をためる。気分が高まると、大笑いしながらたまった電流を放つ。",
+      "entryID": 110400,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0100_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "c2f2e4e921e89219cc8c2210c3e4dc0d4c8a824d66b136a0a2689c05be27a130"
+        }
+      ]
+    },
+    "electrode-hisui": {
+      "chineseDescription": "表层组织与球果的成分极为接近，令人不解。心情烦躁时会释放强烈电流，威力足以媲美接连落下的雷电。",
+      "englishDescription": "Its outer tissue bears a mysterious resemblance to the substance of Apricorns. When agitated, it releases electrical power comparable to repeated lightning strikes.",
+      "japaneseDescription": "表面の組織はぼんぐりの成分と不思議なほど似ている。いらだつと、幾度もの落雷に匹敵する強い電流を放つ。",
+      "entryID": 110401,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0101_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "7338ddd4a3750d955841afbeec678544184b608c87f6090243faac04ffc770e7"
+        }
+      ]
+    },
+    "typhlosion-hisui": {
+      "chineseDescription": "据说洗翠灵山的气息，让它变成了如今的模样。传说它会用火焰净化无处可去的灵魂，为它们送行。",
+      "englishDescription": "Legends link this form to the sacred mountain of Hisui. It is said to use its flames to purify wandering spirits and help them pass on.",
+      "japaneseDescription": "ヒスイの霊山の気に影響されて、今の姿になったと考えられている。行き場のない魂を炎で清め、送るという。",
+      "entryID": 110402,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0157_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "e4c1e4d6e7ac0c43045d4922433d3f7ca8bdbfbf7257a523a30daa8908fcf818"
+        }
+      ]
+    },
+    "qwilfish-hisui": {
+      "chineseDescription": "栖息在寒冷水域，靠食物摄取并积蓄毒素。身上短而粗的针显出鲜明紫色时，便是充满剧毒的警告。",
+      "englishDescription": "It inhabits cold waters and gathers toxins from its food. Vivid purple coloring on its short, thick spines warns of the potent poison within.",
+      "japaneseDescription": "寒い水辺にすみ、食べ物から毒を取り込む。短く太い針が鮮やかな紫色をしているのは、猛毒をためたしるしだ。",
+      "entryID": 110403,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0211_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "3175e1a85e3ea9db70875aecd98e331de315f93c50fcc11ed86eecb37d115d40"
+        }
+      ]
+    },
+    "sneasel-hisui": {
+      "chineseDescription": "强健的爪子让它能在峭壁间行动自如。抓住猎物时，爪尖滴下的毒液便会侵袭对方的神经。",
+      "englishDescription": "Its powerful claws are shaped for moving freely across sheer cliffs. When it catches prey, venom from their tips attacks the victim's nerves.",
+      "japaneseDescription": "丈夫な爪は断崖を自在に動くのに適した形。獲物を捕らえると、爪先からしたたる毒が相手の神経を侵す。",
+      "entryID": 110404,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0215_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "e9236c3e1583afd814ec4f9a3360a0864d7158b53674245b287cb5fd129656dc"
+        }
+      ]
+    },
+    "samurott-hisui": {
+      "chineseDescription": "只在洗翠形成的稀有姿态，性情和刀法都显得冷酷无情。攻势连绵不绝，宛如一层层汹涌而来的浪涛。",
+      "englishDescription": "A rare form that evolved in Hisui, ruthless in both temperament and swordplay. Its relentless attacks follow one another like surging waves.",
+      "japaneseDescription": "ヒスイだけで進化した珍しいすがたで、気性も太刀筋も冷酷。押し寄せる波のように、途切れず攻撃を繰り出す。",
+      "entryID": 110405,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0503_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "97e2970277c49b2d8bb5d76c62bdb2960ccfe596ef275aa1f542c20fa16b8a23"
+        }
+      ]
+    },
+    "lilligant-hisui": {
+      "chineseDescription": "雪山深处的生活，让它练就了格外强健的双腿。头顶花冠散发的香气，能让身边的伙伴振作起来。",
+      "englishDescription": "Life deep in snowy mountains developed its powerful legs. A fragrance from its crown-like flower lifts the spirits of companions nearby.",
+      "japaneseDescription": "雪山の奥で暮らすうちに、脚力がたくましく発達した。冠のような花から香りを放ち、周囲の仲間を元気づける。",
+      "entryID": 110406,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0549_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "bb5fdc0a3804a269767fa6063a3766d5f01920856dfc544f701e2a8114dcd6af"
+        }
+      ]
+    },
+    "zorua-hisui": {
+      "chineseDescription": "死后的灵魂在洗翠复苏，积蓄的怨恨从头顶化为力量升起。会以仇敌的样貌现身，宣泄自己的仇恨。",
+      "englishDescription": "Reborn as a spirit in Hisui, it draws strength from resentment rising from its head. It takes on the appearance of its foes to vent its grudge.",
+      "japaneseDescription": "死後の魂がヒスイでよみがえり、頭から立ちのぼる怨念を力にする。仇の姿へ化け、恨みを晴らそうとする。",
+      "entryID": 110407,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0570_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "f67df8c32a5f12fa75e921659424b9014fcf1364d5c3930f13b59e4e5f3150d0"
+        }
+      ]
+    },
+    "zoroark-hisui": {
+      "chineseDescription": "白色长毛随狂乱的动作翻飞，仿佛现身的幽魂。深重的怨恨驱使它奋不顾身地攻击仇敌。",
+      "englishDescription": "Its wildly moving white hair gives it a spectral appearance. Driven by profound resentment, it attacks its enemies without regard for its own safety.",
+      "japaneseDescription": "白い長毛を激しく振り乱す姿は、まるで亡霊のよう。深い恨みに突き動かされ、自らの身も顧みず仇へ襲いかかる。",
+      "entryID": 110408,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0571_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "e2d8af7af7c48cea88d89a5ac23e94728b63ab2cff362ff35aefc059caf8c0f5"
+        }
+      ]
+    },
+    "braviary-hisui": {
+      "chineseDescription": "捕猎时会发出气势十足的战吼，朝湖水释放冲击波。等猎物被震得浮上水面，便趁势一举捕获。",
+      "englishDescription": "It gives a fearsome battle cry and sends shock waves into lakes while hunting. It seizes prey forced up to the water's surface.",
+      "japaneseDescription": "狩りでは恐ろしい雄叫びを上げ、湖へ衝撃波を放つ。水面に浮かび上がった獲物を、すかさず捕らえる。",
+      "entryID": 110409,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0628_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "81fe3ba69dee2f95269cb2b79ed12d6f27d1d220639d525e60acc0a99848c434"
+        }
+      ]
+    },
+    "sliggoo-hisui": {
+      "chineseDescription": "性情阴沉，背负着金属外壳。人们认为洗翠水中的铁质与皮肤黏液起了作用，才形成了这副特殊的壳。",
+      "englishDescription": "It has a gloomy temperament and carries a metal shell. Researchers link that shell to a reaction between its mucus and iron in Hisui's water.",
+      "japaneseDescription": "気性は陰気で、金属の殻を背負っている。ヒスイの水に含まれる鉄分が、皮膚の粘液に作用して殻になったと考えられる。",
+      "entryID": 110410,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0705_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "1564ee10d8157261a6b8085135d8a09f207bedb1ef8e457851498a2360ef3284"
+        }
+      ]
+    },
+    "goodra-hisui": {
+      "chineseDescription": "能随心控制金属外壳的软硬。非常害怕孤独，喜爱的对象一旦离开身边，就会勃然大怒。",
+      "englishDescription": "It can make its metal shell rigid or pliable at will. Intensely attached and afraid of solitude, it becomes furious when someone it likes leaves.",
+      "japaneseDescription": "金属の殻を硬くも柔らかくも自在に操る。ひとりを嫌う執着の強い性格で、好きな相手が離れると激しく怒る。",
+      "entryID": 110411,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0706_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "748c627986347a0dd59dd62157e49e432d21c42a0a45833c557ca0c7fdea33e3"
+        }
+      ]
+    },
+    "avalugg-hisui": {
+      "chineseDescription": "下颚覆着比钢铁还坚硬的冰甲，能轻易击碎岩石。会用它铲开厚雪，在险峻山道上一路猛冲。",
+      "englishDescription": "Ice armor harder than steel covers its lower jaw and easily breaks rock. It plows through deep snow as it charges along treacherous mountain paths.",
+      "japaneseDescription": "下あごを覆う氷の装甲は鋼より硬く、岩も簡単に砕く。それで厚い雪をかき分け、険しい山道を突き進む。",
+      "entryID": 110412,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0713_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "c1a9bf455eb65b3e73ec98b28aec6adcb7c05fdad71a9e18223dc8e5bed47915"
+        }
+      ]
+    },
+    "decidueye-hisui": {
+      "chineseDescription": "羽毛芯部储存着空气，能帮助抵挡洗翠的严寒。这身独特的羽衣，也留下了环境影响进化的痕迹。",
+      "englishDescription": "Air held within the cores of its feathers helps it withstand Hisui's severe cold. Its plumage shows how the environment shaped its evolution.",
+      "japaneseDescription": "羽毛の芯に空気を含み、ヒスイの厳しい寒さをしのぐ。その羽衣は、環境が進化へ及ぼす影響を物語っている。",
+      "entryID": 110413,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0724_1",
+          "formLabel": "洗翠的样子",
+          "pageSHA256": "73777406f7b3e17415d96c3edb29e73bfa244cf7d991a8a92dd326daf4af74c6"
+        }
+      ]
+    },
+    "tauros-paldea-combat-breed": {
+      "chineseDescription": "肌肉厚实有力，以贴身格斗见长。脾气粗暴，会用短角瞄准对手的要害，发动猛烈攻击。",
+      "englishDescription": "Its dense, powerful muscles make it an expert at close combat. Aggressive by nature, it aims its short horns at an opponent's vulnerable spots.",
+      "japaneseDescription": "厚く発達した筋肉を持ち、接近戦を得意とする。荒々しい性格で、短い角を相手の急所へ向けて攻撃する。",
+      "entryID": 110419,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0128_1",
+          "formLabel": "帕底亚的样子／斗战种",
+          "pageSHA256": "67c891929d8dce851a2463b1de3ba260be148e9cf072180936fbb58c980fd270"
+        }
+      ]
+    },
+    "tauros-paldea-blaze-breed": {
+      "chineseDescription": "三条尾巴常拧在一起，鼻息灼热，因而得名火炽种。双角能被火之能量加热，刺伤对手时还会造成灼伤。",
+      "englishDescription": "Its three tails stay twisted together, and scorching breath gives this breed its name. Fire-heated horns burn opponents as they strike.",
+      "japaneseDescription": "三本のしっぽをより合わせ、熱い鼻息を吐くことからブレイズ種と呼ばれる。炎で熱した角は、傷とやけどを負わせる。",
+      "entryID": 110420,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0128_2",
+          "formLabel": "帕底亚的样子／火炽种",
+          "pageSHA256": "40e855b9117d6b56c29e4e6b0d33105b9e0bfff1726c097b7e1d8f4d7e887c7d"
+        }
+      ]
+    },
+    "tauros-paldea-aqua-breed": {
+      "chineseDescription": "角尖的孔洞能喷出高压水流，既可攻击，也能推动它游泳。体内脂肪较多，因此很容易浮在水面。",
+      "englishDescription": "Water jets from holes at the tips of its horns, serving as both weapons and swimming propulsion. Its high body-fat content helps it float easily.",
+      "japaneseDescription": "角先の穴から高圧の水を噴き、攻撃にも泳ぐ力にも利用する。脂肪が多いため、楽に水面へ浮くことができる。",
+      "entryID": 110421,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0128_3",
+          "formLabel": "帕底亚的样子／水澜种",
+          "pageSHA256": "cc09ac292d111f979b773b48a4514384aa76f618829227a4a1ac6baceb07b818"
+        }
+      ]
+    },
+    "wooper-paldea": {
+      "chineseDescription": "因争夺地盘失利而转到陆地生活，靠有毒黏膜保护身体。穿过沼地时，常三四只排成一列，相互照应。",
+      "englishDescription": "Driven onto land after losing territorial disputes, it protects itself with toxic mucus. Groups of three or four line up to help one another cross swamps.",
+      "japaneseDescription": "縄張り争いに敗れて陸へ移り、毒の粘膜で身を守るようになった。沼を歩くときは三、四匹で列を作り、助け合う。",
+      "entryID": 110422,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0194_1",
+          "formLabel": "帕底亚的样子",
+          "pageSHA256": "def4a210d1cf938b102213474ae1c0db05a358c25324fcaa19ca7b10565e24ea"
+        }
+      ]
+    },
+    "kyurem-black": {
+      "chineseDescription": "与捷克罗姆吸收合体后展现的姿态。体内产生的强烈冰冻能量不断向外泄漏，连自身的躯体也会冻结。",
+      "englishDescription": "This form appears when Kyurem absorbs Zekrom. It produces intense freezing energy that escapes its body and can leave its own flesh encased in ice.",
+      "japaneseDescription": "ゼクロムを吸収合体したキュレムのすがた。体内で生む強い冷気が漏れ出し、自分の体まで凍らせてしまう。",
+      "entryID": 110082,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0646_2",
+          "formLabel": "暗黑酋雷姆",
+          "pageSHA256": "8cffae19b73ecbaad553f73dabbfd4dbbcb8bdecf0641ba9f216f85d0bb3263d"
+        },
+        {
+          "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon04.html",
+          "pageSHA256": "c0a6c1ec0f0cd5a98ba22dacee4e55b36fabc713af16211a6522ff3e016e2b71",
+          "purpose": "Explicit fusion identity and form-specific abilities"
+        }
+      ]
+    },
+    "kyurem-white": {
+      "chineseDescription": "吸收莱希拉姆的力量，成为焰白酋雷姆。它的身体仍蕴藏着强大的冰冻能量，外泄的寒气会使自身结冰。",
+      "englishDescription": "Kyurem takes this form by absorbing Reshiram. Powerful freezing energy remains within it, and escaping cold can freeze parts of its own body.",
+      "japaneseDescription": "レシラムを吸収合体し、ホワイトキュレムとなったすがた。強大な冷気を体に宿し、漏れ出す寒気で自らも凍ってしまう。",
+      "entryID": 110083,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0646_1",
+          "formLabel": "焰白酋雷姆",
+          "pageSHA256": "92a8554787d489fa2e5978a77edaa4543f124ecaccef7f91c8ab3dd1ae5fb2a7"
+        },
+        {
+          "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon04.html",
+          "pageSHA256": "c0a6c1ec0f0cd5a98ba22dacee4e55b36fabc713af16211a6522ff3e016e2b71",
+          "purpose": "Explicit fusion identity and form-specific abilities"
+        }
+      ]
+    },
+    "necrozma-dusk": {
+      "chineseDescription": "不断吸取索尔迦雷欧的光与力量，性情变得极为凶暴。扑向敌人时，会挥动背部和四肢的利爪劈开对手。",
+      "englishDescription": "It continually drains Solgaleo's light and power, becoming fiercely violent. It lunges at enemies and slashes with the claws on its back and limbs.",
+      "japaneseDescription": "ソルガレオの光と力を吸い続け、非常に荒々しくなったすがた。相手に飛びかかり、背中と四肢の爪で切り裂く。",
+      "entryID": 110314,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0800_1",
+          "formLabel": "黄昏之鬃",
+          "pageSHA256": "b3c473cd641d3b709ee55e2526506480a9162f9e3ac028a48e768493981b0244"
+        }
+      ]
+    },
+    "necrozma-dawn": {
+      "chineseDescription": "支配露奈雅拉，持续吞食它的光，并迫使它释放能量。会用巨大的爪子抓住敌人，再将对手撕开。",
+      "englishDescription": "It controls Lunala, devouring its light and forcing it to release its energy. Its huge claws seize enemies before tearing into them.",
+      "japaneseDescription": "ルナアーラを支配して光を奪い、力を放出させ続けるすがた。巨大な爪で相手をつかみ、引き裂く。",
+      "entryID": 110315,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0800_2",
+          "formLabel": "拂晓之翼",
+          "pageSHA256": "a7d9d1472c33e108776326e38a3a7a99fb343707df2a5ca1e828474851c2de73"
+        }
+      ]
+    },
+    "calyrex-ice": {
+      "chineseDescription": "骑乘雪暴马时，念力与寒气会彼此激发。能把极寒凝成巨大的冰枪，射向对手或用于猛烈冲锋。",
+      "englishDescription": "Calyrex's psychic energy strengthens Glastrier's cold as they ride together. It condenses that cold into immense icicle lances for ranged attacks or powerful charges.",
+      "japaneseDescription": "ブリザポスに乗ると、念力と冷気が互いの力を高める。冷気を巨大な氷のやりに変え、撃ち出したり突撃に使ったりする。",
+      "entryID": 110362,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0898_1",
+          "formLabel": "骑白马的样子",
+          "pageSHA256": "5c75d6584dfb66adc5c43f56b1d5ce534be12f1ecf9e97c948b6a18499198c8e"
+        },
+        {
+          "url": "https://swordshield.pokemon.com/en-us/expansionpass/pokemon/ice-rider-calyrex/",
+          "pageSHA256": "f998001801ad751ea7bdc21ee19b96d6997ecc5ff3e05fb46cbe2845d87854e2",
+          "purpose": "Explicit fusion identity and form-specific abilities"
+        }
+      ]
+    },
+    "calyrex-shadow": {
+      "chineseDescription": "与灵幽马的牵绊使它能洞察过去与未来。能将灵力化成无数鬼火，宛如流星雨般向对手倾泻。",
+      "englishDescription": "Its bond with Spectrier unlocks psychic power that reveals past and future. It unleashes countless spectral flames in a shower upon its opponents.",
+      "japaneseDescription": "レイスポスとの絆で、過去と未来を見通す念力が目覚めた。霊力を無数のおにびに変え、流星のように相手へ降り注がせる。",
+      "entryID": 110363,
+      "sources": [
+        {
+          "url": "https://dex.pokemon.cn/play/pokedex/0898_2",
+          "formLabel": "骑黑马的样子",
+          "pageSHA256": "a8567ec45349972b49f8deb12ab44e2e5d7ef3ea51be27c3b4f63e11c8052cc5"
+        },
+        {
+          "url": "https://swordshield.pokemon.com/en-us/expansionpass/pokemon/shadow-rider-calyrex/",
+          "pageSHA256": "ce8adf46f026620cc4f5aded22ab5881d17afb556870e58475dbe04316c19152",
+          "purpose": "Explicit fusion identity and form-specific abilities"
+        }
+      ]
+    }
+  }
+}

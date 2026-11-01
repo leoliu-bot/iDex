@@ -33,8 +33,7 @@ jobs:
             -only-testing:iDexTests/FormCatalogTests \
             -only-testing:iDexTests/NarratorVoiceTests \
             -only-testing:iDexTests/DeviceAudioTests \
-            -only-testing:iDexTests/VoicePackTests \
-            -only-testing:iDexTests/AudioPlaybackTests \
+            -only-testing:iDexTests/AudioPlaybackTests/silentNativeSpeechReportsItsActualStartAndFinish \
             -only-testing:iDexTests/PokemonCryTests \
             -only-testing:iDexTests/ScannerLayoutTests \
             -only-testing:iDexUITests/iDexUITests/testRecordFillsCoverDisplayAndCloses \

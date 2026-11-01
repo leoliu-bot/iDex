@@ -1,3 +1,4 @@
+import AVFoundation
 import Foundation
 import Testing
 @testable import iDex
@@ -13,6 +14,28 @@ struct DeviceAudioTests {
         audio.speak("皮卡丘。图鉴准备就绪。", languageCode: "zh-CN")
         #expect(await waitUntil { backend.spokenCount == 1 })
         #expect(backend.latestNarrator == .female)
+        #expect(backend.latestLanguageCode == "zh-TW")
+        audio.suspend()
+    }
+
+    @Test func selectingASystemVoiceCancelsTheOldReadingAndReachesTheNextRequest() async throws {
+        let backend = AudioPlaybackSpy()
+        let audio = DeviceAudio(worker: backend, defaults: isolatedDefaults())
+        audio.resume()
+        audio.speak("皮卡丘。", languageCode: "zh-CN")
+        #expect(await waitUntil { backend.spokenCount == 1 })
+        let old = try #require(backend.latestSpeechRequest)
+        old.reportSpeechActivity(true)
+        #expect(await waitUntil { audio.isSpeaking })
+        let selected = NarratorVoiceSelection.Choice(identifier: "installed-choice", language: "zh-TW",
+            gender: .female, quality: 2, name: "Downloaded voice")
+        audio.selectSystemVoice(selected, languageCode: "zh-CN")
+        #expect(old.isCancelled)
+        #expect(!audio.isSpeaking && audio.speechLevel == 0)
+        old.reportSpeechLevel(1)
+        audio.speak("图鉴准备就绪。", languageCode: "zh-CN")
+        #expect(await waitUntil { backend.spokenCount == 2 })
+        #expect(backend.latestSpeechRequest?.preferredVoiceIdentifier == selected.identifier)
         #expect(backend.latestLanguageCode == "zh-TW")
         audio.suspend()
     }

@@ -2,50 +2,111 @@ import AVFoundation
 import Foundation
 
 nonisolated enum NarratorVoice: String, CaseIterable, Identifiable, Codable, Sendable {
-    case male, female, system, naturalMale, naturalFemale, retroMale, retroFemale, imported
+    case male, female
 
     var id: String { rawValue }
-    var gender: AVSpeechSynthesisVoiceGender {
-        [.female, .naturalFemale, .retroFemale].contains(self) ? .female : .male
-    }
-    var pitch: Float { gender == .male ? 0.96 : 1.0 }
-    var usesPack: Bool { [.naturalMale, .naturalFemale, .retroMale, .retroFemale, .imported].contains(self) }
-    var isRetro: Bool { self == .retroMale || self == .retroFemale }
+    var gender: AVSpeechSynthesisVoiceGender { self == .male ? .male : .female }
+    var pitch: Float { self == .male ? 0.82 : 1.02 }
 
     static func readingLocale(_ languageCode: String) -> String {
-        languageCode.hasPrefix("zh") ? "zh-TW" : languageCode
+        languageCode.lowercased().hasPrefix("zh") ? "zh-TW" : languageCode
     }
 
     @MainActor func title(in language: AppLanguage) -> String {
-        switch self {
-        case .male: return language.text("System male", "系统男声", "システム男性声")
-        case .female: return language.text("System female", "系统女声", "システム女性声")
-        case .system: return language.text("Choose system voice", "更多系统音色", "システム音声を選ぶ")
-        case .naturalMale: return language.text("Natural narrator · male", "自然图鉴男声 · 离线", "自然な男性声・オフライン")
-        case .naturalFemale: return language.text("Natural narrator · female", "自然图鉴女声 · 离线", "自然な女性声・オフライン")
-        case .retroMale: return language.text("Retro dub · male", "复古译制男声 · 离线", "レトロ男性声・オフライン")
-        case .retroFemale: return language.text("Retro dub · female", "复古译制女声 · 离线", "レトロ女性声・オフライン")
-        case .imported: return language.text("Imported voice pack", "导入的离线音色包", "読み込んだ音声パック")
-        }
+        self == .male
+            ? language.text("Automatic male · Taiwan preferred", "自动男声 · 台湾国语优先", "自動・男性声（台湾華語優先）")
+            : language.text("Automatic female · Taiwan preferred", "自动女声 · 台湾国语优先", "自動・女性声（台湾華語優先）")
     }
 }
 
 /// Uses the installed voice's real gender; lowering a female voice's pitch is
 /// not a substitute for selecting a male narrator. No particular actor is used.
 nonisolated enum NarratorVoiceSelection {
-    struct Choice: Sendable {
+    struct Choice: Sendable, Identifiable {
         let identifier: String
         let language: String
         let gender: AVSpeechSynthesisVoiceGender
         let quality: Int
+        let name: String
+        let isPersonal: Bool
+        let isNovelty: Bool
+
+        var id: String { identifier }
+
+        init(identifier: String, language: String, gender: AVSpeechSynthesisVoiceGender, quality: Int,
+             name: String = "", isPersonal: Bool = false, isNovelty: Bool = false) {
+            self.identifier = identifier
+            self.language = language
+            self.gender = gender
+            self.quality = quality
+            self.name = name
+            self.isPersonal = isPersonal
+            self.isNovelty = isNovelty
+        }
+
+        @MainActor func detail(in appLanguage: AppLanguage) -> String {
+            let locale = Locale(identifier: appLanguage.localeIdentifier)
+            let region = locale.localizedString(forIdentifier: language) ?? language
+            let tier: String
+            if quality >= AVSpeechSynthesisVoiceQuality.premium.rawValue {
+                tier = appLanguage.text("Premium", "高品质", "プレミアム")
+            } else if quality == AVSpeechSynthesisVoiceQuality.enhanced.rawValue {
+                tier = appLanguage.text("Enhanced", "增强", "拡張")
+            } else {
+                tier = appLanguage.text("Standard", "标准", "標準")
+            }
+            return "\(region) · \(tier)"
+        }
     }
 
-    static func choose(_ choices: [Choice], locale: String, narrator: NarratorVoice) -> Choice? {
+    struct Preference: Codable, Sendable, Equatable {
+        let identifier: String
+        let name: String
+        let language: String
+
+        init(_ voice: Choice) {
+            identifier = voice.identifier
+            name = voice.name
+            language = voice.language
+        }
+    }
+
+    struct Delivery: Sendable {
+        let rate: Float
+        let pitch: Float
+        let preDelay: TimeInterval
+    }
+
+    static func languageKey(_ code: String) -> String {
+        code.replacingOccurrences(of: "_", with: "-").split(separator: "-").first.map { $0.lowercased() } ?? code.lowercased()
+    }
+
+    static func available(_ choices: [Choice], locale: String) -> [Choice] {
         let desired = NarratorVoice.readingLocale(locale)
-        let family = desired.split(separator: "-").first
+        let family = languageKey(desired)
         return choices.filter {
-            $0.language.split(separator: "-").first == family
-                && (family != "zh" || !$0.language.hasPrefix("zh-HK"))
+            !$0.isPersonal && !$0.isNovelty
+                && (languageKey($0.language) == family || (family == "zh" && languageKey($0.language) == "yue"))
+        }.sorted {
+            let left = $0.language == desired ? 1 : 0
+            let right = $1.language == desired ? 1 : 0
+            if left != right { return left > right }
+            if $0.language != $1.language { return $0.language < $1.language }
+            if $0.quality != $1.quality { return $0.quality > $1.quality }
+            if $0.name != $1.name { return $0.name < $1.name }
+            return $0.identifier < $1.identifier
+        }
+    }
+
+    static func choose(_ choices: [Choice], locale: String, narrator: NarratorVoice,
+                       preferredIdentifier: String? = nil) -> Choice? {
+        let desired = NarratorVoice.readingLocale(locale)
+        let candidates = available(choices, locale: locale)
+        // An explicit installed voice overrides automatic gender/region ranking.
+        if let preferredIdentifier,
+           let selected = candidates.first(where: { $0.identifier == preferredIdentifier }) { return selected }
+        return candidates.filter {
+            languageKey(desired) != "zh" || (languageKey($0.language) == "zh" && !$0.language.hasPrefix("zh-HK"))
         }.sorted {
             func score(_ voice: Choice) -> Int {
                 (voice.gender == narrator.gender ? 100 : 0)
@@ -56,13 +117,28 @@ nonisolated enum NarratorVoiceSelection {
         }.first
     }
 
-    static func installed(locale: String, narrator: NarratorVoice) -> AVSpeechSynthesisVoice? {
-        let voices = AVSpeechSynthesisVoice.speechVoices().filter {
-            !$0.voiceTraits.contains(.isPersonalVoice) && !$0.voiceTraits.contains(.isNoveltyVoice)
-        }
-        let choices = voices.map { Choice(identifier: $0.identifier, language: $0.language,
-                                          gender: $0.gender, quality: $0.quality.rawValue) }
-        guard let chosen = choose(choices, locale: locale, narrator: narrator) else { return nil }
+    private static func choices(from voices: [AVSpeechSynthesisVoice]) -> [Choice] {
+        voices.map { Choice(identifier: $0.identifier, language: $0.language, gender: $0.gender,
+            quality: $0.quality.rawValue, name: $0.name,
+            isPersonal: $0.voiceTraits.contains(.isPersonalVoice), isNovelty: $0.voiceTraits.contains(.isNoveltyVoice)) }
+    }
+
+    static func installedChoices(locale: String) -> [Choice] {
+        available(choices(from: AVSpeechSynthesisVoice.speechVoices()), locale: locale)
+    }
+
+    static func installed(locale: String, narrator: NarratorVoice,
+                          preferredIdentifier: String? = nil) -> AVSpeechSynthesisVoice? {
+        // Re-enumerate before every reading, so removed voices are never reused
+        // from a stale object cache and newly downloaded voices become usable.
+        let voices = AVSpeechSynthesisVoice.speechVoices()
+        guard let chosen = choose(choices(from: voices), locale: locale, narrator: narrator,
+                                  preferredIdentifier: preferredIdentifier) else { return nil }
         return voices.first { $0.identifier == chosen.identifier }
+    }
+
+    static func delivery(locale: String, narrator: NarratorVoice, explicitVoice: Bool) -> Delivery {
+        if explicitVoice { return Delivery(rate: AVSpeechUtteranceDefaultSpeechRate, pitch: 1, preDelay: 0.12) }
+        return Delivery(rate: locale.hasPrefix("zh") ? 0.40 : 0.46, pitch: narrator.pitch, preDelay: 0.28)
     }
 }

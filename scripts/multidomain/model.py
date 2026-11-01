@@ -40,9 +40,15 @@ def make_model(arch, pretrained=False):
     return Classifier(m)
 
 
-def load_checkpoint(file):
+def same_head(first,second):
+    return [(p['id'],p['name']) for p in first]==[(p['id'],p['name']) for p in second]
+
+
+def load_checkpoint(file,allow_metadata_update=False):
     checkpoint=torch.load(file,map_location='cpu',weights_only=True)
     model=make_model(checkpoint['config']['arch'])
     model.load_state_dict(checkpoint['model'],strict=True)
-    if checkpoint['labels']!=json.loads(LABELS.read_text(encoding="utf-8")): raise ValueError('checkpoint labels mismatch')
+    current=json.loads(LABELS.read_text(encoding='utf-8'))
+    if checkpoint['labels']!=current and not (allow_metadata_update and same_head(checkpoint['labels'],current)):
+        raise ValueError('checkpoint labels mismatch')
     return model,checkpoint

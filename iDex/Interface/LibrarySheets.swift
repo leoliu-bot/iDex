@@ -1,6 +1,5 @@
 import AVFoundation
 import SwiftUI
-import UniformTypeIdentifiers
 
 struct CatalogSheet: View {
     @Bindable var store: DexStore
@@ -57,10 +56,9 @@ struct CatalogSheet: View {
 
 struct SettingsSheet: View {
     @Bindable var store: DexStore
-    @State private var voiceLibrary = VoicePackLibrary.shared
-    @State private var showingVoiceImporter = false
-    @State private var importingVoice = false
-    @State private var voiceImportError: String?
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var installedVoices: [NarratorVoiceSelection.Choice] = []
+
     var body: some View {
         @Bindable var audio = store.audio
         NavigationStack {
@@ -82,38 +80,34 @@ struct SettingsSheet: View {
                 Section(store.text("Sound", "声音", "サウンド")) {
                     Toggle(store.text("Device sounds & spoken entries", "设备音效与图鉴语音", "効果音と図鑑の読み上げ"), isOn: $audio.isSoundEnabled)
                         .accessibilityIdentifier("sound-toggle")
-                    Picker(store.text("Narrator", "图鉴播报音色", "読み上げ音声"), selection: $audio.narratorVoice) {
+                    Picker(store.text("Narrator", "图鉴播报音色", "読み上げ音声"), selection: voiceSelection) {
                         ForEach(NarratorVoice.allCases) { voice in
-                            if voice != .imported || !voiceLibrary.imported.isEmpty {
-                                Text(voice.title(in: store.language)).tag(voice)
-                            }
+                            Text(voice.title(in: store.language)).tag("automatic:\(voice.rawValue)")
+                                .accessibilityIdentifier("automatic-voice-\(voice.rawValue)")
                         }
-                    }.accessibilityIdentifier("narrator-picker")
-                    if audio.narratorVoice == .system {
-                        Picker(store.text("Installed voice", "已安装音色", "インストール済み音声"), selection: $audio.systemVoiceIdentifier) {
-                            Text(store.text("Automatic", "自动选择", "自動")).tag("")
-                            ForEach(VoicePackLibrary.systemVoices(locale: store.language.speechLocale), id: \.identifier) { voice in
-                                Text("\(voice.name) · \(voice.language)").tag(voice.identifier)
-                            }
-                        }.accessibilityIdentifier("system-voice-picker")
-                    }
-                    if audio.narratorVoice == .imported {
-                        Picker(store.text("Offline pack", "离线音色包", "音声パック"), selection: $audio.importedVoiceFilename) {
-                            Text(store.text("Choose a pack", "选择音色包", "パックを選択")).tag("")
-                            ForEach(voiceLibrary.imported) { pack in Text(pack.title).tag(pack.id) }
+                        ForEach(installedVoices) { voice in
+                            Text("\(voice.name) · \(voice.detail(in: store.language))")
+                                .tag("voice:\(voice.identifier)")
+                                .accessibilityIdentifier("installed-voice-\(voice.identifier)")
                         }
+                        if let selected = unavailableSelection {
+                            Text(store.text("\(selected.name) · currently unavailable", "\(selected.name) · 当前不可用", "\(selected.name)・現在利用不可"))
+                                .tag("voice:\(selected.identifier)")
+                        }
+                    }.pickerStyle(.navigationLink).accessibilityIdentifier("narrator-picker")
+                    if let selected = unavailableSelection {
+                        Text(store.text("\(selected.name) is no longer available on this iPhone. An automatic voice is used until it is installed again or you choose another voice.", "本机暂时无法使用\(selected.name)，会临时使用自动音色。重新安装该音色或选择其他声音后即可切换。", "\(selected.name)はこのiPhoneで現在利用できないため、自動音声を使用します。再インストールするか、別の音声を選択してください。"))
+                            .font(.footnote).foregroundStyle(.secondary)
                     }
-                    Button(store.text("Import offline voice pack", "导入离线音色包", "音声パックを読み込む")) {
-                        showingVoiceImporter = true
-                    }.disabled(importingVoice).accessibilityIdentifier("import-voice-pack")
-                    if importingVoice { ProgressView(store.text("Checking voice pack…", "正在校验音色包…", "音声パックを確認中…")) }
                     Button(store.text("Preview narrator", "试听播报", "音声を試す")) {
                         audio.speak(store.text("Pokédex ready. Point at a Pokémon to begin identification.", "宝可梦图鉴，准备就绪。请将取景器对准宝可梦，开始识别。", "ポケモン図鑑、準備完了。ポケモンにカメラを向けてください。"), languageCode: store.language.speechLocale)
                     }.disabled(!audio.isSoundEnabled).accessibilityIdentifier("narrator-preview")
-                    Text(store.text("Chinese readings prefer a Taiwan Mandarin voice of the selected gender. If it is not installed, the closest available Chinese voice is used. Additional system voices can be downloaded in iPhone Settings.", "中文播报优先使用所选性别的台湾国语音色。未安装时使用可用的中文音色；可在 iPhone 系统设置中下载更多声音。", "中国語は選択した性別の台湾華語音声を優先します。未インストールの場合は利用可能な音声を使用します。追加音声はiPhoneの設定からダウンロードできます。"))
+                    Text(store.text("Choose from this iPhone’s available voices for the current language, with their region and quality shown. A specific voice uses its natural pitch and speaking rate. Automatic Chinese voices prefer Taiwan Mandarin. Download additional voices in iPhone Settings; this list refreshes when you return.", "这里列出本机当前语言可用的系统音色，并显示地区与品质。选择具体音色后，保留它自然的音高和语速；自动中文音色优先台湾国语。可在 iPhone 系统设置中下载更多声音，返回这里会自动刷新。", "現在の言語でこのiPhoneが利用できる音声を地域・品質とともに表示します。指定した音声は自然な音程と速度で読み上げます。中国語の自動選択は台湾華語を優先します。追加音声はiPhoneの設定でダウンロードでき、戻ると一覧が更新されます。"))
                         .font(.footnote).foregroundStyle(.secondary)
-                    Text(store.text("Neural voice packs play entirely offline. Retro mode adds gentle vintage broadcast filtering. Packs cover Chinese entries; other languages or missing recordings use an installed system voice.", "自然音色包在手机上完全离线播放；复古模式加入轻微的旧式播报音色处理。音色包用于中文图鉴，其他语言或缺少录音时使用已安装的系统音色。", "ニューラル音声パックは完全オフライン。レトロモードは放送風の音質に調整します。中国語以外や録音のない項目はシステム音声を使用します。"))
-                        .font(.footnote).foregroundStyle(.secondary)
+                    if installedVoices.isEmpty {
+                        Text(store.text("No standard voice for this language is currently listed by iOS. Automatic reading uses the system default.", "iOS 目前未列出该语言的标准音色，自动朗读将使用系统默认声音。", "iOSにこの言語の標準音声が表示されていません。自動読み上げではシステムの既定音声を使用します。"))
+                            .font(.footnote).foregroundStyle(.secondary)
+                    }
                     Button(store.text("Stop reading", "停止朗读", "読み上げを停止")) { audio.stopSpeaking() }
                 }
                 Section(store.text("Field guide", "使用指南", "使い方")) {
@@ -150,22 +144,35 @@ struct SettingsSheet: View {
             .environment(\.locale, Locale(identifier: store.language.localeIdentifier))
             .statusBarHidden()
             .persistentSystemOverlays(.hidden)
-            .fileImporter(isPresented: $showingVoiceImporter, allowedContentTypes: [UTType(filenameExtension: "pokedexvoice") ?? .data]) { result in
-                guard case let .success(url) = result else { return }
-                importingVoice = true
-                Task {
-                    defer { importingVoice = false }
-                    do {
-                        let filename = try await voiceLibrary.importFile(url)
-                        audio.importedVoiceFilename = filename
-                        audio.narratorVoice = .imported
-                    } catch {
-                        voiceImportError = store.text("The voice pack could not be verified. Select a complete .pokedexvoice file.", "音色包未通过校验，请选择完整的 .pokedexvoice 文件。", "音声パックを確認できませんでした。完全な .pokedexvoice ファイルを選択してください。")
-                    }
-                }
+            .onAppear(perform: refreshVoices)
+            .onChange(of: store.language) { _, _ in refreshVoices() }
+            .onChange(of: scenePhase) { _, phase in if phase == .active { refreshVoices() } }
+            .onReceive(NotificationCenter.default.publisher(for: AVSpeechSynthesizer.availableVoicesDidChangeNotification)) { _ in refreshVoices() }
+    }
+
+    private var unavailableSelection: NarratorVoiceSelection.Preference? {
+        guard let selected = store.audio.selectedSystemVoice(languageCode: store.language.speechLocale),
+              !installedVoices.contains(where: { $0.identifier == selected.identifier }) else { return nil }
+        return selected
+    }
+
+    private var voiceSelection: Binding<String> {
+        Binding(get: {
+            if let selected = store.audio.selectedSystemVoice(languageCode: store.language.speechLocale) {
+                return "voice:\(selected.identifier)"
             }
-            .alert(store.text("Voice pack", "离线音色包", "音声パック"), isPresented: Binding(get: { voiceImportError != nil }, set: { if !$0 { voiceImportError = nil } })) {
-                Button(store.text("OK", "好", "OK"), role: .cancel) { voiceImportError = nil }
-            } message: { Text(voiceImportError ?? "") }
+            return "automatic:\(store.audio.narratorVoice.rawValue)"
+        }, set: { value in
+            if value.hasPrefix("automatic:"), let voice = NarratorVoice(rawValue: String(value.dropFirst("automatic:".count))) {
+                store.audio.useAutomaticVoice(voice, languageCode: store.language.speechLocale)
+            } else if value.hasPrefix("voice:"),
+                      let voice = installedVoices.first(where: { $0.identifier == String(value.dropFirst("voice:".count)) }) {
+                store.audio.selectSystemVoice(voice, languageCode: store.language.speechLocale)
+            }
+        })
+    }
+
+    private func refreshVoices() {
+        installedVoices = NarratorVoiceSelection.installedChoices(locale: store.language.speechLocale)
     }
 }

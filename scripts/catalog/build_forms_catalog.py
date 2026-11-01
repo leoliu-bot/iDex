@@ -148,6 +148,7 @@ def label(form, language, names):
     raise ValueError(('Missing localized form label', form['identifier'], language, token))
 
 def main():
+    curated = json.loads((ROOT/'scripts/catalog/form-description-overrides.json').read_text(encoding='utf-8'))['entries']
     species = {p['id']: p for p in json.loads((RESOURCES / 'pokemon-national.json').read_text(encoding='utf-8'))}
     pokemon = {p['id']: p for p in rows('pokemon.csv')}
     names = {(p['pokemon_form_id'], p['local_language_id']): p for p in rows('pokemon_form_names.csv')}
@@ -208,6 +209,12 @@ def main():
                 elif language == 'chinese': description = f'{base["chineseName"]}与{partner["chineseName"]}结合形成的合体形态。' + description
                 else: description = f'{base["japaneseName"]}と{partner["japaneseName"]}が合体したすがた。' + description
             entry[language+'Description'] = description
+        if form['identifier'] in curated:
+            override = curated[form['identifier']]
+            assert override['entryID'] == entry['id'], ('Curated form identity changed', form['identifier'])
+            for language in LANGS:
+                entry[language+'Description'] = override[language+'Description']
+            entry['descriptionSource'] = 'Editorial paraphrase of verified official form-specific field notes; see scripts/catalog/form-description-overrides.json'
         source = source_paths.get(form['id'])
         if source:
             entry['spriteSourcePath'] = 'sprites/pokemon/' + source
