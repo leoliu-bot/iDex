@@ -102,6 +102,8 @@ and Japanese field notes cover all 58 regional and 6 fusion records, with exact
 official-form URLs and hashes in the
 [editorial source receipt](../../scripts/catalog/form-description-overrides.json).
 
+Release 1.3 passed 58 FP32 numerical checks, 59 simulator tests / 101 runs, the iPhone Release build and final IPA resource verification, with zero failures, skips or runtime warnings. [Cloud run](https://github.com/leoliu-bot/iDex/actions/runs/41313885202); [evidence](../../TrainingResources/apple-validation.json). Physical-camera accuracy remains unmeasured.
+
 ## Historical Kanto reference
 
 The following records the upstream 151-class artifact and its physical timings.

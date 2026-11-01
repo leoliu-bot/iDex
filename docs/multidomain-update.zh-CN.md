@@ -76,3 +76,9 @@
 通过后下载 `Pokedex-IPA` 工件，解压取得 IPA，沿用之前成功的 Windows 签名安装流程。
 
 模型来源与复现方法见[扩充训练说明](../scripts/multidomain/README.md)。
+
+## 1.3 publication evidence
+
+[Cloud build and downloads](https://github.com/leoliu-bot/iDex/actions/runs/41313885202) passed 58 FP32 numerical checks, 59 simulator tests / 101 runs, the iPhone Release build and final IPA verification. No failed/skipped tests or runtime warnings were reported. [Machine-readable evidence](../TrainingResources/apple-validation.json).
+
+Artifact: `Pokedex-IPA`; contained file: `Pokedex-1.3-unsigned.ipa` (98,659,090 bytes). SHA-256: `421ed77b5b994d82f6adaa84218c09e60f454bfce4eb66c7e86dd9fbc02fcd79`. Use the established Windows signing procedure after downloading.

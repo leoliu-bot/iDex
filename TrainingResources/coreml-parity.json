@@ -1,0 +1,416 @@
+{
+  "passed": true,
+  "fixturesPerPolicy": 29,
+  "checks": [
+    {
+      "fixture": "1",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.430511474609375e-05,
+      "topEntryID": 1
+    },
+    {
+      "fixture": "6",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 9.5367431640625e-06,
+      "topEntryID": 6
+    },
+    {
+      "fixture": "7",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 5.7220458984375e-06,
+      "topEntryID": 7
+    },
+    {
+      "fixture": "25",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 9.5367431640625e-06,
+      "topEntryID": 25
+    },
+    {
+      "fixture": "151",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 3.910064697265625e-05,
+      "topEntryID": 151
+    },
+    {
+      "fixture": "152",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 5.245208740234375e-06,
+      "topEntryID": 152
+    },
+    {
+      "fixture": "248",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 6.67572021484375e-06,
+      "topEntryID": 248
+    },
+    {
+      "fixture": "384",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 8.58306884765625e-06,
+      "topEntryID": 384
+    },
+    {
+      "fixture": "445",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 7.62939453125e-06,
+      "topEntryID": 445
+    },
+    {
+      "fixture": "658",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 7.62939453125e-06,
+      "topEntryID": 658
+    },
+    {
+      "fixture": "700",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.8596649169921875e-05,
+      "topEntryID": 700
+    },
+    {
+      "fixture": "778",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.33514404296875e-05,
+      "topEntryID": 778
+    },
+    {
+      "fixture": "906",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.4781951904296875e-05,
+      "topEntryID": 906
+    },
+    {
+      "fixture": "1000",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 7.152557373046875e-06,
+      "topEntryID": 1000
+    },
+    {
+      "fixture": "1025",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.0013580322265625e-05,
+      "topEntryID": 1025
+    },
+    {
+      "fixture": "110082",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 8.58306884765625e-06,
+      "topEntryID": 110082
+    },
+    {
+      "fixture": "110083",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 8.58306884765625e-06,
+      "topEntryID": 110083
+    },
+    {
+      "fixture": "110206",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 9.059906005859375e-06,
+      "topEntryID": 110206
+    },
+    {
+      "fixture": "110314",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 7.62939453125e-06,
+      "topEntryID": 110314
+    },
+    {
+      "fixture": "110315",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 6.67572021484375e-06,
+      "topEntryID": 110315
+    },
+    {
+      "fixture": "110328",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 6.67572021484375e-06,
+      "topEntryID": 110328
+    },
+    {
+      "fixture": "110362",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.621246337890625e-05,
+      "topEntryID": 110362
+    },
+    {
+      "fixture": "110363",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.430511474609375e-05,
+      "topEntryID": 110363
+    },
+    {
+      "fixture": "110408",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.430511474609375e-05,
+      "topEntryID": 110408
+    },
+    {
+      "fixture": "110421",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.1444091796875e-05,
+      "topEntryID": 110421
+    },
+    {
+      "fixture": "solid-0",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 0.000102996826171875,
+      "topEntryID": 110151
+    },
+    {
+      "fixture": "solid-127",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 0.00025081634521484375,
+      "topEntryID": 110159
+    },
+    {
+      "fixture": "solid-255",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 7.2479248046875e-05,
+      "topEntryID": 110159
+    },
+    {
+      "fixture": "noise",
+      "computeUnits": "CPU_ONLY",
+      "passed": true,
+      "maximumAbsoluteError": 1.2874603271484375e-05,
+      "topEntryID": 132
+    },
+    {
+      "fixture": "1",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.430511474609375e-05,
+      "topEntryID": 1
+    },
+    {
+      "fixture": "6",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 9.5367431640625e-06,
+      "topEntryID": 6
+    },
+    {
+      "fixture": "7",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 5.7220458984375e-06,
+      "topEntryID": 7
+    },
+    {
+      "fixture": "25",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 9.5367431640625e-06,
+      "topEntryID": 25
+    },
+    {
+      "fixture": "151",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 3.910064697265625e-05,
+      "topEntryID": 151
+    },
+    {
+      "fixture": "152",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 5.245208740234375e-06,
+      "topEntryID": 152
+    },
+    {
+      "fixture": "248",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 6.67572021484375e-06,
+      "topEntryID": 248
+    },
+    {
+      "fixture": "384",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 8.58306884765625e-06,
+      "topEntryID": 384
+    },
+    {
+      "fixture": "445",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 7.62939453125e-06,
+      "topEntryID": 445
+    },
+    {
+      "fixture": "658",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 7.62939453125e-06,
+      "topEntryID": 658
+    },
+    {
+      "fixture": "700",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.8596649169921875e-05,
+      "topEntryID": 700
+    },
+    {
+      "fixture": "778",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.33514404296875e-05,
+      "topEntryID": 778
+    },
+    {
+      "fixture": "906",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.4781951904296875e-05,
+      "topEntryID": 906
+    },
+    {
+      "fixture": "1000",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 7.152557373046875e-06,
+      "topEntryID": 1000
+    },
+    {
+      "fixture": "1025",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.0013580322265625e-05,
+      "topEntryID": 1025
+    },
+    {
+      "fixture": "110082",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 8.58306884765625e-06,
+      "topEntryID": 110082
+    },
+    {
+      "fixture": "110083",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 8.58306884765625e-06,
+      "topEntryID": 110083
+    },
+    {
+      "fixture": "110206",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 9.059906005859375e-06,
+      "topEntryID": 110206
+    },
+    {
+      "fixture": "110314",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 7.62939453125e-06,
+      "topEntryID": 110314
+    },
+    {
+      "fixture": "110315",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 6.67572021484375e-06,
+      "topEntryID": 110315
+    },
+    {
+      "fixture": "110328",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 6.67572021484375e-06,
+      "topEntryID": 110328
+    },
+    {
+      "fixture": "110362",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.621246337890625e-05,
+      "topEntryID": 110362
+    },
+    {
+      "fixture": "110363",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.430511474609375e-05,
+      "topEntryID": 110363
+    },
+    {
+      "fixture": "110408",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.430511474609375e-05,
+      "topEntryID": 110408
+    },
+    {
+      "fixture": "110421",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.1444091796875e-05,
+      "topEntryID": 110421
+    },
+    {
+      "fixture": "solid-0",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 0.000102996826171875,
+      "topEntryID": 110151
+    },
+    {
+      "fixture": "solid-127",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 0.00025081634521484375,
+      "topEntryID": 110159
+    },
+    {
+      "fixture": "solid-255",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 7.2479248046875e-05,
+      "topEntryID": 110159
+    },
+    {
+      "fixture": "noise",
+      "computeUnits": "ALL",
+      "passed": true,
+      "maximumAbsoluteError": 1.2874603271484375e-05,
+      "topEntryID": 132
+    }
+  ],
+  "checkpointSHA256": "9c7691e009db118c1d9a2ae01a975a66ce78e0f01c23e51799f900740180d0d0",
+  "labelsSHA256": "8fdfe2a48b070b7312829f6e03b24a63ca3afba7881b147400b8c76d0f5c2cb6",
+  "trainingManifestSHA256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
+  "physicalIPhone": "Not measured by this Mac numerical test."
+}
