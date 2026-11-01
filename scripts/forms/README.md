@@ -31,6 +31,13 @@ The native app remains offline; source photographs never enter the repository.
   There are 1,492 data-eligible classes; this does not guarantee reliable recognition
   of every camera image. Shiny identification is not trained as separate classes.
 
+All 58 regional, six fusion, 97 Mega and 34 Gigantamax records in the pinned data
+map to trained appearance classes. Four movement states lack usable images and
+remain archive-only; the other four sparse movement classes cannot auto-confirm.
+`TrainingResources/training-runtime.json` gives category coverage and actual run
+times. Evaluation counts identical alias source bytes once (11 validation rows and
+16 test rows omitted), while preserving the frozen grouped manifest unchanged.
+
 ## Reproduce
 
 Use an isolated CUDA environment. The existing pinned species manifest and cached

@@ -1,5 +1,18 @@
 {
-  "campaign": "forms-voice-layout-1.2",
-  "status": "Pending Mac release gate",
-  "checkpointSHA256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571"
+  "file": "Pokedex-Forms-unsigned.ipa",
+  "bytes": 98724019,
+  "sha256": "58c21131efc992468e9d69fb374e1ee03e2432b91b0becf4b04e0c32092efe3a",
+  "displayName": "Pok\u00e9dex",
+  "bundleIdentifier": "zihanghuang.iDex",
+  "version": "1.2",
+  "build": "3",
+  "species": 1025,
+  "additionalForms": 554,
+  "appearanceClasses": 1498,
+  "dataEligibleClasses": 1492,
+  "verifiedCryResources": 1351,
+  "compiledModel": "NationalClassifier.mlmodelc",
+  "checkpointSHA256": "dedffba3faa5df65c6ae901265841f05210dde32d5948315bd2e2bba4f026571",
+  "passed": true,
+  "signing": "Unsigned artifact; use the established Windows signing procedure."
 }

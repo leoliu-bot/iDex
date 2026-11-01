@@ -23,8 +23,10 @@ A native, offline, pixel-style Pokédex for iPhone Duo.
 
 The selected checkpoint was trained for 8 + 12 epochs on a local RTX 4080 SUPER.
 Mixed public test: **92.02% Top-1**, **96.48% Top-3**, **97.53% accepted-known
-accuracy**, and **88.52% acceptance coverage**. The new form-only holdout is lower:
-**78.05% Top-1**, **92.97% accepted accuracy**. Reused prior species groups are
+accuracy**, and **88.52% acceptance coverage**. The strict alternate-form holdout is lower:
+**73.10% Top-1**, **91.09% accepted accuracy** (487 inputs). Regional/fusion Top-1
+is 81.54% (65 inputs). The broader new-reference split also includes ordinary
+appearances and is reported separately. Reused prior species groups are
 reported separately. The 64 natural negatives had 4 false accepts. These public
 artwork diagnostics are **not physical-camera accuracy**. The Mac conversion,
 iOS tests and release build are separate gates recorded in

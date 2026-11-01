@@ -12,8 +12,15 @@ from ImageNet, not the previous species checkpoint. See [form training](../../sc
 [aggregate training report](../../TrainingResources/training-summary.json) and
 [Apple validation](../../TrainingResources/apple-validation.json).
 
-Mixed public-image Top-1 is 92.02%; new form holdout Top-1 is 78.05% (92.97% accuracy
-among accepted form inputs). Reused species holdouts are reported separately.
+Release 1.2 passed 58 FP32 source/Core ML checks (CPU-only and all-compute),
+52 simulator tests / 94 runs, and the iPhone Release build. Maximum absolute
+logit error was 0.000246287. These checks do not measure physical-camera accuracy,
+voice audition, hinge behavior or physical-device performance.
+
+Mixed public-image Top-1 is 92.02%; strict alternate-form Top-1 is 73.10% (91.09%
+accuracy among accepted form inputs, 487 inputs). Regional/fusion Top-1 is 81.54%
+(65 inputs). The broader new-reference split includes ordinary appearances;
+reused species holdouts are also reported separately.
 Natural-negative test false accepts: 4/64. These are public-art diagnostics, not
 physical-camera accuracy. Shiny identification is not separately trained.
 The app's regional/fusion opaque sprite fixtures and original Farfetch'd fixture

@@ -78,6 +78,34 @@
         "supported_classes": 708,
         "accepted": 498
       }
+    },
+    "test-alternate-forms": {
+      "top1": 0.731006160164271,
+      "top3": 0.8562628336755647,
+      "accepted_known_accuracy": 0.9108910891089109,
+      "accepted_known_coverage": 0.62217659137577,
+      "counts": {
+        "images": 487,
+        "known": 487,
+        "unknown": 0,
+        "groups": 470,
+        "supported_classes": 470,
+        "accepted": 303
+      }
+    },
+    "test-regional-fusion": {
+      "top1": 0.8153846153846154,
+      "top3": 0.9538461538461539,
+      "accepted_known_accuracy": 0.9387755102040817,
+      "accepted_known_coverage": 0.7538461538461538,
+      "counts": {
+        "images": 65,
+        "known": 65,
+        "unknown": 0,
+        "groups": 64,
+        "supported_classes": 64,
+        "accepted": 49
+      }
     }
   },
   "limits": "Public artwork/reference diagnostics, not physical-camera accuracy. Species public test groups were reused from the prior campaign; new form test is reported separately. Same-appearance species cannot auto-confirm. Shiny is not separately classified.",
@@ -87,6 +115,27 @@
     "rule": "Identical source SHA with identical label, group and split counted once; frozen source manifest unchanged."
   },
   "appleValidation": {
-    "result": "Pending form-aware Mac export and full release checks"
-  }
+    "campaign": "forms-voice-layout-1.2",
+    "run": "https://github.com/leoliu-bot/iDex/actions/runs/41270266518",
+    "result": "Passed",
+    "coreML": {
+      "fixturesPerComputePolicy": 29,
+      "checks": 58,
+      "maximumAbsoluteLogitError": 0.00024628639221191406,
+      "packagedWeightsSHA256": "6b2ff3ce16ffd384ce480a7b80d1c04044d0a31d574f6ea308e6e198c99aca5b"
+    },
+    "iOS": {
+      "platform": "iOS Simulator",
+      "device": "iPhone Duo",
+      "osVersion": "27.1",
+      "uniqueTests": 52,
+      "totalTestRuns": 94,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": 0
+    },
+    "physicalCamera": "Not measured. Public artwork tests and Mac/simulator validation do not establish physical-camera accuracy.",
+    "narration": "Native installed voices: Taiwan Mandarin preferred for Chinese; gender and persistence tests passed, physical-phone audition remains separate."
+  },
+  "testReferenceSplitNote": "test-forms contains 729 new-reference inputs: 487 alternate forms and 242 ordinary appearances. test-alternate-forms isolates the 487 non-base labels."
 }
