@@ -93,6 +93,7 @@ def calibrate(predictions):
     contract = {'modelResource': 'NationalClassifier', 'classCount': len(labels), 'inputSize': record['size'],
                 'confidenceThreshold': confidence, 'logitMargin': margin,
                 'checkpointSHA256': record['checkpoint_sha256'], 'labelsSHA256': labels_sha,
+                'trainingManifestSHA256': manifest_sha,
                 'confirmedEntryIDs': [label['id'] for label in labels if label.get('confirmed', True)]}
     report = metrics.metrics(rows, labels, confidence, margin, bootstrap_replicates=500)
     # Finish metric computation and JSON validation before publishing any policy.

@@ -14,8 +14,8 @@ nonisolated enum NarratorVoice: String, CaseIterable, Identifiable, Codable, Sen
 
     @MainActor func title(in language: AppLanguage) -> String {
         self == .male
-            ? language.text("Automatic male · Taiwan preferred", "自动男声 · 台湾国语优先", "自動・男性声（台湾華語優先）")
-            : language.text("Automatic female · Taiwan preferred", "自动女声 · 台湾国语优先", "自動・女性声（台湾華語優先）")
+            ? language.text("Automatic male", "自动男声 · 台湾国语优先", "自動・男性声")
+            : language.text("Automatic female", "自动女声 · 台湾国语优先", "自動・女性声")
     }
 }
 

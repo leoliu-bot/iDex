@@ -186,7 +186,8 @@ def _calculate(data, weights=None, detailed=False):
 def _settings(labels, confidence, margin, temperature, ece_bins):
     return dict(confidence_threshold=confidence, raw_logit_margin_threshold=margin,
                 temperature=temperature, ece_bins=ece_bins,
-                acceptance_rule='softmax(logits / temperature).max >= confidence AND raw top1-top2 logits >= margin',
+                acceptance_rule='predicted entry is eligible AND softmax(logits / temperature).max >= confidence AND raw top1-top2 logits >= margin',
+                eligible_classes=sum(bool(label.get('confirmed', True)) for label in labels),
                 tie_break='first column in supplied label order',
                 label_ids=_label_order(labels),
                 label_order_sha256=hashlib.sha256(json.dumps(labels, sort_keys=True).encode()).hexdigest(),
@@ -247,14 +248,16 @@ def metrics(rows, labels, confidence=.25, margin=.5, temperature=1., *, ece_bins
 def compare_models(baseline_rows, candidate_rows, labels, confidence=.25, margin=.5,
                    temperature=1., *, baseline_temperature=None, ece_bins=15,
                    replicates=1000, seed=20261027, baseline_confidence=None,
-                   baseline_margin=None):
+                   baseline_margin=None, baseline_labels=None):
     """Paired CIs of candidate minus baseline, resampling identical image groups.
 
     Inputs may be JSONL paths or iterables. Pairing is exact, never an intersection.
     Confidence, margin and temperature describe the candidate policy. Each
     baseline override defaults to the corresponding candidate value, preserving
     the original .25 confidence/.5 raw margin/T=1 comparison. Overrides support
-    separately validation-frozen operating points. Thresholds are fixed for all
+    separately validation-frozen operating points. baseline_labels preserves the
+    previous release's eligibility flags; its IDs, names and order must match the
+    candidate head. Thresholds are fixed for all
     bootstrap draws, never retuned on test samples. An abstain_all policy must be
     handled explicitly by a consumer, never encoded as a large finite threshold.
     """
@@ -264,7 +267,11 @@ def compare_models(baseline_rows, candidate_rows, labels, confidence=.25, margin
     bt = temperature if baseline_temperature is None else baseline_temperature
     bc = confidence if baseline_confidence is None else baseline_confidence
     bm = margin if baseline_margin is None else baseline_margin
-    baseline = _prepare(first, labels, bc, bm, bt, ece_bins)
+    previous_labels = labels if baseline_labels is None else baseline_labels
+    if (_label_order(previous_labels) != _label_order(labels)
+            or [label['name'] for label in previous_labels] != [label['name'] for label in labels]):
+        raise ValueError('paired comparison requires identical baseline/candidate head identity and order')
+    baseline = _prepare(first, previous_labels, bc, bm, bt, ece_bins)
     candidate = _prepare(second, labels, confidence, margin, temperature, ece_bins)
     candidates = {row['sha256']: row for row in second}
     if set(candidates) != {row['sha256'] for row in first}:
@@ -283,7 +290,7 @@ def compare_models(baseline_rows, candidate_rows, labels, confidence=.25, margin
         values = [None if x is None or y is None else y - x
                   for x, y in zip(samples[0][key], samples[1][key])]
         deltas[key] = _interval(values, point)
-    return dict(baseline=metrics(first, labels, bc, bm, bt, ece_bins=ece_bins),
+    return dict(baseline=metrics(first, previous_labels, bc, bm, bt, ece_bins=ece_bins),
                 candidate=metrics(aligned, labels, confidence, margin, temperature, ece_bins=ece_bins),
                 delta_candidate_minus_baseline=deltas,
                 bootstrap=dict(method='95% paired percentile group bootstrap', seed=seed,
@@ -312,6 +319,8 @@ def main():
         else:
             command.add_argument('--baseline', type=Path, required=True)
             command.add_argument('--candidate', type=Path, required=True)
+            command.add_argument('--baseline-labels', type=Path,
+                                 help='original release labels, including its eligibility flags; head identity/order must match --labels')
             command.add_argument('--baseline-temperature', type=float)
             command.add_argument('--baseline-confidence', type=float,
                                  help='validation-frozen baseline confidence; defaults to --confidence')
@@ -328,6 +337,7 @@ def main():
         report = metrics(selected(args.predictions), labels, bootstrap_replicates=args.replicates, **common)
     else:
         report = compare_models(selected(args.baseline), selected(args.candidate), labels,
+                                baseline_labels=json.loads(args.baseline_labels.read_text(encoding='utf-8-sig')) if args.baseline_labels else None,
                                 baseline_temperature=args.baseline_temperature,
                                 baseline_confidence=args.baseline_confidence,
                                 baseline_margin=args.baseline_margin,
@@ -335,6 +345,8 @@ def main():
     report['provenance'] = dict(labels=str(args.labels), selected_splits=args.split,
                                prediction_files=[str(args.predictions)] if args.command == 'summarize'
                                else [str(args.baseline), str(args.candidate)])
+    if args.command == 'compare' and args.baseline_labels:
+        report['provenance']['baseline_labels'] = str(args.baseline_labels)
     rendered = json.dumps(report, indent=2, allow_nan=False)
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

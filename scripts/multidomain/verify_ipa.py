@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import plistlib
 import zipfile
+from release_contract import validate as validate_contract
 
 
 def sha(raw):
@@ -18,11 +19,14 @@ def main():
     args = parser.parse_args()
     expected_labels = Path('TrainingResources/training-labels.json').read_bytes()
     expected_contract = json.loads(Path('TrainingResources/recognition-manifest.json').read_text())
-    assert sha(expected_labels) == expected_contract['labelsSHA256']
+    validate_contract(expected_contract, json.loads(expected_labels), expected_labels,
+                      Path('TrainingResources/national-best.pt').read_bytes())
     with zipfile.ZipFile(args.ipa) as package:
         assert package.testzip() is None, 'IPA CRC failure'
         names = set(package.namelist())
-        app = next(n[:-len('Info.plist')] for n in names if n.startswith('Payload/') and n.count('/') == 2 and n.endswith('.app/Info.plist'))
+        apps = [n[:-len('Info.plist')] for n in names if n.startswith('Payload/') and n.count('/') == 2 and n.endswith('.app/Info.plist')]
+        assert len(apps) == 1, 'Expected exactly one iPhone app in IPA'
+        app = apps[0]
         info = plistlib.loads(package.read(app + 'Info.plist'))
         assert info['CFBundleDisplayName'] == 'Pok\u00e9dex'
         assert info['CFBundleIdentifier'] == 'zihanghuang.iDex'
@@ -36,6 +40,7 @@ def main():
         base = json.loads(package.read(app + 'pokemon-national.json'))
         forms = json.loads(package.read(app + 'pokemon-forms.json'))
         assert len(base) == 1025 and len(forms) == 554
+        assert base == json.loads(Path('iDex/Resources/pokemon-national.json').read_text(encoding='utf-8'))
         assert forms == json.loads(Path('iDex/Resources/pokemon-forms.json').read_text(encoding='utf-8'))
         assert len({p['id'] for p in base + forms}) == 1579
         assert len(json.loads(expected_labels)) == 1498
@@ -57,6 +62,7 @@ def main():
                   species=1025, additionalForms=554, appearanceClasses=1498, dataEligibleClasses=len(contract['confirmedEntryIDs']),
                   verifiedCryResources=1351, compiledModel='NationalClassifier.mlmodelc',
                   checkpointSHA256=contract['checkpointSHA256'], passed=True,
+                  labelsSHA256=contract['labelsSHA256'], trainingManifestSHA256=contract['trainingManifestSHA256'],
                   signing='Unsigned artifact; use the established Windows signing procedure.')
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, ensure_ascii=True, indent=2)+'\n', encoding='utf-8', newline='\n')

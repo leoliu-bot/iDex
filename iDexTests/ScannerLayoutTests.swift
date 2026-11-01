@@ -74,10 +74,60 @@ struct ScannerLayoutTests {
             }
         }
 
+        func pixels(_ image: UIImage) throws -> Data {
+            let cgImage = try #require(image.cgImage)
+            let width = cgImage.width, height = cgImage.height
+            var bytes = [UInt8](repeating: 0, count: width * height * 4)
+            try bytes.withUnsafeMutableBytes { buffer in
+                let context = try #require(CGContext(data: buffer.baseAddress, width: width, height: height,
+                    bitsPerComponent: 8, bytesPerRow: width * 4, space: CGColorSpaceCreateDeviceRGB(),
+                    bitmapInfo: CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.premultipliedLast.rawValue))
+                context.draw(cgImage, in: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
+            }
+            return Data(bytes)
+        }
+
+        func speechLensIsLit(_ bytes: Data) -> Bool {
+            // The unlit lens has no bright cyan pixels; the speech frame has
+            // thousands. Confirm the new state before accepting equal frames.
+            bytes.withUnsafeBytes { buffer in
+                var brightCyan = 0
+                for offset in stride(from: 0, to: buffer.count, by: 4) {
+                    if buffer[offset] < 100 && buffer[offset + 1] > 150 && buffer[offset + 2] > 180 {
+                        brightCyan += 1
+                        if brightCyan > 100 { return true }
+                    }
+                }
+                return false
+            }
+        }
+
+        func difference(_ expected: Data, _ actual: Data, width: Int) -> String {
+            guard expected.count == actual.count else { return "Different byte counts: \(expected.count), \(actual.count)" }
+            let baseline = [UInt8](expected), sample = [UInt8](actual)
+            var count = 0, maximumDelta = 0
+            var minX = width, minY = baseline.count / 4 / width, maxX = -1, maxY = -1
+            for offset in stride(from: 0, to: baseline.count, by: 4) {
+                var changed = false
+                for channel in 0..<4 {
+                    let delta = abs(Int(baseline[offset + channel]) - Int(sample[offset + channel]))
+                    maximumDelta = max(maximumDelta, delta)
+                    changed = changed || delta > 0
+                }
+                if changed {
+                    count += 1
+                    let pixel = offset / 4, x = pixel % width, y = pixel / width
+                    minX = min(minX, x); maxX = max(maxX, x)
+                    minY = min(minY, y); maxY = max(maxY, y)
+                }
+            }
+            return "changedPixels=\(count), maximumChannelDelta=\(maximumDelta), bounds=(\(minX),\(minY))...(\(maxX),\(maxY))"
+        }
+
         var frames = Set<Data>()
         for _ in 0..<20 {
             let image = snapshot()
-            if frames.insert(try #require(image.pngData())).inserted {
+            if frames.insert(try pixels(image)).inserted {
                 Attachment.record(image, named: "scanner-chase-\(frames.count)", as: .png)
             }
             if frames.count >= 3 { break }
@@ -90,23 +140,35 @@ struct ScannerLayoutTests {
         host.view.layoutIfNeeded()
         // Hosting updates are asynchronous on the simulator. Wait for the
         // speaking appearance to settle, then observe longer than a full
-        // three-light chase. Compare pixels, not PNG encoder output.
-        func pixels(_ image: UIImage) throws -> Data {
-            try #require(image.cgImage?.dataProvider?.data) as Data
-        }
+        // three-light chase. Normalize to RGBA8 so storage formats and row
+        // padding cannot produce false differences in otherwise equal images.
         var speaking = snapshot()
         var settled = false
         for _ in 0..<15 {
             try await Task.sleep(for: .milliseconds(100))
             let next = snapshot()
-            if try pixels(next) == pixels(speaking) { settled = true; break }
+            let nextPixels = try pixels(next)
+            let previousPixels = try pixels(speaking)
+            if speechLensIsLit(nextPixels) && nextPixels == previousPixels {
+                speaking = next
+                settled = true
+                break
+            }
             speaking = next
         }
         #expect(settled)
         let speakingPixels = try pixels(speaking)
-        for _ in 0..<4 {
+        #expect(speechLensIsLit(speakingPixels))
+        let source = try #require(speaking.cgImage)
+        print("Speech snapshot: \(source.width)x\(source.height), bitsPerPixel=\(source.bitsPerPixel), bytesPerRow=\(source.bytesPerRow), bitmapInfo=\(source.bitmapInfo.rawValue)")
+        for index in 0..<4 {
             try await Task.sleep(for: .milliseconds(220))
-            #expect(try pixels(snapshot()) == speakingPixels)
+            let sample = snapshot(), samplePixels = try pixels(sample)
+            if samplePixels != speakingPixels {
+                Attachment.record(sample, named: "scanner-speech-followup-\(index)", as: .png)
+                print("Speech snapshot \(index): \(difference(speakingPixels, samplePixels, width: source.width))")
+            }
+            #expect(samplePixels == speakingPixels)
         }
         Attachment.record(speaking, named: "scanner-chase-stopped-for-speech", as: .png)
     }

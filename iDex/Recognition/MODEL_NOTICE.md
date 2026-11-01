@@ -1,5 +1,36 @@
 > Current form extension: the 1498-class appearance model is fine-tuned from fresh TorchVision ImageNet weights, using unambiguous pinned JJMack groups plus PokéAPI references and explicitly named historical card-art crops. Raw training images are not redistributed. Preserve applicable attribution and noncommercial/share-alike conditions. Historical Kanto source details follow.
 
+## Expanded-source campaign (1.3)
+
+This continuation retains the same 1,498-column head and adds the following
+source views. Counts describe acquired inputs before duplicate grouping and
+quarantine; they are not counts of independent training examples.
+
+- The pinned Keremberke corpus listed below supplies 4,321 unambiguous
+  species-labelled images. A 186-image visual audit identifies examples of
+  animation, game renders, cards and physical toys. Episode/capture provenance is
+  incomplete; the uploader's license declaration does not clear every image.
+- The pinned PokéAPI sprite repository supplies 11,216 game-animation frames
+  from 2,807 assets. Frames of one animation remain in one source group.
+- The pinned Pokémon TCG metadata supplies 14,245 candidate card-art crops;
+  143 ambiguous candidates received manual form review, with three excluded.
+  Accepted cards also supply a full-card view with name and attack text blurred.
+  Both views stay in one group. Receipts retain original image URL, card ID,
+  artist and image hashes. Some other printed text may remain visible.
+- [San-ei Boeki's official Pokémon All Star Collection catalog](https://www.san-ei-boeki.co.jp/character/pap/)
+  supplies 1,298 manufacturer product-photo views across 291 products, matched to
+  269 entries by explicit Japanese product names. Product JAN identifiers group
+  multiple views. These are copyrighted studio product photographs, not an open
+  image license or an independent consumer-camera benchmark. Product pages,
+  original image URLs, JAN IDs and SHA-256 receipts are retained locally.
+
+No raw card, game, mixed-corpus or product photograph is redistributed in the
+source repository or app. The app's bundled pixel sprites and cries retain their
+separate attribution. These additions do not establish commercial rights to the
+underlying imagery or change the source-code MIT license. See the
+[expanded training protocol](../../scripts/multidomain/README.md) for split,
+selection and evaluation limitations.
+
 ## Additional form sources
 
 - [PokéAPI sprites](https://github.com/PokeAPI/sprites/tree/1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64), pinned revision `1dd55c0436d2a5b6e324c0b780e1b1b416fbfb64`; credits include Smogon contributors. Training references include game sprites, Home and official artwork. Source-code repository licensing does not grant blanket character/artwork rights.

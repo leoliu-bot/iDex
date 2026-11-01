@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import shutil
 import sys
+import tempfile
+import uuid
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import coremltools as ct
@@ -11,10 +13,47 @@ import numpy as np
 from PIL import Image
 import torch
 from model import load_checkpoint
+from release_contract import validate as validate_contract
 
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def publish_verified(selected, labels, contract_path, destination, rollback):
+    """Stage the complete bundle, retaining a unique, restorable prior bundle."""
+    workspace = Path.cwd().resolve()
+    allowed = workspace / 'iDex/Recognition'
+    if destination.resolve().parent != allowed or rollback.resolve() != workspace / 'artifacts/multidomain/rollback':
+        raise ValueError('Publication paths must stay within the expected workspace directories')
+    allowed.mkdir(parents=True, exist_ok=True)
+    # Save can fail; it must finish before any existing app resource is moved.
+    with tempfile.TemporaryDirectory(prefix='.national-release-', dir=allowed) as temporary:
+        staged = Path(temporary)
+        selected.save(str(staged / destination.name))
+        shutil.copy2(labels, staged / 'pokemon_labels.json')
+        shutil.copy2(contract_path, staged / 'recognition-manifest.json')
+        backup = rollback / uuid.uuid4().hex
+        backup.mkdir(parents=True)
+        originals = [destination, allowed / 'KantoClassifier.mlpackage',
+                     allowed / 'pokemon_labels.json', allowed / 'recognition-manifest.json']
+        moved, installed = [], []
+        try:
+            for original in originals:
+                if original.exists():
+                    original.replace(backup / original.name)
+                    moved.append(original)
+            for name in [destination.name, 'pokemon_labels.json', 'recognition-manifest.json']:
+                target = allowed / name
+                (staged / name).replace(target)
+                installed.append(target)
+        except BaseException:
+            for target in reversed(installed):
+                target.replace(staged / target.name)
+            for original in reversed(moved):
+                (backup / original.name).replace(original)
+            raise
+    return backup
 
 
 def main():
@@ -22,11 +61,11 @@ def main():
     checkpoint = resources / 'national-best.pt'
     labels = resources / 'training-labels.json'
     contract = json.loads((resources / 'recognition-manifest.json').read_text())
-    assert sha(checkpoint) == contract['checkpointSHA256']
-    assert sha(labels) == contract['labelsSHA256']
     decoded_labels = json.loads(labels.read_text(encoding='utf-8'))
-    assert len(decoded_labels) == contract['classCount']
-    reference, _ = load_checkpoint(checkpoint)
+    validate_contract(contract, decoded_labels, labels.read_bytes(), checkpoint.read_bytes())
+    reference, state = load_checkpoint(checkpoint)
+    if state['manifest_sha256'] != contract['trainingManifestSHA256'] or state['labels'] != decoded_labels:
+        raise ValueError('Publication checkpoint differs from the frozen release contract')
     reference.eval()
     torch.set_num_threads(4)
     size = contract['inputSize']
@@ -56,6 +95,14 @@ def main():
     results = []
     for units in [ct.ComputeUnit.CPU_ONLY, ct.ComputeUnit.ALL]:
         converted = ct.models.MLModel(str(package), compute_units=units)
+        metadata = converted.user_defined_metadata
+        expected_metadata = {'checkpoint_sha256': contract['checkpointSHA256'],
+                             'manifest_sha256': contract['trainingManifestSHA256'],
+                             'app_labels_sha256': contract['labelsSHA256'],
+                             'class_count': str(contract['classCount']),
+                             'eligible_count': str(len(contract['confirmedEntryIDs']))}
+        if any(metadata.get(key) != value for key, value in expected_metadata.items()):
+            raise ValueError('Exported Core ML metadata does not match the frozen release')
         for name, image in fixtures:
             pixels = np.asarray(image).copy()
             tensor = torch.from_numpy(pixels).permute(2, 0, 1).unsqueeze(0).float() / 255
@@ -64,26 +111,26 @@ def main():
             actual = np.asarray(converted.predict({'image': image})['logits']).reshape(-1)
             passed = actual.shape == expected.shape and np.isfinite(actual).all() and np.allclose(actual, expected, atol=.001, rtol=.0001) and actual.argmax() == expected.argmax()
             result = {'fixture': name, 'computeUnits': units.name, 'passed': bool(passed),
-                      'maximumAbsoluteError': float(np.max(np.abs(actual - expected))), 'topEntryID': decoded_labels[int(actual.argmax())]['id']}
+                      'maximumAbsoluteError': float(np.max(np.abs(actual - expected))) if actual.shape == expected.shape else None,
+                      'topEntryID': decoded_labels[int(actual.argmax())]['id'] if actual.shape == expected.shape and np.isfinite(actual).all() else None}
             results.append(result)
             if not passed:
                 raise ValueError(f'Core ML parity failed; app model was not replaced: {result}')
     output = Path('artifacts/multidomain/reports')
     output.mkdir(parents=True, exist_ok=True)
-    (output / 'coreml-parity.json').write_text(json.dumps({'passed': True, 'fixturesPerPolicy': len(fixtures), 'checks': results, 'physicalIPhone': 'Not measured by this Mac numerical test.'}, indent=2) + '\n')
+    (output / 'coreml-parity.json').write_text(json.dumps({'passed': True, 'fixturesPerPolicy': len(fixtures), 'checks': results,
+        'checkpointSHA256': contract['checkpointSHA256'], 'labelsSHA256': contract['labelsSHA256'],
+        'trainingManifestSHA256': contract['trainingManifestSHA256'],
+        'physicalIPhone': 'Not measured by this Mac numerical test.'}, indent=2) + '\n')
     selected = ct.models.MLModel(str(package), skip_model_load=True)
     selected.short_description = f'Pokédex offline National species and form classifier ({len(decoded_labels)} classes)'
     selected.user_defined_metadata['checkpoint_sha256'] = contract['checkpointSHA256']
     selected.user_defined_metadata['app_labels_sha256'] = contract['labelsSHA256']
     destination = Path('iDex/Recognition/NationalClassifier.mlpackage')
     rollback = Path('artifacts/multidomain/rollback')
-    rollback.mkdir(parents=True, exist_ok=True)
-    for original in [destination, Path('iDex/Recognition/KantoClassifier.mlpackage')]:
-        if original.exists():
-            shutil.move(str(original), str(rollback / original.name))
-    selected.save(str(destination))
-    shutil.copy2(labels, 'iDex/Recognition/pokemon_labels.json')
-    shutil.copy2(resources / 'recognition-manifest.json', 'iDex/Recognition/recognition-manifest.json')
+    backup = publish_verified(selected, labels, resources / 'recognition-manifest.json', destination, rollback)
+    (output / 'publication.json').write_text(json.dumps({'checkpointSHA256': contract['checkpointSHA256'],
+        'labelsSHA256': contract['labelsSHA256'], 'rollback': str(backup)}, indent=2) + '\n')
     print(f'Published numerically verified FP32 model with {len(decoded_labels)} labels.', flush=True)
 
 

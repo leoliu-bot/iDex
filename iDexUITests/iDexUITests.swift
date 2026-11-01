@@ -63,6 +63,43 @@ final class iDexUITests: XCTestCase {
         XCTAssertTrue(app.buttons["identify-button"].label.contains("SCAN"))
     }
 
+    func testInstalledVoicePickerShowsMetadataAndPersistsTheChosenVoice() throws {
+        let app = launchInEnglish()
+        app.buttons["settings-button"].tap()
+        let settings = app.navigationBars["Device settings"]
+        XCTAssertTrue(settings.waitForExistence(timeout: 5))
+        let picker = element("narrator-picker", in: app)
+        XCTAssertTrue(picker.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["narrator-preview"].isEnabled) // Keep UI tests muted.
+        attachScreenshot("system-voice-settings-en", app: app)
+        picker.tap()
+        let automatic = element("automatic-voice-male", in: app)
+        XCTAssertTrue(automatic.waitForExistence(timeout: 5))
+        let rows = app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "installed-voice-"))
+        XCTAssertTrue(rows.firstMatch.waitForExistence(timeout: 10), app.debugDescription)
+        let voice = rows.allElementsBoundByIndex.first(where: \.isHittable) ?? rows.firstMatch
+        let name = try XCTUnwrap(voice.label.components(separatedBy: " · ").first)
+        XCTAssertFalse(name.isEmpty)
+        XCTAssertTrue(["Standard", "Enhanced", "Premium"].contains { voice.label.contains($0) })
+        attachScreenshot("installed-system-voice-options-en", app: app)
+        voice.tap()
+        if !settings.waitForExistence(timeout: 1) { app.navigationBars.buttons.firstMatch.tap() }
+        XCTAssertTrue(settings.waitForExistence(timeout: 5))
+        XCTAssertTrue((picker.label + " " + (picker.value as? String ?? "")).contains(name))
+        app.terminate()
+        app.launch()
+        XCTAssertTrue(app.buttons["settings-button"].waitForExistence(timeout: 10))
+        app.buttons["settings-button"].tap()
+        XCTAssertTrue(settings.waitForExistence(timeout: 5))
+        XCTAssertTrue((picker.label + " " + (picker.value as? String ?? "")).contains(name))
+        attachScreenshot("selected-system-voice-persisted-en", app: app)
+        // Restore the automatic choice so this test does not affect later runs.
+        picker.tap()
+        XCTAssertTrue(automatic.waitForExistence(timeout: 5))
+        automatic.tap()
+        if !settings.waitForExistence(timeout: 1) { app.navigationBars.buttons.firstMatch.tap() }
+    }
+
     func testRecordFillsCoverDisplayAndCloses() throws {
         let app = launchInEnglish()
         guard !app.buttons["catalog-button"].exists else {

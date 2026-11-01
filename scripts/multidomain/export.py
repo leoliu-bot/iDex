@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import numpy as np
 import torch
 from model import load_checkpoint
+from release_contract import validate as validate_contract
 
 
 def main():
@@ -25,8 +26,14 @@ def main():
     import coremltools as ct
     if not hasattr(ct.target,a.deployment): raise SystemExit(f'{a.deployment} absent in coremltools {ct.__version__}; use validated target supported by the SDK, record it explicitly')
     if a.out.exists(): raise ValueError('Use a new export folder; no overwrite')
-    a.out.mkdir(parents=True)
     model,state=load_checkpoint(a.checkpoint); model.eval();size=state['config']['size']
+    label_bytes=Path('TrainingResources/training-labels.json').read_bytes()
+    labels=json.loads(label_bytes)
+    contract=json.loads(Path('TrainingResources/recognition-manifest.json').read_text())
+    validate_contract(contract,labels,label_bytes,a.checkpoint.read_bytes())
+    if state['labels']!=labels or state['manifest_sha256']!=contract['trainingManifestSHA256'] or size!=contract['inputSize']:
+        raise ValueError('Selected checkpoint does not match the complete frozen release contract')
+    a.out.mkdir(parents=True)
     torch.manual_seed(20261027);example=torch.rand(1,3,size,size)
     traced=torch.jit.trace(model,example,check_trace=True)
     capture=[]
@@ -43,11 +50,16 @@ def main():
         converted.license='Research candidate: source dataset and Pokémon rights caveats apply; see report'
         converted.user_defined_metadata['checkpoint_sha256']=hashlib.sha256(a.checkpoint.read_bytes()).hexdigest()
         converted.user_defined_metadata['manifest_sha256']=state['manifest_sha256']
+        converted.user_defined_metadata['app_labels_sha256']=contract['labelsSHA256']
+        converted.user_defined_metadata['class_count']=str(len(labels))
+        converted.user_defined_metadata['eligible_count']=str(len(contract['confirmedEntryIDs']))
         path=a.out/f'NationalCandidate-{name}.mlpackage';converted.save(str(path))
         results.append(dict(precision=name,path=str(path)))
-    (a.out/'labels.json').write_text(json.dumps(state['labels'],indent=2))
+    (a.out/'labels.json').write_bytes(label_bytes)
     record=dict(platform=platform.platform(),torch=torch.__version__,coremltools=ct.__version__,deployment=a.deployment,size=size,trace_max_errors=capture,models=results,
-                parity='Conversion only: run scripts/forms/validate_and_publish.py and consult coreml-parity.json. Physical iPhone evaluation is separate.')
+                checkpointSHA256=contract['checkpointSHA256'],labelsSHA256=contract['labelsSHA256'],
+                trainingManifestSHA256=state['manifest_sha256'],classCount=len(labels),eligibleCount=len(contract['confirmedEntryIDs']),
+                parity='Conversion only: run scripts/multidomain/validate_and_publish.py and consult coreml-parity.json. Physical iPhone evaluation is separate.')
     (a.out/'export_receipt.json').write_text(json.dumps(record,indent=2));print(json.dumps(record,indent=2))
 
 

@@ -1,0 +1,60 @@
+{
+  "file": "source-receipts.tar.gz",
+  "bytes": 13187757,
+  "sha256": "dcb599002edc0365d9344179220bb9833caa1c16b36110071b26a84555e32e27",
+  "format": 1,
+  "rawManifestSHA256": "b5542585d0c29bd6858384de80584d6b16a809f03bf1b3a4c45f28128f771abe",
+  "rows": 72058,
+  "usableRows": 71859,
+  "content": "Metadata and source/hash receipts only; no images, audio, weights or predictions.",
+  "members": {
+    "card-references.json": {
+      "bytes": 7618442,
+      "sha256": "fcc2872cdfb2c03f7f85aeeccc06b75102a87ff16846afdab46f239854cad4ed"
+    },
+    "coverage.json": {
+      "bytes": 1813,
+      "sha256": "e7267f341b3a51fb7b68d3653147ae1d99e4829cd10097b8497525d9af63c938"
+    },
+    "data/split_lock.json": {
+      "bytes": 1813,
+      "sha256": "e7267f341b3a51fb7b68d3653147ae1d99e4829cd10097b8497525d9af63c938"
+    },
+    "game-references.json": {
+      "bytes": 6933112,
+      "sha256": "e5a7a6320b12274bdb0a0093b76cbb8f7084cd3e1aa57359f222760291916bd1"
+    },
+    "manifest-receipts.jsonl": {
+      "bytes": 43751452,
+      "sha256": "7ee3603fa8c9064110781897d8c6404888c5aede798688ee29c2c8d4d91be822"
+    },
+    "mixed-references.json": {
+      "bytes": 2024729,
+      "sha256": "3b83b87b25fe5f60ce912095bd079ce09216ead1aac4ba121f1d37b42a361772"
+    },
+    "plush-references.json": {
+      "bytes": 926379,
+      "sha256": "0316957c2acf52ca46650be76c111de381ec7ca6d9c592e6f0d82e20bf69f6fa"
+    },
+    "protocol.json": {
+      "bytes": 1713,
+      "sha256": "3c6df908c3ba7176264fe882efa0a07c1985b91b569a19b1e7f4997ecd59511e"
+    },
+    "quarantine.json": {
+      "bytes": 1851,
+      "sha256": "cfd5529a507a247430b457a94eb995d87f07c5a40f6ca5a0f78cafe5c4f8a2b5"
+    },
+    "review/card-form-audit.json": {
+      "bytes": 64364,
+      "sha256": "24fa68b3bbd68e4493e17554fc2997a3eebdad4863d71f68b5e7037742807dd7"
+    },
+    "review/card-form-review.json": {
+      "bytes": 10066,
+      "sha256": "3db65306feecab4723f3fba9d463a81dc0503059f526a7f7cb39db5353d0dcc9"
+    },
+    "review/domain-review.json": {
+      "bytes": 24545,
+      "sha256": "4d797e45c63efbbdb4d9263e13e514b19210fc475b05c9e5b9a5a7004f2eb3d5"
+    }
+  }
+}

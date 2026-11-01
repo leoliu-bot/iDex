@@ -290,7 +290,7 @@
     },
     "slowbro-galar": {
       "chineseDescription": "手臂上的大舌贝不断吸取渗出的毒素，因而咬得格外用力。紧咬带来的刺激，有时会让呆壳兽突然发狂。",
-      "englishDescription": "The Shellder on its arm bites hard to draw out more of its toxins. This irritation can occasionally send its usually sluggish host into a frenzy.",
+      "englishDescription": "The Shellder on its arm bites down to absorb more of Slowbro's toxins. That irritation can occasionally send this usually sluggish Pokémon into a frenzy.",
       "japaneseDescription": "腕のシェルダーは毒を多く吸おうと、強くかみつく。その刺激のためか、普段は鈍いヤドランが突然暴れだすことがある。",
       "entryID": 110324,
       "sources": [
@@ -471,9 +471,9 @@
       ]
     },
     "yamask-galar": {
-      "chineseDescription": "刻有诅咒的古老黏土板附在身上，吸收着怨念的能量。传说它的诞生，与被石板吸引的强烈怨魂有关。",
-      "englishDescription": "A cursed ancient clay tablet clings to it and draws in the energy of resentment. Its origin is linked to a powerful spirit attracted to the tablet.",
-      "japaneseDescription": "呪いを刻まれた古い粘土板が取りつき、怨念の力を吸い込む。板に引き寄せられた、強い恨みを持つ魂から生まれたという。",
+      "chineseDescription": "刻有诅咒的古老黏土板附在身上，吸收着怨念的能量。据说这块石板受强烈怨魂吸引，才诞生了它。",
+      "englishDescription": "A cursed ancient clay tablet clings to it and absorbs dark energy. It is said to have formed when the tablet was drawn to a vengeful spirit.",
+      "japaneseDescription": "呪いを刻まれた古い粘土板が取りつき、怨念の力を吸い込む。強い恨みを持つ魂に板が引き寄せられ、生まれたという。",
       "entryID": 110338,
       "sources": [
         {
@@ -577,7 +577,7 @@
     "sneasel-hisui": {
       "chineseDescription": "强健的爪子让它能在峭壁间行动自如。抓住猎物时，爪尖滴下的毒液便会侵袭对方的神经。",
       "englishDescription": "Its powerful claws are shaped for moving freely across sheer cliffs. When it catches prey, venom from their tips attacks the victim's nerves.",
-      "japaneseDescription": "丈夫な爪は断崖を自在に動くのに適した形。獲物を捕らえると、爪先からしたたる毒が相手の神経を侵す。",
+      "japaneseDescription": "丈夫な爪は断崖を自在に動くのに適した形。獲物を捕らえると、爪の先からしたたる毒が相手の神経を侵す。",
       "entryID": 110404,
       "sources": [
         {
@@ -757,8 +757,8 @@
       ]
     },
     "kyurem-black": {
-      "chineseDescription": "与捷克罗姆吸收合体后展现的姿态。体内产生的强烈冰冻能量不断向外泄漏，连自身的躯体也会冻结。",
-      "englishDescription": "This form appears when Kyurem absorbs Zekrom. It produces intense freezing energy that escapes its body and can leave its own flesh encased in ice.",
+      "chineseDescription": "酋雷姆吸收捷克罗姆后形成的合体姿态。体内产生的强烈冷气不断向外泄漏，连自身也会冻结。",
+      "englishDescription": "This form appears when Kyurem absorbs Zekrom. It produces immense freezing energy, and escaping cold can coat even its own body in ice.",
       "japaneseDescription": "ゼクロムを吸収合体したキュレムのすがた。体内で生む強い冷気が漏れ出し、自分の体まで凍らせてしまう。",
       "entryID": 110082,
       "sources": [
@@ -770,12 +770,12 @@
         {
           "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon04.html",
           "pageSHA256": "c0a6c1ec0f0cd5a98ba22dacee4e55b36fabc713af16211a6522ff3e016e2b71",
-          "purpose": "Explicit fusion identity and form-specific abilities"
+          "purpose": "Official absorption-fusion partner identity"
         }
       ]
     },
     "kyurem-white": {
-      "chineseDescription": "吸收莱希拉姆的力量，成为焰白酋雷姆。它的身体仍蕴藏着强大的冰冻能量，外泄的寒气会使自身结冰。",
+      "chineseDescription": "酋雷姆吸收莱希拉姆后形成的合体姿态。体内仍蕴藏强大的冰冻能量，外泄的寒气会使自身结冰。",
       "englishDescription": "Kyurem takes this form by absorbing Reshiram. Powerful freezing energy remains within it, and escaping cold can freeze parts of its own body.",
       "japaneseDescription": "レシラムを吸収合体し、ホワイトキュレムとなったすがた。強大な冷気を体に宿し、漏れ出す寒気で自らも凍ってしまう。",
       "entryID": 110083,
@@ -788,7 +788,7 @@
         {
           "url": "https://www.pokemon.co.jp/ex/b2w2/pokemon/pokemon04.html",
           "pageSHA256": "c0a6c1ec0f0cd5a98ba22dacee4e55b36fabc713af16211a6522ff3e016e2b71",
-          "purpose": "Explicit fusion identity and form-specific abilities"
+          "purpose": "Official absorption-fusion partner identity"
         }
       ]
     },
