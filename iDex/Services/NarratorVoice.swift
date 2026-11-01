@@ -2,20 +2,31 @@ import AVFoundation
 import Foundation
 
 nonisolated enum NarratorVoice: String, CaseIterable, Identifiable, Codable, Sendable {
-    case male, female
+    case male, female, system, naturalMale, naturalFemale, retroMale, retroFemale, imported
 
     var id: String { rawValue }
-    var gender: AVSpeechSynthesisVoiceGender { self == .male ? .male : .female }
-    var pitch: Float { self == .male ? 0.82 : 1.02 }
+    var gender: AVSpeechSynthesisVoiceGender {
+        [.female, .naturalFemale, .retroFemale].contains(self) ? .female : .male
+    }
+    var pitch: Float { gender == .male ? 0.96 : 1.0 }
+    var usesPack: Bool { [.naturalMale, .naturalFemale, .retroMale, .retroFemale, .imported].contains(self) }
+    var isRetro: Bool { self == .retroMale || self == .retroFemale }
 
     static func readingLocale(_ languageCode: String) -> String {
         languageCode.hasPrefix("zh") ? "zh-TW" : languageCode
     }
 
     @MainActor func title(in language: AppLanguage) -> String {
-        self == .male
-            ? language.text("Classic male", "经典男声", "クラシック男性声")
-            : language.text("Classic female", "经典女声", "クラシック女性声")
+        switch self {
+        case .male: return language.text("System male", "系统男声", "システム男性声")
+        case .female: return language.text("System female", "系统女声", "システム女性声")
+        case .system: return language.text("Choose system voice", "更多系统音色", "システム音声を選ぶ")
+        case .naturalMale: return language.text("Natural narrator · male", "自然图鉴男声 · 离线", "自然な男性声・オフライン")
+        case .naturalFemale: return language.text("Natural narrator · female", "自然图鉴女声 · 离线", "自然な女性声・オフライン")
+        case .retroMale: return language.text("Retro dub · male", "复古译制男声 · 离线", "レトロ男性声・オフライン")
+        case .retroFemale: return language.text("Retro dub · female", "复古译制女声 · 离线", "レトロ女性声・オフライン")
+        case .imported: return language.text("Imported voice pack", "导入的离线音色包", "読み込んだ音声パック")
+        }
     }
 }
 

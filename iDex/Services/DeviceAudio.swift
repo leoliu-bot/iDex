@@ -1,3 +1,4 @@
+import AVFoundation
 import Foundation
 import Observation
 import UIKit
@@ -14,6 +15,14 @@ final class DeviceAudio {
     static let shared = DeviceAudio()
 
     private(set) var isSpeaking = false
+    private(set) var speechLevel = 0.0
+
+    var systemVoiceIdentifier: String {
+        didSet { defaults.set(systemVoiceIdentifier, forKey: "idex.systemVoiceIdentifier"); stopSpeaking() }
+    }
+    var importedVoiceFilename: String {
+        didSet { defaults.set(importedVoiceFilename, forKey: "idex.importedVoiceFilename"); stopSpeaking() }
+    }
 
     var narratorVoice: NarratorVoice {
         didSet {
@@ -48,6 +57,8 @@ final class DeviceAudio {
         self.worker = worker
         self.defaults = defaults
         narratorVoice = defaults.string(forKey: "idex.narratorVoice").flatMap(NarratorVoice.init(rawValue:)) ?? .male
+        systemVoiceIdentifier = defaults.string(forKey: "idex.systemVoiceIdentifier") ?? ""
+        importedVoiceFilename = defaults.string(forKey: "idex.importedVoiceFilename") ?? ""
         isSoundEnabled = defaults.object(forKey: "idex.soundEnabled") != nil
             ? defaults.bool(forKey: "idex.soundEnabled") : true
     }
@@ -109,11 +120,22 @@ final class DeviceAudio {
         guard isActive, isSoundEnabled, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         stopSpeaking()
         let generation = speechGeneration
-        let request = AudioPlaybackRequest { [weak self] speaking in
+        let packURL: URL? = narratorVoice == .imported
+            ? VoicePackLibrary.url(filename: importedVoiceFilename)
+            : narratorVoice.usesPack ? VoicePackFile.bundledURL(female: narratorVoice.gender == .female) : nil
+        let request = AudioPlaybackRequest(voicePackURL: packURL,
+            systemVoiceIdentifier: narratorVoice == .system ? systemVoiceIdentifier : nil,
+            speechLevel: { [weak self] level in
+                Task { @MainActor [weak self] in
+                    guard let self, generation == self.speechGeneration, self.isActive, self.isSoundEnabled else { return }
+                    self.speechLevel = self.isSpeaking ? level : 0
+                }
+            }) { [weak self] speaking in
             Task { @MainActor [weak self] in
                 guard let self, generation == self.speechGeneration,
                       self.isActive, self.isSoundEnabled else { return }
                 self.isSpeaking = speaking
+                if !speaking { self.speechLevel = 0 }
             }
         }
         speechRequest = request
@@ -156,6 +178,7 @@ final class DeviceAudio {
     func stopSpeaking() {
         speechGeneration += 1
         isSpeaking = false
+        speechLevel = 0
         speechTask?.cancel()
         speechTask = nil
         speechRequest?.cancel()

@@ -64,6 +64,7 @@ struct Indicator: View {
 
 struct Lens: View {
     var isLit = false
+    var speechLevel = 1.0
 
     var body: some View {
         Circle().fill(LinearGradient(colors: [.white, Color(white: 0.5), Color(white: 0.85)], startPoint: .topLeading, endPoint: .bottomTrailing))
@@ -74,6 +75,12 @@ struct Lens: View {
                 center: .init(x: 0.35, y: 0.25), startRadius: 0, endRadius: 57)).padding(9) }
             .overlay(alignment: .topLeading) { Ellipse().fill(.white.opacity(isLit ? 0.85 : 0.3)).frame(width: 23, height: 12).rotationEffect(.degrees(-40)).offset(x: 15, y: 15) }
             .frame(width: 70, height: 70)
+            .overlay {
+                if isLit {
+                    Circle().fill(.cyan.opacity((1 - speechLevel) * 0.12)).padding(7)
+                        .blendMode(.multiply).allowsHitTesting(false)
+                }
+            }
             .shadow(color: .cyan.opacity(isLit ? 0.65 : 0), radius: 12)
             .shadow(color: .black.opacity(0.55), radius: 3, x: 2, y: 5)
             .accessibilityHidden(true)
@@ -83,6 +90,7 @@ struct Lens: View {
 struct ScannerLights: View {
     var isScanning: Bool
     var isSpeaking: Bool
+    var speechLevel = 1.0
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var activeLight = 0
 
@@ -90,7 +98,9 @@ struct ScannerLights: View {
 
     var body: some View {
         HStack(spacing: 13) {
-            Lens(isLit: isSpeaking)
+            Lens(isLit: isSpeaking, speechLevel: reduceMotion ? 1 : speechLevel)
+                .opacity(isSpeaking && !reduceMotion ? 0.86 + 0.14 * speechLevel : 1)
+                .animation(reduceMotion ? nil : .easeOut(duration: 0.1), value: speechLevel)
             VStack(alignment: .leading, spacing: 16) {
                 HStack(spacing: 9) {
                     ForEach(0..<3) { index in

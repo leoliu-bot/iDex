@@ -133,8 +133,11 @@ struct DeviceAudioTests {
         #expect(!audio.isSpeaking)
         first.reportSpeechActivity(true)
         #expect(await waitUntil { audio.isSpeaking })
+        first.reportSpeechLevel(0.8)
+        #expect(await waitUntil { audio.speechLevel == 0.8 })
         first.reportSpeechActivity(false)
         #expect(await waitUntil { !audio.isSpeaking })
+        #expect(audio.speechLevel == 0)
 
         audio.speak("Bulbasaur", languageCode: "en-US")
         #expect(await waitUntil { backend.spokenCount == 2 })
@@ -142,6 +145,7 @@ struct DeviceAudioTests {
         second.reportSpeechActivity(true)
         #expect(await waitUntil { audio.isSpeaking })
         first.reportSpeechActivity(false)
+        first.reportSpeechLevel(1)
         await Task.yield()
         #expect(audio.isSpeaking)
         // Also reject an already queued callback after an explicit stop.
@@ -149,6 +153,7 @@ struct DeviceAudioTests {
         audio.stopSpeaking()
         await Task.yield()
         #expect(!audio.isSpeaking)
+        #expect(audio.speechLevel == 0)
         audio.suspend()
     }
 

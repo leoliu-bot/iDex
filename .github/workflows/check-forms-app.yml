@@ -2,7 +2,7 @@ name: Check form catalog, fixed panel and narration
 
 on:
   push:
-    branches: [forms-voice-layout]
+    branches: [forms-voice-layout, expressive-multidomain]
   workflow_dispatch:
 
 permissions:
@@ -33,6 +33,8 @@ jobs:
             -only-testing:iDexTests/FormCatalogTests \
             -only-testing:iDexTests/NarratorVoiceTests \
             -only-testing:iDexTests/DeviceAudioTests \
+            -only-testing:iDexTests/VoicePackTests \
+            -only-testing:iDexTests/AudioPlaybackTests \
             -only-testing:iDexTests/PokemonCryTests \
             -only-testing:iDexTests/ScannerLayoutTests \
             -only-testing:iDexUITests/iDexUITests/testRecordFillsCoverDisplayAndCloses \

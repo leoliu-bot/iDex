@@ -140,7 +140,7 @@ private struct ScannerPanel: View {
 
     private var header: some View {
         HStack(alignment: .center, spacing: 13) {
-            ScannerLights(isScanning: store.isScanning, isSpeaking: store.audio.isSpeaking)
+            ScannerLights(isScanning: store.isScanning, isSpeaking: store.audio.isSpeaking, speechLevel: store.audio.speechLevel)
             Spacer()
             VStack(alignment: .trailing, spacing: 8) {
                 pixel(store.text("POKÉDEX", "宝可梦图鉴", "ポケモン図鑑"), 10)

@@ -1,4 +1,5 @@
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct CatalogSheet: View {
     @Bindable var store: DexStore
@@ -55,6 +56,10 @@ struct CatalogSheet: View {
 
 struct SettingsSheet: View {
     @Bindable var store: DexStore
+    @State private var voiceLibrary = VoicePackLibrary.shared
+    @State private var showingVoiceImporter = false
+    @State private var importingVoice = false
+    @State private var voiceImportError: String?
     var body: some View {
         @Bindable var audio = store.audio
         NavigationStack {
@@ -78,13 +83,35 @@ struct SettingsSheet: View {
                         .accessibilityIdentifier("sound-toggle")
                     Picker(store.text("Narrator", "图鉴播报音色", "読み上げ音声"), selection: $audio.narratorVoice) {
                         ForEach(NarratorVoice.allCases) { voice in
-                            Text(voice.title(in: store.language)).tag(voice)
+                            if voice != .imported || !voiceLibrary.imported.isEmpty {
+                                Text(voice.title(in: store.language)).tag(voice)
+                            }
                         }
                     }.accessibilityIdentifier("narrator-picker")
+                    if audio.narratorVoice == .system {
+                        Picker(store.text("Installed voice", "已安装音色", "インストール済み音声"), selection: $audio.systemVoiceIdentifier) {
+                            Text(store.text("Automatic", "自动选择", "自動")).tag("")
+                            ForEach(VoicePackLibrary.systemVoices(locale: store.language.speechLocale), id: \.identifier) { voice in
+                                Text("\(voice.name) · \(voice.language)").tag(voice.identifier)
+                            }
+                        }.accessibilityIdentifier("system-voice-picker")
+                    }
+                    if audio.narratorVoice == .imported {
+                        Picker(store.text("Offline pack", "离线音色包", "音声パック"), selection: $audio.importedVoiceFilename) {
+                            Text(store.text("Choose a pack", "选择音色包", "パックを選択")).tag("")
+                            ForEach(voiceLibrary.imported) { pack in Text(pack.title).tag(pack.id) }
+                        }
+                    }
+                    Button(store.text("Import offline voice pack", "导入离线音色包", "音声パックを読み込む")) {
+                        showingVoiceImporter = true
+                    }.disabled(importingVoice).accessibilityIdentifier("import-voice-pack")
+                    if importingVoice { ProgressView(store.text("Checking voice pack…", "正在校验音色包…", "音声パックを確認中…")) }
                     Button(store.text("Preview narrator", "试听播报", "音声を試す")) {
                         audio.speak(store.text("Pokédex ready. Point at a Pokémon to begin identification.", "宝可梦图鉴，准备就绪。请将取景器对准宝可梦，开始识别。", "ポケモン図鑑、準備完了。ポケモンにカメラを向けてください。"), languageCode: store.language.speechLocale)
                     }.disabled(!audio.isSoundEnabled).accessibilityIdentifier("narrator-preview")
                     Text(store.text("Chinese readings prefer a Taiwan Mandarin voice of the selected gender. If it is not installed, the closest available Chinese voice is used. Additional system voices can be downloaded in iPhone Settings.", "中文播报优先使用所选性别的台湾国语音色。未安装时使用可用的中文音色；可在 iPhone 系统设置中下载更多声音。", "中国語は選択した性別の台湾華語音声を優先します。未インストールの場合は利用可能な音声を使用します。追加音声はiPhoneの設定からダウンロードできます。"))
+                        .font(.footnote).foregroundStyle(.secondary)
+                    Text(store.text("Neural voice packs play entirely offline. Retro mode adds gentle vintage broadcast filtering. Packs cover Chinese entries; other languages or missing recordings use an installed system voice.", "自然音色包在手机上完全离线播放；复古模式加入轻微的旧式播报音色处理。音色包用于中文图鉴，其他语言或缺少录音时使用已安装的系统音色。", "ニューラル音声パックは完全オフライン。レトロモードは放送風の音質に調整します。中国語以外や録音のない項目はシステム音声を使用します。"))
                         .font(.footnote).foregroundStyle(.secondary)
                     Button(store.text("Stop reading", "停止朗读", "読み上げを停止")) { audio.stopSpeaking() }
                 }
@@ -122,5 +149,22 @@ struct SettingsSheet: View {
             .environment(\.locale, Locale(identifier: store.language.localeIdentifier))
             .statusBarHidden()
             .persistentSystemOverlays(.hidden)
+            .fileImporter(isPresented: $showingVoiceImporter, allowedContentTypes: [UTType(filenameExtension: "pokedexvoice") ?? .data]) { result in
+                guard case let .success(url) = result else { return }
+                importingVoice = true
+                Task {
+                    defer { importingVoice = false }
+                    do {
+                        let filename = try await voiceLibrary.importFile(url)
+                        audio.importedVoiceFilename = filename
+                        audio.narratorVoice = .imported
+                    } catch {
+                        voiceImportError = store.text("The voice pack could not be verified. Select a complete .pokedexvoice file.", "音色包未通过校验，请选择完整的 .pokedexvoice 文件。", "音声パックを確認できませんでした。完全な .pokedexvoice ファイルを選択してください。")
+                    }
+                }
+            }
+            .alert(store.text("Voice pack", "离线音色包", "音声パック"), isPresented: Binding(get: { voiceImportError != nil }, set: { if !$0 { voiceImportError = nil } })) {
+                Button(store.text("OK", "好", "OK"), role: .cancel) { voiceImportError = nil }
+            } message: { Text(voiceImportError ?? "") }
     }
 }
